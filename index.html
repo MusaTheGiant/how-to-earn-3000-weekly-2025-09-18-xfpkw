@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TexitCoin - Join the Texas Crypto Revolution | Earn Up to $3000 Per Week</title>
-    <meta name="description" content="Join TexitCoin, the Texas-based cryptocurrency mining opportunity. Earn up to $3000 per week through mining TXC coins. Made in Texas, for Texans. Start mining today!">
-    <meta name="keywords" content="TexitCoin, TXC, Texas cryptocurrency, crypto mining, earn money, Texas independence, TEXIT, blockchain, mining packages">
+    <title>TexitCoin Titans Team - Your Path to $3000 Per Week | Join the Revolution</title>
+    <meta name="description" content="Join the TexitCoin Titans Team and earn up to $3000 per week with TexitCoin mining. Get your free customized website, training, and support. Made in Texas, for Texans.">
+    <meta name="keywords" content="TexitCoin Titans, TXC mining, earn $3000 per week, Texas cryptocurrency, affiliate program, Bobby Gray, TEXIT">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --primary-red: #dc2626;
+            --primary-blue: #1e40af;
+            --dark-blue: #1e3a8a;
+            --gold: #fbbf24;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --gradient-hero: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
+            --gradient-cta: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --texitcoin-blue: #262262;
-            --texitcoin-red: #be1f24;
-            --texitcoin-dark: #130c0e;
-            --gradient-red: linear-gradient(135deg, #be1f24 0%, #d32f2f 100%);
-            --gradient-blue: linear-gradient(135deg, #262262 0%, #3a2d8a 100%);
-            --gradient-hero: linear-gradient(135deg, #262262 0%, #3a2d8a 50%, #4a3a9a 100%);
-            --card-shadow: 0 8px 32px rgba(38, 34, 98, 0.15);
-            --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #130c0e;
             line-height: 1.6;
+            color: var(--text-dark);
             overflow-x: hidden;
         }
 
@@ -41,32 +49,92 @@
         }
 
         /* Progress Bar */
-        .progress-container {
+        .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 0%;
             height: 4px;
+            background: var(--gradient-cta);
             z-index: 1000;
-            background: rgba(38, 34, 98, 0.1);
+            transition: width 0.3s ease;
         }
 
-        .progress-bar {
-            height: 100%;
-            background: var(--gradient-red);
-            width: 0%;
-            transition: width 0.3s ease;
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-cta {
+            background: var(--gradient-cta);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
             background: var(--gradient-hero);
-            display: flex;
-            align-items: center;
+            color: var(--white);
+            padding: 8rem 0 4rem;
             position: relative;
             overflow: hidden;
-            padding: 4rem 0;
         }
 
         .hero::before {
@@ -76,7 +144,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(190,31,36,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
             background-size: cover;
             animation: float 20s ease-in-out infinite;
         }
@@ -96,6 +164,16 @@
 
         .hero-content {
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
             animation: fadeInUp 1s ease-out;
         }
 
@@ -110,98 +188,65 @@
             }
         }
 
-        .hero h1 {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto 3rem;
+        .hero-description {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 3rem;
+            opacity: 0.9;
             line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
-        .cta-container {
+        .cta-buttons {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .cta-btn {
             padding: 1rem 2.5rem;
-            border: none;
             border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
             text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
             cursor: pointer;
         }
 
         .cta-primary {
-            background: var(--gradient-red);
-            color: #ffffff;
-            box-shadow: var(--red-shadow);
+            background: var(--white);
+            color: var(--primary-red);
+            box-shadow: var(--shadow-lg);
         }
 
         .cta-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+            box-shadow: var(--shadow-xl);
+            color: var(--primary-red);
         }
 
         .cta-secondary {
-            background: #25D366;
-            color: #ffffff;
-            border: 2px solid #ffffff;
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
         }
 
         .cta-secondary:hover {
-            background: #ffffff;
-            color: #25D366;
+            background: var(--white);
+            color: var(--primary-blue);
             transform: translateY(-3px);
-        }
-
-        /* Stats Row */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .stat-item {
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .stat-number {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 900;
-            color: #be1f24;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-description {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
         }
 
         /* Section Styles */
@@ -209,419 +254,306 @@
             padding: 5rem 0;
         }
 
-        .section-gray {
-            background: #f8f9fa;
+        .section-alt {
+            background: var(--bg-light);
         }
 
         .section-title {
             font-family: 'Orbitron', monospace;
             font-size: clamp(2rem, 4vw, 3rem);
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--texitcoin-blue);
+            margin-bottom: 1rem;
+            color: var(--text-dark);
         }
 
         .section-subtitle {
+            text-align: center;
             font-size: clamp(1rem, 2vw, 1.2rem);
-            text-align: center;
-            color: #666666;
+            color: var(--text-light);
             max-width: 600px;
-            margin: 0 auto 4rem;
+            margin: 0 auto 3rem;
         }
 
-        /* Benefits Grid */
-        .benefits-grid {
+        /* Founder Section */
+        .founder-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .benefit-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(38, 34, 98, 0.1);
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(38, 34, 98, 0.2);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-blue);
-            border-radius: 50%;
-            display: flex;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: #ffffff;
-            font-size: 2rem;
-        }
-
-        .benefit-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--texitcoin-blue);
-            margin-bottom: 1rem;
-        }
-
-        .benefit-description {
-            color: #666666;
-            line-height: 1.6;
-        }
-
-        /* Mining Packages */
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .package-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
+        .founder-image {
             position: relative;
-            border: 1px solid rgba(38, 34, 98, 0.1);
         }
 
-        .package-card.popular {
-            border: 2px solid var(--texitcoin-red);
-            transform: scale(1.05);
-        }
-
-        .package-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(38, 34, 98, 0.2);
-        }
-
-        .package-card.popular:hover {
-            transform: translateY(-10px) scale(1.05);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--texitcoin-red);
-            color: #ffffff;
-            padding: 0.5rem 1rem;
+        .founder-image img {
+            width: 100%;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            box-shadow: var(--shadow-xl);
         }
 
-        .package-name {
+        .founder-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--gradient-cta);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 50%;
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--texitcoin-blue);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .founder-content h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
             margin-bottom: 1rem;
+            color: var(--primary-blue);
         }
 
-        .package-price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--texitcoin-red);
-            margin-bottom: 0.5rem;
+        .founder-credentials {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--gold);
         }
 
-        .package-hashpower {
-            font-size: 1.1rem;
-            color: #666666;
-            margin-bottom: 2rem;
-        }
-
-        .package-features {
+        .credentials-list {
             list-style: none;
-            margin-bottom: 2rem;
-            text-align: left;
+            margin: 1rem 0;
         }
 
-        .package-features li {
+        .credentials-list li {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin-bottom: 0.8rem;
-            color: #666666;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
-        .package-features li::before {
-            content: "✓";
-            color: #22c55e;
-            font-weight: bold;
+        .credentials-list li::before {
+            content: "🏆";
             font-size: 1.2rem;
         }
 
-        .package-btn {
-            width: 100%;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .package-btn-primary {
-            background: var(--gradient-red);
-            color: #ffffff;
-        }
-
-        .package-btn-secondary {
-            background: var(--gradient-blue);
-            color: #ffffff;
-        }
-
-        .package-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Video Tutorials */
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .video-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 1.5rem;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(38, 34, 98, 0.2);
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-hero);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .play-btn {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.5rem;
-            color: var(--texitcoin-blue);
-        }
-
-        .play-btn:hover {
-            background: #ffffff;
-            transform: scale(1.1);
-        }
-
-        .video-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--texitcoin-blue);
-            margin-bottom: 0.8rem;
-        }
-
-        .video-description {
-            color: #666666;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-
-        .video-btn {
-            width: 100%;
-            padding: 0.8rem 1.5rem;
-            border: 2px solid var(--texitcoin-blue);
-            background: transparent;
-            color: var(--texitcoin-blue);
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .video-btn:hover {
-            background: var(--texitcoin-blue);
-            color: #ffffff;
-        }
-
-        /* About Section */
-        .about-grid {
+        /* Company Section */
+        .company-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .about-content h2 {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--texitcoin-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p {
-            color: #666666;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .about-features {
-            list-style: none;
-        }
-
-        .about-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-            color: #666666;
-        }
-
-        .founder-card {
-            background: var(--gradient-hero);
-            border-radius: 20px;
-            padding: 2rem;
-            color: #ffffff;
-        }
-
-        .founder-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .founder-card p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        /* Resources Section */
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .resource-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 2rem;
+        .company-logo {
             text-align: center;
-            box-shadow: var(--card-shadow);
+        }
+
+        .company-logo img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Vision & Mission Section */
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .vision-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .resource-card:hover {
+        .vision-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(38, 34, 98, 0.2);
+            box-shadow: var(--shadow-xl);
         }
 
-        .resource-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-red);
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-cta);
+        }
+
+        .vision-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-cta);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: #ffffff;
-            font-size: 2rem;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .resource-title {
+        .vision-card h4 {
+            font-family: 'Orbitron', monospace;
             font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--texitcoin-blue);
             margin-bottom: 1rem;
+            color: var(--primary-blue);
         }
 
-        .resource-description {
-            color: #666666;
+        .benefits-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .benefits-list li::before {
+            content: "✅";
+            font-size: 1.1rem;
+            margin-top: 0.1rem;
+        }
+
+        /* Member Offer Section */
+        .offer-highlight {
+            background: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') repeat;
+        }
+
+        .offer-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--text-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
             margin-bottom: 2rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .resource-btn {
-            background: var(--gradient-red);
-            color: #ffffff;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+        .offer-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
         }
 
-        .resource-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+        .offer-description {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .eligibility-note {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold);
+            text-align: left;
+        }
+
+        .eligibility-note h5 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
         }
 
         /* CTA Section */
         .cta-section {
-            background: var(--gradient-hero);
-            color: #ffffff;
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 4rem 0;
             text-align: center;
         }
 
         .cta-section h2 {
             font-family: 'Orbitron', monospace;
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .cta-section p {
             font-size: clamp(1rem, 2vw, 1.2rem);
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            line-height: 1.7;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
         /* Footer */
         .footer {
-            background: var(--texitcoin-blue);
-            color: #ffffff;
+            background: var(--bg-light);
             padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .footer-grid {
@@ -631,15 +563,11 @@
             margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
+        .footer-section h4 {
+            font-family: 'Orbitron', monospace;
             font-size: 1.2rem;
             margin-bottom: 1rem;
-            font-family: 'Orbitron', monospace;
-        }
-
-        .footer-section p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
+            color: var(--primary-blue);
         }
 
         .footer-links {
@@ -651,20 +579,44 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-light);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #ffffff;
+            color: var(--primary-red);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-red);
+            transform: translateY(-2px);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--text-light);
         }
 
         /* Scroll to Top */
@@ -674,18 +626,18 @@
             right: 2rem;
             width: 50px;
             height: 50px;
-            background: var(--gradient-red);
+            background: var(--gradient-cta);
+            color: var(--white);
+            border: none;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
-            border: none;
-            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.2rem;
         }
 
@@ -696,21 +648,31 @@
 
         .scroll-top:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
+            .nav-links {
+                display: none;
             }
 
             .hero {
-                min-height: 80vh;
-                padding: 3rem 0;
+                padding: 6rem 0 3rem;
             }
 
-            .cta-container {
+            .founder-grid,
+            .company-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .company-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
@@ -721,368 +683,252 @@
                 justify-content: center;
             }
 
-            .stats-row {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .packages-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .package-card.popular {
-                transform: none;
-            }
-
-            .videos-grid {
-                grid-template-columns: 1fr;
-            }
-
             .section {
                 padding: 3rem 0;
             }
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient-blue);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--texitcoin-blue);
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
     <!-- Progress Bar -->
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">TexitCoin Titans</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#founder">Founder</a></li>
+                <li><a href="#company">Company</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="/getting-started-with-texitcoin.html">Getting Started</a></li>
+            </ul>
+            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Now</a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Join the TexitCoin Revolution</h1>
-                <p>Earn up to <strong>$3000 per week</strong> mining TXC coins. Be part of the Texas independence movement while building generational wealth through cryptocurrency mining.</p>
-                
-                <div class="cta-container">
+                <h1>Become a TexitCoin Titan</h1>
+                <p class="hero-subtitle">Your Path to $3,000 Per Week Starts Here</p>
+                <p class="hero-description">
+                    We are a focused, supportive team that equips people worldwide with the information, tools, strategies, and hands-on support they need to succeed with TexitCoin. Our mission is to help ordinary people earn up to $3,000 per week with TexitCoin. Join us, become a Titan, and let's make it happen together.
+                </p>
+                <div class="cta-buttons">
                     <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-rocket"></i>
-                        Start Mining TXC Now
+                        Mine TXC Now
                     </a>
                     <a href="https://wa.me/27721714626" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i>
-                        Get Free Consultation
+                        Let's Chat Now
                     </a>
-                </div>
-
-                <!-- Stats Row -->
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <div class="stat-number">17%</div>
-                        <div class="stat-label">Recovery Rate</div>
-                        <div class="stat-description">of participants recover their initial investment</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">$989K</div>
-                        <div class="stat-label">Weekly Pool</div>
-                        <div class="stat-description">recent weekly commission pool</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">136+</div>
-                        <div class="stat-label">Years</div>
-                        <div class="stat-description">of sustainable mining designed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">$2M</div>
-                        <div class="stat-label">Bonus</div>
-                        <div class="stat-description">for first Million Megahash Club member</div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="section section-gray">
+    <!-- Founder Section -->
+    <section class="section" id="founder">
         <div class="container">
-            <h2 class="section-title">Why Choose TexitCoin?</h2>
-            <p class="section-subtitle">Join thousands of Texans who are building wealth and supporting independence through cryptocurrency mining</p>
+            <h2 class="section-title">Meet Our Founder</h2>
+            <p class="section-subtitle">The visionary behind TexitCoin and the Texas independence movement</p>
             
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-dollar-sign"></i>
+            <div class="founder-grid animate-on-scroll">
+                <div class="founder-image">
+                    <img src="https://texitcointitans.com/images/Bobby-Gray-Texit-Coin-Founder.png" alt="Bobby Gray - TexitCoin Founder" loading="lazy">
+                    <div class="founder-badge">
+                        <i class="fas fa-star"></i>
                     </div>
-                    <h3 class="benefit-title">Earn Up to $3000/Week</h3>
-                    <p class="benefit-description">Binary compensation structure with proven earning potential through our unique mining and referral system.</p>
                 </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="benefit-title">Daily Mining Rewards</h3>
-                    <p class="benefit-description">$5 per day per mining seat paid directly to your wallet at 7:00 PM Central daily.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="benefit-title">Texas-Based & Secure</h3>
-                    <p class="benefit-description">Built in Texas, for Texans. Supporting local economy and the Texas independence movement.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="benefit-title">Community Support</h3>
-                    <p class="benefit-description">Comprehensive training, dedicated support, and a community of like-minded individuals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mining Packages Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Choose Your Mining Package</h2>
-            <p class="section-subtitle">Select the mining package that fits your investment goals. All packages include lifetime mining and comprehensive support.</p>
-            
-            <div class="packages-grid">
-                <!-- Single Package -->
-                <div class="package-card">
-                    <h3 class="package-name">Single</h3>
-                    <div class="package-price">$995</div>
-                    <div class="package-hashpower">100 megahash mining power</div>
-                    <ul class="package-features">
-                        <li>100 megahash mining power</li>
-                        <li>One affiliate tracking center</li>
-                        <li>Unique tracking code & URL</li>
-                        <li>Back-office training & tools</li>
-                        <li>Dedicated Customer Support</li>
-                        <li>Unlimited hosting & electricity</li>
-                    </ul>
-                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="package-btn package-btn-secondary" target="_blank" rel="noopener noreferrer">
-                        Get Started Now <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-
-                <!-- Triple Play Package -->
-                <div class="package-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3 class="package-name">Triple Play</h3>
-                    <div class="package-price">$2,985</div>
-                    <div class="package-hashpower">300 megahash mining power</div>
-                    <ul class="package-features">
-                        <li>300 megahash mining power</li>
-                        <li>One affiliate tracking center</li>
-                        <li>Unique tracking code & URL</li>
-                        <li>Back-office training & tools</li>
-                        <li>Dedicated Customer Support</li>
-                        <li>Unlimited hosting & electricity</li>
-                    </ul>
-                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="package-btn package-btn-primary" target="_blank" rel="noopener noreferrer">
-                        Get Started Now <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-
-                <!-- Builder Plan Package -->
-                <div class="package-card">
-                    <h3 class="package-name">Builder Plan</h3>
-                    <div class="package-price">$8,955</div>
-                    <div class="package-hashpower">900 megahash mining power</div>
-                    <ul class="package-features">
-                        <li>900 megahash mining power</li>
-                        <li>Three affiliate tracking centers</li>
-                        <li>Unique tracking code & URL</li>
-                        <li>Back-office training & tools</li>
-                        <li>Dedicated Customer Support</li>
-                        <li>Unlimited hosting & electricity</li>
-                    </ul>
-                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="package-btn package-btn-secondary" target="_blank" rel="noopener noreferrer">
-                        Get Started Now <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Tutorials Section -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Step-by-Step Video Tutorials</h2>
-            <p class="section-subtitle">Master TexitCoin mining with our comprehensive video training series. Learn everything from registration to advanced strategies.</p>
-            
-            <div class="videos-grid">
-                <div class="video-card">
-                    <div class="video-container">
-                        <button class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
-                    <h3 class="video-title">Welcome To TexitCoin (TXC)</h3>
-                    <p class="video-description">Your path to Earning Up to $3000 Per Week.</p>
-                    <a href="#" class="video-btn">
-                        <i class="fas fa-video"></i> Watch Tutorial
-                    </a>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <button class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
-                    <h3 class="video-title">Quick TexitCoin Registration Tutorial</h3>
-                    <p class="video-description">Complete TexitCoin registration walkthrough - join TexitCoin in under 5 minutes and start mining & earning TXC coins today.</p>
-                    <a href="#" class="video-btn">
-                        <i class="fas fa-video"></i> Watch Tutorial
-                    </a>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <button class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
-                    <h3 class="video-title">First Login & Profile Configuration</h3>
-                    <p class="video-description">Master your TexitCoin dashboard setup - secure login, profile configuration, and essential settings for new miners.</p>
-                    <a href="#" class="video-btn">
-                        <i class="fas fa-video"></i> Watch Tutorial
-                    </a>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <button class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
-                    <h3 class="video-title">Boost Your Mining Power: Purchase Hash Power</h3>
-                    <p class="video-description">Step-by-step guide to purchasing additional hash power from your MineTXC dashboard - scale your mining operation and multiply your TXC earnings.</p>
-                    <a href="#" class="video-btn">
-                        <i class="fas fa-video"></i> Watch Tutorial
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About TexitCoin Section -->
-    <section class="section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2>About TexitCoin</h2>
-                    <p>TexitCoin emerges from the heart of Texas - a currency created by Texans, for Texas. More than just a digital currency, TexitCoin embodies the unwavering commitment of Texans to restore the values of true Americanism.</p>
-                    <p>Rooted in the principles of transparency, security, and community, TexitCoin offers Texans and others around the world a powerful means to protect their wealth and participate in the digital economy.</p>
+                
+                <div class="founder-content">
+                    <h3>Bobby Gray</h3>
+                    <p>The cryptocurrency pioneer who created the original Bitcoin coin and now leads the TexitCoin revolution. With over 16 years of experience in precious metals and digital currencies, Bobby is uniquely qualified to guide us into the future of honest money.</p>
                     
-                    <ul class="about-features">
-                        <li>
-                            <i class="fas fa-globe" style="color: #3b82f6;"></i>
-                            <span><strong>Made in Texas, by Texans</strong></span>
-                        </li>
-                        <li>
-                            <i class="fas fa-chart-line" style="color: #22c55e;"></i>
-                            <span><strong>136+ years of sustainable mining</strong></span>
-                        </li>
-                        <li>
-                            <i class="fas fa-award" style="color: #be1f24;"></i>
-                            <span><strong>Supporting Texas independence movement</strong></span>
-                        </li>
+                    <div class="founder-credentials">
+                        <h4>🏆 Proven Track Record</h4>
+                        <ul class="credentials-list">
+                            <li>Creator of American Open Currency Standard (2008)</li>
+                            <li>Created the original Bitcoin coin (2011)</li>
+                            <li>US Congressional expert witness (2012)</li>
+                            <li>Creator of Bitcoin Cold Storage Coin (2017)</li>
+                            <li>16+ years manufacturing precious metal coins</li>
+                        </ul>
+                    </div>
+                    
+                    <p><em>"Today, I'm here to introduce you to the future of crypto in America. It's called TexitCoin – faster, cheaper, and superior in every way."</em></p>
+                    
+                    <a href="#company" class="cta-btn cta-primary" style="margin-top: 1rem; display: inline-flex;">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="section section-alt" id="company">
+        <div class="container">
+            <h2 class="section-title">About TexitCoin</h2>
+            <p class="section-subtitle">The future of money in Texas - faster, cheaper, and superior to Bitcoin</p>
+            
+            <div class="company-grid animate-on-scroll">
+                <div class="company-logo">
+                    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" loading="lazy">
+                </div>
+                
+                <div class="company-content">
+                    <h3>TEXITcoin: Your Second Chance at Crypto</h3>
+                    <p>For Texas by Texans, TXC is a fast & inexpensive mineable blockchain-based cryptocurrency designed for generations of honest trade. Built on the principles of Texas independence and financial sovereignty.</p>
+                    
+                    <div class="company-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">$5.28</div>
+                            <div class="stat-label">Current TXC Price</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">138+</div>
+                            <div class="stat-label">Years Sustainable</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3 Min</div>
+                            <div class="stat-label">Block Time</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">353M</div>
+                            <div class="stat-label">Total Supply</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Why TexitCoin?</strong> Unlike Bitcoin with its slow transactions and high fees, TexitCoin is built for real-world use. It's the cryptocurrency that Texas needs for true economic independence.</p>
+                    
+                    <a href="#vision" class="cta-btn cta-primary" style="margin-top: 1rem; display: inline-flex;">
+                        Our Vision <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="section" id="vision">
+        <div class="container">
+            <h2 class="section-title">Our Vision & Mission</h2>
+            <p class="section-subtitle">How TexitCoin Titans Team supports your success every step of the way</p>
+            
+            <div class="vision-grid">
+                <div class="vision-card animate-on-scroll">
+                    <div class="vision-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h4>Who We Are</h4>
+                    <p>The TexitCoin Titans Team is a dedicated community of like-minded individuals committed to financial freedom through TexitCoin. We believe in the power of Texas independence and honest money.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>Experienced team of crypto professionals</li>
+                        <li>Passionate about Texas independence</li>
+                        <li>Committed to member success</li>
+                        <li>Building generational wealth together</li>
                     </ul>
                 </div>
-
-                <div class="founder-card">
-                    <h3>Founder: Bobby Gray</h3>
-                    <p>"I've been manufacturing gold, silver and copper coins for the past sixteen years. In 2012, I had the honor of creating the original Bitcoin coin, which has since become one of the most renowned coins worldwide."</p>
-                    <p>"Today, I'm here to introduce you to the future of crypto in America. It's called TexitCoin – faster, cheaper, and superior in every way."</p>
+                
+                <div class="vision-card animate-on-scroll">
+                    <div class="vision-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>How We Support You</h4>
+                    <p>When you join our team, you're not just getting access to TexitCoin - you're getting a complete support system designed for your success.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>Free customized website copy</li>
+                        <li>Ongoing maintenance & unlimited edits</li>
+                        <li>Comprehensive training resources</li>
+                        <li>Step-by-step video tutorials</li>
+                        <li>Downloadable PDFs & guides</li>
+                        <li>WhatsApp & Telegram support groups</li>
+                        <li>Access to vibrant TexitCoin community</li>
+                        <li>24/7 dedicated support</li>
+                    </ul>
+                </div>
+                
+                <div class="vision-card animate-on-scroll">
+                    <div class="vision-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Your Success Path</h4>
+                    <p>We've created a proven system that helps ordinary people achieve extraordinary results with TexitCoin mining and affiliate marketing.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>Earn up to $3,000 per week potential</li>
+                        <li>Multiple income streams available</li>
+                        <li>Proven affiliate marketing system</li>
+                        <li>Community of successful members</li>
+                        <li>Ongoing mentorship & guidance</li>
+                        <li>Tools for long-term success</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="section section-gray">
+    <!-- Member Offer Section -->
+    <section class="offer-highlight">
         <div class="container">
-            <h2 class="section-title">Free Resources & Downloads</h2>
-            <p class="section-subtitle">Access comprehensive documentation, training materials, and resources to maximize your TexitCoin success.</p>
-            
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3 class="resource-title">Compensation Plan</h3>
-                    <p class="resource-description">Detailed breakdown of the binary compensation structure and earning potential.</p>
-                    <a href="#" class="resource-btn">
-                        <i class="fas fa-download"></i> Download Now
-                    </a>
+            <div class="offer-content">
+                <div class="offer-badge">🎁 Exclusive Member Benefit</div>
+                <h2 class="offer-title">Get Your Free TexitCoin Website</h2>
+                <p class="offer-description">
+                    When new members join TexitCoin through our affiliate link, they receive a full copy of texitcointitans.com customized with their details. We host and maintain it for free. Members only need to provide their affiliate link and contact info.
+                </p>
+                
+                <div class="eligibility-note">
+                    <h5>📋 Eligibility Requirements:</h5>
+                    <p>To activate a TexitCoin affiliate link, a user must purchase at least one TXC Mining Node. Sharing the affiliate link is recommended to grow commissions and support TexitCoin's mission to expand mining facilities in Texas, USA and beyond, grow the TexitCoin ecosystem, market the TXC coin, pay affiliate commissions, and much more.</p>
                 </div>
-
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-download"></i>
-                    </div>
-                    <h3 class="resource-title">TexitCoin Litepaper</h3>
-                    <p class="resource-description">Technical documentation and vision behind the TexitCoin project.</p>
-                    <a href="#" class="resource-btn">
-                        <i class="fas fa-download"></i> Download Now
+                
+                <div class="cta-buttons">
+                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Journey
                     </a>
-                </div>
-
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="resource-title">Training Materials</h3>
-                    <p class="resource-description">Complete video library and step-by-step guides for getting started.</p>
-                    <a href="#" class="resource-btn">
-                        <i class="fas fa-download"></i> Download Now
+                    <a href="https://wa.me/27721714626" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        Ask Questions
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section cta-section">
+    <!-- Final CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Ready to Join the Revolution?</h2>
-            <p>Don't miss your chance to be part of the TexitCoin movement. Secure your mining package today and start building generational wealth with Texas independence.</p>
-            
-            <div class="cta-container">
+            <h2>Ready to Become a Titan?</h2>
+            <p>Join thousands of Texans who are building wealth and supporting independence through TexitCoin</p>
+            <div class="cta-buttons">
                 <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-rocket"></i>
-                    Start Mining Now
+                    Mine TXC Now
                 </a>
-                <a href="https://wa.me/27721714626" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-phone"></i>
-                    Get Support
+                <a href="/getting-started-with-texitcoin.html" class="cta-btn cta-secondary">
+                    <i class="fas fa-book"></i>
+                    Getting Started Guide
                 </a>
             </div>
         </div>
@@ -1093,43 +939,59 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>TexitCoin</h3>
-                    <p>Made in Texas, for Texans. Join the cryptocurrency revolution supporting Texas independence and honest money.</p>
+                    <h4>TexitCoin Titans</h4>
+                    <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy">Mining Packages</a></li>
-                        <li><a href="#videos">Video Tutorials</a></li>
-                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="/getting-started-with-texitcoin.html">Getting Started</a></li>
+                        <li><a href="#founder">Meet Bobby Gray</a></li>
+                        <li><a href="#company">About TexitCoin</a></li>
+                        <li><a href="#vision">Our Vision</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="#videos">Getting Started</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="https://wa.me/27721714626">WhatsApp Support</a></li>
-                        <li><a href="https://wa.me/27721714626">Contact Us</a></li>
+                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Training Videos</a></li>
+                        <li><a href="#">Download PDFs</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Legal</h3>
+                    <h4>Support</h4>
                     <ul class="footer-links">
-                        <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#disclaimer">Disclaimer</a></li>
-                        <li><a href="#affiliate">Affiliate Disclosure</a></li>
+                        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+                        <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+                        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 TexitCoin. All rights reserved. | Jobs = modern slavery. Recurring income = financial sovereignty.</p>
+                <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
             </div>
         </div>
     </footer>
@@ -1140,10 +1002,18 @@
     </button>
 
     <script>
-        // Progress Bar and Scroll Functionality
+        // Progress Bar and Navigation
         window.addEventListener('scroll', () => {
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.getElementById('progressBar').style.width = scrolled + '%';
+            
+            // Navigation background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
             
             // Show/hide scroll to top button
             const scrollTop = document.getElementById('scrollTop');
@@ -1165,16 +1035,36 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offsetTop = target.offsetTop - 80; // Account for fixed nav
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
         // Add hover effects to buttons
-        document.querySelectorAll('.cta-btn, .package-btn, .video-btn, .resource-btn').forEach(btn => {
+        document.querySelectorAll('.cta-btn').forEach(btn => {
             btn.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-2px) scale(1.02)';
             });
@@ -1184,35 +1074,19 @@
             });
         });
 
-        // Play button functionality for videos
-        document.querySelectorAll('.play-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                // This would typically open a video modal or redirect to video
-                alert('Video tutorial would open here. Replace with actual video functionality.');
+        // Add click tracking for analytics (optional)
+        document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Track affiliate link clicks
+                console.log('Affiliate link clicked:', this.href);
             });
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Track WhatsApp clicks
+                console.log('WhatsApp link clicked:', this.href);
             });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.benefit-card, .package-card, .video-card, .resource-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
         });
     </script>
 </body>
