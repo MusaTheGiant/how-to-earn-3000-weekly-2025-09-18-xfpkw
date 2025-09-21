@@ -296,6 +296,162 @@
  transform: translateY(-3px);
  }
 
+ /* Video Section Styles */
+ .video-section {
+ padding: 5rem 0;
+ background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .video-section::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.03)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
+ background-size: cover;
+ opacity: 0.5;
+ }
+
+ .video-content {
+ position: relative;
+ z-index: 2;
+ text-align: center;
+ }
+
+ .video-header {
+ margin-bottom: 3rem;
+ }
+
+ .video-badge {
+ display: inline-block;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 0.5rem 1.5rem;
+ border-radius: 50px;
+ font-weight: 700;
+ margin-bottom: 1.5rem;
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ box-shadow: var(--red-shadow);
+ }
+
+ .video-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(2rem, 4vw, 3.5rem);
+ font-weight: 900;
+ color: var(--deep-blue);
+ margin-bottom: 1rem;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .video-subtitle {
+ font-size: clamp(1rem, 2vw, 1.3rem);
+ color: var(--text-secondary);
+ max-width: 600px;
+ margin: 0 auto 2rem;
+ line-height: 1.7;
+ }
+
+ .video-container {
+ max-width: 900px;
+ margin: 0 auto;
+ position: relative;
+ background: var(--white);
+ border-radius: 20px;
+ box-shadow: var(--card-shadow);
+ overflow: hidden;
+ transition: all 0.3s ease;
+ }
+
+ .video-container:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 20px 60px rgba(38, 34, 98, 0.2);
+ }
+
+ .video-wrapper {
+ position: relative;
+ width: 100%;
+ height: 0;
+ padding-bottom: 56.25%; /* 16:9 aspect ratio */
+ background: var(--gradient-blue);
+ }
+
+ .video-iframe {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: none;
+ border-radius: 0;
+ }
+
+ .video-info {
+ padding: 2rem;
+ text-align: center;
+ background: var(--white);
+ }
+
+ .video-description {
+ color: var(--text-secondary);
+ font-size: 1.1rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ }
+
+ .video-cta {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 1rem 2rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ box-shadow: var(--red-shadow);
+ }
+
+ .video-cta:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 15px 40px rgba(190, 31, 36, 0.4);
+ color: var(--white);
+ text-decoration: none;
+ }
+
+ .video-stats {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ padding-top: 3rem;
+ border-top: 1px solid rgba(38, 34, 98, 0.1);
+ }
+
+ .video-stat {
+ text-align: center;
+ }
+
+ .video-stat-number {
+ font-family: 'Orbitron', monospace;
+ font-size: 2rem;
+ font-weight: 900;
+ color: var(--bold-red);
+ margin-bottom: 0.5rem;
+ }
+
+ .video-stat-label {
+ font-size: 0.9rem;
+ color: var(--text-secondary);
+ font-weight: 500;
+ }
+
  /* Section Styles */
  .section {
  padding: 5rem 0;
@@ -778,6 +934,26 @@
  bottom: 1rem;
  right: 1rem;
  }
+
+ /* Video section mobile styles */
+ .video-section {
+ padding: 3rem 0;
+ }
+
+ .video-info {
+ padding: 1.5rem;
+ }
+
+ .video-stats {
+ grid-template-columns: repeat(2, 1fr);
+ gap: 1.5rem;
+ margin-top: 2rem;
+ padding-top: 2rem;
+ }
+
+ .video-stat-number {
+ font-size: 1.5rem;
+ }
  }
 
  @media (max-width: 480px) {
@@ -794,6 +970,11 @@
  padding: 0.8rem 1.5rem;
  font-size: 0.95rem;
  }
+
+ .video-stats {
+ grid-template-columns: 1fr;
+ gap: 1rem;
+ }
  }
 
  /* Animation Classes */
@@ -806,6 +987,11 @@
  .animate-on-scroll.animated {
  opacity: 1;
  transform: translateY(0);
+ }
+
+ /* Video Section Animation */
+ .video-container {
+ animation: fadeInUp 0.8s ease-out;
  }
 
  /* Loading States */
@@ -918,6 +1104,7 @@
 <a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Join Now</a>
 </div>
 </nav>
+
 <!-- Hero Section -->
 <section class="hero" id="home">
 <div class="container">
@@ -925,7 +1112,7 @@
 <h1>Is Texas Leading the Charge for Financial Sovereignty?</h1>
 <p class="hero-subtitle">A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence.</p>
 <p class="hero-description">
- TexitCoin is more than technology it’s a movement fueled by Texas pride and the spirit of community ownership. Permissioned mining, fast transactions, and a transparent blockchain empower Texans to take control of their financial future. Step into the revolution where independence and innovation meet.
+ TexitCoin is more than technology it's a movement fueled by Texas pride and the spirit of community ownership. Permissioned mining, fast transactions, and a transparent blockchain empower Texans to take control of their financial future. Step into the revolution where independence and innovation meet.
  </p>
 <div class="cta-buttons">
 <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
@@ -940,6 +1127,65 @@
 </div>
 </div>
 </section>
+
+<!-- Video Section -->
+<section class="video-section" id="intro-video">
+<div class="container">
+<div class="video-content">
+<div class="video-header">
+<span class="video-badge">
+<i class="fas fa-play"></i>
+Featured Video
+</span>
+<h2 class="video-title">
+Discover the Power of TexitCoin Mining
+</h2>
+<p class="video-subtitle">
+Watch this exclusive introduction to understand how TexitCoin is revolutionizing financial sovereignty in Texas and beyond.
+</p>
+</div>
+
+<div class="video-container">
+<div class="video-wrapper">
+<iframe class="video-iframe" 
+src="https://www.youtube.com/embed/-cQ4O0kmMN0" 
+title="Discover the Power of TexitCoin Mining"
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen
+loading="lazy">
+</iframe>
+</div>
+
+<div class="video-info">
+<p class="video-description">
+Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cryptocurrency that puts financial control back in your hands.
+</p>
+<a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
+<i class="fas fa-rocket"></i>
+Start Mining Now
+</a>
+</div>
+</div>
+
+<div class="video-stats">
+<div class="video-stat">
+<div class="video-stat-number">24/7</div>
+<div class="video-stat-label">Mining Rewards</div>
+</div>
+<div class="video-stat">
+<div class="video-stat-number">100%</div>
+<div class="video-stat-label">Texas Made</div>
+</div>
+<div class="video-stat">
+<div class="video-stat-number">∞</div>
+<div class="video-stat-label">Potential</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Footer -->
 <footer class="footer">
 <div class="container">
@@ -997,10 +1243,12 @@
 </div>
 </div>
 </footer>
+
 <!-- Scroll to Top Button -->
 <button aria-label="Scroll to top" class="scroll-top" id="scrollTop" onclick="scrollToTop()">
 <i class="fas fa-arrow-up"></i>
 </button>
+
 <script>
  // Performance optimizations
  let ticking = false;
