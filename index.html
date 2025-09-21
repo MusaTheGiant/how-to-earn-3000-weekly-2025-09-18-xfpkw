@@ -940,15 +940,27 @@
  padding: 3rem 0;
  }
 
+ .video-container {
+ margin: 0 -1rem; /* Full width on mobile */
+ border-radius: 0; /* Remove border radius for full width */
+ }
+
  .video-info {
  padding: 1.5rem;
  }
 
+ /* Hide video description and stats on mobile */
+ .video-description {
+ display: none;
+ }
+
  .video-stats {
- grid-template-columns: repeat(2, 1fr);
- gap: 1.5rem;
- margin-top: 2rem;
- padding-top: 2rem;
+ display: none;
+ }
+
+ /* Add margin to CTA button since description is hidden */
+ .video-cta {
+ margin-top: 1rem;
  }
 
  .video-stat-number {
@@ -971,9 +983,13 @@
  font-size: 0.95rem;
  }
 
- .video-stats {
- grid-template-columns: 1fr;
- gap: 1rem;
+ /* Video section adjustments for very small screens */
+ .video-section {
+ padding: 2rem 0;
+ }
+
+ .video-info {
+ padding: 1rem;
  }
  }
 
