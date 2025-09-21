@@ -1,725 +1,1177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TexitCoin Titans Team - Your Path to $3,000 Per Week | Join the Revolution</title>
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-  <meta name="description" content="Join the TexitCoin Titans Team and earn up to $3,000 per week with TexitCoin mining. Get a free customized website, training, and support." />
-  <meta name="keywords" content="TexitCoin Titans, TXC mining, earn $3000 per week, affiliate program, Bobby Gray, TexitCoin" />
-  <link rel="canonical" href="https://texitcointitans.com/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TexitCoin Titans Team - Your Path to $3000 Per Week | Join the Revolution</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="Join the TexitCoin Titans Team and earn up to $3000 per week with TexitCoin mining. Get your free customized website, training, and support. Made in Texas, for Texans.">
+    <meta name="keywords" content="TexitCoin Titans, TXC mining, earn $3000 per week, Texas cryptocurrency, affiliate program, Bobby Gray, TEXIT">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TexitCoin Titans Team - Your Path to $3000 Per Week">
+    <meta property="og:description" content="Join the TexitCoin Titans Team and earn up to $3000 per week with TexitCoin mining.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texitcointitans.com">
+    <meta property="og:image" content="https://texitcointitans.com/images/txc-logo.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --deep-blue: #262262;
+            --bold-red: #be1f24;
+            --white: #ffffff;
+            --dark-shade: #130c0e;
+            --text-primary: #130c0e;
+            --text-secondary: #666666;
+            --text-light: #ffffff;
+            --gradient-red: linear-gradient(135deg, #be1f24 0%, #d32f2f 100%);
+            --gradient-blue: linear-gradient(135deg, #262262 0%, #3a2d8a 100%);
+            --gradient-hero: linear-gradient(135deg, #262262 0%, #3a2d8a 50%, #4a3a9a 100%);
+            --card-shadow: 0 8px 32px rgba(38, 34, 98, 0.15);
+            --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
+        }
 
-  <!-- Fonts and icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Basic structured data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"TexitCoin Titans Team",
-    "url":"https://texitcointitans.com",
-    "logo":"https://texitcointitans.com/images/txc-logo.jpg",
-    "sameAs":[
-      "https://www.facebook.com/TexitCoinTitans",
-      "https://www.tiktok.com/@texitcointitans",
-      "https://www.youtube.com/@TexitCoinTitans"
-    ]
-  }
-  </script>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-  <style>
-    :root{
-      --primary-red:#dc2626;
-      --primary-blue:#1e40af;
-      --dark-blue:#1e3a8a;
-      --gold:#fbbf24;
-      --text-dark:#111827;
-      --text-light:#6b7280;
-      --bg-light:#f9fafb;
-      --white:#ffffff;
-      --gradient-hero: linear-gradient(135deg,#1e40af 0%,#dc2626 100%);
-      --gradient-cta: linear-gradient(135deg,#dc2626 0%,#b91c1c 100%);
-      --shadow-lg: 0 12px 20px rgba(0,0,0,0.08);
-      --max-width:1200px;
-      --nav-height:72px;
-      --focus-ring: 3px solid rgba(29,78,216,0.15);
-    }
+        .font-orbitron {
+            font-family: 'Orbitron', monospace;
+        }
 
-    /* Reset and base */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-      color:var(--text-dark);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      background:var(--white);
-      -webkit-tap-highlight-color:transparent;
-    }
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            z-index: 1000;
+            background: rgba(38, 34, 98, 0.1);
+        }
 
-    a{color:inherit}
-    img{max-width:100%;display:block;height:auto}
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-red);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
 
-    /* Skip link for accessibility */
-    .skip-link{
-      position: absolute;
-      left:-9999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
-    }
-    .skip-link:focus{
-      left:1rem;
-      top:1rem;
-      width:auto;
-      height:auto;
-      padding:0.5rem 1rem;
-      background:#111827;
-      color:#fff;
-      z-index:2000;
-      border-radius:6px;
-    }
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+            z-index: 999;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
 
-    /* Progress bar and percentage */
-    .progress-wrap{
-      position:fixed;
-      top:0;
-      left:0;
-      right:0;
-      height:4px;
-      z-index:1200;
-      background:transparent;
-    }
-    .progress-bar{
-      width:0%;
-      height:4px;
-      background:var(--gradient-cta);
-      transition:width 0.2s linear;
-    }
-    .progress-percent{
-      position:fixed;
-      top:8px;
-      right:12px;
-      background:rgba(0,0,0,0.6);
-      color:#fff;
-      padding:2px 8px;
-      border-radius:12px;
-      font-size:12px;
-      z-index:1201;
-      font-weight:600;
-      backdrop-filter:blur(4px);
-      display:none;
-    }
-    @media(min-width:640px){ .progress-percent{display:block} }
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--card-shadow);
+        }
 
-    /* Navigation */
-    nav.nav{
-      position:fixed;
-      left:0;right:0;top:0;
-      height:var(--nav-height);
-      display:flex;
-      align-items:center;
-      z-index:1100;
-      background:rgba(255,255,255,0.90);
-      backdrop-filter:blur(6px);
-      border-bottom:1px solid rgba(15,23,42,0.04);
-      transition:padding 0.25s ease,box-shadow 0.25s ease,background 0.25s ease;
-    }
-    nav.nav.scrolled{ box-shadow:var(--shadow-lg) }
-    .nav-container{
-      width:100%;
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding:0 1.25rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:0.75rem;
-      text-decoration:none;
-      color:var(--primary-blue);
-      font-family:'Orbitron',sans-serif;
-      font-weight:800;
-      font-size:1.125rem;
-    }
-    .logo img{height:40px;width:auto;border-radius:6px;object-fit:contain}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .nav-links{
-      display:flex;
-      gap:1.25rem;
-      list-style:none;
-      align-items:center;
-      margin:0;
-      padding:0;
-    }
-    .nav-links a{
-      text-decoration:none;
-      color:var(--text-dark);
-      font-weight:600;
-      font-size:0.95rem;
-      padding:8px 6px;
-      border-radius:8px;
-    }
-    .nav-links a:focus{outline:none;box-shadow:var(--focus-ring)}
-    .cta-join{
-      margin-left:1rem;
-      padding:0.6rem 1rem;
-      border-radius:999px;
-      background:var(--gradient-cta);
-      color:var(--white);
-      text-decoration:none;
-      font-weight:700;
-      display:inline-flex;
-      gap:0.6rem;
-      align-items:center;
-      transition:transform .18s ease;
-    }
-    .cta-join:active,.cta-join:focus{transform:translateY(-1px)}
-    .nav-actions{
-      display:flex;
-      gap:0.5rem;
-      align-items:center;
-    }
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+            text-decoration: none;
+        }
 
-    /* Mobile */
-    .mobile-toggle{
-      display:none;
-      background:transparent;
-      border:0;
-      font-size:1.2rem;
-      padding:8px;
-    }
-    @media(max-width:880px){
-      .nav-links{display:none}
-      .mobile-toggle{display:block}
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    /* Container */
-    .container{max-width:var(--max-width);margin:0 auto;padding:0 1.25rem}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-    /* Hero */
-    .hero{
-      background:var(--gradient-hero);
-      color:var(--white);
-      padding:calc(var(--nav-height) + 48px) 0 60px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-inner{
-      text-align:center;
-      max-width:920px;
-      margin:0 auto;
-      position:relative;
-      z-index:2;
-    }
-    .hero h1{
-      font-family:'Orbitron',sans-serif;
-      font-size:clamp(2.25rem,5vw,3.6rem);
-      margin:0 0 0.75rem;
-      line-height:1.02;
-      letter-spacing:-0.02em;
-    }
-    .hero .subtitle{
-      font-size:clamp(1rem,2.2vw,1.2rem);
-      margin-bottom:1rem;
-      opacity:0.95;
-    }
-    .hero .desc{
-      font-size:clamp(0.95rem,1.8vw,1.07rem);
-      max-width:760px;
-      margin:0 auto 1.75rem;
-      opacity:0.95;
-      line-height:1.65;
-    }
-    .cta-row{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:0.6rem;
-      padding:0.9rem 1.6rem;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:800;
-      font-size:0.98rem;
-      border:0;
-      cursor:pointer;
-    }
-    .btn-primary{
-      background:var(--white);
-      color:var(--primary-red);
-      box-shadow:var(--shadow-lg);
-    }
-    .btn-secondary{
-      background:transparent;
-      color:var(--white);
-      border:2px solid rgba(255,255,255,0.18);
-    }
+        .nav-links a:hover {
+            color: var(--bold-red);
+        }
 
-    /* Sections */
-    .section{padding:64px 0}
-    .section.light{background:var(--bg-light)}
-    .section .section-title{
-      font-family:'Orbitron',sans-serif;
-      text-align:center;
-      font-size:clamp(1.6rem,3.5vw,2.2rem);
-      margin-bottom:0.5rem;
-      color:var(--text-dark);
-    }
-    .section .section-sub{ text-align:center;color:var(--text-light);max-width:720px;margin:0 auto 1.5rem }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--bold-red);
+            transition: width 0.3s ease;
+        }
 
-    /* Grids */
-    .grid{display:grid;gap:1.25rem}
-    .founder-grid{grid-template-columns:1fr 1.5fr;align-items:center;gap:2rem;margin-top:1.25rem}
-    .company-grid{grid-template-columns:1fr 1fr;align-items:center;gap:2rem;margin-top:1.25rem}
-    @media(max-width:880px){
-      .founder-grid,.company-grid{grid-template-columns:1fr;text-align:center}
-      .founder-grid img{margin:0 auto}
-    }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-    .card{background:var(--white);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow-lg)}
-    .founder-image img{border-radius:14px}
-    .founder-badge{position:absolute;top:-12px;right:-12px;background:var(--gradient-cta);color:#fff;padding:10px;border-radius:50%;box-shadow:var(--shadow-lg)}
+        .nav-cta {
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
 
-    .company-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
-    @media(max-width:480px){ .company-stats{grid-template-columns:1fr} }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--red-shadow);
+        }
 
-    .stat-card{text-align:center;padding:1rem;border-radius:12px;background:var(--white);box-shadow:var(--shadow-lg)}
-    .stat-number{font-family:'Orbitron',sans-serif;font-size:1.4rem;color:var(--primary-red);font-weight:900}
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
 
-    /* Vision grid */
-    .vision-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
-    .vision-card{padding:1.25rem;border-radius:14px;background:var(--white);box-shadow:var(--shadow-lg);transition:transform .18s ease}
-    .vision-card:hover{transform:translateY(-6px)}
-    .benefits-list{list-style:none;padding:0;margin:0}
-    .benefits-list li{margin:0.45rem 0;padding-left:0.5rem}
+        /* Hero Section */
+        .hero {
+            min-height: 75vh;
+            background: var(--gradient-hero);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 0;
+        }
 
-    /* Offer highlight */
-    .offer{
-      padding:40px 0;
-      color:var(--white);
-      background:var(--gradient-hero);
-      border-top:1px solid rgba(255,255,255,0.04);
-      border-bottom:1px solid rgba(255,255,255,0.04);
-    }
-    .offer .badge{display:inline-block;background:var(--gold);color:var(--text-dark);padding:6px 12px;border-radius:999px;font-weight:700;margin-bottom:12px}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(190,31,36,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            animation: float 20s ease-in-out infinite;
+        }
 
-    /* CTA */
-    .cta-section{background:var(--text-dark);color:var(--white);text-align:center;padding:48px 0}
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
 
-    /* Footer */
-    footer.footer{background:var(--bg-light);padding:36px 0;border-top:1px solid rgba(0,0,0,0.04)}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-    .footer a{color:var(--text-light);text-decoration:none}
-    .social-links{display:flex;gap:0.5rem;margin-top:8px}
-    .social-links a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:var(--primary-blue);color:#fff}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
 
-    /* Scroll-top */
-    .scroll-top{
-      position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:999px;border:0;background:var(--gradient-cta);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);z-index:1200;cursor:pointer;opacity:0;visibility:hidden;transition:all .2s ease;
-    }
-    .scroll-top.visible{opacity:1;visibility:visible;transform:translateY(-6px)}
-    .scroll-top:focus{outline:none;box-shadow:var(--focus-ring)}
+        .hero-content {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
 
-    /* Utilities */
-    .muted{color:var(--text-light)}
-    .small{font-size:0.9rem}
-    .center{text-align:center}
-    .mb-4{margin-bottom:1rem}
-    .mt-2{margin-top:0.5rem}
-    .btn-inline{display:inline-flex;align-items:center;gap:0.5rem}
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /* Reduced motion preference */
-    @media (prefers-reduced-motion: reduce){
-      *{transition:none!important;animation:none!important}
-    }
-  </style>
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.4s both;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .cta-primary {
+            background: var(--gradient-red);
+            color: var(--white);
+            box-shadow: var(--red-shadow);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+        }
+
+        .cta-secondary {
+            background: #25D366;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .cta-secondary:hover {
+            background: #ffffff;
+            color: #25D366;
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-alt {
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Founder Section */
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .founder-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--gradient-cta);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .founder-content h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .founder-credentials {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--gold);
+        }
+
+        .credentials-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .credentials-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .credentials-list li::before {
+            content: "🏆";
+            font-size: 1.2rem;
+        }
+
+        /* Company Section */
+        .company-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .company-logo {
+            text-align: center;
+        }
+
+        .company-logo img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+        }
+
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Vision & Mission Section */
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .vision-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-cta);
+        }
+
+        .vision-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-cta);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-card h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .benefits-list li::before {
+            content: "✅";
+            font-size: 1.1rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Member Offer Section */
+        .offer-highlight {
+            background: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') repeat;
+        }
+
+        .offer-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--text-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .offer-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-description {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .eligibility-note {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold);
+            text-align: left;
+        }
+
+        .eligibility-note h5 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #262262;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(38, 34, 98, 0.2);
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            color: #ffffff;
+        }
+
+        .footer-section h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .footer-section p {
+            color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bold-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--bold-red);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .footer-bottom p {
+            color: #ffffff;
+        }
+
+        .footer-content {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .footer-content p {
+            color: #ffffff;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+        }
+
+        .scroll-top i {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 3rem 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+                margin-bottom: 1rem;
+            }
+
+            .hero-description {
+                font-size: clamp(0.9rem, 4vw, 1.1rem);
+                margin-bottom: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .scroll-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                min-height: 65vh;
+                padding: 2rem 0;
+            }
+
+            .cta-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading States */
+        img {
+            transition: opacity 0.3s ease;
+        }
+
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+
+        /* Performance Optimizations */
+        .hero::before {
+            will-change: transform;
+        }
+
+        .cta-btn:hover {
+            will-change: transform;
+        }
+
+        /* Focus States */
+        .cta-btn:focus,
+        .nav-cta:focus,
+        .scroll-top:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .nav-links a:focus {
+            outline: 2px solid var(--bold-red);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--white);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-blue);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--deep-blue);
+        }
+    </style>
 </head>
 <body>
-  <a class="skip-link" href="#maincontent">Skip to main content</a>
-
-  <!-- Progress and percent -->
-  <div class="progress-wrap" aria-hidden="true">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-  <div class="progress-percent" id="progressPercent" aria-hidden="true">0%</div>
-
-  <!-- Navigation -->
-  <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-container">
-      <a class="logo" href="/" aria-label="TexitCoin Titans, go to home">
-        <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Titans logo" />
-        TexitCoin Titans
-      </a>
-
-      <ul class="nav-links" role="menubar" aria-hidden="false">
-        <li role="none"><a role="menuitem" href="#home">Home</a></li>
-        <li role="none"><a role="menuitem" href="#founder">Founder</a></li>
-        <li role="none"><a role="menuitem" href="#company">Company</a></li>
-        <li role="none"><a role="menuitem" href="#vision">Vision</a></li>
-        <li role="none"><a role="menuitem" href="/getting-started-with-texitcoin.html">Getting Started</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="mobile-toggle" aria-label="Open menu" onclick="toggleMobileMenu(event)"><i class="fas fa-bars" aria-hidden="true"></i></button>
-
-        <!-- Previous page button -->
-        <button class="btn btn-inline" title="Go back to previous page" onclick="goBack()" aria-label="Go back to previous page">
-          <i class="fas fa-arrow-left" aria-hidden="true"></i>
-          <span class="small muted" style="margin-left:6px">Back</span>
-        </button>
-
-        <a class="cta-join" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Join Now <i class="fas fa-rocket" aria-hidden="true"></i></a>
-      </div>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
     </div>
-  </nav>
 
-  <main id="maincontent" tabindex="-1" aria-labelledby="homeTitle">
-    <!-- Hero -->
-    <header class="hero" id="home" role="banner" aria-label="Hero section">
-      <div class="container hero-inner">
-        <h1 id="homeTitle">Become a TexitCoin Titan</h1>
-        <p class="subtitle">Turn knowledge and action into steady income with TexitCoin</p>
-        <p class="desc">
-          We are a focused, supportive team that equips people worldwide with the information, tools, strategies, and hands-on support they need to succeed with TexitCoin. Our mission is to help ordinary people earn up to $3,000 per week with TexitCoin. Join us, become a Titan, and let us make it happen together.
-        </p>
-
-        <div class="cta-row" role="region" aria-label="Primary calls to action">
-          <a class="btn btn-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-rocket" aria-hidden="true"></i>
-            Mine TXC Now
-          </a>
-
-          <a class="btn btn-secondary" href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            Let us chat now
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <!-- Founder -->
-    <section class="section" id="founder" aria-labelledby="founderTitle">
-      <div class="container">
-        <h2 class="section-title" id="founderTitle">Meet our founder</h2>
-        <p class="section-sub">The visionary leading the TexitCoin movement</p>
-
-        <div class="founder-grid">
-          <div class="founder-image" style="position:relative">
-            <img src="https://texitcointitans.com/images/Bobby-Gray-Texit-Coin-Founder.png" alt="Bobby Gray, TexitCoin founder" loading="lazy" width="520" height="420" />
-            <div class="founder-badge" aria-hidden="true"><i class="fas fa-star"></i></div>
-          </div>
-
-          <div>
-            <h3 style="font-family:'Orbitron',sans-serif;margin-top:0">Bobby Gray</h3>
-            <p class="muted">A proven entrepreneur and crypto veteran, Bobby brings deep experience in coins, custody, mining, and education. He leads TexitCoin with an emphasis on practical adoption and community success.</p>
-
-            <div class="card mt-2">
-              <strong style="display:block;margin-bottom:8px">Proven track record</strong>
-              <ul class="small muted">
-                <li>Founder and longtime leader in digital currency development</li>
-                <li>Industry experience building secure coin and mining tools</li>
-                <li>Long focus on practical adoption and education</li>
-              </ul>
-            </div>
-
-            <div style="margin-top:12px">
-              <a class="btn btn-primary" href="#company">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Company -->
-    <section class="section light" id="company" aria-labelledby="companyTitle">
-      <div class="container">
-        <h2 class="section-title" id="companyTitle">About TexitCoin</h2>
-        <p class="section-sub">A fast, mineable blockchain built for practical use</p>
-
-        <div class="company-grid">
-          <div class="center">
-            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin logo" loading="lazy" width="300" />
-          </div>
-
-          <div>
-            <h3 style="margin-top:0">TexitCoin: Built for real adoption</h3>
-            <p class="muted">TexitCoin is a mineable, low-fee blockchain designed to support commerce and community. It focuses on speed, cost efficiency, and practical mining for long-term sustainability.</p>
-
-            <div class="company-stats" aria-hidden="true">
-              <div class="stat-card">
-                <div class="stat-number">$5.28</div>
-                <div class="small muted">Example TXC price</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">3 min</div>
-                <div class="small muted">Typical block time</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">353M</div>
-                <div class="small muted">Example total supply</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">Live</div>
-                <div class="small muted">Active mining network</div>
-              </div>
-            </div>
-
-            <div style="margin-top:12px">
-              <a class="btn btn-primary" href="#vision">Our vision <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vision & Mission -->
-    <section class="section" id="vision" aria-labelledby="visionTitle">
-      <div class="container">
-        <h2 class="section-title" id="visionTitle">Vision and mission</h2>
-        <p class="section-sub">How the TexitCoin Titans Team supports members every step of the way</p>
-
-        <div class="vision-grid">
-          <div class="vision-card">
-            <h4 style="margin-top:0">Who we are</h4>
-            <p class="muted">A focused, practical team committed to helping people build sustainable income and long-term crypto holdings through TexitCoin mining and affiliate growth.</p>
-            <ul class="benefits-list muted">
-              <li>Experienced coaching and mentorship</li>
-              <li>Community-first approach</li>
-              <li>Products and training for long-term success</li>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">TexitCoin Titans</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
             </ul>
-          </div>
-
-          <div class="vision-card">
-            <h4 style="margin-top:0">How we support you</h4>
-            <p class="muted">Members get hands-on help and marketing tools designed to drive results.</p>
-            <ul class="benefits-list muted">
-              <li>Free customized website copy and setup</li>
-              <li>Ongoing hosting and maintenance</li>
-              <li>Unlimited edits on request</li>
-              <li>Step-by-step video tutorials and PDFs</li>
-              <li>WhatsApp and Telegram support groups</li>
-            </ul>
-          </div>
-
-          <div class="vision-card">
-            <h4 style="margin-top:0">Your success path</h4>
-            <p class="muted">Follow our proven system: set up mining, use the affiliate system, and use our marketing materials to scale earning potential.</p>
-            <ul class="benefits-list muted">
-              <li>Potential to earn up to $3,000 per week</li>
-              <li>Daily TXC mining rewards</li>
-              <li>Multiple ways to grow income</li>
-            </ul>
-          </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Now</a>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Become a TexitCoin Titan</h1>
+                <p class="hero-subtitle">Your Path to $3,000 Per Week Starts Here</p>
+                <p class="hero-description">
+                    We are a focused, supportive team that equips people worldwide with the information, tools, strategies, and hands-on support they need to succeed with TexitCoin. Our mission is to help ordinary people earn up to $3,000 per week with TexitCoin. Join us, become a Titan, and let's make it happen together.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-rocket"></i>
+                        Mine TXC Now
+                    </a>
+                    <a href="https://wa.me/27721714626" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        Let's Chat Now
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Offer -->
-    <section class="offer" aria-labelledby="offerTitle">
-      <div class="container center">
-        <div class="badge" style="display:inline-block">🎁 Exclusive member benefit</div>
-        <h2 id="offerTitle" style="margin-top:10px">Get your free TexitCoin website</h2>
-        <p class="muted center" style="max-width:760px;margin:10px auto 16px">When new members join through our affiliate link, they receive a full copy of texitcointitans.com customized with their affiliate link, contact details, video and PDF presentations, tutorial videos, downloadable resources, and more. We host and maintain it for you at no cost.</p>
-
-        <div class="card center" style="display:inline-block;max-width:880px">
-          <strong>Eligibility</strong>
-          <p class="small muted">To activate an affiliate link you must purchase at least one TXC mining node. We recommend sharing your affiliate link to grow commissions and support the TexitCoin ecosystem.</p>
-          <div style="margin-top:12px" class="cta-row">
-            <a class="btn btn-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start your journey</a>
-            <a class="btn btn-secondary" href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">Ask questions</a>
-          </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>TexitCoin Titans</h4>
+                    <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+                        <li><a href="#founder">Meet Bobby Gray</a></li>
+                        <li><a href="#company">About TexitCoin</a></li>
+                        <li><a href="#vision">Our Vision</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Training Videos</a></li>
+                        <li><a href="#">Download PDFs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+                        <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+                        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
+            </div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- Final CTA -->
-    <section class="cta-section" aria-labelledby="ctaTitle">
-      <div class="container">
-        <h2 id="ctaTitle">Ready to become a Titan?</h2>
-        <p class="muted">Join people who are building income and supporting adoption through TexitCoin</p>
-        <div style="margin-top:12px" class="cta-row center">
-          <a class="btn btn-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Mine TXC now</a>
-          <a class="btn btn-secondary" href="/getting-started-with-texitcoin.html">Getting started guide</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4 style="margin-top:0;font-family:'Orbitron',sans-serif;color:var(--primary-blue)">TexitCoin Titans</h4>
-          <p class="muted small">Your partner for practical TexitCoin adoption, mining, and affiliate growth.</p>
-          <div class="social-links" aria-label="Social links">
-            <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-            <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp group"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-          </div>
-        </div>
+    <script>
+        // Performance optimizations
+        let ticking = false;
 
-        <div>
-          <h4 style="font-family:'Orbitron',sans-serif;color:var(--primary-blue)">Quick links</h4>
-          <ul style="list-style:none;padding:0;margin:0" class="muted small">
-            <li><a href="#home">Home</a></li>
-            <li><a href="/getting-started-with-texitcoin.html">Getting Started</a></li>
-            <li><a href="#founder">Meet Bobby Gray</a></li>
-            <li><a href="#company">About TexitCoin</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="font-family:'Orbitron',sans-serif;color:var(--primary-blue)">Resources</h4>
-          <ul style="list-style:none;padding:0;margin:0" class="muted small">
-            <li><a href="#">Compensation plan</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Training videos</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="font-family:'Orbitron',sans-serif;color:var(--primary-blue)">Support</h4>
-          <ul style="list-style:none;padding:0;margin:0" class="muted small">
-            <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp support</a></li>
-            <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp group</a></li>
-            <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:18px;color:var(--text-light);font-size:0.92rem">
-        &copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll to top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" onclick="scrollToTop()">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-  </button>
-
-  <script>
-    // Basic helpers
-    function $(sel){return document.querySelector(sel)}
-    function $all(sel){return Array.from(document.querySelectorAll(sel))}
-
-    // Back button
-    function goBack(){
-      if (document.referrer && document.referrer !== window.location.href) {
-        history.back()
-      } else {
-        window.location.href = '/'
-      }
-    }
-
-    // Mobile menu placeholder (keeps file self-contained)
-    function toggleMobileMenu(e){
-      // Minimal mobile toggle: show a simple alert as placeholder or implement off-canvas
-      // For now, scroll to nav links area
-      const navLinks = document.querySelector('.nav-links')
-      if (!navLinks) return
-      const isHidden = getComputedStyle(navLinks).display === 'none'
-      if (isHidden) {
-        navLinks.style.display = 'flex'
-        navLinks.style.flexDirection = 'column'
-        navLinks.style.position = 'absolute'
-        navLinks.style.right = '1.25rem'
-        navLinks.style.top = '72px'
-        navLinks.style.background = 'rgba(255,255,255,0.98)'
-        navLinks.style.padding = '1rem'
-        navLinks.style.borderRadius = '8px'
-        navLinks.style.boxShadow = '0 8px 24px rgba(0,0,0,0.08)'
-      } else {
-        navLinks.style.display = 'none'
-      }
-    }
-
-    // Smooth anchor scroll that accounts for fixed nav
-    $all('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const href = this.getAttribute('href')
-        if (href === '#' || href === '') return
-        const target = document.querySelector(href)
-        if (!target) return
-        e.preventDefault()
-        const navHeight = document.getElementById('navbar').offsetHeight || 72
-        const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12
-        window.scrollTo({top, behavior:'smooth'})
-      })
-    })
-
-    // Scroll progress
-    const progressBar = $('#progressBar')
-    const progressPercent = $('#progressPercent')
-    const navbar = $('#navbar')
-    const scrollTopBtn = $('#scrollTop')
-
-    function updateProgress(){
-      const doc = document.documentElement
-      const scrollTop = window.scrollY || doc.scrollTop
-      const height = (doc.scrollHeight - window.innerHeight) || 1
-      const pct = Math.round((scrollTop / height) * 100)
-      progressBar.style.width = pct + '%'
-      progressPercent.textContent = pct + '%'
-      // nav style
-      if (scrollTop > 60) navbar.classList.add('scrolled')
-      else navbar.classList.remove('scrolled')
-      // scroll top visibility
-      if (scrollTop > 300) scrollTopBtn.classList.add('visible')
-      else scrollTopBtn.classList.remove('visible')
-    }
-
-    window.addEventListener('scroll', updateProgress, {passive:true})
-    window.addEventListener('resize', updateProgress)
-    document.addEventListener('DOMContentLoaded', updateProgress)
-
-    function scrollToTop(){
-      window.scrollTo({top:0, behavior:'smooth'})
-    }
-
-    // Intersection observer for reveal animations (lightweight)
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.style.opacity = 1
-          e.target.style.transform = 'none'
-          io.unobserve(e.target)
+        // Progress Bar and Navigation
+        function updateOnScroll() {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+            
+            // Navigation background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Show/hide scroll to top button
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+            
+            ticking = false;
         }
-      })
-    }, {threshold:0.12})
 
-    $all('.founder-grid,.company-grid,.vision-card,.offer,.cta-section,.section').forEach(el=>{
-      el.style.opacity = 0
-      el.style.transform = 'translateY(18px)'
-      el.style.transition = 'opacity 520ms ease, transform 520ms ease'
-      io.observe(el)
-    })
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        });
 
-    // Lightweight click trackers (console only)
-    $all('a').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const href = a.href || ''
-        if (href.includes('minetxc.com')) console.log('Affiliate clicked:', href)
-      })
-    })
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-    // Accessibility: focus visible fallback
-    document.body.addEventListener('keydown', function(e){
-      if(e.key === 'Tab') document.body.classList.add('show-focus')
-    })
-  </script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed nav
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll with performance optimization
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lazy loading for images
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        // Enhanced button interactions
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+
+            // Add click feedback
+            btn.addEventListener('click', function() {
+                this.style.transform = 'translateY(0) scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-2px) scale(1.02)';
+                }, 150);
+            });
+        });
+
+        // Analytics tracking (placeholder - replace with your analytics)
+        function trackEvent(eventName, properties = {}) {
+            console.log('Event tracked:', eventName, properties);
+            // Replace with your analytics implementation
+        }
+
+        // Track affiliate link clicks
+        document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
+            link.addEventListener('click', function() {
+                trackEvent('affiliate_link_clicked', {
+                    url: this.href,
+                    location: this.closest('section')?.id || 'unknown'
+                });
+            });
+        });
+
+        // Track WhatsApp clicks
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                trackEvent('whatsapp_clicked', {
+                    location: this.closest('section')?.id || 'unknown'
+                });
+            });
+        });
+
+        // Track section views
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                    trackEvent('section_viewed', {
+                        section: entry.target.id
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('section[id]').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Enhanced accessibility
+        document.addEventListener('keydown', function(e) {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            }
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            trackEvent('page_loaded', {
+                load_time: performance.now()
+            });
+        });
+
+        // Error handling
+        window.addEventListener('error', function(e) {
+            console.error('Page error:', e.error);
+        });
+
+        // Update current TXC price (placeholder - replace with real API)
+        function updateTXCPrice() {
+            // This would typically fetch from a real API
+            // For now, using the price from search results
+            const priceElement = document.querySelector('.stat-number');
+            if (priceElement && priceElement.textContent.includes('$')) {
+                // Price already set in HTML
+                trackEvent('price_displayed', {
+                    price: priceElement.textContent
+                });
+            }
+        }
+
+        updateTXCPrice();
+    </script>
 </body>
 </html>
