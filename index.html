@@ -941,8 +941,12 @@
  }
 
  .video-container {
- margin: 0 -1rem; /* Full width on mobile */
- border-radius: 0; /* Remove border radius for full width */
+ max-width: 95%;
+ margin: 0 auto;
+ }
+
+ .video-title {
+ font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
  }
 
  .video-info {
