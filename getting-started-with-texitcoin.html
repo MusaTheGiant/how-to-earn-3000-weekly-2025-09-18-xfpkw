@@ -41,6 +41,42 @@
             --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
         }
 
+        /* Header Navigation */
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .back-home-btn {
+            color: var(--deep-blue);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+
+        .back-home-btn:hover {
+            color: var(--bold-red);
+        }
+
+        .back-home-btn i {
+            font-size: 1.1rem;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--white);
@@ -607,6 +643,14 @@
                 font-size: 0.8rem;
             }
 
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .back-home-btn {
+                font-size: 0.9rem;
+            }
+
             .main-content {
                 padding: 3rem 0;
             }
@@ -652,6 +696,10 @@
                 font-size: clamp(1.5rem, 5vw, 2.2rem);
                 margin-bottom: 2rem;
             }
+
+            .back-home-btn {
+                font-size: 0.8rem;
+            }
         }
 
         /* Smooth scrolling */
@@ -683,6 +731,18 @@
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="https://texitcointitans.com/" class="back-home-btn">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
