@@ -789,8 +789,6 @@
         }
 
         // Progress Bar and Scroll Functionality
-        let lastScrollTop = 0;
-        
         window.addEventListener('scroll', () => {
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.getElementById('progressBar').style.width = scrolled + '%';
@@ -805,20 +803,6 @@
             } else {
                 scrollTopBtn.classList.remove('visible');
             }
-            
-            // Auto-hide/show header on scroll
-            const header = document.getElementById('header');
-            const currentScrollTop = window.scrollY;
-            
-            if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
-                // Scrolling down - hide header
-                header.classList.add('hidden');
-            } else if (currentScrollTop < lastScrollTop) {
-                // Scrolling up - show header
-                header.classList.remove('hidden');
-            }
-            
-            lastScrollTop = currentScrollTop;
         });
 
         document.getElementById('scrollTop').addEventListener('click', () => {
