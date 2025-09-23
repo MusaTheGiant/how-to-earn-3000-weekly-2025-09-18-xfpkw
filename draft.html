@@ -392,7 +392,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--space-2xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--surface-secondary);
   position: relative;
 }
@@ -401,17 +401,17 @@ body {
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .separator-logo {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 var(--space-lg);
-  box-shadow: var(--shadow-medium);
-  border: 3px solid var(--white);
+  box-shadow: var(--shadow-strong);
+  border: 4px solid var(--white);
   position: relative;
   background: var(--white);
 }
@@ -920,12 +920,12 @@ body {
   }
 
   .section-separator {
-    padding: var(--space-lg) 0;
+    padding: var(--space-xl) 0;
   }
 
   .separator-logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin: 0 var(--space-md);
   }
 
@@ -1482,7 +1482,7 @@ document.querySelectorAll('.cta-btn').forEach(btn => {
 // Separator logo hover effect
 document.querySelectorAll('.separator-logo').forEach(logo => {
   logo.addEventListener('mouseenter', function() {
-    this.style.transform = 'scale(1.1) rotate(5deg)';
+    this.style.transform = 'scale(1.15) rotate(8deg)';
   });
   
   logo.addEventListener('mouseleave', function() {
