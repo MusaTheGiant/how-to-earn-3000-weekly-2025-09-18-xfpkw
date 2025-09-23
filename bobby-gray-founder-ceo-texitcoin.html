@@ -184,32 +184,33 @@
             }
         }
 
-        .profile-image {
+        .profile-image-container {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 6px solid #ffffff;
             background: var(--gradient-red);
-            box-shadow: none;
+            border: 6px solid #ffffff;
             margin: 0 auto 2rem;
-            display: block;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: all 0.5s ease;
             animation: profileFloat 4s ease-in-out infinite;
+            overflow: hidden;
         }
 
-        @keyframes profileFloat {
-            0%, 100% { 
-                transform: translateY(0px) scale(1);
-            }
-            50% { 
-                transform: translateY(-8px) scale(1.02);
-            }
-        }
-
-        .profile-image:hover {
+        .profile-image-container:hover {
             transform: translateY(-8px) scale(1.05);
             animation-play-state: paused;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            mix-blend-mode: screen;
+            filter: contrast(1.1) brightness(1.1);
         }
 
         .hero h1 {
@@ -503,7 +504,7 @@
                 padding: 3rem 0;
             }
 
-            .profile-image {
+            .profile-image-container {
                 width: 150px;
                 height: 150px;
                 margin-bottom: 1.5rem;
@@ -560,7 +561,7 @@
                 padding: 2rem 0;
             }
             
-            .profile-image {
+            .profile-image-container {
                 width: 130px;
                 height: 130px;
             }
@@ -614,9 +615,11 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+            <div class="profile-image-container">
                 <img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" 
                      alt="Bobby Gray - Founder and CEO of TexitCoin" 
                      class="profile-image">
+            </div>
                 <h1>Bobby Gray</h1>
                 <p class="title">Founder & CEO of TexitCoin (TXC)</p>
                 <p class="intro">Cryptocurrency pioneer and monetary policy expert leading Texas towards financial sovereignty through innovative blockchain technology</p>
