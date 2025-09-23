@@ -67,9 +67,16 @@
             background: var(--white);
             padding: 1rem 0;
             box-shadow: var(--card-shadow);
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .header.header-hidden {
+            transform: translateY(-100%);
         }
 
         .nav-container {
@@ -115,22 +122,23 @@
         }
 
         .back-home-btn {
-            background: var(--gradient-blue);
+            background: var(--gradient-red);
             color: var(--white);
             padding: 0.6rem 1.5rem;
             border-radius: 25px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            box-shadow: var(--red-shadow);
         }
 
         .back-home-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(38, 34, 98, 0.3);
+            box-shadow: 0 12px 30px rgba(190, 31, 36, 0.4);
         }
 
         /* Hero Section */
@@ -141,7 +149,8 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding: 4rem 0;
+            padding: 6rem 0 4rem;
+            margin-top: 0;
         }
 
         .hero::before {
@@ -189,16 +198,30 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 6px solid var(--white);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            border: 6px solid var(--bold-red);
+            box-shadow: 0 12px 40px rgba(190, 31, 36, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.8);
             margin: 0 auto 2rem;
             display: block;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: all 0.5s ease;
+            animation: profileFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 12px 40px rgba(190, 31, 36, 0.3), 0 0 0 2px rgba(255, 255, 255, 0.8);
+            }
+            50% { 
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 20px 50px rgba(190, 31, 36, 0.4), 0 0 0 3px rgba(255, 255, 255, 0.9);
+            }
         }
 
         .profile-image:hover {
-            transform: scale(1.05);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(190, 31, 36, 0.5), 0 0 0 4px rgba(255, 255, 255, 1);
+            animation-play-state: paused;
         }
 
         .hero h1 {
@@ -538,18 +561,20 @@
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="nav-container">
-            <a href="https://texitcointitans.com/" class="logo">TexitCoin Titans</a>
-            <nav class="nav-links">
-                <a href="https://texitcointitans.com/" class="back-home-btn">
-                    <i class="fas fa-home"></i>
-                    Back to Home
-                </a>
-            </nav>
-        </div>
-    </header>
+    <!-- Page Wrapper for Better Layout Control -->
+    <div class="page-wrapper">
+        <!-- Header Navigation -->
+        <header class="header" id="header">
+            <div class="nav-container">
+                <a href="https://texitcointitans.com/" class="logo">TexitCoin Titans</a>
+                <nav class="nav-links">
+                    <a href="https://texitcointitans.com/" class="back-home-btn">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                </nav>
+            </div>
+        </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -687,8 +712,44 @@
     <div class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
     </div>
+    
+    </div>
+    <!-- End Page Wrapper -->
 
     <script>
+        // Auto-hide/show navigation on scroll
+        let lastScrollTop = 0;
+        let scrollTimer = null;
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Clear existing timer
+            if (scrollTimer) {
+                clearTimeout(scrollTimer);
+            }
+            
+            // Show header immediately when scrolling up, hide when scrolling down
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down & past 100px
+                header.classList.add('header-hidden');
+            } else if (scrollTop < lastScrollTop || scrollTop <= 100) {
+                // Scrolling up or at top
+                header.classList.remove('header-hidden');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            
+            // Scroll to top button visibility
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (scrollTop > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        }, { passive: true });
+
         // Update footer date
         function updateFooterDate() {
             const now = new Date();
@@ -713,15 +774,6 @@
         }
 
         // Scroll to top functionality
-        window.addEventListener('scroll', () => {
-            const scrollTop = document.getElementById('scrollTop');
-            if (window.scrollY > 300) {
-                scrollTop.classList.add('visible');
-            } else {
-                scrollTop.classList.remove('visible');
-            }
-        });
-
         document.getElementById('scrollTop').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
