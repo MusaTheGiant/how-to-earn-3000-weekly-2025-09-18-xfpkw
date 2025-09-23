@@ -1,1384 +1,1164 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TexitCoin Titans | TexitCoin Mining</title>
+<title>TexitCoin Titans | Premium Texas Cryptocurrency Mining</title>
 <link href="images/favicon.png" rel="icon" type="image/png"/>
 <meta content="Discover TexitCoin: a Texas mineable cryptocurrency powering financial sovereignty with daily mining rewards, community growth, and independence." name="description"/>
 <meta content="TexitCoin, Texas cryptocurrency, TXC mining, financial sovereignty, mineable digital asset, decentralized finance, crypto community" name="keywords"/>
+
 <!-- Open Graph Meta Tags -->
 <meta content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto Mining" property="og:title"/>
 <meta content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://texitcointitans.com" property="og:url"/>
 <meta content="https://texitcointitans.com/images/txc-logo.jpg" property="og:image"/>
+
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
 <!-- Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
 <style>
- :root {
- --deep-blue: #262262;
- --bold-red: #be1f24;
- --white: #ffffff;
- --dark-shade: #130c0e;
- --text-primary: #130c0e;
- --text-secondary: #666666;
- --text-light: #ffffff;
- --gradient-red: linear-gradient(135deg, #be1f24 0%, #d32f2f 100%);
- --gradient-blue: linear-gradient(135deg, #262262 0%, #3a2d8a 100%);
- --gradient-hero: linear-gradient(135deg, #262262 0%, #3a2d8a 50%, #4a3a9a 100%);
- --card-shadow: 0 8px 32px rgba(38, 34, 98, 0.15);
- --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
- }
-
- * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- }
-
- body {
- font-family: 'Inter', sans-serif;
- background: var(--white);
- color: var(--text-primary);
- line-height: 1.6;
- overflow-x: hidden;
- }
-
- .font-orbitron {
- font-family: 'Orbitron', monospace;
- }
-
- /* Progress Bar */
- .progress-container {
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 4px;
- z-index: 1000;
- background: rgba(38, 34, 98, 0.1);
- }
-
- .progress-bar {
- height: 100%;
- background: var(--gradient-red);
- width: 0%;
- transition: width 0.3s ease;
- }
-
- /* Navigation */
- .nav {
- position: fixed;
- top: 0;
- left: 0;
- right: 0;
- background: rgba(255, 255, 255, 0.95);
- backdrop-filter: blur(10px);
- border-bottom: 1px solid rgba(38, 34, 98, 0.1);
- z-index: 999;
- padding: 1rem 0;
- transition: all 0.3s ease;
- }
-
- .nav.scrolled {
- background: rgba(255, 255, 255, 0.98);
- box-shadow: var(--card-shadow);
- }
-
- .nav-container {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 2rem;
- display: flex;
- justify-content: space-between;
- align-items: center;
- }
-
- .logo {
- font-family: 'Orbitron', monospace;
- font-size: 1.5rem;
- font-weight: 900;
- color: var(--deep-blue);
- text-decoration: none;
- }
-
- .nav-links {
- display: flex;
- list-style: none;
- gap: 2rem;
- }
-
- .nav-links a {
- text-decoration: none;
- color: var(--text-primary);
- font-weight: 500;
- transition: color 0.3s ease;
- position: relative;
- }
-
- .nav-links a:hover {
- color: var(--bold-red);
- }
-
- .nav-links a::after {
- content: '';
- position: absolute;
- width: 0;
- height: 2px;
- bottom: -5px;
- left: 0;
- background: var(--bold-red);
- transition: width 0.3s ease;
- }
-
- .nav-links a:hover::after {
- width: 100%;
- }
-
- .nav-cta {
- background: var(--gradient-red);
- color: var(--white);
- padding: 0.75rem 1.5rem;
- border-radius: 50px;
- text-decoration: none;
- font-weight: 600;
- transition: all 0.3s ease;
- }
-
- .nav-cta:hover {
- transform: translateY(-2px);
- box-shadow: var(--red-shadow);
- }
-
- .mobile-menu-btn {
- display: none;
- background: none;
- border: none;
- font-size: 1.5rem;
- color: var(--text-primary);
- cursor: pointer;
- }
-
- /* Hero Section */
- .hero {
- min-height: 75vh;
- background: var(--gradient-hero);
- display: flex;
- align-items: center;
- position: relative;
- overflow: hidden;
- padding: 4rem 0;
- }
-
- .hero::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(190,31,36,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- animation: float 20s ease-in-out infinite;
- }
-
- @keyframes float {
- 0%, 100% { transform: translateY(0px) rotate(0deg); }
- 50% { transform: translateY(-20px) rotate(180deg); }
- }
-
- .container {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 2rem;
- position: relative;
- z-index: 2;
- }
-
- .hero-content {
- text-align: center;
- animation: fadeInUp 1s ease-out;
- }
-
- @keyframes fadeInUp {
- from {
- opacity: 0;
- transform: translateY(30px);
- }
- to {
- opacity: 1;
- transform: translateY(0);
- }
- }
-
- .hero h1 {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2.2rem, 4.5vw, 3.5rem);
- font-weight: 900;
- color: var(--white);
- margin-bottom: 1.2rem;
- text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
- }
-
- .hero-subtitle {
- font-size: clamp(1.2rem, 2.5vw, 1.5rem);
- margin-bottom: 2rem;
- opacity: 0.95;
- animation: fadeInUp 1s ease-out 0.2s both;
- color: rgba(255, 255, 255, 0.9);
- }
-
- .hero-description {
- font-size: clamp(1rem, 1.8vw, 1.2rem);
- margin-bottom: 2.5rem;
- opacity: 0.9;
- line-height: 1.7;
- animation: fadeInUp 1s ease-out 0.4s both;
- color: rgba(255, 255, 255, 0.9);
- max-width: 600px;
- margin-left: auto;
- margin-right: auto;
- }
-
- .cta-buttons {
- display: flex;
- gap: 1.5rem;
- justify-content: center;
- flex-wrap: wrap;
- animation: fadeInUp 1s ease-out 0.6s both;
- }
-
- .cta-btn {
- padding: 1rem 2.5rem;
- border: none;
- border-radius: 50px;
- font-size: 1.1rem;
- font-weight: 600;
- text-decoration: none;
- display: inline-flex;
- align-items: center;
- gap: 0.5rem;
- transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
- position: relative;
- overflow: hidden;
- cursor: pointer;
- text-align: center;
- min-width: 200px;
- justify-content: center;
- }
-
- .cta-primary {
- background: var(--gradient-red);
- color: var(--white);
- box-shadow: var(--red-shadow);
- }
-
- .cta-primary:hover {
- transform: translateY(-3px);
- box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
- }
-
- .cta-secondary {
- background: #25D366;
- color: #ffffff;
- border: 2px solid #ffffff;
- }
-
- .cta-secondary:hover {
- background: #ffffff;
- color: #25D366;
- transform: translateY(-3px);
- }
-
- /* Problem Section */
- .problem-section {
- background: var(--gradient-blue);
- padding: 5rem 0;
- position: relative;
- overflow: hidden;
- }
-
- .problem-section::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') repeat;
- opacity: 0.3;
- }
-
- .problem-content {
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 4rem;
- align-items: center;
- }
-
- /* Left Side - Problem Statement */
- .problem-text {
- color: var(--white);
- }
-
- .problem-badge {
- display: inline-block;
- background: var(--gradient-red);
- color: var(--white);
- padding: 0.5rem 1.5rem;
- border-radius: 50px;
- font-weight: 700;
- margin-bottom: 1.5rem;
- font-size: 0.9rem;
- text-transform: uppercase;
- letter-spacing: 0.5px;
- box-shadow: var(--red-shadow);
- }
-
- .problem-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- font-weight: 900;
- margin-bottom: 1.5rem;
- color: var(--white);
- text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
- }
-
- .problem-description {
- font-size: clamp(1rem, 2vw, 1.2rem);
- margin-bottom: 2rem;
- opacity: 0.95;
- line-height: 1.7;
- color: rgba(255, 255, 255, 0.9);
- }
-
- .problem-points {
- list-style: none;
- margin: 2rem 0;
- }
-
- .problem-points li {
- display: flex;
- align-items: flex-start;
- gap: 1rem;
- margin-bottom: 1.5rem;
- padding: 1rem;
- background: rgba(255, 255, 255, 0.1);
- border-radius: 10px;
- backdrop-filter: blur(10px);
- border: 1px solid rgba(255, 255, 255, 0.1);
- transition: all 0.3s ease;
- }
-
- .problem-points li:hover {
- background: rgba(255, 255, 255, 0.15);
- transform: translateX(10px);
- }
-
- .problem-points li::before {
- content: "⚠️";
- font-size: 1.2rem;
- flex-shrink: 0;
- margin-top: 0.1rem;
- }
-
- .problem-points li strong {
- color: #fbbf24;
- font-weight: 700;
- }
-
- /* Right Side - Statistics */
- .problem-stats {
- display: grid;
- grid-template-columns: 1fr;
- gap: 2rem;
- }
-
- .stat-card {
- background: rgba(255, 255, 255, 0.95);
- padding: 2rem;
- border-radius: 20px;
- text-align: center;
- box-shadow: var(--card-shadow);
- border: 1px solid rgba(255, 255, 255, 0.2);
- transition: all 0.3s ease;
- position: relative;
- overflow: hidden;
- }
-
- .stat-card::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- height: 4px;
- background: var(--gradient-red);
- }
-
- .stat-card:hover {
- transform: translateY(-10px);
- box-shadow: 0 20px 60px rgba(38, 34, 98, 0.3);
- }
-
- .stat-icon {
- width: 60px;
- height: 60px;
- background: var(--gradient-red);
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- color: var(--white);
- font-size: 1.5rem;
- margin: 0 auto 1.5rem;
- box-shadow: var(--red-shadow);
- }
-
- .stat-number {
- font-family: 'Orbitron', monospace;
- font-size: 2.5rem;
- font-weight: 900;
- color: var(--bold-red);
- margin-bottom: 0.5rem;
- text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
-
- .stat-label {
- font-size: 1rem;
- color: var(--text-secondary);
- font-weight: 600;
- margin-bottom: 0.5rem;
- }
-
- .stat-description {
- font-size: 0.9rem;
- color: var(--text-secondary);
- line-height: 1.5;
- }
-
- /* CTA at bottom */
- .problem-cta {
- text-align: center;
- margin-top: 3rem;
- grid-column: 1 / -1;
- }
-
- .problem-cta-text {
- font-size: clamp(1.1rem, 2vw, 1.3rem);
- color: rgba(255, 255, 255, 0.9);
- margin-bottom: 1.5rem;
- font-weight: 500;
- }
-
- /* Video Section Styles */
- .video-section {
- padding: 5rem 0;
- background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
- position: relative;
- overflow: hidden;
- }
-
- .video-section::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.03)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- opacity: 0.5;
- }
-
- .video-content {
- position: relative;
- z-index: 2;
- text-align: center;
- }
-
- .video-header {
- margin-bottom: 3rem;
- }
-
- .video-badge {
- display: inline-block;
- background: var(--gradient-red);
- color: var(--white);
- padding: 0.5rem 1.5rem;
- border-radius: 50px;
- font-weight: 700;
- margin-bottom: 1.5rem;
- font-size: 0.9rem;
- text-transform: uppercase;
- letter-spacing: 0.5px;
- box-shadow: var(--red-shadow);
- }
-
- .video-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3.5rem);
- font-weight: 900;
- color: var(--deep-blue);
- margin-bottom: 1rem;
- text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
-
- .video-subtitle {
- font-size: clamp(1rem, 2vw, 1.3rem);
- color: var(--text-secondary);
- max-width: 600px;
- margin: 0 auto 2rem;
- line-height: 1.7;
- }
-
- .video-container {
- max-width: 900px;
- margin: 0 auto;
- position: relative;
- background: var(--white);
- border-radius: 20px;
- box-shadow: var(--card-shadow);
- overflow: hidden;
- transition: all 0.3s ease;
- }
-
- .video-container:hover {
- transform: translateY(-5px);
- box-shadow: 0 20px 60px rgba(38, 34, 98, 0.2);
- }
-
- .video-wrapper {
- position: relative;
- width: 100%;
- height: 0;
- padding-bottom: 56.25%; /* 16:9 aspect ratio */
- background: var(--gradient-blue);
- }
-
- .video-iframe {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- border: none;
- border-radius: 0;
- }
-
- .video-info {
- padding: 2rem;
- text-align: center;
- background: var(--white);
- }
-
- .video-description {
- color: var(--text-secondary);
- font-size: 1.1rem;
- line-height: 1.6;
- margin-bottom: 1.5rem;
- }
-
- .video-cta {
- display: inline-flex;
- align-items: center;
- gap: 0.5rem;
- background: var(--gradient-red);
- color: var(--white);
- padding: 1rem 2rem;
- border-radius: 50px;
- text-decoration: none;
- font-weight: 600;
- transition: all 0.3s ease;
- box-shadow: var(--red-shadow);
- }
-
- .video-cta:hover {
- transform: translateY(-2px);
- box-shadow: 0 15px 40px rgba(190, 31, 36, 0.4);
- color: var(--white);
- text-decoration: none;
- }
-
- .video-stats {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
- gap: 2rem;
- margin-top: 3rem;
- padding-top: 3rem;
- border-top: 1px solid rgba(38, 34, 98, 0.1);
- }
-
- .video-stat {
- text-align: center;
- }
-
- .video-stat-number {
- font-family: 'Orbitron', monospace;
- font-size: 2rem;
- font-weight: 900;
- color: var(--bold-red);
- margin-bottom: 0.5rem;
- }
-
- .video-stat-label {
- font-size: 0.9rem;
- color: var(--text-secondary);
- font-weight: 500;
- }
-
- /* Section Styles */
- .section {
- padding: 5rem 0;
- }
-
- .section-alt {
- background: var(--bg-light);
- }
-
- .section-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- text-align: center;
- margin-bottom: 1rem;
- color: var(--text-dark);
- }
-
- .section-subtitle {
- text-align: center;
- font-size: clamp(1rem, 2vw, 1.2rem);
- color: var(--text-light);
- max-width: 600px;
- margin: 0 auto 3rem;
- }
-
- /* Founder Section */
- .founder-grid {
- display: grid;
- grid-template-columns: 1fr 2fr;
- gap: 4rem;
- align-items: center;
- max-width: 1000px;
- margin: 0 auto;
- }
-
- .founder-image {
- position: relative;
- }
-
- .founder-image img {
- width: 100%;
- border-radius: 20px;
- box-shadow: var(--shadow-xl);
- }
-
- .founder-badge {
- position: absolute;
- top: -20px;
- right: -20px;
- background: var(--gradient-cta);
- color: var(--white);
- padding: 1rem;
- border-radius: 50%;
- font-size: 1.5rem;
- box-shadow: var(--shadow-lg);
- }
-
- .founder-content h3 {
- font-family: 'Orbitron', monospace;
- font-size: 2rem;
- margin-bottom: 1rem;
- color: var(--primary-blue);
- }
-
- .founder-credentials {
- background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
- padding: 1.5rem;
- border-radius: 15px;
- margin: 1.5rem 0;
- border-left: 4px solid var(--gold);
- }
-
- .credentials-list {
- list-style: none;
- margin: 1rem 0;
- }
-
- .credentials-list li {
- display: flex;
- align-items: center;
- gap: 0.5rem;
- margin-bottom: 0.5rem;
- font-weight: 500;
- }
-
- .credentials-list li::before {
- content: "🏆";
- font-size: 1.2rem;
- }
-
- /* Company Section */
- .company-grid {
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 4rem;
- align-items: center;
- max-width: 1000px;
- margin: 0 auto;
- }
-
- .company-logo {
- text-align: center;
- }
-
- .company-logo img {
- max-width: 300px;
- width: 100%;
- height: auto;
- filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
- }
-
- .company-stats {
- display: grid;
- grid-template-columns: repeat(2, 1fr);
- gap: 1.5rem;
- margin: 2rem 0;
- }
-
- .company-stats .stat-card {
- background: var(--white);
- padding: 1.5rem;
- border-radius: 15px;
- text-align: center;
- box-shadow: var(--shadow-lg);
- border: 1px solid rgba(0, 0, 0, 0.05);
- transition: transform 0.3s ease;
- }
-
- .company-stats .stat-card:hover {
- transform: translateY(-5px);
- }
-
- .company-stats .stat-number {
- font-family: 'Orbitron', monospace;
- font-size: 2rem;
- font-weight: 900;
- color: var(--primary-red);
- margin-bottom: 0.5rem;
- }
-
- .company-stats .stat-label {
- font-size: 0.9rem;
- color: var(--text-light);
- font-weight: 500;
- }
-
- /* Vision & Mission Section */
- .vision-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
- gap: 3rem;
- margin-top: 3rem;
- }
-
- .vision-card {
- background: var(--white);
- padding: 2.5rem;
- border-radius: 20px;
- box-shadow: var(--shadow-lg);
- position: relative;
- overflow: hidden;
- transition: all 0.3s ease;
- }
-
- .vision-card:hover {
- transform: translateY(-10px);
- box-shadow: var(--shadow-xl);
- }
-
- .vision-card::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- height: 4px;
- background: var(--gradient-cta);
- }
-
- .vision-icon {
- width: 60px;
- height: 60px;
- background: var(--gradient-cta);
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- color: var(--white);
- font-size: 1.5rem;
- margin-bottom: 1.5rem;
- }
-
- .vision-card h4 {
- font-family: 'Orbitron', monospace;
- font-size: 1.3rem;
- margin-bottom: 1rem;
- color: var(--primary-blue);
- }
-
- .benefits-list {
- list-style: none;
- margin: 1.5rem 0;
- }
-
- .benefits-list li {
- display: flex;
- align-items: flex-start;
- gap: 0.8rem;
- margin-bottom: 1rem;
- padding: 0.5rem 0;
- }
-
- .benefits-list li::before {
- content: "✅";
- font-size: 1.1rem;
- margin-top: 0.1rem;
- flex-shrink: 0;
- }
-
- /* Member Offer Section */
- .offer-highlight {
- background: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
- color: var(--white);
- padding: 4rem 0;
- position: relative;
- overflow: hidden;
- }
-
- .offer-highlight::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') repeat;
- }
-
- .offer-content {
- position: relative;
- z-index: 2;
- text-align: center;
- max-width: 800px;
- margin: 0 auto;
- }
-
- .offer-badge {
- display: inline-block;
- background: var(--gold);
- color: var(--text-dark);
- padding: 0.5rem 1.5rem;
- border-radius: 50px;
- font-weight: 700;
- margin-bottom: 2rem;
- font-size: 0.9rem;
- text-transform: uppercase;
- letter-spacing: 0.5px;
- }
-
- .offer-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- margin-bottom: 1.5rem;
- }
-
- .offer-description {
- font-size: clamp(1rem, 2vw, 1.2rem);
- margin-bottom: 2rem;
- opacity: 0.95;
- line-height: 1.7;
- }
-
- .eligibility-note {
- background: rgba(255, 255, 255, 0.1);
- padding: 1.5rem;
- border-radius: 15px;
- margin: 2rem 0;
- border-left: 4px solid var(--gold);
- text-align: left;
- }
-
- .eligibility-note h5 {
- font-weight: 700;
- margin-bottom: 0.5rem;
- color: var(--gold);
- }
-
- /* CTA Section */
- .cta-section {
- background: var(--text-dark);
- color: var(--white);
- padding: 4rem 0;
- text-align: center;
- }
-
- .cta-section h2 {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- margin-bottom: 1rem;
- }
-
- .cta-section p {
- font-size: clamp(1rem, 2vw, 1.2rem);
- margin-bottom: 2rem;
- opacity: 0.9;
- }
-
- /* Footer */
- .footer {
- background: #262262;
- padding: 3rem 0 2rem;
- border-top: 1px solid rgba(38, 34, 98, 0.2);
- color: #ffffff;
- }
-
- .footer-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
- gap: 2rem;
- margin-bottom: 2rem;
- }
-
- .footer-section {
- color: #ffffff;
- }
-
- .footer-section h4 {
- font-family: 'Orbitron', monospace;
- font-size: 1.2rem;
- margin-bottom: 1rem;
- color: #ffffff;
- }
-
- .footer-section p {
- color: #ffffff;
- }
-
- .footer-links {
- list-style: none;
- }
-
- .footer-links li {
- margin-bottom: 0.5rem;
- }
-
- .footer-links a {
- color: rgba(255, 255, 255, 0.8);
- text-decoration: none;
- transition: color 0.3s ease;
- }
-
- .footer-links a:hover {
- color: #ffffff;
- }
-
- .social-links {
- display: flex;
- gap: 1rem;
- margin-top: 1rem;
- }
-
- .social-links a {
- width: 40px;
- height: 40px;
- background: var(--bold-red);
- color: var(--white);
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- text-decoration: none;
- transition: all 0.3s ease;
- }
-
- .social-links a:hover {
- background: var(--white);
- color: var(--bold-red);
- transform: translateY(-2px);
- }
-
- .footer-bottom {
- text-align: center;
- padding-top: 2rem;
- border-top: 1px solid rgba(255, 255, 255, 0.1);
- color: #ffffff;
- }
-
- .footer-bottom p {
- color: #ffffff;
- }
-
- .footer-content {
- text-align: center;
- color: #ffffff;
- }
-
- .footer-content p {
- color: #ffffff;
- }
-
- /* Scroll to Top */
- .scroll-top {
- position: fixed;
- bottom: 2rem;
- right: 2rem;
- width: 50px;
- height: 50px;
- background: var(--gradient-red);
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- cursor: pointer;
- opacity: 0;
- visibility: hidden;
- transition: all 0.3s ease;
- z-index: 1000;
- border: none;
- }
-
- .scroll-top.visible {
- opacity: 1;
- visibility: visible;
- }
-
- .scroll-top:hover {
- transform: translateY(-3px);
- box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
- }
-
- .scroll-top i {
- color: var(--white);
- font-size: 1.2rem;
- }
-
- /* Responsive Design */
- @media (max-width: 768px) {
- .nav-links {
- display: none;
- }
-
- .mobile-menu-btn {
- display: block;
- }
-
- .hero {
- min-height: 70vh;
- padding: 3rem 0;
- }
-
- .hero h1 {
- font-size: clamp(1.8rem, 6vw, 2.5rem);
- margin-bottom: 1rem;
- }
-
- .hero-description {
- font-size: clamp(0.9rem, 4vw, 1.1rem);
- margin-bottom: 2rem;
- }
-
- .cta-buttons {
- flex-direction: column;
- align-items: center;
- gap: 1rem;
- }
-
- .cta-btn {
- width: 100%;
- max-width: 300px;
- justify-content: center;
- padding: 0.9rem 2rem;
- font-size: 1rem;
- }
-
- .container {
- padding: 0 1rem;
- }
-
- .scroll-top {
- bottom: 1rem;
- right: 1rem;
- }
-
- /* Problem section mobile styles */
- .problem-section {
- padding: 3rem 0;
- }
-
- .problem-content {
- grid-template-columns: 1fr;
- gap: 3rem;
- }
-
- .problem-points li {
- padding: 0.8rem;
- margin-bottom: 1rem;
- }
-
- .stat-card {
- padding: 1.5rem;
- }
-
- .stat-number {
- font-size: 2rem;
- }
-
- /* Video section mobile styles */
- .video-section {
- padding: 3rem 0;
- }
-
- .video-container {
- max-width: 95%;
- margin: 0 auto;
- }
-
- .video-title {
- font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
- }
-
- .video-info {
- padding: 1.5rem;
- }
-
- /* Hide video description and stats on mobile */
- .video-description {
- display: none;
- }
-
- .video-stats {
- display: none;
- }
-
- /* Add margin to CTA button since description is hidden */
- .video-cta {
- margin-top: 1rem;
- }
-
- .video-stat-number {
- font-size: 1.5rem;
- }
- }
-
- @media (max-width: 480px) {
- .nav-container {
- padding: 0 1rem;
- }
-
- .hero {
- min-height: 65vh;
- padding: 2rem 0;
- }
-
- .cta-btn {
- padding: 0.8rem 1.5rem;
- font-size: 0.95rem;
- }
-
- /* Problem section adjustments for very small screens */
- .problem-section {
- padding: 2rem 0;
- }
-
- .problem-content {
- gap: 2rem;
- }
-
- .stat-card {
- padding: 1.2rem;
- }
-
- /* Video section adjustments for very small screens */
- .video-section {
- padding: 2rem 0;
- }
-
- .video-info {
- padding: 1rem;
- }
- }
-
- /* Animation Classes */
- .animate-on-scroll {
- opacity: 0;
- transform: translateY(30px);
- transition: all 0.6s ease;
- }
-
- .animate-on-scroll.animated {
- opacity: 1;
- transform: translateY(0);
- }
-
- /* Video Section Animation */
- .video-container {
- animation: fadeInUp 0.8s ease-out;
- }
-
- /* Loading States */
- img {
- transition: opacity 0.3s ease;
- }
-
- img[loading="lazy"] {
- opacity: 0;
- }
-
- img[loading="lazy"].loaded {
- opacity: 1;
- }
-
- /* Performance Optimizations */
- .hero::before {
- will-change: transform;
- }
-
- .cta-btn:hover {
- will-change: transform;
- }
-
- /* Focus States */
- .cta-btn:focus,
- .nav-cta:focus,
- .scroll-top:focus {
- outline: 2px solid #ffffff;
- outline-offset: 2px;
- }
-
- .nav-links a:focus {
- outline: 2px solid var(--bold-red);
- outline-offset: 4px;
- border-radius: 4px;
- }
-
- /* Smooth scrolling */
- html {
- scroll-behavior: smooth;
- }
-
- /* Custom scrollbar */
- ::-webkit-scrollbar {
- width: 8px;
- }
-
- ::-webkit-scrollbar-track {
- background: var(--white);
- }
-
- ::-webkit-scrollbar-thumb {
- background: var(--gradient-blue);
- border-radius: 4px;
- }
-
- ::-webkit-scrollbar-thumb:hover {
- background: var(--deep-blue);
- }
- </style>
-<link href="https://texitcointitans.com/" rel="canonical"/><meta content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto" name="twitter:title"/><meta content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth." name="twitter:description"/><script type="application/ld+json">{
- "@context": "https://schema.org",
- "@graph": [
- {
- "@type": "Organization",
- "@id": "https://texitcointitans.com/#org",
- "name": "TexitCoin Titans Team",
- "url": "https://texitcointitans.com/",
- "logo": {
- "@type": "ImageObject",
- "url": "https://texitcointitans.com/images/txc-logo.jpg"
- },
- "sameAs": [
- "https://www.facebook.com/TexitCoinTitans",
- "https://www.tiktok.com/@texitcointitans",
- "https://www.youtube.com/@TexitCoinTitans"
- ]
- },
- {
- "@type": "WebPage",
- "@id": "https://texitcointitans.com/#webpage",
- "url": "https://texitcointitans.com/",
- "inLanguage": "en-US",
- "name": "TexitCoin Titans Team - Home",
- "headline": "Is Texas Forging the Future of Financial Sovereignty?",
- "description": "Far more than code on a blockchain, TexitCoin represents a movement toward self-reliance and community-powered growth. By combining mining rewards with real-world adoption, it positions Texans and the world to claim greater control over their financial future.",
- "isPartOf": {
- "@id": "https://texitcointitans.com/#org"
- }
- }
- ]
-}</script></head>
+:root {
+  /* Premium Brand Colors */
+  --txc-red: #be1f24;
+  --txc-black: #130c0e;
+  --txc-blue: #262262;
+  --white: #ffffff;
+  
+  /* Sophisticated Color Palette */
+  --surface-primary: #ffffff;
+  --surface-secondary: #f8fafc;
+  --surface-dark: #0f0f0f;
+  --text-primary: #130c0e;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --text-light: #ffffff;
+  
+  /* Premium Gradients */
+  --gradient-primary: linear-gradient(135deg, #be1f24 0%, #d42c31 50%, #e63946 100%);
+  --gradient-blue: linear-gradient(135deg, #262262 0%, #3730a3 50%, #4338ca 100%);
+  --gradient-dark: linear-gradient(135deg, #130c0e 0%, #1f1f1f 50%, #2d2d2d 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  
+  /* Luxury Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 20px 80px rgba(0, 0, 0, 0.15);
+  --shadow-red: 0 10px 40px rgba(190, 31, 36, 0.3);
+  --shadow-blue: 0 10px 40px rgba(38, 34, 98, 0.3);
+  
+  /* Premium Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  
+  /* Container Constraints */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --container-2xl: 1400px;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--surface-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+.font-primary { font-family: 'Inter', sans-serif; }
+.font-display { font-family: 'Orbitron', monospace; }
+.font-modern { font-family: 'Space Grotesk', sans-serif; }
+
+/* Container System */
+.container {
+  width: 100%;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.container-wide {
+  max-width: var(--container-xl);
+}
+
+.container-narrow {
+  max-width: var(--container-md);
+}
+
+/* Progress Bar */
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--gradient-primary);
+  width: 0%;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  padding: var(--space-sm) 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-xs) 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--txc-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--txc-red);
+  transform: translateY(-1px);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: var(--space-xs) 0;
+}
+
+.nav-links a:hover {
+  color: var(--txc-red);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: var(--gradient-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-red);
+  border: none;
+  cursor: pointer;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 50px rgba(190, 31, 36, 0.4);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background: var(--gradient-blue);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(190, 31, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(190, 31, 36, 0.08) 0%, transparent 50%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  animation: subtle-float 20s ease-in-out infinite;
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: hero-entrance 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes hero-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: hero-entrance 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.2s backwards;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: var(--space-md);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
+  animation: hero-entrance 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.4s backwards;
+}
+
+.hero-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  animation: hero-entrance 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.6s backwards;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: hero-entrance 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s backwards;
+}
+
+.cta-btn {
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  min-width: 180px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cta-btn:hover::before {
+  left: 100%;
+}
+
+.cta-primary {
+  background: var(--gradient-primary);
+  color: var(--white);
+  box-shadow: var(--shadow-red);
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(190, 31, 36, 0.4);
+}
+
+.cta-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.cta-secondary:hover {
+  background: var(--white);
+  color: var(--txc-blue);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Section Separator */
+.section-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-2xl) 0;
+  background: var(--surface-secondary);
+  position: relative;
+}
+
+.separator-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+  max-width: 200px;
+}
+
+.separator-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 var(--space-lg);
+  box-shadow: var(--shadow-medium);
+  border: 3px solid var(--white);
+  position: relative;
+  background: var(--white);
+}
+
+.separator-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.separator-logo:hover img {
+  transform: scale(1.1);
+}
+
+/* Problem Section */
+.problem-section {
+  background: var(--gradient-dark);
+  padding: var(--space-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(190, 31, 36, 0.05) 0%, transparent 50%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.5" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+}
+
+.problem-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.problem-text {
+  color: var(--white);
+}
+
+.section-badge {
+  display: inline-block;
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-red);
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: var(--space-md);
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.section-description {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+  opacity: 0.9;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.problem-points {
+  list-style: none;
+  margin: var(--space-lg) 0;
+}
+
+.problem-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.problem-points li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(8px);
+}
+
+.problem-points li::before {
+  content: "⚠️";
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.problem-points li strong {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.problem-stats {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: var(--space-xl);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-strong);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-strong);
+}
+
+.stat-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.8rem;
+  margin: 0 auto var(--space-md);
+  box-shadow: var(--shadow-red);
+}
+
+.stat-number {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--txc-red);
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.problem-cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  grid-column: 1 / -1;
+}
+
+.problem-cta-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+
+/* Video Section */
+.video-section {
+  padding: var(--space-3xl) 0;
+  background: var(--surface-secondary);
+  position: relative;
+}
+
+.video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 70% 30%, rgba(38, 34, 98, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(190, 31, 36, 0.02) 0%, transparent 50%);
+}
+
+.video-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.video-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.video-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: var(--txc-blue);
+  margin-bottom: var(--space-md);
+}
+
+.video-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background: var(--gradient-blue);
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  padding: var(--space-xl);
+  text-align: center;
+  background: var(--white);
+}
+
+.video-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.video-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-red);
+}
+
+.video-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(190, 31, 36, 0.4);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.video-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.video-stat {
+  text-align: center;
+}
+
+.video-stat-number {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--txc-red);
+  margin-bottom: var(--space-xs);
+}
+
+.video-stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Footer */
+.footer {
+  background: var(--gradient-dark);
+  padding: var(--space-3xl) 0 var(--space-lg);
+  color: var(--white);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footergrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footergrid)"/></svg>');
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-section h4 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.2rem;
+  margin-bottom: var(--space-md);
+  color: var(--white);
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-xs);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.social-links a {
+  width: 45px;
+  height: 45px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-red);
+}
+
+.social-links a:hover {
+  background: var(--white);
+  color: var(--txc-red);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: var(--shadow-medium);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+/* Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  width: 55px;
+  height: 55px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  border: none;
+  box-shadow: var(--shadow-red);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+}
+
+.scroll-top i {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    max-width: var(--container-md);
+    padding: 0 var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: var(--space-2xl) 0;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .problem-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .section-separator {
+    padding: var(--space-lg) 0;
+  }
+
+  .separator-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 var(--space-md);
+  }
+
+  .video-container {
+    margin: 0 var(--space-md);
+  }
+
+  .video-description {
+    display: none;
+  }
+
+  .video-stats {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .video-container {
+    margin: 0;
+    border-radius: 16px;
+  }
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animate-on-scroll-left.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animate-on-scroll-right.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Performance Optimizations */
+.hero::before,
+.problem-section::before {
+  will-change: transform;
+}
+
+.cta-btn:hover,
+.video-container:hover {
+  will-change: transform;
+}
+
+/* Focus States */
+.cta-btn:focus,
+.nav-cta:focus,
+.scroll-top:focus {
+  outline: 3px solid rgba(190, 31, 36, 0.5);
+  outline-offset: 3px;
+}
+
+.nav-links a:focus {
+  outline: 2px solid var(--txc-red);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--txc-red);
+}
+</style>
+
+<link href="https://texitcointitans.com/" rel="canonical"/>
+<meta content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto" name="twitter:title"/>
+<meta content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth." name="twitter:description"/>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://texitcointitans.com/#org",
+      "name": "TexitCoin Titans Team",
+      "url": "https://texitcointitans.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://texitcointitans.com/images/txc-logo.jpg"
+      },
+      "sameAs": [
+        "https://www.facebook.com/TexitCoinTitans",
+        "https://www.tiktok.com/@texitcointitans",
+        "https://www.youtube.com/@TexitCoinTitans"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://texitcointitans.com/#webpage",
+      "url": "https://texitcointitans.com/",
+      "inLanguage": "en-US",
+      "name": "TexitCoin Titans Team - Home",
+      "headline": "Is Texas Forging the Future of Financial Sovereignty?",
+      "description": "Far more than code on a blockchain, TexitCoin represents a movement toward self-reliance and community-powered growth. By combining mining rewards with real-world adoption, it positions Texans and the world to claim greater control over their financial future.",
+      "isPartOf": {
+        "@id": "https://texitcointitans.com/#org"
+      }
+    }
+  ]
+}</script>
+</head>
+
 <body>
 <!-- Progress Bar -->
 <div class="progress-container">
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 </div>
+
 <!-- Navigation -->
 <nav class="nav" id="navbar">
-<div class="nav-container">
-<a class="logo" href="#">TexitCoin Titans</a>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
-</ul>
-<button class="mobile-menu-btn" id="mobileMenuBtn">
-<i class="fas fa-bars"></i>
-</button>
-<a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Join Now</a>
-</div>
+  <div class="container nav-container">
+    <a class="logo" href="#home">TexitCoin Titans</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
+      Join Now
+    </a>
+  </div>
 </nav>
 
 <!-- Hero Section -->
 <section class="hero" id="home">
-<div class="container">
-<div class="hero-content">
-<h1>Is Texas Leading the Charge for Financial Sovereignty?</h1>
-<p class="hero-subtitle">A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Tap in and secure your mining position today ⛏️</p>
-<div class="cta-buttons">
-<a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
-<i class="fas fa-rocket"></i>
- Mine TXC Now
- </a>
-<a class="cta-btn cta-secondary" href="https://wa.me/27721714626" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-whatsapp"></i>
- Let's Chat Now
- </a>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        Premium Texas Cryptocurrency
+      </div>
+      
+      <h1>Is Texas Leading the Charge for Financial Sovereignty?</h1>
+      
+      <p class="hero-subtitle">
+        A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Secure your mining position today and join the revolution. ⛏️
+      </p>
+      
+      <div class="cta-buttons">
+        <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
+          <i class="fas fa-rocket"></i>
+          Mine TXC Now
+        </a>
+        <a class="cta-btn cta-secondary" href="https://wa.me/27721714626" rel="noopener noreferrer" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          Let's Chat Now
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Problem/Agitation Section -->
+<!-- Section Separator -->
+<div class="section-separator">
+  <div class="separator-line"></div>
+  <div class="separator-logo">
+    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" loading="lazy">
+  </div>
+  <div class="separator-line"></div>
+</div>
+
+<!-- Problem Section -->
 <section class="problem-section animate-on-scroll" id="problems">
   <div class="container">
     <div class="problem-content">
       
       <!-- Left Side - Problem Statement -->
-      <div class="problem-text">
-        <span class="problem-badge">
+      <div class="problem-text animate-on-scroll-left">
+        <span class="section-badge">
           <i class="fas fa-exclamation-triangle"></i>
           The Hard Truth
         </span>
         
-        <h2 class="problem-title">
+        <h2 class="section-title">
           Your Financial Freedom is Under Attack
         </h2>
         
-        <p class="problem-description">
+        <p class="section-description">
           While you work harder than ever, traditional financial systems are designed to keep you dependent. The game is rigged, but there's a way out that most people don't know about.
         </p>
         
@@ -1407,9 +1187,9 @@
       </div>
       
       <!-- Right Side - Statistics -->
-      <div class="problem-stats">
+      <div class="problem-stats animate-on-scroll-right">
         
-        <div class="stat-card animate-on-scroll">
+        <div class="stat-card">
           <div class="stat-icon">
             <i class="fas fa-chart-line-down"></i>
           </div>
@@ -1418,7 +1198,7 @@
           <div class="stat-description">Average American purchasing power decline since 2020 due to inflation</div>
         </div>
         
-        <div class="stat-card animate-on-scroll">
+        <div class="stat-card">
           <div class="stat-icon">
             <i class="fas fa-piggy-bank"></i>
           </div>
@@ -1427,7 +1207,7 @@
           <div class="stat-description">Average interest rate on savings accounts while inflation runs at 6%+</div>
         </div>
         
-        <div class="stat-card animate-on-scroll">
+        <div class="stat-card">
           <div class="stat-icon">
             <i class="fas fa-users"></i>
           </div>
@@ -1439,11 +1219,11 @@
       </div>
       
       <!-- CTA at bottom -->
-      <div class="problem-cta">
+      <div class="problem-cta animate-on-scroll">
         <p class="problem-cta-text">
           There's a better way. A Texas-made solution that puts financial control back in YOUR hands.
         </p>
-        <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn" target="_blank" rel="noopener noreferrer">
+        <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-arrow-right"></i>
           Discover the Solution
         </a>
@@ -1453,337 +1233,358 @@
   </div>
 </section>
 
+<!-- Section Separator -->
+<div class="section-separator">
+  <div class="separator-line"></div>
+  <div class="separator-logo">
+    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" loading="lazy">
+  </div>
+  <div class="separator-line"></div>
+</div>
+
 <!-- Video Section -->
-<section class="video-section" id="intro-video">
-<div class="container">
-<div class="video-content">
-<div class="video-header">
-<span class="video-badge">
-<i class="fas fa-play"></i>
-Featured Video
-</span>
-<h2 class="video-title">
-Discover the Power of TexitCoin Mining
-</h2>
-<p class="video-subtitle">
-Watch this exclusive introduction to understand how TexitCoin is revolutionizing financial sovereignty in Texas and beyond.
-</p>
-</div>
+<section class="video-section animate-on-scroll" id="intro-video">
+  <div class="container">
+    <div class="video-content">
+      <div class="video-header">
+        <span class="section-badge">
+          <i class="fas fa-play"></i>
+          Featured Video
+        </span>
+        <h2 class="video-title">
+          Discover the Power of TexitCoin Mining
+        </h2>
+        <p class="video-subtitle">
+          Watch this exclusive introduction to understand how TexitCoin is revolutionizing financial sovereignty in Texas and beyond.
+        </p>
+      </div>
 
-<div class="video-container">
-<div class="video-wrapper">
-<iframe class="video-iframe" 
-src="https://www.youtube.com/embed/-cQ4O0kmMN0?rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&showinfo=0&controls=1&cc_load_policy=0" 
-title="Discover the Power of TexitCoin Mining"
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-allowfullscreen
-loading="lazy">
-</iframe>
-</div>
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe class="video-iframe" 
+            src="https://www.youtube.com/embed/-cQ4O0kmMN0?rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&showinfo=0&controls=1&cc_load_policy=0" 
+            title="Discover the Power of TexitCoin Mining"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
 
-<div class="video-info">
-<p class="video-description">
-Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cryptocurrency that puts financial control back in your hands.
-</p>
-<a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
-<i class="fas fa-rocket"></i>
-Start Mining Now
-</a>
-</div>
-</div>
+        <div class="video-info">
+          <p class="video-description">
+            Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cryptocurrency that puts financial control back in your hands.
+          </p>
+          <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-rocket"></i>
+            Start Mining Now
+          </a>
+        </div>
+      </div>
 
-<div class="video-stats">
-<div class="video-stat">
-<div class="video-stat-number">24/7</div>
-<div class="video-stat-label">Mining Rewards</div>
-</div>
-<div class="video-stat">
-<div class="video-stat-number">100%</div>
-<div class="video-stat-label">Texas Made</div>
-</div>
-<div class="video-stat">
-<div class="video-stat-number">∞</div>
-<div class="video-stat-label">Potential</div>
-</div>
-</div>
-</div>
-</div>
+      <div class="video-stats">
+        <div class="video-stat">
+          <div class="video-stat-number">24/7</div>
+          <div class="video-stat-label">Mining Rewards</div>
+        </div>
+        <div class="video-stat">
+          <div class="video-stat-number">100%</div>
+          <div class="video-stat-label">Texas Made</div>
+        </div>
+        <div class="video-stat">
+          <div class="video-stat-number">∞</div>
+          <div class="video-stat-label">Potential</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-section">
-<h4>TexitCoin Titans</h4>
-<p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
-<div class="social-links">
-<a aria-label="Facebook" href="https://www.facebook.com/TexitCoinTitans" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-<a aria-label="TikTok" href="https://www.tiktok.com/@texitcointitans" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-tiktok"></i>
-</a>
-<a aria-label="YouTube" href="https://www.youtube.com/@TexitCoinTitans" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
-<a aria-label="WhatsApp" href="http://texitcointitans.com/whatsappgroup.html" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-</div>
-</div>
-<div class="footer-section">
-<h4>Quick Links</h4>
-<ul class="footer-links">
-<li><a href="#home">Home</a></li>
-<li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
-<li><a href="#founder">Meet Bobby Gray</a></li>
-<li><a href="#company">About TexitCoin</a></li>
-<li><a href="#vision">Our Vision</a></li>
-</ul>
-</div>
-<div class="footer-section">
-<h4>Resources</h4>
-<ul class="footer-links">
-<li><a href="#">Compensation Plan</a></li>
-<li><a href="#">FAQ</a></li>
-<li><a href="#">Testimonials</a></li>
-<li><a href="#">Training Videos</a></li>
-<li><a href="#">Download PDFs</a></li>
-</ul>
-</div>
-<div class="footer-section">
-<h4>Support</h4>
-<ul class="footer-links">
-<li><a href="https://wa.me/27721714626" rel="noopener noreferrer" target="_blank">WhatsApp Support</a></li>
-<li><a href="http://texitcointitans.com/whatsappgroup.html" rel="noopener noreferrer" target="_blank">Join WhatsApp Group</a></li>
-<li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Start Mining</a></li>
-<li><a href="https://texitcoin.org" rel="noopener noreferrer" target="_blank">Official TexitCoin</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
-</div>
-</div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>TexitCoin Titans</h4>
+        <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+        <div class="social-links">
+          <a aria-label="Facebook" href="https://www.facebook.com/TexitCoinTitans" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a aria-label="TikTok" href="https://www.tiktok.com/@texitcointitans" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a aria-label="YouTube" href="https://www.youtube.com/@TexitCoinTitans" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a aria-label="WhatsApp" href="http://texitcointitans.com/whatsappgroup.html" rel="noopener noreferrer" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+          <li><a href="#founder">Meet Bobby Gray</a></li>
+          <li><a href="#company">About TexitCoin</a></li>
+          <li><a href="#vision">Our Vision</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#">Compensation Plan</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Training Videos</a></li>
+          <li><a href="#">Download PDFs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/27721714626" rel="noopener noreferrer" target="_blank">WhatsApp Support</a></li>
+          <li><a href="http://texitcointitans.com/whatsappgroup.html" rel="noopener noreferrer" target="_blank">Join WhatsApp Group</a></li>
+          <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Start Mining</a></li>
+          <li><a href="https://texitcoin.org" rel="noopener noreferrer" target="_blank">Official TexitCoin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
+    </div>
+  </div>
 </footer>
 
 <!-- Scroll to Top Button -->
-<button aria-label="Scroll to top" class="scroll-top" id="scrollTop" onclick="scrollToTop()">
-<i class="fas fa-arrow-up"></i>
+<button aria-label="Scroll to top" class="scroll-top" id="scrollTop">
+  <i class="fas fa-arrow-up"></i>
 </button>
 
 <script>
- // Performance optimizations
- let ticking = false;
+// Performance optimizations
+let ticking = false;
 
- // Progress Bar and Navigation
- function updateOnScroll() {
- const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
- document.getElementById('progressBar').style.width = scrolled + '%';
+// Progress Bar and Navigation
+function updateOnScroll() {
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
 
- // Navigation background on scroll
- const navbar = document.getElementById('navbar');
- if (window.scrollY > 100) {
- navbar.classList.add('scrolled');
- } else {
- navbar.classList.remove('scrolled');
- }
+  // Navigation background on scroll
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
 
- // Show/hide scroll to top button
- const scrollTop = document.getElementById('scrollTop');
- if (window.scrollY > 300) {
- scrollTop.classList.add('visible');
- } else {
- scrollTop.classList.remove('visible');
- }
+  // Show/hide scroll to top button
+  const scrollTop = document.getElementById('scrollTop');
+  if (window.scrollY > 300) {
+    scrollTop.classList.add('visible');
+  } else {
+    scrollTop.classList.remove('visible');
+  }
 
- ticking = false;
- }
+  ticking = false;
+}
 
- window.addEventListener('scroll', () => {
- if (!ticking) {
- requestAnimationFrame(updateOnScroll);
- ticking = true;
- }
- });
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(updateOnScroll);
+    ticking = true;
+  }
+});
 
- // Scroll to top functionality
- function scrollToTop() {
- window.scrollTo({ top: 0, behavior: 'smooth' });
- }
+// Scroll to top functionality
+document.getElementById('scrollTop').addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
- // Smooth scrolling for anchor links
- document.querySelectorAll('a[href^="#"]').forEach(anchor => {
- anchor.addEventListener('click', function (e) {
- e.preventDefault();
- const target = document.querySelector(this.getAttribute('href'));
- if (target) {
- const offsetTop = target.offsetTop - 80; // Account for fixed nav
- window.scrollTo({
- top: offsetTop,
- behavior: 'smooth'
- });
- }
- });
- });
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offsetTop = target.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 
- // Animate elements on scroll with performance optimization
- const observerOptions = {
- threshold: 0.1,
- rootMargin: '0px 0px -50px 0px'
- };
+// Enhanced scroll animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
 
- const observer = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if (entry.isIntersecting) {
- entry.target.classList.add('animated');
- observer.unobserve(entry.target); // Stop observing once animated
- }
- });
- }, observerOptions);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animated');
+      
+      // Staggered animation for child elements
+      const children = entry.target.querySelectorAll('.stat-card, .problem-points li');
+      children.forEach((child, index) => {
+        setTimeout(() => {
+          child.style.transform = 'translateY(0)';
+          child.style.opacity = '1';
+        }, index * 100);
+      });
+      
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
 
- // Observe all animate-on-scroll elements
- document.querySelectorAll('.animate-on-scroll').forEach(el => {
- observer.observe(el);
- });
+// Observe all animate-on-scroll elements
+document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right').forEach(el => {
+  observer.observe(el);
+});
 
- // Lazy loading for images
- document.querySelectorAll('img[loading="lazy"]').forEach(img => {
- img.addEventListener('load', function() {
- this.classList.add('loaded');
- });
- });
+// Mobile menu functionality
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.querySelector('.nav-links');
 
- // Mobile menu functionality
- const mobileMenuBtn = document.getElementById('mobileMenuBtn');
- const navLinks = document.querySelector('.nav-links');
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    const icon = this.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+}
 
- if (mobileMenuBtn) {
- mobileMenuBtn.addEventListener('click', function() {
- navLinks.classList.toggle('active');
- const icon = this.querySelector('i');
- icon.classList.toggle('fa-bars');
- icon.classList.toggle('fa-times');
- });
- }
+// Enhanced button interactions with modern effects
+document.querySelectorAll('.cta-btn').forEach(btn => {
+  btn.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-3px) scale(1.02)';
+  });
 
- // Enhanced button interactions
- document.querySelectorAll('.cta-btn').forEach(btn => {
- btn.addEventListener('mouseenter', function() {
- this.style.transform = 'translateY(-2px) scale(1.02)';
- });
+  btn.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) scale(1)';
+  });
 
- btn.addEventListener('mouseleave', function() {
- this.style.transform = 'translateY(0) scale(1)';
- });
+  btn.addEventListener('click', function() {
+    this.style.transform = 'translateY(0) scale(0.98)';
+    setTimeout(() => {
+      this.style.transform = 'translateY(-3px) scale(1.02)';
+    }, 150);
+  });
+});
 
- // Add click feedback
- btn.addEventListener('click', function() {
- this.style.transform = 'translateY(0) scale(0.98)';
- setTimeout(() => {
- this.style.transform = 'translateY(-2px) scale(1.02)';
- }, 150);
- });
- });
+// Separator logo hover effect
+document.querySelectorAll('.separator-logo').forEach(logo => {
+  logo.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.1) rotate(5deg)';
+  });
+  
+  logo.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1) rotate(0deg)';
+  });
+});
 
- // Analytics tracking (placeholder - replace with your analytics)
- function trackEvent(eventName, properties = {}) {
- console.log('Event tracked:', eventName, properties);
- // Replace with your analytics implementation
- }
+// Analytics tracking
+function trackEvent(eventName, properties = {}) {
+  console.log('Event tracked:', eventName, properties);
+  // Replace with your analytics implementation
+}
 
- // Track affiliate link clicks
- document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
- link.addEventListener('click', function() {
- trackEvent('affiliate_link_clicked', {
- url: this.href,
- location: this.closest('section')?.id || 'unknown'
- });
- });
- });
+// Track affiliate link clicks
+document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
+  link.addEventListener('click', function() {
+    trackEvent('affiliate_link_clicked', {
+      url: this.href,
+      location: this.closest('section')?.id || 'unknown'
+    });
+  });
+});
 
- // Track WhatsApp clicks
- document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
- link.addEventListener('click', function() {
- trackEvent('whatsapp_clicked', {
- location: this.closest('section')?.id || 'unknown'
- });
- });
- });
+// Track WhatsApp clicks
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', function() {
+    trackEvent('whatsapp_clicked', {
+      location: this.closest('section')?.id || 'unknown'
+    });
+  });
+});
 
- // Track section views
- const sectionObserver = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
- trackEvent('section_viewed', {
- section: entry.target.id
- });
- }
- });
- }, { threshold: 0.5 });
+// Track section views
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+      trackEvent('section_viewed', {
+        section: entry.target.id
+      });
+    }
+  });
+}, { threshold: 0.5 });
 
- document.querySelectorAll('section[id]').forEach(section => {
- sectionObserver.observe(section);
- });
+document.querySelectorAll('section[id]').forEach(section => {
+  sectionObserver.observe(section);
+});
 
- // Enhanced accessibility
- document.addEventListener('keydown', function(e) {
- // ESC key closes mobile menu
- if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
- navLinks.classList.remove('active');
- mobileMenuBtn.querySelector('i').classList.remove('fa-times');
- mobileMenuBtn.querySelector('i').classList.add('fa-bars');
- }
- });
+// Enhanced accessibility
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+  }
+});
 
- // Performance monitoring
- window.addEventListener('load', function() {
- trackEvent('page_loaded', {
- load_time: performance.now()
- });
- });
+// Performance monitoring
+window.addEventListener('load', function() {
+  trackEvent('page_loaded', {
+    load_time: performance.now()
+  });
+});
 
- // Error handling
- window.addEventListener('error', function(e) {
- console.error('Page error:', e.error);
- });
+// Error handling
+window.addEventListener('error', function(e) {
+  console.error('Page error:', e.error);
+});
 
- // Update current TXC price (placeholder - replace with real API)
- function updateTXCPrice() {
- // This would typically fetch from a real API
- // For now, using the price from search results
- const priceElement = document.querySelector('.stat-number');
- if (priceElement && priceElement.textContent.includes('$')) {
- // Price already set in HTML
- trackEvent('price_displayed', {
- price: priceElement.textContent
- });
- }
- }
+// Preload critical images
+function preloadImages() {
+  const imageUrls = [
+    'https://texitcointitans.com/images/txc-logo.jpg'
+  ];
+  
+  imageUrls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
+}
 
- updateTXCPrice();
+preloadImages();
 
-// Hide navbar on scroll down for desktop/laptop, show when at top
+// Responsive navbar behavior
 let lastScrollTop = 0;
 window.addEventListener("scroll", function() {
- const navbar = document.getElementById("navbar");
- if (window.innerWidth > 768) {
- let scrollTop = window.scrollY;
- if (scrollTop > lastScrollTop) {
- navbar.style.top = "-80px"; // hide nav
- } else if (scrollTop <= 0) {
- navbar.style.top = "0"; // show at top
- }
- lastScrollTop = scrollTop;
- }
+  const navbar = document.getElementById("navbar");
+  if (window.innerWidth > 768) {
+    let scrollTop = window.scrollY;
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      navbar.style.transform = "translateY(-100%)";
+    } else {
+      navbar.style.transform = "translateY(0)";
+    }
+    lastScrollTop = scrollTop;
+  }
 });
-// Hide nav completely on mobile
+
+// Hide nav completely on mobile if needed
 if (window.innerWidth <= 768) {
- const navbar = document.getElementById("navbar");
- if (navbar) navbar.style.display = "none";
+  // Keep navbar visible on mobile for better UX
 }
 </script>
+
 </body>
 </html>
