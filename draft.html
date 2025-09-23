@@ -8,509 +8,246 @@
 <meta name="description" content="Discover TexitCoin: a Texas mineable cryptocurrency powering financial sovereignty with daily mining rewards, community growth, and independence."/>
 <meta name="keywords" content="TexitCoin, Texas cryptocurrency, TXC mining, financial sovereignty, mineable digital asset, decentralized finance, crypto community"/>
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto Mining"/>
-<meta property="og:description" content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth."/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://texitcointitans.com"/>
-<meta property="og:image" content="https://texitcointitans.com/images/txc-logo.jpg"/>
-
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet"/>
 
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 <style>
-:root{
+:root {
   --txc-red:#be1f24;
-  --txc-black:#130c0e;
   --txc-blue:#262262;
+  --txc-black:#130c0e;
   --white:#ffffff;
-
-  --surface-primary:#ffffff;
-  --surface-secondary:#fbfcfe;
-  --surface-muted:#f6f7f9;
-  --text-primary:#130c0e;
-  --text-secondary:#64748b;
-
-  --gradient-primary:linear-gradient(135deg,#be1f24 0%,#d42c31 50%,#e63946 100%);
-  --gradient-blue:linear-gradient(135deg,#262262 0%,#3730a3 50%,#4338ca 100%);
-
-  --shadow-soft:0 6px 30px rgba(0,0,0,0.08);
-  --shadow-subtle:0 10px 30px rgba(0,0,0,0.06);
-
-  --space-sm:0.75rem;
-  --space-md:1rem;
-  --space-lg:1.75rem;
-  --space-xl:3rem;
-
-  /* narrower, refined container */
-  --container-max:1100px;
-  --container-comfort:920px;
+  --bg-light:#f9f9fb;
+  --gradient-redblue:linear-gradient(135deg,#be1f24,#262262);
 }
 
 /* Reset */
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  color:var(--text-primary);
-  background:var(--surface-primary);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  font-family:'Inter',sans-serif;
+  background:var(--bg-light);
+  color:var(--txc-black);
   overflow-x:hidden;
-  line-height:1.55;
+  line-height:1.6;
 }
 
-/* Typography helpers */
-.font-display{font-family:'Orbitron',monospace}
-.font-modern{font-family:'Space Grotesk',sans-serif}
-
-/* Constrained container for elegance */
-.container{
-  width:100%;
-  max-width:var(--container-comfort);
-  margin:0 auto;
-  padding:0 var(--space-lg);
-}
-
-/* Utility tighter wide when needed */
-.container-wide{
-  max-width:var(--container-max);
-}
-
-/* Top progress */
-.progress-container{position:fixed;top:0;left:0;right:0;height:3px;z-index:120;background:rgba(0,0,0,0.04)}
-.progress-bar{height:100%;background:var(--gradient-primary);width:0;transition:width .35s cubic-bezier(.4,0,.2,1)}
+/* Global container */
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 1.5rem}
 
 /* Nav */
 .nav{
-  position:fixed;inset:0 0 auto 0;
-  display:flex;align-items:center;
-  background:transparent;padding:calc(var(--space-sm) - 2px) 0;
-  z-index:110;transition:transform .35s ease,background .3s ease,box-shadow .3s ease;
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,0.05);
 }
-.nav.scrolled{background:rgba(255,255,255,0.96);box-shadow:var(--shadow-soft);padding:6px 0}
-
-.nav-container{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:var(--container-comfort);margin:0 auto;padding:0 var(--space-lg)}
-.logo{font-family:'Orbitron',monospace;color:var(--txc-blue);font-weight:800;text-decoration:none;font-size:1.15rem;letter-spacing:0.6px}
-.logo:hover{color:var(--txc-red);transform:translateY(-1px)}
-
-.nav-links{display:flex;gap:var(--space-lg);align-items:center;list-style:none}
-.nav-links a{color:var(--text-primary);text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 2px;position:relative}
+.nav-container{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
+.logo{font-family:'Orbitron',sans-serif;font-weight:900;color:var(--txc-blue);font-size:1.2rem;text-decoration:none}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{text-decoration:none;font-weight:600;color:var(--txc-black)}
 .nav-links a:hover{color:var(--txc-red)}
-
-.nav-cta{background:var(--gradient-primary);color:var(--white);padding:.5rem 1rem;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(190,31,36,0.18)}
-.mobile-menu-btn{display:none;background:none;border:0;font-size:1.25rem}
+.nav-cta{padding:.6rem 1rem;border-radius:8px;background:var(--gradient-redblue);color:var(--white);text-decoration:none;font-weight:700}
 
 /* Hero */
 .hero{
-  min-height:84vh;
-  display:flex;align-items:center;position:relative;
-  background:linear-gradient(180deg,rgba(38,34,98,0.95),rgba(38,34,98,0.88));
-  overflow:hidden;padding:calc(var(--space-xl)) 0;
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff;
+  overflow:hidden;
 }
 .hero::before{
   content:"";
-  position:absolute;inset:0;background:
-    radial-gradient(400px 200px at 12% 25%, rgba(190,31,36,0.06), transparent 15%),
-    radial-gradient(350px 180px at 88% 75%, rgba(255,255,255,0.02), transparent 20%);
-  pointer-events:none;
-  mix-blend-mode:overlay;
-  opacity:.9;
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(90deg,rgba(0,0,0,0.03) 1px,transparent 1px),
+    linear-gradient(rgba(0,0,0,0.03) 1px,transparent 1px);
+  background-size:40px 40px;
+  animation:moveGrid 20s linear infinite;
 }
-.hero-content{text-align:center;z-index:2;max-width:900px;margin:0 auto;color:var(--white);padding:0 var(--space-lg);animation:fadeInUp .9s cubic-bezier(.2,.9,.3,1) both}
+@keyframes moveGrid{from{background-position:0 0}to{background-position:40px 40px}}
 
-@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-content{
+  position:relative;z-index:1;
+  text-align:center;
+  padding:2rem;
+  max-width:800px;
+}
+.hero h1{font-family:'Orbitron',sans-serif;font-size:3rem;color:var(--txc-blue);margin-bottom:1rem}
+.hero p{font-size:1.2rem;margin-bottom:2rem}
+.cta-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.cta-btn{
+  padding:.9rem 1.5rem;
+  border:none;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+.cta-primary{background:var(--gradient-redblue);color:#fff}
+.cta-secondary{background:#fff;color:var(--txc-blue);border:2px solid var(--txc-blue)}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
 
-.hero-badge{display:inline-block;background:rgba(255,255,255,0.06);backdrop-filter:blur(6px);padding:.45rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,0.06);font-weight:700;margin-bottom:1rem}
-.hero h1{font-family:'Orbitron',monospace;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;margin-bottom:1rem;text-shadow:0 10px 30px rgba(0,0,0,0.35)}
-.hero-subtitle{font-family:'Space Grotesk',sans-serif;font-size:clamp(1rem,2.5vw,1.2rem);opacity:.95;color:rgba(255,255,255,0.94);max-width:740px;margin:0 auto 1.25rem}
-.cta-buttons{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
-.cta-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.15rem;border-radius:12px;border:0;font-weight:700;cursor:pointer;min-width:160px;justify-content:center;transition:transform .26s ease,box-shadow .26s ease}
-.cta-primary{background:var(--gradient-primary);color:var(--white);box-shadow:0 12px 40px rgba(190,31,36,0.14)}
-.cta-secondary{background:rgba(255,255,255,0.08);color:var(--white);border:1px solid rgba(255,255,255,0.08)}
+/* Section separator with glowing TXC logo */
+.section-separator{
+  display:flex;align-items:center;justify-content:center;
+  margin:3rem 0;
+}
+.separator-line{
+  flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,var(--txc-blue),transparent);
+}
+.separator-logo{
+  width:72px;height:72px;
+  border-radius:50%;
+  margin:0 1rem;
+  overflow:hidden;
+  border:3px solid #fff;
+  box-shadow:0 0 15px rgba(190,31,36,0.5),0 0 25px rgba(38,34,98,0.5);
+  animation:pulse 4s ease-in-out infinite;
+}
+.separator-logo img{width:100%;height:100%;object-fit:cover}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+}
 
-/* Section separator refined and small */
-.section-separator{display:flex;align-items:center;justify-content:center;padding:1.25rem 0;background:transparent}
-.separator-line{height:1px;flex:1;max-width:260px;background:linear-gradient(90deg,transparent,rgba(0,0,0,0.08),transparent)}
-.separator-logo{width:64px;height:64px;border-radius:50%;overflow:hidden;margin:0 1rem;border:3px solid var(--white);box-shadow:0 10px 30px rgba(0,0,0,0.12);background:var(--white)}
-.separator-logo img{width:100%;height:100%;object-fit:cover;display:block;transform-origin:center;transition:transform .35s ease}
-.separator-logo:hover img{transform:scale(1.06)}
+/* Problem section */
+.problem-section{background:#fff;padding:4rem 0}
+.problem-content{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.section-title{font-family:'Orbitron';font-size:2rem;margin-bottom:1rem;color:var(--txc-blue)}
+.section-description{margin-bottom:1.5rem;color:#444}
+.problem-points{list-style:none}
+.problem-points li{margin-bottom:.75rem;padding:1rem;background:#f3f4f6;border-radius:8px}
+.problem-points li strong{color:var(--txc-red)}
 
-/* Problem section: narrow grid for balance */
-.problem-section{background:linear-gradient(180deg,rgba(19,12,14,0.98),rgba(19,12,14,0.95));padding:var(--space-xl) 0;color:var(--white);overflow:hidden}
-.problem-content{display:grid;grid-template-columns:1fr 420px;gap:2.25rem;align-items:start;max-width:var(--container-comfort);margin:0 auto;padding:0 var(--space-lg)}
-.problem-text{}
-.section-badge{display:inline-block;background:var(--gradient-primary);padding:.35rem .8rem;border-radius:999px;font-weight:700;margin-bottom:1rem;color:var(--white);font-size:.85rem}
-.section-title{font-family:'Orbitron',monospace;font-size:clamp(1.75rem,3.2vw,2.6rem);margin-bottom:1rem;color:var(--white)}
-.section-description{font-family:'Space Grotesk',sans-serif;font-size:1.02rem;opacity:.92;color:rgba(255,255,255,0.88);margin-bottom:1rem}
+/* Stats */
+.stat-card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.05);text-align:center}
+.stat-number{font-family:'Orbitron';font-size:2rem;color:var(--txc-red)}
+.stat-label{font-weight:700;margin:.3rem 0}
 
-.problem-points{list-style:none;margin-top:1rem}
-.problem-points li{background:rgba(255,255,255,0.03);padding:.9rem;border-radius:10px;margin-bottom:.85rem;transition:transform .28s ease,background .28s ease}
-.problem-points li:hover{transform:translateX(6px);background:rgba(255,255,255,0.045)}
-.problem-points li::before{content:"⚠️";margin-right:.6rem;display:inline-block;vertical-align:top}
-
-.problem-stats{display:flex;flex-direction:column;gap:1rem}
-.stat-card{background:var(--white);color:var(--text-primary);padding:1.1rem;border-radius:14px;box-shadow:var(--shadow-subtle);border:1px solid rgba(0,0,0,0.04);transition:transform .28s ease}
-.stat-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;background:var(--gradient-primary);color:var(--white)}
-.stat-number{font-family:'Orbitron',monospace;font-size:2rem;color:var(--txc-red);font-weight:900}
-.stat-label{font-weight:700;color:var(--text-primary);margin-top:.3rem}
-.stat-description{color:var(--text-secondary);font-size:.92rem}
-
-/* Video section slimmer container */
-.video-section{padding:2.25rem 0;background:var(--surface-secondary)}
-.video-content{max-width:820px;margin:0 auto;text-align:center;padding:0 var(--space-lg)}
-.video-header .section-badge{background:linear-gradient(90deg,rgba(38,34,98,0.95),rgba(38,34,98,0.9));color:var(--white)}
-.video-title{font-family:'Orbitron';font-size:clamp(1.6rem,3.6vw,2.6rem);color:var(--txc-blue);margin-bottom:0.6rem}
-.video-subtitle{color:var(--text-secondary);font-family:'Space Grotesk';max-width:720px;margin:0 auto 1rem}
-.video-container{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-soft);transition:transform .28s ease}
-.video-wrapper{position:relative;padding-bottom:56.25%;height:0;background:var(--gradient-blue)}
-.video-iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.video-info{padding:1.1rem;text-align:center}
+/* Video */
+.video-section{background:var(--bg-light);padding:4rem 0;text-align:center}
+.video-title{font-family:'Orbitron';font-size:2rem;margin-bottom:1rem;color:var(--txc-blue)}
+.video-container{max-width:800px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,0.1)}
+.video-container iframe{width:100%;height:450px;border:0}
 
 /* Footer */
-.footer{background:linear-gradient(180deg,rgba(19,12,14,1),rgba(34,28,31,1));padding:2.25rem 0;color:var(--white)}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;max-width:var(--container-comfort);margin:0 auto;padding:0 var(--space-lg)}
-.footer-section h4{font-family:'Orbitron',monospace;font-size:1.05rem;margin-bottom:.6rem}
-.footer-links a{color:rgba(255,255,255,0.78);text-decoration:none}
-.footer-bottom{text-align:center;padding-top:1rem;color:rgba(255,255,255,0.6);font-size:.95rem}
-
-/* Scroll to top */
-.scroll-top{position:fixed;right:var(--space-lg);bottom:var(--space-lg);width:52px;height:52px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:var(--gradient-primary);box-shadow:0 12px 40px rgba(190,31,36,0.16);border:0;cursor:pointer;opacity:0;visibility:hidden;transition:all .28s ease;z-index:120}
-.scroll-top.visible{opacity:1;visibility:visible}
-.scroll-top i{color:var(--white)}
+.footer{background:#fff;border-top:1px solid #eee;padding:2rem;text-align:center;color:#666;font-size:.9rem}
 
 /* Animations */
-.animate-on-scroll{opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.2,.9,.3,1)}
-.animate-on-scroll.animated{opacity:1;transform:none}
-
-/* Responsive */
-@media (max-width:1024px){.problem-content{grid-template-columns:1fr 380px;padding:0 1rem}}
-@media (max-width:880px){
-  .container{padding:0 1rem}
-  .nav-links{display:none}
-  .mobile-menu-btn{display:block}
-  .problem-content{grid-template-columns:1fr;gap:1.25rem}
-  .separator-line{max-width:120px}
-  .separator-logo{width:56px;height:56px}
-  .video-container{margin:0 0}
-}
-@media (max-width:480px){
-  .hero{min-height:70vh;padding:2rem 0}
-  .hero h1{font-size:1.6rem}
-  .cta-btn{min-width:unset;width:100%;max-width:320px}
-  .separator-logo{width:48px;height:48px}
-}
-
-/* Accessibility focus */
-a:focus,.cta-btn:focus{outline:3px solid rgba(190,31,36,0.25);outline-offset:3px}
+.animate{opacity:0;transform:translateY(20px);transition:all .8s ease}
+.animate.visible{opacity:1;transform:translateY(0)}
 </style>
-
-<link rel="canonical" href="https://texitcointitans.com/"/>
-<meta name="twitter:title" content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto"/>
-<meta name="twitter:description" content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth."/>
-
-<script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Organization",
-      "@id":"https://texitcointitans.com/#org",
-      "name":"TexitCoin Titans Team",
-      "url":"https://texitcointitans.com/",
-      "logo":{"@type":"ImageObject","url":"https://texitcointitans.com/images/txc-logo.jpg"},
-      "sameAs":["https://www.facebook.com/TexitCoinTitans","https://www.tiktok.com/@texitcointitans","https://www.youtube.com/@TexitCoinTitans"]
-    },
-    {
-      "@type":"WebPage",
-      "@id":"https://texitcointitans.com/#webpage",
-      "url":"https://texitcointitans.com/",
-      "inLanguage":"en-US",
-      "name":"TexitCoin Titans Team - Home",
-      "headline":"Is Texas Forging the Future of Financial Sovereignty?",
-      "description":"Far more than code on a blockchain, TexitCoin represents a movement toward self-reliance and community-powered growth. By combining mining rewards with real-world adoption, it positions Texans and the world to claim greater control over their financial future.",
-      "isPartOf":{"@id":"https://texitcointitans.com/#org"}
-    }
-  ]
-}</script>
 </head>
 <body>
 
-<!-- Progress Bar -->
-<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
-
-<!-- Navigation -->
-<nav class="nav" id="navbar">
+<!-- NAV -->
+<nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="#home">TexitCoin Titans</a>
-    <ul class="nav-links" aria-label="Primary navigation">
-      <li><a href="#home">Home</a></li>
-      <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
-    </ul>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
-      <i class="fas fa-bars"></i>
-    </button>
-    <a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Join Now</a>
+    <a href="#" class="logo">TexitCoin Titans</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="getting-started-with-texitcoin.html">Getting Started</a>
+    </div>
+    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" class="nav-cta">Join Now</a>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero" id="home" aria-labelledby="hero-heading">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge"><i class="fas fa-star" aria-hidden="true"></i> Premium Texas Cryptocurrency</div>
-      <h1 id="hero-heading">Is Texas Leading the Charge for Financial Sovereignty?</h1>
-      <p class="hero-subtitle">A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Secure your mining position today and join the revolution. ⛏️</p>
-      <div class="cta-buttons">
-        <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket" aria-hidden="true"></i> Mine TXC Now</a>
-        <a class="cta-btn cta-secondary" href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Let's Chat Now</a>
-      </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Is Texas Leading the Charge for Financial Sovereignty?</h1>
+    <p>A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Secure your mining position today and join the revolution. ⛏️</p>
+    <div class="cta-buttons">
+      <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank">🚀 Mine TXC Now</a>
+      <a class="cta-btn cta-secondary" href="https://wa.me/27721714626" target="_blank">💬 Let's Chat Now</a>
     </div>
   </div>
 </section>
 
 <!-- Separator -->
-<div class="section-separator" aria-hidden="true">
+<div class="section-separator">
   <div class="separator-line"></div>
-  <div class="separator-logo" title="TexitCoin logo">
-    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" loading="lazy">
+  <div class="separator-logo">
+    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TXC Logo">
   </div>
   <div class="separator-line"></div>
 </div>
 
 <!-- Problem Section -->
-<section class="problem-section animate-on-scroll" id="problems">
-  <div class="problem-content">
-    <div class="problem-text">
-      <span class="section-badge"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> The Hard Truth</span>
-      <h2 class="section-title">Your Financial Freedom is Under Attack</h2>
-      <p class="section-description">While you work harder than ever, traditional financial systems are designed to keep you dependent. The game is rigged, but there's a way out that most people don't know about.</p>
-
-      <ul class="problem-points" aria-live="polite">
-        <li><div><strong>Inflation is stealing your wealth:</strong> Your savings lose purchasing power every single day while banks profit from your deposits.</div></li>
-        <li><div><strong>Banks control your money:</strong> They can freeze accounts, limit withdrawals, and charge fees whenever they want.</div></li>
-        <li><div><strong>Traditional investments favor the wealthy:</strong> High minimums and complex barriers keep average people from real wealth-building opportunities.</div></li>
-        <li><div><strong>Economic uncertainty is growing:</strong> Job security, retirement funds, and economic stability are no longer guaranteed.</div></li>
-      </ul>
+<section class="problem-section">
+  <div class="container">
+    <div class="problem-content">
+      <div>
+        <h2 class="section-title">Your Financial Freedom is Under Attack</h2>
+        <p class="section-description">While you work harder than ever, traditional financial systems are designed to keep you dependent. The game is rigged, but there's a way out that most people don't know about.</p>
+        <ul class="problem-points">
+          <li><strong>Inflation is stealing your wealth:</strong> Your savings lose purchasing power every single day while banks profit from your deposits.</li>
+          <li><strong>Banks control your money:</strong> They can freeze accounts, limit withdrawals, and charge fees whenever they want.</li>
+          <li><strong>Traditional investments favor the wealthy:</strong> High minimums and complex barriers keep average people from real wealth-building opportunities.</li>
+          <li><strong>Economic uncertainty is growing:</strong> Job security, retirement funds, and economic stability are no longer guaranteed.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="stat-card">
+          <div class="stat-number">-23%</div>
+          <div class="stat-label">Purchasing Power Lost</div>
+          <p>Average American purchasing power decline since 2020 due to inflation</p>
+        </div>
+        <br/>
+        <div class="stat-card">
+          <div class="stat-number">64%</div>
+          <div class="stat-label">Living Paycheck to Paycheck</div>
+          <p>Of Americans have less than $1,000 in emergency savings</p>
+        </div>
+      </div>
     </div>
-
-    <aside class="problem-stats" aria-label="Statistics">
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-chart-line-down" aria-hidden="true"></i></div>
-        <div class="stat-number">-23%</div>
-        <div class="stat-label">Purchasing Power Lost</div>
-        <div class="stat-description">Average American purchasing power decline since 2020 due to inflation</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-piggy-bank" aria-hidden="true"></i></div>
-        <div class="stat-number">0.01%</div>
-        <div class="stat-label">Bank Savings Interest</div>
-        <div class="stat-description">Average interest rate on savings accounts while inflation runs at 6%+</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
-        <div class="stat-number">64%</div>
-        <div class="stat-label">Living Paycheck to Paycheck</div>
-        <div class="stat-description">Of Americans have less than $1,000 in emergency savings</div>
-      </div>
-
-      <div style="text-align:center;margin-top:1rem">
-        <p style="color:rgba(255,255,255,0.95);margin-bottom:.75rem;font-weight:600">There's a better way. A Texas-made solution that puts financial control back in YOUR hands.</p>
-        <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right" aria-hidden="true"></i> Discover the Solution</a>
-      </div>
-    </aside>
   </div>
 </section>
 
 <!-- Separator -->
-<div class="section-separator" aria-hidden="true">
+<div class="section-separator">
   <div class="separator-line"></div>
   <div class="separator-logo">
-    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" loading="lazy">
+    <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TXC Logo">
   </div>
   <div class="separator-line"></div>
 </div>
 
 <!-- Video Section -->
-<section class="video-section animate-on-scroll" id="intro-video">
-  <div class="video-content">
-    <div class="video-header">
-      <span class="section-badge"><i class="fas fa-play" aria-hidden="true"></i> Featured Video</span>
-      <h2 class="video-title">Discover the Power of TexitCoin Mining</h2>
-      <p class="video-subtitle">Watch this exclusive introduction to understand how TexitCoin is revolutionizing financial sovereignty in Texas and beyond.</p>
+<section class="video-section">
+  <div class="container">
+    <h2 class="video-title">Discover the Power of TexitCoin Mining</h2>
+    <p>Watch this exclusive introduction to understand how TexitCoin is revolutionizing financial sovereignty in Texas and beyond.</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/-cQ4O0kmMN0" title="TexitCoin Video" allowfullscreen></iframe>
     </div>
-
-    <div class="video-container" role="region" aria-label="Intro video">
-      <div class="video-wrapper">
-        <iframe class="video-iframe" src="https://www.youtube.com/embed/-cQ4O0kmMN0?rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&showinfo=0&controls=1&cc_load_policy=0" title="Discover the Power of TexitCoin Mining" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-info">
-        <p class="video-description">Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cryptocurrency that puts financial control back in your hands.</p>
-        <a class="video-cta cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket" aria-hidden="true"></i> Start Mining Now</a>
-      </div>
-    </div>
-
-    <div class="video-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-top:1rem;max-width:760px;margin-left:auto;margin-right:auto">
-      <div style="text-align:center">
-        <div style="font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:900;color:var(--txc-red)">24/7</div>
-        <div style="font-weight:700;color:var(--text-secondary);font-size:.9rem">Mining Rewards</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:900;color:var(--txc-red)">100%</div>
-        <div style="font-weight:700;color:var(--text-secondary);font-size:.9rem">Texas Made</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:900;color:var(--txc-red)">∞</div>
-        <div style="font-weight:700;color:var(--text-secondary);font-size:.9rem">Potential</div>
-      </div>
-    </div>
+    <br/>
+    <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank">🚀 Start Mining Now</a>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-section">
-      <h4>TexitCoin Titans</h4>
-      <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
-      <div style="display:flex;gap:.6rem;margin-top:.6rem">
-        <a aria-label="Facebook" href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--gradient-primary);color:var(--white);text-decoration:none"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-        <a aria-label="TikTok" href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--gradient-primary);color:var(--white);text-decoration:none"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-        <a aria-label="YouTube" href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--gradient-primary);color:var(--white);text-decoration:none"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-        <a aria-label="WhatsApp" href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--gradient-primary);color:var(--white);text-decoration:none"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul class="footer-links" style="margin-top:.5rem">
-        <li><a href="#home">Home</a></li>
-        <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
-        <li><a href="#founder">Meet Bobby Gray</a></li>
-        <li><a href="#company">About TexitCoin</a></li>
-        <li><a href="#vision">Our Vision</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Resources</h4>
-      <ul class="footer-links" style="margin-top:.5rem">
-        <li><a href="#">Compensation Plan</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Training Videos</a></li>
-        <li><a href="#">Download PDFs</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Support</h4>
-      <ul class="footer-links" style="margin-top:.5rem">
-        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
-        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
-        <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
-        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
-  </div>
+  <p>© 2025 TexitCoin Titans Team. All rights reserved. Made in Texas, for Texans. Supporting the TEXIT movement.</p>
 </footer>
 
-<!-- Scroll top -->
-<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
-
 <script>
-// Smooth progress and nav behavior
-const progressBar = document.getElementById('progressBar');
-const navbar = document.getElementById('navbar');
-const scrollTopBtn = document.getElementById('scrollTop');
-
-function onScroll(){
-  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-  progressBar.style.width = Math.min(100, scrolled) + '%';
-
-  if(window.scrollY > 90) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
-
-  if(window.scrollY > 350) scrollTopBtn.classList.add('visible'); else scrollTopBtn.classList.remove('visible');
-}
-let ticking=false;
-window.addEventListener('scroll', () => { if(!ticking){ requestAnimationFrame(onScroll); ticking=true; setTimeout(()=>ticking=false,120); } });
-
-// Scroll to top
-scrollTopBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
-
-// Smooth anchor links offset for fixed nav
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', function(e){
-    const href = this.getAttribute('href');
-    if(href && href.startsWith('#')){
-      e.preventDefault();
-      const el = document.querySelector(href);
-      if(el) {
-        const offset = Math.max(16, 80);
-        const top = el.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({top,behavior:'smooth'});
-      }
-    }
-  });
-});
-
-// Animate on scroll
-const io = new IntersectionObserver((entries)=>{
+// Scroll animations
+const elements=document.querySelectorAll('.animate');
+const observer=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
-      entry.target.classList.add('animated');
-      // stagger children
-      const children = entry.target.querySelectorAll('.stat-card, .problem-points li, .video-container');
-      children.forEach((c,i)=>setTimeout(()=>{ c.style.opacity='1'; c.style.transform='none'; }, i*90));
-      io.unobserve(entry.target);
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
   });
-},{threshold:.12,rootMargin:'0px 0px -100px 0px'});
-
-document.querySelectorAll('.animate-on-scroll').forEach(el=>io.observe(el));
-
-// Mobile menu
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.querySelector('.nav-links');
-if(mobileBtn){
-  mobileBtn.addEventListener('click', ()=>{
-    navLinks.classList.toggle('active');
-    mobileBtn.querySelector('i').classList.toggle('fa-bars');
-    mobileBtn.querySelector('i').classList.toggle('fa-times');
-    if(navLinks.classList.contains('active')){
-      navLinks.style.display='flex';
-      navLinks.style.flexDirection='column';
-      navLinks.style.position='absolute';
-      navLinks.style.right='1rem';
-      navLinks.style.top='60px';
-      navLinks.style.background='rgba(255,255,255,0.98)';
-      navLinks.style.padding='1rem';
-      navLinks.style.borderRadius='10px';
-      navLinks.style.boxShadow='0 10px 30px rgba(0,0,0,0.08)';
-    } else {
-      navLinks.removeAttribute('style');
-    }
-  });
-}
-
-// Preload logo
-(new Image()).src='https://texitcointitans.com/images/txc-logo.jpg';
-
-// Track affiliate clicks placeholder
-document.querySelectorAll('a[href*="minetxc.com"]').forEach(a=>{
-  a.addEventListener('click', ()=>console.log('affiliate_link_clicked', {url:a.href}));
-});
+},{threshold:.2});
+elements.forEach(el=>observer.observe(el));
 </script>
-
 </body>
 </html>
