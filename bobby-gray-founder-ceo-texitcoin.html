@@ -62,93 +62,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Header Navigation */
-        .header {
-            background: var(--white);
-            padding: 1rem 0;
-            box-shadow: var(--card-shadow);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            transition: transform 0.3s ease;
-        }
-
-        .header.header-hidden {
-            transform: translateY(-100%);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--deep-blue);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .logo:hover {
-            color: var(--bold-red);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--bold-red);
-        }
-
-        .back-home-btn {
-            background: var(--gradient-red);
-            color: #ffffff !important;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 800 !important;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: var(--red-shadow);
-        }
-
-        .back-home-btn i {
-            color: #ffffff !important;
-        }
-
-        .back-home-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
-        }
-
         /* Hero Section */
         .hero {
             min-height: 70vh;
@@ -157,8 +70,23 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding: 6rem 0 4rem;
+            padding: 4rem 0;
             margin-top: 0;
+        }
+        
+        .back-home-link {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+            display: block;
+        }
+        
+        .back-home-link:hover {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .hero::before {
@@ -457,27 +385,13 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .back-home-btn {
-                order: -1;
-            }
-
             .container {
                 padding: 0 1rem;
             }
 
             .hero {
                 min-height: 60vh;
-                padding: 8rem 0 3rem;
+                padding: 3rem 0;
             }
 
             .profile-image {
@@ -511,11 +425,16 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+
+            .back-home-link {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
             .hero {
-                padding: 9rem 0 2rem;
+                padding: 2rem 0;
             }
             
             .profile-image {
@@ -536,6 +455,10 @@
             .quote-highlight::before {
                 font-size: 3rem;
                 top: -5px;
+            }
+
+            .back-home-link {
+                font-size: 0.8rem;
             }
         }
 
@@ -731,39 +654,6 @@
     <!-- End Page Wrapper -->
 
     <script>
-        // Auto-hide/show navigation on scroll
-        let lastScrollTop = 0;
-        let scrollTimer = null;
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Clear existing timer
-            if (scrollTimer) {
-                clearTimeout(scrollTimer);
-            }
-            
-            // Show header immediately when scrolling up, hide when scrolling down
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down & past 100px
-                header.classList.add('header-hidden');
-            } else if (scrollTop < lastScrollTop || scrollTop <= 100) {
-                // Scrolling up or at top
-                header.classList.remove('header-hidden');
-            }
-            
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            
-            // Scroll to top button visibility
-            const scrollTopBtn = document.getElementById('scrollTop');
-            if (scrollTop > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        }, { passive: true });
-
         // Update footer date
         function updateFooterDate() {
             const now = new Date();
@@ -788,6 +678,15 @@
         }
 
         // Scroll to top functionality
+        window.addEventListener('scroll', () => {
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
         document.getElementById('scrollTop').addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
