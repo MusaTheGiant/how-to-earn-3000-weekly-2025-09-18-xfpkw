@@ -20,6 +20,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
 <!-- Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Preload critical images -->
+<link rel="preload" href="https://texitcointitans.com/images/txc-logo.jpg" as="image"/>
 <style>
  :root {
  --deep-blue: #262262;
@@ -1592,7 +1594,7 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
 document.querySelectorAll('.divider-image').forEach(img => {
  img.addEventListener('error', function() {
  this.classList.add('error');
- console.log('Image failed to load, showing text fallback');
+ // Silent fallback - no console logging
  });
  
  img.addEventListener('load', function() {
@@ -1667,8 +1669,9 @@ document.querySelectorAll('.cta-btn').forEach(btn => {
 
 // Analytics tracking with proper JSON formatting
 function trackEvent(eventName, properties = {}) {
- console.log('Event tracked:', eventName, JSON.stringify(properties, null, 2));
- // Replace with your analytics implementation
+ // Silent tracking - replace with your analytics implementation
+ // Example: gtag('event', eventName, properties);
+ // Example: analytics.track(eventName, properties);
 }
 
 // Track affiliate link clicks
@@ -1726,7 +1729,8 @@ window.addEventListener('load', function() {
 
 // Error handling
 window.addEventListener('error', function(e) {
- console.error('Page error:', e.error);
+ // Silent error handling - implement proper error reporting here
+ // Example: Send to error tracking service like Sentry
 });
 
 // Hide navbar on scroll down for desktop/laptop, show when at top
