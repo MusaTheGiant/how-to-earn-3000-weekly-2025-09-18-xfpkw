@@ -17,15 +17,19 @@
     <meta name="twitter:title" content="TexitCoin Tutorial Videos | Complete TXC Mining Guide & Training">
     <meta name="twitter:description" content="Master TexitCoin mining with step-by-step video tutorials. Learn how to join TexitCoin, mine TXC coins, and build recurring crypto income.">
     <link href="favicon.jpg" rel="icon" type="image/jpg"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="https://texitcointitans.com/images/txc-logo.jpg" as="image">
 
+    <style>
         :root {
             --deep-blue: #262262;
             --bold-red: #be1f24;
@@ -41,40 +45,10 @@
             --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
         }
 
-        /* Header Navigation */
-        .header {
-            background: var(--white);
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .back-home-btn {
-            color: var(--deep-blue);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s ease;
-            text-align: center;
-        }
-
-        .back-home-btn:hover {
-            color: var(--bold-red);
-        }
-
-        .back-home-btn i {
-            font-size: 1.1rem;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -83,6 +57,10 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        .font-orbitron {
+            font-family: 'Orbitron', monospace;
         }
 
         /* Progress Bar */
@@ -103,7 +81,127 @@
             transition: width 0.3s ease;
         }
 
-        /* Hero Section - Adjusted for better proportions */
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+            z-index: 999;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--card-shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--bold-red);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--bold-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--red-shadow);
+            animation-play-state: paused;
+        }
+
+        .nav-cta .desktop-text {
+            display: inline;
+        }
+
+        .nav-cta .mobile-text {
+            display: none;
+        }
+
+        @keyframes ctaPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: var(--red-shadow);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 12px 40px rgba(190, 31, 36, 0.35);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: var(--red-shadow);
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Hero Section */
         .hero {
             min-height: 75vh;
             background: var(--gradient-hero);
@@ -111,7 +209,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding: 4rem 0;
+            padding: 6rem 0 3rem 0;
         }
 
         .hero::before {
@@ -157,26 +255,39 @@
 
         .hero h1 {
             font-family: 'Orbitron', monospace;
-            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
             font-weight: 900;
             color: var(--white);
             margin-bottom: 1.2rem;
             text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
         }
 
-        .hero p {
-            font-size: clamp(1rem, 1.8vw, 1.2rem);
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.2s both;
             color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.7;
         }
 
-        .cta-container {
+        .hero-description {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.4s both;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .cta-btn {
@@ -193,7 +304,10 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            z-index: 15;
+            text-align: center;
+            min-width: 200px;
+            justify-content: center;
+            animation: ctaPulse 3s ease-in-out infinite;
         }
 
         .cta-primary {
@@ -205,6 +319,7 @@
         .cta-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+            animation-play-state: paused;
         }
 
         .cta-secondary {
@@ -217,20 +332,122 @@
             background: #ffffff;
             color: #25D366;
             transform: translateY(-3px);
+            animation-play-state: paused;
         }
 
-        /* Body Section */
-        .main-content {
-            padding: 5rem 0;
+        /* Section Divider System */
+        .section-divider {
+            position: relative;
+            z-index: 10;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -30px 0;
+        }
+
+        .divider-image-container {
+            position: relative;
+            z-index: 15;
+            animation: fadeInScale 1.2s ease-out both;
+        }
+
+        .divider-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            box-shadow: 0 8px 32px rgba(38, 34, 98, 0.3), 0 0 0 2px rgba(38, 34, 98, 0.1);
+            transition: all 0.3s ease;
             background: var(--white);
+            display: block;
+        }
+
+        .divider-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 48px rgba(38, 34, 98, 0.4), 0 0 0 2px rgba(190, 31, 36, 0.2);
+        }
+
+        .divider-text {
+            display: none;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding: 0 2rem;
+            animation: fadeInScale 1.2s ease-out both;
+        }
+
+        .divider-text::before,
+        .divider-text::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: var(--gradient-red);
+        }
+
+        .divider-text::before {
+            left: -50px;
+        }
+
+        .divider-text::after {
+            right: -50px;
+        }
+
+        .divider-text .icon {
+            color: var(--bold-red);
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tutorial Section */
+        .tutorial-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tutorial-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.7;
         }
 
         .section-title {
             font-family: 'Orbitron', monospace;
-            font-size: clamp(2rem, 4vw, 3rem);
-            text-align: center;
-            margin-bottom: 3rem;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 900;
             color: var(--deep-blue);
+            margin-bottom: 3rem;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 2;
         }
 
         .video-grid {
@@ -238,16 +455,15 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Updated grid layout for optimal desktop viewing - 2 videos per row */
         @media (min-width: 769px) {
             .video-grid {
                 grid-template-columns: repeat(2, 1fr);
                 max-width: 1000px;
+                margin: 0 auto 4rem auto;
                 gap: 2.5rem;
             }
         }
@@ -262,7 +478,14 @@
             overflow: visible;
             box-shadow: var(--card-shadow);
             text-align: center;
+            animation: fadeInUp 0.8s ease-out both;
         }
+
+        .video-card:nth-child(1) { animation-delay: 0.2s; }
+        .video-card:nth-child(2) { animation-delay: 0.4s; }
+        .video-card:nth-child(3) { animation-delay: 0.6s; }
+        .video-card:nth-child(4) { animation-delay: 0.8s; }
+        .video-card:nth-child(5) { animation-delay: 1.0s; }
 
         .video-card::before {
             content: '';
@@ -354,15 +577,7 @@
         .play-btn i {
             font-size: 2rem;
             color: var(--deep-blue);
-            margin-left: 4px; /* Slight offset for visual centering */
-        }
-
-        .video-container:hover .video-overlay {
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .video-container:hover .play-btn {
-            transform: scale(1.05);
+            margin-left: 4px;
         }
 
         .video-title {
@@ -379,13 +594,13 @@
         }
 
         /* Resources Section */
-        .resources {
-            background: rgba(38, 34, 98, 0.03);
-            padding: 5rem 0;
+        .resources-section {
+            background: var(--white);
+            padding: 4rem 0;
             position: relative;
         }
 
-        .resources::before {
+        .resources-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -399,6 +614,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .resource-card {
@@ -411,7 +628,12 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--card-shadow);
+            animation: fadeInUp 0.8s ease-out both;
         }
+
+        .resource-card:nth-child(1) { animation-delay: 0.2s; }
+        .resource-card:nth-child(2) { animation-delay: 0.4s; }
+        .resource-card:nth-child(3) { animation-delay: 0.6s; }
 
         .resource-card::before {
             content: '';
@@ -476,11 +698,13 @@
             position: relative;
             z-index: 10;
             cursor: pointer;
+            animation: ctaPulse 3s ease-in-out infinite;
         }
 
         .download-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+            animation-play-state: paused;
         }
 
         /* Footer */
@@ -488,36 +712,112 @@
             background: #262262;
             padding: 3rem 0 2rem;
             border-top: 1px solid rgba(38, 34, 98, 0.2);
+            color: #ffffff;
         }
 
-        .footer-content {
-            text-align: center;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            color: #ffffff;
+        }
+
+        .footer-section h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .footer-section p {
             color: #ffffff;
         }
 
         .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
         }
 
         .footer-links a {
-            color: #ffffff;
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .footer-content p {
             color: #ffffff;
         }
 
-        /* Scroll to Top Button */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bold-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--bold-red);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .footer-bottom p {
+            color: #ffffff;
+            margin-top: 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .legal-links a:hover {
+            color: #ffffff;
+        }
+
+        .legal-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Scroll to Top */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
@@ -534,6 +834,7 @@
             visibility: hidden;
             transition: all 0.3s ease;
             z-index: 1000;
+            border: none;
         }
 
         .scroll-top.visible {
@@ -551,59 +852,122 @@
             font-size: 1.2rem;
         }
 
-        /* Progress Indicator */
-        .progress-indicator {
-            position: fixed;
-            bottom: 2rem;
-            left: 2rem;
-            background: var(--white);
-            border: 1px solid rgba(38, 34, 98, 0.2);
-            border-radius: 25px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            z-index: 1000;
-            box-shadow: var(--card-shadow);
-        }
-
-        .progress-text {
-            color: var(--deep-blue);
-            font-weight: 600;
-        }
-
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .container {
+                padding: 0 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: clamp(1.6rem, 3vw, 2.4rem);
+            }
+            
+            .section-divider {
+                height: 100px;
+                margin: -25px 0;
+            }
+            
+            .divider-image {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(38, 34, 98, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                font-size: 1.2rem;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+                transition: all 0.3s ease;
+                z-index: 998;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-links a {
+                color: var(--white);
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            .nav-links a:hover {
+                color: var(--bold-red);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-container {
                 padding: 0 1rem;
             }
 
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-cta {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
             .hero {
-                min-height: 70vh;
-                padding: 3rem 0;
+                min-height: 65vh;
+                padding: 5rem 0 2rem 0;
             }
 
             .hero h1 {
-                font-size: clamp(1.8rem, 6vw, 2.5rem);
+                font-size: clamp(1.4rem, 5vw, 2rem);
                 margin-bottom: 1rem;
             }
 
-            .hero p {
-                font-size: clamp(0.9rem, 4vw, 1.1rem);
+            .hero-description {
+                font-size: clamp(0.85rem, 3.5vw, 1rem);
                 margin-bottom: 2rem;
             }
 
-            .cta-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
+            .cta-buttons {
+                justify-content: center;
             }
 
             .cta-btn {
                 width: 100%;
-                max-width: 300px;
-                justify-content: center;
+                max-width: 280px;
                 padding: 0.9rem 2rem;
                 font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .scroll-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .tutorial-section {
+                padding: 3rem 0;
+            }
+
+            .resources-section {
+                padding: 3rem 0;
             }
 
             .video-grid {
@@ -627,48 +991,64 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
+            /* Mobile Section Divider - Switch to text */
+            .section-divider {
+                height: auto;
+                margin: 2rem 0 3rem 0;
+                padding: 1rem 0;
             }
 
-            .scroll-top {
-                bottom: 1rem;
-                right: 1rem;
+            .divider-image-container {
+                display: none;
             }
 
-            .progress-indicator {
-                bottom: 1rem;
-                left: 1rem;
-                font-size: 0.8rem;
+            .divider-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
             }
 
-            .nav-container {
-                padding: 0 1rem;
+            .divider-text::before,
+            .divider-text::after {
+                width: 30px;
             }
 
-            .back-home-btn {
-                font-size: 0.9rem;
+            .divider-text::before {
+                left: -40px;
             }
 
-            .main-content {
-                padding: 3rem 0;
-            }
-
-            .resources {
-                padding: 3rem 0;
+            .divider-text::after {
+                right: -40px;
             }
         }
 
         @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
             .hero {
-                min-height: 65vh;
-                padding: 2rem 0;
+                min-height: 60vh;
+                padding: 4.5rem 0 1.5rem 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.2rem, 5vw, 1.6rem);
             }
 
             .cta-btn {
                 padding: 0.8rem 1.5rem;
                 font-size: 0.95rem;
+                max-width: 260px;
+            }
+
+            .tutorial-section {
+                padding: 2.5rem 0;
+            }
+
+            .resources-section {
+                padding: 2.5rem 0;
             }
 
             .video-grid {
@@ -692,14 +1072,59 @@
                 gap: 1.5rem;
             }
 
-            .section-title {
-                font-size: clamp(1.5rem, 5vw, 2.2rem);
-                margin-bottom: 2rem;
+            /* Section Divider for very small screens */
+            .section-divider {
+                margin: 1.5rem 0 2.5rem 0;
             }
 
-            .back-home-btn {
-                font-size: 0.8rem;
+            .divider-text {
+                font-size: 0.9rem;
             }
+
+            .divider-text::before,
+            .divider-text::after {
+                width: 25px;
+            }
+
+            .divider-text::before {
+                left: -35px;
+            }
+
+            .divider-text::after {
+                right: -35px;
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Focus States for Accessibility */
+        .cta-btn:focus,
+        .nav-cta:focus,
+        .scroll-top:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .nav-links a:focus {
+            outline: 2px solid var(--bold-red);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .mobile-menu-btn:focus {
+            outline: 2px solid var(--bold-red);
+            outline-offset: 2px;
+            border-radius: 4px;
         }
 
         /* Smooth scrolling */
@@ -732,29 +1157,33 @@
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Header Navigation -->
-    <header class="header" id="header">
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
         <div class="nav-container">
-            <nav class="nav-links">
-                <a href="https://texitcointitans.com/" class="back-home-btn">
-                    <i class="fas fa-home"></i>
-                    Back to Home
-                </a>
-            </nav>
+            <a href="https://texitcointitans.com/" class="logo">TexitCoin Titans</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://texitcointitans.com/">Home</a></li>
+                <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Start Mining TXC ⛏️</a>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <h1>Master TexitCoin Mining: Complete Step-by-Step Video Tutorials</h1>
-                <p>Discover how to join TexitCoin, mine TXC coins, and build recurring crypto income with our comprehensive video training, proven strategies, and free downloadable resources.</p>
+                <p class="hero-subtitle">Your Complete Guide to TXC Mining Success</p>
+                <p class="hero-description">Discover how to join TexitCoin, mine TXC coins, and build recurring crypto income with our comprehensive video training, proven strategies, and free downloadable resources.</p>
                 
-                <div class="cta-container">
+                <div class="cta-buttons">
                     <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-rocket"></i>
-                        Mine TXC Now
+                        Start Mining TXC ⛏️
                     </a>
                     <a href="https://wa.me/27721714626" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i>
@@ -765,8 +1194,18 @@
         </div>
     </section>
 
-    <!-- Main Content Section -->
-    <section class="main-content" id="tutorials">
+    <!-- Section Divider 1 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>VIDEO TUTORIALS
+        </div>
+    </div>
+
+    <!-- Tutorial Videos Section -->
+    <section class="tutorial-section" id="tutorials">
         <div class="container">
             <h2 class="section-title">Step-by-Step Tutorial Videos</h2>
             
@@ -858,8 +1297,18 @@
         </div>
     </section>
 
+    <!-- Section Divider 2 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>RESOURCES
+        </div>
+    </div>
+
     <!-- Resources Section -->
-    <section class="resources" id="resources">
+    <section class="resources-section" id="resources">
         <div class="container">
             <h2 class="section-title">Download Resources</h2>
             
@@ -906,32 +1355,94 @@
         </div>
     </section>
 
+    <!-- Final CTA Section -->
+    <section class="tutorial-section">
+        <div class="container">
+            <div style="text-align: center; padding: 2rem 0;">
+                <h2 class="section-title">Ready to Start Mining?</h2>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Join thousands of miners already earning with TexitCoin. Your financial sovereignty journey starts now.
+                </p>
+                <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-rocket"></i>
+                    Start Mining TXC ⛏️
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                    <a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                    <a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
-                    <a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">Contact Us</a>
-                    <a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliate Disclosure</a>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>TexitCoin Titans</h4>
+                    <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
-                <p>&copy; <span id="currentYear">2025</span> TexitCoin Titans Team. All rights reserved. | Jobs = modern slavery. Recurring income = financial sovereignty.</p>
-                <p class="footer-date"><span id="currentDate">Loading...</span></p>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://texitcointitans.com/">Home</a></li>
+                        <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+                        <li><a href="#founder">Meet Bobby Gray</a></li>
+                        <li><a href="#company">About TexitCoin</a></li>
+                        <li><a href="#vision">Our Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Training Videos</a></li>
+                        <li><a href="#">Download PDFs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+                        <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+                        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a>
+                </div>
+                <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top" id="scrollTop">
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <!-- Progress Indicator -->
-    <div class="progress-indicator" id="progressIndicator">
-        <span class="progress-text">0%</span>
-    </div>
+    </button>
 
     <script>
         // Video play functionality
@@ -960,14 +1471,22 @@
             });
         }
 
-        // Progress Bar and Scroll Functionality
-        window.addEventListener('scroll', () => {
+        // Performance optimizations
+        let ticking = false;
+
+        // Progress Bar and Navigation
+        function updateOnScroll() {
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.getElementById('progressBar').style.width = scrolled + '%';
-            
-            // Update progress indicator
-            document.querySelector('.progress-text').textContent = Math.round(scrolled) + '%';
-            
+
+            // Navigation background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
             // Show/hide scroll to top button
             const scrollTop = document.getElementById('scrollTop');
             if (window.scrollY > 300) {
@@ -975,21 +1494,26 @@
             } else {
                 scrollTop.classList.remove('visible');
             }
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
         });
 
         // Scroll to top functionality
         document.getElementById('scrollTop').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
-                // Only handle valid internal anchors, not just "#"
                 if (href && href !== '#' && href.length > 1) {
                     e.preventDefault();
                     const target = document.querySelector(href);
@@ -1003,40 +1527,7 @@
             });
         });
 
-        // Add loading animation
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-            
-            // Update copyright year and current date
-            updateFooterDate();
-        });
-
-        // Function to update footer date
-        function updateFooterDate() {
-            const now = new Date();
-            const currentYear = now.getFullYear();
-            const options = { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric',
-                timeZone: 'UTC'
-            };
-            const currentDate = now.toLocaleDateString('en-US', options);
-            
-            // Update copyright year (check if element exists)
-            const yearElement = document.getElementById('currentYear');
-            if (yearElement) {
-                yearElement.textContent = currentYear;
-            }
-            
-            // Update current date (check if element exists)
-            const dateElement = document.getElementById('currentDate');
-            if (dateElement) {
-                dateElement.textContent = currentDate;
-            }
-        }
-
-        // Intersection Observer for animations
+        // Animate elements on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1045,26 +1536,66 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all video cards and resource cards
-        document.querySelectorAll('.video-card, .resource-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
-        // Add hover effects for better interactivity
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        }
+
+        // Enhanced button interactions
         document.querySelectorAll('.cta-btn').forEach(btn => {
             btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px) scale(1.02)';
+                this.style.transform = 'translateY(-2px) scale(1.02)';
             });
-            
+
             btn.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
@@ -1087,6 +1618,30 @@
                     playBtn.style.transform = 'scale(1)';
                 }
             });
+        });
+
+        // Accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                document.body.style.overflow = '';
+            }
         });
     </script>
 </body>
