@@ -173,7 +173,7 @@
  align-items: center;
  position: relative;
  overflow: hidden;
- padding: 4rem 0 5rem 0;
+ padding: 4rem 0 3rem 0;
  }
 
  .hero::before {
@@ -219,7 +219,7 @@
 
  .hero h1 {
  font-family: 'Orbitron', monospace;
- font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+ font-size: clamp(1.8rem, 3.5vw, 2.8rem);
  font-weight: 900;
  color: var(--white);
  margin-bottom: 1.2rem;
@@ -227,7 +227,7 @@
  }
 
  .hero-subtitle {
- font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+ font-size: clamp(1rem, 2vw, 1.3rem);
  margin-bottom: 2rem;
  opacity: 0.95;
  animation: fadeInUp 1s ease-out 0.2s both;
@@ -235,7 +235,7 @@
  }
 
  .hero-description {
- font-size: clamp(1rem, 1.8vw, 1.2rem);
+ font-size: clamp(0.9rem, 1.5vw, 1.1rem);
  margin-bottom: 2.5rem;
  opacity: 0.9;
  line-height: 1.7;
@@ -284,19 +284,7 @@
  box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
  }
 
- .cta-secondary {
- background: #25D366;
- color: #ffffff;
- border: 2px solid #ffffff;
- }
-
- .cta-secondary:hover {
- background: #ffffff;
- color: #25D366;
- transform: translateY(-3px);
- }
-
- /* Section Divider */
+ /* Universal Section Divider System */
  .section-divider {
  position: relative;
  z-index: 10;
@@ -304,7 +292,7 @@
  display: flex;
  justify-content: center;
  align-items: center;
- margin: -30px 0 -30px 0;
+ margin: -30px 0;
  }
 
  .divider-image-container {
@@ -314,11 +302,11 @@
  }
 
  .divider-image {
- width: 120px;
- height: 120px;
+ width: 100px;
+ height: 100px;
  border-radius: 50%;
  object-fit: cover;
- border: 4px solid var(--white);
+ border: 3px solid var(--white);
  box-shadow: 0 8px 32px rgba(38, 34, 98, 0.3), 0 0 0 2px rgba(38, 34, 98, 0.1);
  transition: all 0.3s ease;
  background: var(--white);
@@ -328,6 +316,43 @@
  .divider-image:hover {
  transform: scale(1.05);
  box-shadow: 0 12px 48px rgba(38, 34, 98, 0.4), 0 0 0 2px rgba(190, 31, 36, 0.2);
+ }
+
+ .divider-text {
+ display: none;
+ font-family: 'Orbitron', monospace;
+ font-size: 1.2rem;
+ font-weight: 900;
+ color: var(--deep-blue);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ position: relative;
+ padding: 0 2rem;
+ animation: fadeInScale 1.2s ease-out both;
+ }
+
+ .divider-text::before,
+ .divider-text::after {
+ content: '';
+ position: absolute;
+ top: 50%;
+ width: 40px;
+ height: 2px;
+ background: var(--gradient-red);
+ }
+
+ .divider-text::before {
+ left: -50px;
+ }
+
+ .divider-text::after {
+ right: -50px;
+ }
+
+ .divider-text .icon {
+ color: var(--bold-red);
+ margin-right: 0.5rem;
+ font-size: 1.1rem;
  }
 
  @keyframes fadeInScale {
@@ -341,18 +366,9 @@
  }
  }
 
- /* Add padding to prevent obstruction */
- .hero {
- padding-bottom: 5rem;
- }
-
- .problems-solutions-section {
- padding-top: 5rem;
- }
-
  /* Problems vs Solutions Section */
  .problems-solutions-section {
- padding: 5rem 0;
+ padding: 4rem 0;
  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
  position: relative;
  overflow: hidden;
@@ -396,7 +412,7 @@
 
  .problems-solutions-title {
  font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
+ font-size: clamp(1.6rem, 3vw, 2.4rem);
  font-weight: 900;
  color: var(--deep-blue);
  margin-bottom: 1rem;
@@ -405,7 +421,7 @@
  }
 
  .problems-solutions-intro {
- font-size: clamp(1rem, 2vw, 1.2rem);
+ font-size: clamp(0.9rem, 1.6vw, 1.1rem);
  color: var(--text-secondary);
  max-width: 600px;
  margin: 0 auto 3rem;
@@ -476,7 +492,7 @@
  .problem-title, .solution-title {
  font-family: 'Orbitron', monospace;
  font-weight: 700;
- font-size: 1.1rem;
+ font-size: 1rem;
  margin-bottom: 0.8rem;
  }
 
@@ -489,7 +505,7 @@
  }
 
  .problem-text, .solution-text {
- font-size: 0.95rem;
+ font-size: 0.9rem;
  line-height: 1.5;
  }
 
@@ -531,7 +547,7 @@
 
  /* Video Section Styles */
  .video-section {
- padding: 5rem 0;
+ padding: 4rem 0;
  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
  position: relative;
  overflow: hidden;
@@ -575,7 +591,7 @@
 
  .video-title {
  font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3.5rem);
+ font-size: clamp(1.6rem, 3vw, 2.8rem);
  font-weight: 900;
  color: var(--deep-blue);
  margin-bottom: 1rem;
@@ -583,7 +599,7 @@
  }
 
  .video-subtitle {
- font-size: clamp(1rem, 2vw, 1.3rem);
+ font-size: clamp(0.9rem, 1.6vw, 1.2rem);
  color: var(--text-secondary);
  max-width: 600px;
  margin: 0 auto 2rem;
@@ -673,7 +689,7 @@
 
  .video-stat-number {
  font-family: 'Orbitron', monospace;
- font-size: 2rem;
+ font-size: 1.8rem;
  font-weight: 900;
  color: var(--bold-red);
  margin-bottom: 0.5rem;
@@ -683,313 +699,6 @@
  font-size: 0.9rem;
  color: var(--text-secondary);
  font-weight: 500;
- }
-
- /* Section Styles */
- .section {
- padding: 5rem 0;
- }
-
- .section-alt {
- background: var(--bg-light);
- }
-
- .section-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- text-align: center;
- margin-bottom: 1rem;
- color: var(--text-dark);
- }
-
- .section-subtitle {
- text-align: center;
- font-size: clamp(1rem, 2vw, 1.2rem);
- color: var(--text-light);
- max-width: 600px;
- margin: 0 auto 3rem;
- }
-
- /* Founder Section */
- .founder-grid {
- display: grid;
- grid-template-columns: 1fr 2fr;
- gap: 4rem;
- align-items: center;
- max-width: 1000px;
- margin: 0 auto;
- }
-
- .founder-image {
- position: relative;
- }
-
- .founder-image img {
- width: 100%;
- border-radius: 20px;
- box-shadow: var(--shadow-xl);
- }
-
- .founder-badge {
- position: absolute;
- top: -20px;
- right: -20px;
- background: var(--gradient-cta);
- color: var(--white);
- padding: 1rem;
- border-radius: 50%;
- font-size: 1.5rem;
- box-shadow: var(--shadow-lg);
- }
-
- .founder-content h3 {
- font-family: 'Orbitron', monospace;
- font-size: 2rem;
- margin-bottom: 1rem;
- color: var(--primary-blue);
- }
-
- .founder-credentials {
- background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
- padding: 1.5rem;
- border-radius: 15px;
- margin: 1.5rem 0;
- border-left: 4px solid var(--gold);
- }
-
- .credentials-list {
- list-style: none;
- margin: 1rem 0;
- }
-
- .credentials-list li {
- display: flex;
- align-items: center;
- gap: 0.5rem;
- margin-bottom: 0.5rem;
- font-weight: 500;
- }
-
- .credentials-list li::before {
- content: "🏆";
- font-size: 1.2rem;
- }
-
- /* Company Section */
- .company-grid {
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 4rem;
- align-items: center;
- max-width: 1000px;
- margin: 0 auto;
- }
-
- .company-logo {
- text-align: center;
- }
-
- .company-logo img {
- max-width: 300px;
- width: 100%;
- height: auto;
- filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
- }
-
- .company-stats {
- display: grid;
- grid-template-columns: repeat(2, 1fr);
- gap: 1.5rem;
- margin: 2rem 0;
- }
-
- .stat-card {
- background: var(--white);
- padding: 1.5rem;
- border-radius: 15px;
- text-align: center;
- box-shadow: var(--shadow-lg);
- border: 1px solid rgba(0, 0, 0, 0.05);
- transition: transform 0.3s ease;
- }
-
- .stat-card:hover {
- transform: translateY(-5px);
- }
-
- .stat-number {
- font-family: 'Orbitron', monospace;
- font-size: 2rem;
- font-weight: 900;
- color: var(--primary-red);
- margin-bottom: 0.5rem;
- }
-
- .stat-label {
- font-size: 0.9rem;
- color: var(--text-light);
- font-weight: 500;
- }
-
- /* Vision & Mission Section */
- .vision-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
- gap: 3rem;
- margin-top: 3rem;
- }
-
- .vision-card {
- background: var(--white);
- padding: 2.5rem;
- border-radius: 20px;
- box-shadow: var(--shadow-lg);
- position: relative;
- overflow: hidden;
- transition: all 0.3s ease;
- }
-
- .vision-card:hover {
- transform: translateY(-10px);
- box-shadow: var(--shadow-xl);
- }
-
- .vision-card::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- height: 4px;
- background: var(--gradient-cta);
- }
-
- .vision-icon {
- width: 60px;
- height: 60px;
- background: var(--gradient-cta);
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- color: var(--white);
- font-size: 1.5rem;
- margin-bottom: 1.5rem;
- }
-
- .vision-card h4 {
- font-family: 'Orbitron', monospace;
- font-size: 1.3rem;
- margin-bottom: 1rem;
- color: var(--primary-blue);
- }
-
- .benefits-list {
- list-style: none;
- margin: 1.5rem 0;
- }
-
- .benefits-list li {
- display: flex;
- align-items: flex-start;
- gap: 0.8rem;
- margin-bottom: 1rem;
- padding: 0.5rem 0;
- }
-
- .benefits-list li::before {
- content: "✓";
- font-size: 1.1rem;
- margin-top: 0.1rem;
- flex-shrink: 0;
- }
-
- /* Member Offer Section */
- .offer-highlight {
- background: linear-gradient(135deg, #1e40af 0%, #dc2626 100%);
- color: var(--white);
- padding: 4rem 0;
- position: relative;
- overflow: hidden;
- }
-
- .offer-highlight::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') repeat;
- }
-
- .offer-content {
- position: relative;
- z-index: 2;
- text-align: center;
- max-width: 800px;
- margin: 0 auto;
- }
-
- .offer-badge {
- display: inline-block;
- background: var(--gold);
- color: var(--text-dark);
- padding: 0.5rem 1.5rem;
- border-radius: 50px;
- font-weight: 700;
- margin-bottom: 2rem;
- font-size: 0.9rem;
- text-transform: uppercase;
- letter-spacing: 0.5px;
- }
-
- .offer-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- margin-bottom: 1.5rem;
- }
-
- .offer-description {
- font-size: clamp(1rem, 2vw, 1.2rem);
- margin-bottom: 2rem;
- opacity: 0.95;
- line-height: 1.7;
- }
-
- .eligibility-note {
- background: rgba(255, 255, 255, 0.1);
- padding: 1.5rem;
- border-radius: 15px;
- margin: 2rem 0;
- border-left: 4px solid var(--gold);
- text-align: left;
- }
-
- .eligibility-note h5 {
- font-weight: 700;
- margin-bottom: 0.5rem;
- color: var(--gold);
- }
-
- /* CTA Section */
- .cta-section {
- background: var(--text-dark);
- color: var(--white);
- padding: 4rem 0;
- text-align: center;
- }
-
- .cta-section h2 {
- font-family: 'Orbitron', monospace;
- font-size: clamp(2rem, 4vw, 3rem);
- margin-bottom: 1rem;
- }
-
- .cta-section p {
- font-size: clamp(1rem, 2vw, 1.2rem);
- margin-bottom: 2rem;
- opacity: 0.9;
  }
 
  /* Footer */
@@ -1013,7 +722,7 @@
 
  .footer-section h4 {
  font-family: 'Orbitron', monospace;
- font-size: 1.2rem;
+ font-size: 1.1rem;
  margin-bottom: 1rem;
  color: #ffffff;
  }
@@ -1076,15 +785,6 @@
  color: #ffffff;
  }
 
- .footer-content {
- text-align: center;
- color: #ffffff;
- }
-
- .footer-content p {
- color: #ffffff;
- }
-
  /* Scroll to Top */
  .scroll-top {
  position: fixed;
@@ -1121,6 +821,26 @@
  }
 
  /* Responsive Design */
+ @media (max-width: 1024px) {
+ .container {
+ padding: 0 1.5rem;
+ }
+ 
+ .hero h1 {
+ font-size: clamp(1.6rem, 3vw, 2.4rem);
+ }
+ 
+ .section-divider {
+ height: 100px;
+ margin: -25px 0;
+ }
+ 
+ .divider-image {
+ width: 90px;
+ height: 90px;
+ }
+ }
+
  @media (max-width: 768px) {
  .nav-links {
  display: none;
@@ -1131,37 +851,29 @@
  }
 
  .hero {
- min-height: 70vh;
- padding: 3rem 0;
+ min-height: 65vh;
+ padding: 3rem 0 2rem 0;
  }
 
  .hero h1 {
- font-size: clamp(1.8rem, 6vw, 2.5rem);
+ font-size: clamp(1.4rem, 5vw, 2rem);
  margin-bottom: 1rem;
  }
 
  .hero-description {
- font-size: clamp(0.9rem, 4vw, 1.1rem);
+ font-size: clamp(0.85rem, 3.5vw, 1rem);
  margin-bottom: 2rem;
  }
 
  .cta-buttons {
- flex-direction: column;
- align-items: center;
- gap: 1rem;
+ justify-content: center;
  }
 
  .cta-btn {
  width: 100%;
- max-width: 300px;
- justify-content: center;
+ max-width: 280px;
  padding: 0.9rem 2rem;
  font-size: 1rem;
- }
-
- /* Hide secondary CTA button on mobile */
- .cta-secondary {
- display: none;
  }
 
  .container {
@@ -1173,6 +885,37 @@
  right: 1rem;
  }
 
+ /* Mobile Section Divider - Switch to text */
+ .section-divider {
+ height: auto;
+ margin: 2rem 0 3rem 0;
+ padding: 1rem 0;
+ }
+
+ .divider-image-container {
+ display: none;
+ }
+
+ .divider-text {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1rem;
+ }
+
+ .divider-text::before,
+ .divider-text::after {
+ width: 30px;
+ }
+
+ .divider-text::before {
+ left: -40px;
+ }
+
+ .divider-text::after {
+ right: -40px;
+ }
+
  /* Problems vs Solutions mobile styles */
  .problems-solutions-section {
  padding: 3rem 0;
@@ -1182,16 +925,8 @@
  padding: 0 1rem;
  }
 
- /* Section Divider mobile styles */
- .section-divider {
- height: 50px;
- margin: -50px 0;
- }
-
- .divider-image {
- width: 100px;
- height: 100px;
- border-width: 3px;
+ .problems-solutions-title {
+ font-size: clamp(1.3rem, 4vw, 1.8rem);
  }
 
  .problem-solution-item {
@@ -1214,13 +949,13 @@
 
  .problem-title,
  .solution-title {
- font-size: 1rem;
+ font-size: 0.95rem;
  margin-bottom: 0.6rem;
  }
 
  .problem-text,
  .solution-text {
- font-size: 0.9rem;
+ font-size: 0.85rem;
  }
 
  /* Video section mobile styles */
@@ -1234,14 +969,13 @@
  }
 
  .video-title {
- font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+ font-size: clamp(1.3rem, 4vw, 1.8rem);
  }
 
  .video-info {
  padding: 1.5rem;
  }
 
- /* Hide video description and stats on mobile */
  .video-description {
  display: none;
  }
@@ -1250,7 +984,6 @@
  display: none;
  }
 
- /* Add margin to CTA button since description is hidden */
  .video-cta {
  margin-top: 1rem;
  }
@@ -1266,35 +999,50 @@
  }
 
  .hero {
- min-height: 65vh;
- padding: 2rem 0;
+ min-height: 60vh;
+ padding: 2.5rem 0 1.5rem 0;
+ }
+
+ .hero h1 {
+ font-size: clamp(1.2rem, 5vw, 1.6rem);
  }
 
  .cta-btn {
  padding: 0.8rem 1.5rem;
  font-size: 0.95rem;
+ max-width: 260px;
  }
 
- /* Problems vs Solutions adjustments for very small screens */
- .problems-solutions-section {
- padding: 2rem 0;
- }
-
- /* Section Divider adjustments for very small screens */
+ /* Section Divider for very small screens */
  .section-divider {
- height: 40px;
- margin: -40px 0;
+ margin: 1.5rem 0 2.5rem 0;
  }
 
- .divider-image {
- width: 80px;
- height: 80px;
- border-width: 2px;
+ .divider-text {
+ font-size: 0.9rem;
+ }
+
+ .divider-text::before,
+ .divider-text::after {
+ width: 25px;
+ }
+
+ .divider-text::before {
+ left: -35px;
+ }
+
+ .divider-text::after {
+ right: -35px;
+ }
+
+ /* Problems vs Solutions very small screens */
+ .problems-solutions-section {
+ padding: 2.5rem 0;
  }
 
  .problem-solution-item {
  padding: 1.5rem 1rem;
- margin-bottom: 2rem;
+ gap: 1.2rem;
  }
 
  .vs-divider {
@@ -1303,9 +1051,9 @@
  font-size: 0.9rem;
  }
 
- /* Video section adjustments for very small screens */
+ /* Video section very small screens */
  .video-section {
- padding: 2rem 0;
+ padding: 2.5rem 0;
  }
 
  .video-info {
@@ -1325,11 +1073,6 @@
  transform: translateY(0);
  }
 
- /* Video Section Animation */
- .video-container {
- animation: fadeInUp 0.8s ease-out;
- }
-
  /* Loading States */
  img {
  transition: opacity 0.3s ease;
@@ -1343,6 +1086,19 @@
  opacity: 1;
  }
 
+ /* Image Loading Fallback */
+ .divider-image {
+ background: url('https://texitcointitans.com/images/txc-logo.jpg') center center/cover;
+ }
+
+ .divider-image.error + .divider-text {
+ display: flex;
+ }
+
+ .divider-image.error {
+ display: none;
+ }
+
  /* Performance Optimizations */
  .hero::before {
  will-change: transform;
@@ -1352,7 +1108,7 @@
  will-change: transform;
  }
 
- /* Focus States */
+ /* Focus States for Accessibility */
  .cta-btn:focus,
  .nav-cta:focus,
  .scroll-top:focus {
@@ -1426,6 +1182,7 @@
 <div class="progress-container">
 <div class="progress-bar" id="progressBar"></div>
 </div>
+
 <!-- Navigation -->
 <nav class="nav" id="navbar">
 <div class="nav-container">
@@ -1451,20 +1208,19 @@
 <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
 <i class="fas fa-rocket"></i>
  Mine TXC Now
- </a>
-<a class="cta-btn cta-secondary" href="https://wa.me/27721714626" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-whatsapp"></i>
- Let's Chat Now
- </a>
+</a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- Section Divider -->
+<!-- Section Divider 1 -->
 <div class="section-divider">
 <div class="divider-image-container">
 <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+</div>
+<div class="divider-text">
+<span class="icon">⛏</span>MINE TXC
 </div>
 </div>
 
@@ -1528,6 +1284,16 @@ Claim Your Financial Independence
 </div>
 </div>
 </section>
+
+<!-- Section Divider 2 -->
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+</div>
+<div class="divider-text">
+<span class="icon">⛏</span>MINE TXC
+</div>
+</div>
 
 <!-- Video Section -->
 <section class="video-section" id="intro-video">
@@ -1651,11 +1417,11 @@ Start Mining Now
 </button>
 
 <script>
- // Performance optimizations
- let ticking = false;
+// Performance optimizations
+let ticking = false;
 
- // Progress Bar and Navigation
- function updateOnScroll() {
+// Progress Bar and Navigation
+function updateOnScroll() {
  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
  document.getElementById('progressBar').style.width = scrolled + '%';
 
@@ -1676,22 +1442,22 @@ Start Mining Now
  }
 
  ticking = false;
- }
+}
 
- window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
  if (!ticking) {
  requestAnimationFrame(updateOnScroll);
  ticking = true;
  }
- });
+});
 
- // Scroll to top functionality
- function scrollToTop() {
+// Scroll to top functionality
+function scrollToTop() {
  window.scrollTo({ top: 0, behavior: 'smooth' });
- }
+}
 
- // Smooth scrolling for anchor links
- document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  anchor.addEventListener('click', function (e) {
  e.preventDefault();
  const target = document.querySelector(this.getAttribute('href'));
@@ -1703,50 +1469,55 @@ Start Mining Now
  });
  }
  });
- });
+});
 
- // Animate elements on scroll with performance optimization
- const observerOptions = {
+// Animate elements on scroll with performance optimization
+const observerOptions = {
  threshold: 0.1,
  rootMargin: '0px 0px -50px 0px'
- };
+};
 
- const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
  entries.forEach(entry => {
  if (entry.isIntersecting) {
  entry.target.classList.add('animated');
  observer.unobserve(entry.target); // Stop observing once animated
  }
  });
- }, observerOptions);
+}, observerOptions);
 
- // Observe all animate-on-scroll elements
- document.querySelectorAll('.animate-on-scroll').forEach(el => {
+// Observe all animate-on-scroll elements
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
  observer.observe(el);
- });
+});
 
- // Lazy loading for images
- document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+// Image loading fallback system
+document.querySelectorAll('.divider-image').forEach(img => {
+ img.addEventListener('error', function() {
+ this.classList.add('error');
+ console.log('Image failed to load, showing text fallback');
+ });
+ 
  img.addEventListener('load', function() {
  this.classList.add('loaded');
  });
- });
+});
 
- // Mobile menu functionality
- const mobileMenuBtn = document.getElementById('mobileMenuBtn');
- const navLinks = document.querySelector('.nav-links');
+// Mobile menu functionality
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.querySelector('.nav-links');
 
- if (mobileMenuBtn) {
+if (mobileMenuBtn) {
  mobileMenuBtn.addEventListener('click', function() {
  navLinks.classList.toggle('active');
  const icon = this.querySelector('i');
  icon.classList.toggle('fa-bars');
  icon.classList.toggle('fa-times');
  });
- }
+}
 
- // Enhanced button interactions
- document.querySelectorAll('.cta-btn').forEach(btn => {
+// Enhanced button interactions
+document.querySelectorAll('.cta-btn').forEach(btn => {
  btn.addEventListener('mouseenter', function() {
  this.style.transform = 'translateY(-2px) scale(1.02)';
  });
@@ -1762,35 +1533,35 @@ Start Mining Now
  this.style.transform = 'translateY(-2px) scale(1.02)';
  }, 150);
  });
- });
+});
 
- // Analytics tracking (placeholder - replace with your analytics)
- function trackEvent(eventName, properties = {}) {
+// Analytics tracking with proper JSON formatting
+function trackEvent(eventName, properties = {}) {
  console.log('Event tracked:', eventName, JSON.stringify(properties, null, 2));
  // Replace with your analytics implementation
- }
+}
 
- // Track affiliate link clicks
- document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
+// Track affiliate link clicks
+document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
  link.addEventListener('click', function() {
  trackEvent('affiliate_link_clicked', {
  url: this.href,
  location: this.closest('section')?.id || 'unknown'
  });
  });
- });
+});
 
- // Track WhatsApp clicks
- document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+// Track WhatsApp clicks
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
  link.addEventListener('click', function() {
  trackEvent('whatsapp_clicked', {
  location: this.closest('section')?.id || 'unknown'
  });
  });
- });
+});
 
- // Track section views
- const sectionObserver = new IntersectionObserver((entries) => {
+// Track section views
+const sectionObserver = new IntersectionObserver((entries) => {
  entries.forEach(entry => {
  if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
  trackEvent('section_viewed', {
@@ -1798,48 +1569,33 @@ Start Mining Now
  });
  }
  });
- }, { threshold: 0.5 });
+}, { threshold: 0.5 });
 
- document.querySelectorAll('section[id]').forEach(section => {
+document.querySelectorAll('section[id]').forEach(section => {
  sectionObserver.observe(section);
- });
+});
 
- // Enhanced accessibility
- document.addEventListener('keydown', function(e) {
+// Enhanced accessibility
+document.addEventListener('keydown', function(e) {
  // ESC key closes mobile menu
  if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
  navLinks.classList.remove('active');
  mobileMenuBtn.querySelector('i').classList.remove('fa-times');
  mobileMenuBtn.querySelector('i').classList.add('fa-bars');
  }
- });
+});
 
- // Performance monitoring
- window.addEventListener('load', function() {
+// Performance monitoring
+window.addEventListener('load', function() {
  trackEvent('page_loaded', {
  load_time: performance.now()
  });
- });
+});
 
- // Error handling
- window.addEventListener('error', function(e) {
+// Error handling
+window.addEventListener('error', function(e) {
  console.error('Page error:', e.error);
- });
-
- // Update current TXC price (placeholder - replace with real API)
- function updateTXCPrice() {
- // This would typically fetch from a real API
- // For now, using the price from search results
- const priceElement = document.querySelector('.stat-number');
- if (priceElement && priceElement.textContent.includes('$')) {
- // Price already set in HTML
- trackEvent('price_displayed', {
- price: priceElement.textContent
- });
- }
- }
-
- updateTXCPrice();
+});
 
 // Hide navbar on scroll down for desktop/laptop, show when at top
 let lastScrollTop = 0;
@@ -1847,14 +1603,15 @@ window.addEventListener("scroll", function() {
  const navbar = document.getElementById("navbar");
  if (window.innerWidth > 768) {
  let scrollTop = window.scrollY;
- if (scrollTop > lastScrollTop) {
+ if (scrollTop > lastScrollTop && scrollTop > 100) {
  navbar.style.top = "-80px"; // hide nav
- } else if (scrollTop <= 0) {
- navbar.style.top = "0"; // show at top
+ } else {
+ navbar.style.top = "0"; // show nav
  }
  lastScrollTop = scrollTop;
  }
 });
+
 // Hide nav completely on mobile
 if (window.innerWidth <= 768) {
  const navbar = document.getElementById("navbar");
