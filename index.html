@@ -296,6 +296,51 @@
  transform: translateY(-3px);
  }
 
+ /* Section Divider */
+ .section-divider {
+ position: relative;
+ z-index: 10;
+ height: 60px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: -60px 0;
+ }
+
+ .divider-image-container {
+ position: relative;
+ z-index: 15;
+ animation: fadeInScale 1.2s ease-out both;
+ }
+
+ .divider-image {
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+ object-fit: cover;
+ border: 4px solid var(--white);
+ box-shadow: 0 8px 32px rgba(38, 34, 98, 0.3), 0 0 0 2px rgba(38, 34, 98, 0.1);
+ transition: all 0.3s ease;
+ background: var(--white);
+ display: block;
+ }
+
+ .divider-image:hover {
+ transform: scale(1.05);
+ box-shadow: 0 12px 48px rgba(38, 34, 98, 0.4), 0 0 0 2px rgba(190, 31, 36, 0.2);
+ }
+
+ @keyframes fadeInScale {
+ from {
+ opacity: 0;
+ transform: scale(0.8);
+ }
+ to {
+ opacity: 1;
+ transform: scale(1);
+ }
+ }
+
  /* Problems vs Solutions Section */
  .problems-solutions-section {
  padding: 5rem 0;
@@ -1123,6 +1168,18 @@
  padding: 0 1rem;
  }
 
+ /* Section Divider mobile styles */
+ .section-divider {
+ height: 50px;
+ margin: -50px 0;
+ }
+
+ .divider-image {
+ width: 100px;
+ height: 100px;
+ border-width: 3px;
+ }
+
  .problem-solution-item {
  grid-template-columns: 1fr;
  gap: 1.5rem;
@@ -1207,6 +1264,18 @@
  /* Problems vs Solutions adjustments for very small screens */
  .problems-solutions-section {
  padding: 2rem 0;
+ }
+
+ /* Section Divider adjustments for very small screens */
+ .section-divider {
+ height: 40px;
+ margin: -40px 0;
+ }
+
+ .divider-image {
+ width: 80px;
+ height: 80px;
+ border-width: 2px;
  }
 
  .problem-solution-item {
@@ -1377,6 +1446,13 @@
 </div>
 </div>
 </section>
+
+<!-- Section Divider -->
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+</div>
+</div>
 
 <!-- Problems vs Solutions Section -->
 <section class="problems-solutions-section" id="problems-solutions">
