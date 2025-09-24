@@ -157,6 +157,30 @@
  box-shadow: var(--red-shadow);
  }
 
+ /* CTA Button Animations */
+ @keyframes ctaPulse {
+ 0% {
+ transform: scale(1);
+ box-shadow: var(--red-shadow);
+ }
+ 50% {
+ transform: scale(1.02);
+ box-shadow: 0 12px 40px rgba(190, 31, 36, 0.35);
+ }
+ 100% {
+ transform: scale(1);
+ box-shadow: var(--red-shadow);
+ }
+ }
+
+ .cta-btn, .nav-cta, .video-cta, .problems-solutions-cta .cta-btn {
+ animation: ctaPulse 3s ease-in-out infinite;
+ }
+
+ .cta-btn:hover, .nav-cta:hover, .video-cta:hover, .problems-solutions-cta .cta-btn:hover {
+ animation-play-state: paused;
+ }
+
  .mobile-menu-btn {
  display: none;
  background: none;
@@ -1280,7 +1304,7 @@
 <div class="cta-buttons">
 <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
 <i class="fas fa-rocket"></i>
- Mine TXC Now
+ Start Mining TXC ⛏️
 </a>
 </div>
 </div>
@@ -1352,7 +1376,7 @@ While the wealthy get richer, everyday people face impossible barriers to real w
 <div class="problems-solutions-cta">
 <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn" target="_blank" rel="noopener noreferrer">
 <i class="fas fa-shield-alt"></i>
-Claim Your Financial Independence
+Start Mining TXC ⛏️
 </a>
 </div>
 </div>
@@ -1403,7 +1427,7 @@ Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cr
 </p>
 <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
 <i class="fas fa-rocket"></i>
-Start Mining Now
+Start Mining TXC ⛏️
 </a>
 </div>
 </div>
