@@ -676,6 +676,32 @@
 
         .footer-bottom p {
             color: #ffffff;
+            margin-top: 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .legal-links a:hover {
+            color: #ffffff;
+        }
+
+        .legal-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
 
         /* Scroll to Top */
@@ -1021,7 +1047,7 @@
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Start Mining TXC ⛏️</a>
+            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Mine TXC ⛏️</a>
         </div>
     </nav>
 
@@ -1241,17 +1267,18 @@
                         <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a></li>
-                        <li><a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a></li>
-                        <li><a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a></li>
-                        <li><a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a></li>
-                    </ul>
-                </div>
+
             </div>
             <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a>
+                </div>
                 <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
             </div>
         </div>
