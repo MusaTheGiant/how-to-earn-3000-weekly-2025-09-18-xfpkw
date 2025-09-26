@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About TexitCoin (TXC) | What is TexitCoin? | Fast, Fair, Mineable Cryptocurrency</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="Discover TexitCoin (TXC), a fast, fair, and mineable Layer 1 cryptocurrency built for Texas. Learn about TXC's features, benefits, and vision for financial sovereignty and decentralized digital economy.">
+    <meta name="keywords" content="TexitCoin, TXC, what is TexitCoin, cryptocurrency, Bitcoin alternative, mineable crypto, Texas cryptocurrency, Bobby Gray, decentralized finance, financial sovereignty, blockchain technology">
+    <meta name="author" content="TexitCoin Titans">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texitcointitans.com/about-texitcoin-what-is-texitcoin.html">
+    <meta property="og:title" content="About TexitCoin (TXC) | What is TexitCoin? | Fast, Fair Cryptocurrency">
+    <meta property="og:description" content="Discover TexitCoin (TXC), the fast, fair, and mineable cryptocurrency built for Texas. Join the movement for financial sovereignty and decentralized digital economy with TXC.">
+    <meta property="og:image" content="https://texitcointitans.com/images/txc-logo.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://texitcointitans.com/about-texitcoin-what-is-texitcoin.html">
+    <meta property="twitter:title" content="About TexitCoin (TXC) | What is TexitCoin? | Fast, Fair Cryptocurrency">
+    <meta property="twitter:description" content="Discover TexitCoin (TXC), the fast, fair, and mineable cryptocurrency built for Texas. Join the movement for financial sovereignty and decentralized digital economy with TXC.">
+    <meta property="twitter:image" content="https://texitcointitans.com/images/txc-logo.jpg">
+
+    <link href="favicon.jpg" rel="icon" type="image/jpg"/>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="https://texitcointitans.com/images/txc-logo.jpg" as="image">
+
+    <style>
+        :root {
+            --deep-blue: #262262;
+            --bold-red: #be1f24;
+            --white: #ffffff;
+            --dark-shade: #130c0e;
+            --text-primary: #130c0e;
+            --text-secondary: #666666;
+            --text-light: #ffffff;
+            --gradient-red: linear-gradient(135deg, #be1f24 0%, #d32f2f 100%);
+            --gradient-blue: linear-gradient(135deg, #262262 0%, #3a2d8a 100%);
+            --gradient-hero: linear-gradient(135deg, #262262 0%, #3a2d8a 50%, #4a3a9a 100%);
+            --card-shadow: 0 8px 32px rgba(38, 34, 98, 0.15);
+            --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .font-orbitron {
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            z-index: 1000;
+            background: rgba(38, 34, 98, 0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-red);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+            z-index: 999;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--card-shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--bold-red);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--bold-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--red-shadow);
+            animation-play-state: paused;
+        }
+
+        @keyframes ctaPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: var(--red-shadow);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 12px 40px rgba(190, 31, 36, 0.35);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: var(--red-shadow);
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 75vh;
+            background: var(--gradient-hero);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 0 3rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(190,31,36,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid #ffffff;
+            box-shadow: none;
+            margin: 0 auto 2rem;
+            display: block;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            animation: profileFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1);
+            }
+            50% { 
+                transform: translateY(-8px) scale(1.02);
+            }
+        }
+
+        .profile-image:hover {
+            transform: translateY(-8px) scale(1.05);
+            animation-play-state: paused;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-description {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.4s both;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+            justify-content: center;
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+
+        .cta-primary {
+            background: var(--gradient-red);
+            color: var(--white);
+            box-shadow: var(--red-shadow);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+            animation-play-state: paused;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Section Divider System */
+        .section-divider {
+            position: relative;
+            z-index: 10;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -30px 0;
+        }
+
+        .divider-image-container {
+            position: relative;
+            z-index: 15;
+            animation: fadeInScale 1.2s ease-out both;
+        }
+
+        .divider-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            box-shadow: 0 8px 32px rgba(38, 34, 98, 0.3), 0 0 0 2px rgba(38, 34, 98, 0.1);
+            transition: all 0.3s ease;
+            background: var(--white);
+            display: block;
+        }
+
+        .divider-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 48px rgba(38, 34, 98, 0.4), 0 0 0 2px rgba(190, 31, 36, 0.2);
+        }
+
+        .divider-text {
+            display: none;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding: 0 2rem;
+            animation: fadeInScale 1.2s ease-out both;
+        }
+
+        .divider-text::before,
+        .divider-text::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: var(--gradient-red);
+        }
+
+        .divider-text::before {
+            left: -50px;
+        }
+
+        .divider-text::after {
+            right: -50px;
+        }
+
+        .divider-text .icon {
+            color: var(--bold-red);
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.7;
+        }
+
+        .content-section:nth-child(even) {
+            background: var(--white);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 900;
+            color: var(--deep-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-block {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(38, 34, 98, 0.1);
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .content-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(38, 34, 98, 0.15);
+        }
+
+        .content-block h3 {
+            font-size: 1.5rem;
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .content-block p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-block ul {
+            color: var(--text-secondary);
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .content-block li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        /* Feature Pills */
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .feature-pill {
+            background: var(--gradient-blue);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(38, 34, 98, 0.3);
+        }
+
+        .feature-pill.red {
+            background: var(--gradient-red);
+        }
+
+        .feature-pill.red:hover {
+            box-shadow: 0 8px 20px rgba(190, 31, 36, 0.3);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(38, 34, 98, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--bold-red);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Highlight Quote */
+        .quote-highlight {
+            background: linear-gradient(135deg, rgba(38, 34, 98, 0.05) 0%, rgba(190, 31, 36, 0.05) 100%);
+            border-left: 4px solid var(--bold-red);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .quote-highlight::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--bold-red);
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            font-family: serif;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: rgba(38, 34, 98, 0.03);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-blue);
+        }
+
+        .cta-content h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: #262262;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(38, 34, 98, 0.2);
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            color: #ffffff;
+        }
+
+        .footer-section h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .footer-section p {
+            color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bold-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--bold-red);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .footer-bottom p {
+            color: #ffffff;
+            margin-top: 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .legal-links a:hover {
+            color: #ffffff;
+        }
+
+        .legal-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+        }
+
+        .scroll-top i {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        /* WhatsApp Support Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            animation: whatsappPulse 3s ease-in-out infinite;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        .whatsapp-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+            animation-play-state: paused;
+        }
+
+        .whatsapp-btn i {
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+
+        @keyframes whatsappPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: clamp(1.6rem, 3vw, 2.4rem);
+            }
+            
+            .section-divider {
+                height: 100px;
+                margin: -25px 0;
+            }
+            
+            .divider-image {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .content-grid-2col {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(38, 34, 98, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                font-size: 1.2rem;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+                transition: all 0.3s ease;
+                z-index: 998;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-links a {
+                color: var(--white);
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            .nav-links a:hover {
+                color: var(--bold-red);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-cta {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                min-height: 65vh;
+                padding: 7rem 0 2rem 0;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.4rem, 5vw, 2rem);
+                margin-bottom: 1rem;
+            }
+
+            .hero-description {
+                font-size: clamp(0.85rem, 3.5vw, 1rem);
+                margin-bottom: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 280px;
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .scroll-top {
+                bottom: 1rem;
+                left: 1rem;
+            }
+
+            .whatsapp-btn {
+                bottom: 1rem;
+                right: 1rem;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-btn i {
+                font-size: 1.6rem;
+            }
+
+            .content-section {
+                padding: 3rem 0;
+            }
+
+            .content-block {
+                padding: 2rem;
+            }
+
+            .feature-list {
+                justify-content: center;
+            }
+
+            .feature-pill {
+                font-size: 0.8rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .cta-section {
+                padding: 3rem 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            /* Mobile Section Divider */
+            .section-divider {
+                height: auto;
+                margin: 2rem 0 3rem 0;
+                padding: 1rem 0;
+            }
+
+            .divider-image-container {
+                display: none;
+            }
+
+            .divider-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+            }
+
+            .divider-text::before,
+            .divider-text::after {
+                width: 30px;
+            }
+
+            .divider-text::before {
+                left: -40px;
+            }
+
+            .divider-text::after {
+                right: -40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                min-height: 60vh;
+                padding: 6.5rem 0 1.5rem 0;
+            }
+
+            .profile-image {
+                width: 130px;
+                height: 130px;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.2rem, 5vw, 1.6rem);
+            }
+
+            .cta-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+                max-width: 260px;
+            }
+
+            .content-section {
+                padding: 2.5rem 0;
+            }
+
+            .content-block {
+                padding: 1.5rem 1rem;
+            }
+
+            .quote-highlight {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+
+            .quote-highlight::before {
+                font-size: 3rem;
+                top: -5px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Section Divider for very small screens */
+            .section-divider {
+                margin: 1.5rem 0 2.5rem 0;
+            }
+
+            .divider-text {
+                font-size: 0.9rem;
+            }
+
+            .divider-text::before,
+            .divider-text::after {
+                width: 25px;
+            }
+
+            .divider-text::before {
+                left: -35px;
+            }
+
+            .divider-text::after {
+                right: -35px;
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Focus States for Accessibility */
+        .cta-btn:focus,
+        .nav-cta:focus,
+        .scroll-top:focus,
+        .whatsapp-btn:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .nav-links a:focus {
+            outline: 2px solid var(--bold-red);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .mobile-menu-btn:focus {
+            outline: 2px solid var(--bold-red);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--white);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-blue);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--deep-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="https://texitcointitans.com/" class="logo">TexitCoin Titans</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://texitcointitans.com/">Home</a></li>
+                <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Mine TXC ⛏️</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <img src="https://texitcointitans.com/images/txc-logo.jpg" 
+                     alt="TexitCoin (TXC) Logo - Fast, Fair, Mineable Cryptocurrency" 
+                     class="profile-image">
+                <h1>About TexitCoin (TXC)</h1>
+                <p class="hero-subtitle">Fast, Fair, and Mineable Cryptocurrency Built for the Future</p>
+                <p class="hero-description">Discover TexitCoin, the Layer 1 blockchain cryptocurrency designed for generations of honest trade, financial sovereignty, and community empowerment</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-rocket"></i>
+                        Start Mining TXC ⛏️
+                    </a>
+                    <a href="getting-started-with-texitcoin.html" class="cta-btn cta-secondary">
+                        <i class="fas fa-book"></i>
+                        Getting Started Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 1 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>WHAT IS TXC
+        </div>
+    </div>
+
+    <!-- What is TexitCoin Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">What is TexitCoin (TXC)?</h2>
+            <div class="content-grid">
+                <div class="content-block">
+                    <p>TexitCoin (TXC) is a Layer 1, proof-of-work cryptocurrency built on the proven Scrypt algorithm, designed for fast, low-cost transactions and completely fair distribution. Created by cryptocurrency pioneer <a href="bobby-gray-founder-ceo-texitcoin.html" style="color: var(--bold-red); text-decoration: none; font-weight: 600;">Bobby Gray</a> in 2024, TXC represents more than just digital currency. It's a movement toward financial sovereignty and decentralized economic empowerment.</p>
+                    
+                    <p>Unlike many cryptocurrencies with questionable origins, TexitCoin started with zero pre-mine, ensuring every participant begins on equal footing. With new blocks created every 3 minutes and a mining lifespan designed to last over 138 years, TXC combines the security of Bitcoin with the efficiency of modern blockchain technology.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Minute Blocks</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">254</span>
+                            <span class="stat-label">TXC Per Block</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">353M</span>
+                            <span class="stat-label">Total Supply</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">138</span>
+                            <span class="stat-label">Year Timeline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 2 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>KEY FEATURES
+        </div>
+    </div>
+
+    <!-- Key Features Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Key Features & Technical Advantages</h2>
+            <div class="content-grid-2col">
+                <div class="content-block">
+                    <h3>Fair Launch & Distribution</h3>
+                    <ul>
+                        <li><strong>Zero Pre-Mine:</strong> No insider advantages or corporate pre-allocation</li>
+                        <li><strong>Global Mining Access:</strong> Anyone worldwide can mine TXC</li>
+                        <li><strong>Equal Opportunity:</strong> Fair start for all participants</li>
+                        <li><strong>Transparent Process:</strong> Open-source blockchain with full visibility</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Advanced Technology</h3>
+                    <ul>
+                        <li><strong>Scrypt Algorithm:</strong> Proven secure and efficient consensus mechanism</li>
+                        <li><strong>Lightning-Fast Transactions:</strong> 3-minute block confirmations</li>
+                        <li><strong>Low Transaction Fees:</strong> Cost-effective for daily use</li>
+                        <li><strong>Layer 1 Blockchain:</strong> Independent network with full functionality</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Economic Design</h3>
+                    <ul>
+                        <li><strong>Deflationary Model:</strong> Regular halving events increase scarcity</li>
+                        <li><strong>Controlled Supply:</strong> 353+ million TXC over 138 years</li>
+                        <li><strong>Sustainable Mining:</strong> Long-term mining rewards and incentives</li>
+                        <li><strong>Value Preservation:</strong> Built to maintain purchasing power over time</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Community & Accessibility</h3>
+                    <ul>
+                        <li><strong>Educational Focus:</strong> Comprehensive learning resources</li>
+                        <li><strong>Affiliate Program:</strong> Earn rewards for community building</li>
+                        <li><strong>Exchange Listed:</strong> Available on BitMart, DexTrade, and more</li>
+                        <li><strong>User-Friendly:</strong> Designed for both beginners and experts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-list">
+                <span class="feature-pill">
+                    <i class="fas fa-shield-alt"></i>
+                    Secure & Decentralized
+                </span>
+                <span class="feature-pill">
+                    <i class="fas fa-bolt"></i>
+                    Lightning Fast
+                </span>
+                <span class="feature-pill">
+                    <i class="fas fa-coins"></i>
+                    No Pre-Mine
+                </span>
+                <span class="feature-pill red">
+                    <i class="fas fa-chart-line"></i>
+                    Deflationary Design
+                </span>
+                <span class="feature-pill">
+                    <i class="fas fa-users"></i>
+                    Community-Driven
+                </span>
+                <span class="feature-pill red">
+                    <i class="fas fa-globe"></i>
+                    Global Access
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 3 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>VISION & MISSION
+        </div>
+    </div>
+
+    <!-- Vision & Mission Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The TexitCoin Vision</h2>
+            <div class="content-grid">
+                <div class="content-block">
+                    <h3>Financial Sovereignty for All</h3>
+                    <p>TexitCoin represents more than cryptocurrency—it's a movement toward genuine financial independence. By creating a decentralized network that puts control back in individual hands, TXC empowers people to break free from traditional banking limitations and government monetary manipulation.</p>
+                    
+                    <p>Founded by <a href="bobby-gray-founder-ceo-texitcoin.html" style="color: var(--bold-red); text-decoration: none; font-weight: 600;">Bobby Gray</a>, a respected monetary policy expert and Congressional witness, TexitCoin builds on over 16 years of alternative currency advocacy. This isn't just another crypto project. It's the culmination of decades of experience in honest money principles.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Built for Generations</h3>
+                    <p>While Bitcoin struggles with slow transactions and high fees, and other cryptocurrencies focus on short-term speculation, TexitCoin is designed for the long term. With a 138-year mining timeline and sustainable economic model, TXC provides a foundation for generational wealth building.</p>
+                    
+                    <p>This isn't about quick profits. It's about creating lasting value through honest money principles, transparent operations, and community participation. TexitCoin offers everyone the opportunity to be part of building a better financial future.</p>
+                    
+                    <div class="quote-highlight">
+                        TexitCoin is the world's most honest money. When money is honest, it serves you and the market, not politicians and bankers. Honest money safely stores wealth and can't be inflated away.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 4 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>HOW TO JOIN
+        </div>
+    </div>
+
+    <!-- How to Get Involved Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">How to Get Involved with TexitCoin</h2>
+            <div class="content-grid-2col">
+                <div class="content-block">
+                    <h3><i class="fas fa-pickaxe" style="color: var(--bold-red); margin-right: 0.5rem;"></i>Mining TXC</h3>
+                    <p>Join the TexitCoin mining community and earn daily TXC rewards. Our mining system is designed to be fair and accessible, whether you're running your own equipment or purchasing mining shares through our hosted solutions.</p>
+                    <ul>
+                        <li>Daily TXC payouts distributed at 7 PM</li>
+                        <li>Mining packages available for all budgets</li>
+                        <li>No technical expertise required</li>
+                        <li>Join the world's largest decentralized crypto mine</li>
+                    </ul>
+                    <p><strong>Limited mining packages available.</strong> Once sold out, they're gone forever. <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" style="color: var(--bold-red); text-decoration: none; font-weight: 600;" target="_blank" rel="noopener noreferrer">Start mining TXC today</a> and secure your position in the TexitCoin revolution.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h3><i class="fas fa-users" style="color: var(--bold-red); margin-right: 0.5rem;"></i>Community Building</h3>
+                    <p>Help grow the TexitCoin movement through our rewarding affiliate program. Share TXC with friends, family, and your network while earning bonuses and building long-term income streams.</p>
+                    <ul>
+                        <li>Generous referral rewards and bonuses</li>
+                        <li>Multiple income streams available</li>
+                        <li>Educational support and training</li>
+                        <li>Weekly community calls and updates</li>
+                    </ul>
+                    <p>Perfect for affiliate marketers, network marketers, and anyone passionate about financial education. <a href="getting-started-with-texitcoin.html" style="color: var(--bold-red); text-decoration: none; font-weight: 600;">Learn more about getting started</a> with TexitCoin today.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h3><i class="fas fa-store" style="color: var(--bold-red); margin-right: 0.5rem;"></i>Business Integration</h3>
+                    <p>Small business owners can attract new customers and support local economic independence by accepting TXC for goods and services. Be part of building a robust ecosystem for practical cryptocurrency use.</p>
+                    <ul>
+                        <li>Attract crypto-savvy customers</li>
+                        <li>Fast, low-cost transaction processing</li>
+                        <li>No chargebacks or payment disputes</li>
+                        <li>Support local economic sovereignty</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3><i class="fas fa-chart-line" style="color: var(--bold-red); margin-right: 0.5rem;"></i>Trading & Investment</h3>
+                    <p>TexitCoin is available on major cryptocurrency exchanges, offering multiple ways to buy, sell, and trade TXC. Whether you're holding for the long term or actively trading, TXC provides opportunities for everyone.</p>
+                    <ul>
+                        <li>Listed on BitMart, DexTrade, and growing</li>
+                        <li>Cold storage solutions available</li>
+                        <li>Desktop and mobile wallet support</li>
+                        <li>Growing liquidity and trading volume</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 5 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>WHO SHOULD JOIN
+        </div>
+    </div>
+
+    <!-- Who Should Join Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Who Should Join TexitCoin?</h2>
+            <div class="content-grid">
+                <div class="content-block">
+                    <p>TexitCoin welcomes everyone who believes in financial sovereignty, honest money, and community-driven economics. Whether you're new to cryptocurrency or a seasoned veteran, there's a place for you in the TXC ecosystem:</p>
+                    
+                    <div class="feature-list" style="justify-content: flex-start; margin: 2rem 0;">
+                        <span class="feature-pill"><i class="fas fa-star"></i>Crypto Beginners</span>
+                        <span class="feature-pill"><i class="fas fa-coins"></i>Experienced Miners</span>
+                        <span class="feature-pill"><i class="fas fa-store"></i>Small Business Owners</span>
+                        <span class="feature-pill"><i class="fas fa-users"></i>Network Marketers</span>
+                        <span class="feature-pill"><i class="fas fa-chart-line"></i>Investors & Traders</span>
+                        <span class="feature-pill"><i class="fas fa-graduation-cap"></i>Crypto Enthusiasts</span>
+                        <span class="feature-pill"><i class="fas fa-family"></i>Families Building Wealth</span>
+                        <span class="feature-pill"><i class="fas fa-rocket"></i>Early Adopters</span>
+                        <span class="feature-pill"><i class="fas fa-globe"></i>Freedom Advocates</span>
+                        <span class="feature-pill"><i class="fas fa-handshake"></i>Community Builders</span>
+                    </div>
+                    
+                    <p>TexitCoin is designed for locals and global participants, miners and marketers, business owners and individuals. Anyone looking for a fair, decentralized cryptocurrency with practical applications and real community support.</p>
+                    
+                    <p><strong>Most importantly, TexitCoin is for people who believe in taking control of their financial future.</strong> If you're tired of banks, inflation, and monetary manipulation, if you believe in honest money and community empowerment, then TexitCoin is for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join the TexitCoin Revolution?</h2>
+                <p>Be part of building the future of honest money. Start mining TXC today and secure your place in the next generation of cryptocurrency.</p>
+                <div class="cta-buttons">
+                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-rocket"></i>
+                        Start Mining TXC ⛏️
+                    </a>
+                    <a href="getting-started-with-texitcoin.html" class="cta-btn cta-secondary">
+                        <i class="fas fa-book"></i>
+                        Getting Started Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>TexitCoin Titans</h4>
+                    <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://texitcointitans.com/">Home</a></li>
+                        <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+                        <li><a href="bobby-gray-founder-ceo-texitcoin.html">Meet Bobby Gray</a></li>
+                        <li><a href="#what-is-txc">About TexitCoin</a></li>
+                        <li><a href="#features">Key Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Training Videos</a></li>
+                        <li><a href="#">Download PDFs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+                        <li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+                        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a>
+                </div>
+                <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Support Button -->
+    <a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Join WhatsApp Support Group">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Performance optimizations
+        let ticking = false;
+
+        // Progress Bar and Navigation
+        function updateOnScroll() {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+
+            // Navigation background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Show/hide scroll to top button
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        });
+
+        // Scroll to top functionality
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        }
+
+        // Enhanced button interactions
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Show WhatsApp button after 10 seconds
+        setTimeout(function() {
+            const whatsappBtn = document.querySelector('.whatsapp-btn');
+            if (whatsappBtn) {
+                whatsappBtn.classList.add('visible');
+            }
+        }, 10000); // 10 seconds delay
+    </script>
+</body>
+</html>
