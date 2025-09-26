@@ -758,6 +758,15 @@
             text-decoration: none;
             box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
             animation: whatsappPulse 3s ease-in-out infinite;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        .whatsapp-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
 
         .whatsapp-btn:hover {
@@ -1511,6 +1520,14 @@
                 document.body.style.overflow = '';
             }
         });
+
+        // Show WhatsApp button after 10 seconds
+        setTimeout(function() {
+            const whatsappBtn = document.querySelector('.whatsapp-btn');
+            if (whatsappBtn) {
+                whatsappBtn.classList.add('visible');
+            }
+        }, 10000); // 10 seconds delay
     </script>
 </body>
 </html>
