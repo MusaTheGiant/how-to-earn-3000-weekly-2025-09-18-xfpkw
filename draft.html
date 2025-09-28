@@ -175,11 +175,11 @@
  }
  }
 
- .cta-btn, .nav-cta, .video-cta, .problems-solutions-cta .cta-btn {
+ .cta-btn, .nav-cta, .video-cta, .problems-solutions-cta .cta-btn, .preview-cta {
  animation: ctaPulse 3s ease-in-out infinite;
  }
 
- .cta-btn:hover, .nav-cta:hover, .video-cta:hover, .problems-solutions-cta .cta-btn:hover {
+ .cta-btn:hover, .nav-cta:hover, .video-cta:hover, .problems-solutions-cta .cta-btn:hover, .preview-cta:hover {
  animation-play-state: paused;
  }
 
@@ -593,6 +593,239 @@
  text-decoration: none;
  }
 
+ /* NEW PREVIEW SECTIONS STYLES */
+ .preview-section {
+ padding: 4rem 0;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .preview-section:nth-of-type(even) {
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+ }
+
+ .preview-section:nth-of-type(odd) {
+ background: var(--white);
+ }
+
+ .preview-section::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
+ background-size: cover;
+ opacity: 0.7;
+ }
+
+ .preview-content {
+ position: relative;
+ z-index: 2;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ }
+
+ .preview-badge {
+ display: inline-block;
+ background: var(--gradient-blue);
+ color: var(--white);
+ padding: 0.5rem 1.5rem;
+ border-radius: 50px;
+ font-weight: 700;
+ margin-bottom: 1.5rem;
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ box-shadow: var(--card-shadow);
+ animation: fadeInUp 0.8s ease-out;
+ }
+
+ .preview-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+ font-weight: 900;
+ color: var(--deep-blue);
+ margin-bottom: 1.5rem;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ animation: fadeInUp 0.8s ease-out 0.2s both;
+ text-align: center;
+ }
+
+ .preview-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
+ margin-bottom: 3rem;
+ }
+
+ .preview-text-content {
+ animation: fadeInUp 0.8s ease-out 0.4s both;
+ }
+
+ .preview-description {
+ font-size: clamp(1rem, 1.8vw, 1.2rem);
+ color: var(--text-secondary);
+ line-height: 1.8;
+ margin-bottom: 2rem;
+ }
+
+ .preview-features {
+ display: grid;
+ gap: 1rem;
+ margin-bottom: 2.5rem;
+ }
+
+ .preview-feature {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ background: rgba(255, 255, 255, 0.8);
+ padding: 1rem 1.5rem;
+ border-radius: 15px;
+ border-left: 4px solid var(--bold-red);
+ transition: all 0.3s ease;
+ }
+
+ .preview-feature:hover {
+ transform: translateX(10px);
+ box-shadow: var(--card-shadow);
+ }
+
+ .preview-feature-icon {
+ width: 40px;
+ height: 40px;
+ background: var(--gradient-red);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--white);
+ font-size: 1rem;
+ flex-shrink: 0;
+ }
+
+ .preview-feature-text {
+ flex: 1;
+ }
+
+ .preview-feature-title {
+ font-weight: 700;
+ color: var(--text-primary);
+ margin-bottom: 0.3rem;
+ font-size: 1rem;
+ }
+
+ .preview-feature-desc {
+ font-size: 0.9rem;
+ color: var(--text-secondary);
+ line-height: 1.4;
+ }
+
+ .preview-visual {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ animation: fadeInUp 0.8s ease-out 0.6s both;
+ }
+
+ .preview-image-container {
+ position: relative;
+ }
+
+ .preview-image {
+ width: 300px;
+ height: 300px;
+ border-radius: 20px;
+ object-fit: cover;
+ border: 4px solid var(--white);
+ box-shadow: var(--card-shadow);
+ transition: all 0.5s ease;
+ }
+
+ .preview-image:hover {
+ transform: scale(1.05) rotate(2deg);
+ box-shadow: 0 20px 60px rgba(38, 34, 98, 0.2);
+ }
+
+ .preview-cta {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 1.2rem 2.5rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 1.1rem;
+ transition: all 0.3s ease;
+ box-shadow: var(--red-shadow);
+ }
+
+ .preview-cta:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+ color: var(--white);
+ text-decoration: none;
+ }
+
+ .preview-cta.secondary {
+ background: var(--gradient-blue);
+ box-shadow: var(--card-shadow);
+ }
+
+ .preview-cta.secondary:hover {
+ box-shadow: 0 20px 40px rgba(38, 34, 98, 0.4);
+ }
+
+ .preview-stats {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ padding-top: 3rem;
+ border-top: 1px solid rgba(38, 34, 98, 0.1);
+ text-align: center;
+ }
+
+ .preview-stat {
+ animation: fadeInUp 0.8s ease-out 0.8s both;
+ }
+
+ .preview-stat-number {
+ font-family: 'Orbitron', monospace;
+ font-size: 2.2rem;
+ font-weight: 900;
+ color: var(--bold-red);
+ margin-bottom: 0.5rem;
+ display: block;
+ }
+
+ .preview-stat-label {
+ font-size: 0.9rem;
+ color: var(--text-secondary);
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+
+ /* Bobby Gray specific styles */
+ .bobby-preview-section .preview-feature-icon {
+ background: var(--gradient-blue);
+ }
+
+ .bobby-preview-section .preview-feature {
+ border-left-color: var(--deep-blue);
+ }
+
+ .bobby-preview-section .preview-badge {
+ background: var(--gradient-red);
+ }
+
  /* Video Section Styles */
  .video-section {
  padding: 4rem 0;
@@ -912,6 +1145,15 @@
  width: 90px;
  height: 90px;
  }
+
+ .preview-grid {
+ gap: 3rem;
+ }
+
+ .preview-image {
+ width: 250px;
+ height: 250px;
+ }
  }
 
  @media (max-width: 768px) {
@@ -1076,6 +1318,59 @@
  font-size: 0.85rem;
  }
 
+ /* Preview sections mobile styles */
+ .preview-section {
+ padding: 3rem 0;
+ }
+
+ .preview-content {
+ padding: 0 1rem;
+ }
+
+ .preview-title {
+ font-size: clamp(1.4rem, 4vw, 2rem);
+ }
+
+ .preview-grid {
+ grid-template-columns: 1fr;
+ gap: 2rem;
+ text-align: center;
+ }
+
+ .preview-image {
+ width: 200px;
+ height: 200px;
+ margin: 0 auto;
+ }
+
+ .preview-features {
+ max-width: 400px;
+ margin: 0 auto 2rem;
+ }
+
+ .preview-feature {
+ padding: 0.8rem 1rem;
+ }
+
+ .preview-feature:hover {
+ transform: translateX(0);
+ }
+
+ .preview-feature-icon {
+ width: 35px;
+ height: 35px;
+ font-size: 0.9rem;
+ }
+
+ .preview-stats {
+ grid-template-columns: repeat(2, 1fr);
+ gap: 1.5rem;
+ }
+
+ .preview-stat-number {
+ font-size: 1.8rem;
+ }
+
  /* Video section mobile styles */
  .video-section {
  padding: 3rem 0;
@@ -1167,6 +1462,34 @@
  width: 45px;
  height: 45px;
  font-size: 0.9rem;
+ }
+
+ /* Preview sections very small screens */
+ .preview-section {
+ padding: 2.5rem 0;
+ }
+
+ .preview-image {
+ width: 180px;
+ height: 180px;
+ }
+
+ .preview-feature {
+ padding: 0.7rem 0.8rem;
+ }
+
+ .preview-feature-icon {
+ width: 30px;
+ height: 30px;
+ font-size: 0.8rem;
+ }
+
+ .preview-feature-title {
+ font-size: 0.9rem;
+ }
+
+ .preview-feature-desc {
+ font-size: 0.8rem;
  }
 
  /* Video section very small screens */
@@ -1318,7 +1641,7 @@
 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
 <i class="fas fa-bars"></i>
 </button>
-<a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Mine TXC ⛏️</a>
+<a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Mine TXC ⚡️</a>
 </div>
 </nav>
 
@@ -1327,11 +1650,11 @@
 <div class="container">
 <div class="hero-content">
 <h1>Is Texas Leading the Charge for Financial Sovereignty?</h1>
-<p class="hero-subtitle">A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Tap in and secure your mining position today ⛏️</p>
+<p class="hero-subtitle">A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Tap in and secure your mining position today.</p>
 <div class="cta-buttons">
 <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
 <i class="fas fa-rocket"></i>
- Start Mining TXC ⛏️
+ Start Mining TXC ⚡️
 </a>
 </div>
 </div>
@@ -1344,7 +1667,7 @@
 <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
 </div>
 <div class="divider-text">
-<span class="icon">⛏</span>MINE TXC
+<span class="icon">⚡</span>MINE TXC
 </div>
 </div>
 
@@ -1403,7 +1726,7 @@ While the wealthy get richer, everyday people face impossible barriers to real w
 <div class="problems-solutions-cta">
 <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn" target="_blank" rel="noopener noreferrer">
 <i class="fas fa-shield-alt"></i>
-Start Mining TXC ⛏️
+Start Mining TXC ⚡️
 </a>
 </div>
 </div>
@@ -1415,7 +1738,193 @@ Start Mining TXC ⛏️
 <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
 </div>
 <div class="divider-text">
-<span class="icon">⛏</span>MINE TXC
+<span class="icon">⚡</span>ABOUT TXC
+</div>
+</div>
+
+<!-- About TexitCoin Preview Section -->
+<section class="preview-section" id="about-texitcoin-preview">
+<div class="preview-content">
+<span class="preview-badge">
+<i class="fas fa-info-circle"></i>
+Revolutionary Technology
+</span>
+<h2 class="preview-title">
+What Makes TexitCoin Different?
+</h2>
+
+<div class="preview-grid">
+<div class="preview-text-content">
+<p class="preview-description">
+TexitCoin (TXC) isn't just another cryptocurrency - it's a Layer 1 blockchain designed for generations of honest trade and financial sovereignty. Built on the proven Scrypt algorithm with zero pre-mine, TXC offers lightning-fast 3-minute blocks and true decentralization.
+</p>
+
+<div class="preview-features">
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-balance-scale"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">100% Fair Launch</div>
+<div class="preview-feature-desc">Zero pre-mine means everyone starts equal - no insider advantages or corporate manipulation</div>
+</div>
+</div>
+
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-bolt"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Lightning Speed</div>
+<div class="preview-feature-desc">3-minute block times deliver fast, cost-effective transactions for daily use</div>
+</div>
+</div>
+
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Built to Last</div>
+<div class="preview-feature-desc">138-year mining timeline with deflationary model designed for generational wealth</div>
+</div>
+</div>
+</div>
+
+<a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html" class="preview-cta">
+<i class="fas fa-arrow-right"></i>
+Discover TexitCoin's Revolutionary Technology
+</a>
+</div>
+
+<div class="preview-visual">
+<div class="preview-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin (TXC) - Revolutionary Cryptocurrency" class="preview-image" loading="lazy">
+</div>
+</div>
+</div>
+
+<div class="preview-stats">
+<div class="preview-stat">
+<span class="preview-stat-number">3</span>
+<span class="preview-stat-label">Min Blocks</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">254</span>
+<span class="preview-stat-label">TXC/Block</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">353M</span>
+<span class="preview-stat-label">Total Supply</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">138</span>
+<span class="preview-stat-label">Year Timeline</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section Divider 3 -->
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder" class="divider-image" loading="lazy">
+</div>
+<div class="divider-text">
+<span class="icon">⚡</span>MEET BOBBY
+</div>
+</div>
+
+<!-- About Bobby Gray Preview Section -->
+<section class="preview-section bobby-preview-section" id="about-bobby-preview">
+<div class="preview-content">
+<span class="preview-badge">
+<i class="fas fa-user-tie"></i>
+Cryptocurrency Pioneer
+</span>
+<h2 class="preview-title">
+Meet the Visionary Behind TexitCoin
+</h2>
+
+<div class="preview-grid">
+<div class="preview-visual">
+<div class="preview-image-container">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" loading="lazy">
+</div>
+</div>
+
+<div class="preview-text-content">
+<p class="preview-description">
+Bobby Gray isn't just another crypto entrepreneur - he's a true pioneer who created the original physical Bitcoin coin in 2011 and testified before Congress as a monetary policy expert. With 16+ years in precious metals and global crypto experience, Bobby brings unmatched credibility to TexitCoin.
+</p>
+
+<div class="preview-features">
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-coins"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Bitcoin Pioneer (2011)</div>
+<div class="preview-feature-desc">Created the original physical Bitcoin coin, bridging digital and traditional currency</div>
+</div>
+</div>
+
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-landmark"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Congressional Expert</div>
+<div class="preview-feature-desc">Testified before U.S. Congress in 2012 as recognized monetary policy authority</div>
+</div>
+</div>
+
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-globe"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Global Experience</div>
+<div class="preview-feature-desc">Witnessed crypto boom firsthand in South Korea, Singapore, and Thailand markets</div>
+</div>
+</div>
+</div>
+
+<a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html" class="preview-cta secondary">
+<i class="fas fa-arrow-right"></i>
+Meet the Visionary Behind TexitCoin
+</a>
+</div>
+</div>
+
+<div class="preview-stats">
+<div class="preview-stat">
+<span class="preview-stat-number">16+</span>
+<span class="preview-stat-label">Years Experience</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">2011</span>
+<span class="preview-stat-label">Bitcoin Pioneer</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">2012</span>
+<span class="preview-stat-label">Congress Testimony</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">2024</span>
+<span class="preview-stat-label">TexitCoin Launch</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section Divider 4 -->
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+</div>
+<div class="divider-text">
+<span class="icon">⚡</span>MINE TXC
 </div>
 </div>
 
@@ -1454,7 +1963,7 @@ Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cr
 </p>
 <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
 <i class="fas fa-rocket"></i>
-Start Mining TXC ⛏️
+Start Mining TXC ⚡️
 </a>
 </div>
 </div>
@@ -1504,8 +2013,8 @@ Start Mining TXC ⛏️
 <ul class="footer-links">
 <li><a href="https://texitcointitans.com/">Home</a></li>
 <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
-<li><a href="#founder">Meet Bobby Gray</a></li>
-<li><a href="#company">About TexitCoin</a></li>
+<li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
+<li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Meet Bobby Gray</a></li>
 <li><a href="#vision">Our Vision</a></li>
 </ul>
 </div>
@@ -1637,6 +2146,13 @@ document.querySelectorAll('.divider-image').forEach(img => {
  });
 });
 
+// Preview image loading
+document.querySelectorAll('.preview-image').forEach(img => {
+ img.addEventListener('load', function() {
+ this.classList.add('loaded');
+ });
+});
+
 // Mobile menu functionality
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
@@ -1684,7 +2200,7 @@ if (mobileMenuBtn && navLinks) {
 }
 
 // Enhanced button interactions
-document.querySelectorAll('.cta-btn').forEach(btn => {
+document.querySelectorAll('.cta-btn, .preview-cta').forEach(btn => {
  btn.addEventListener('mouseenter', function() {
  this.style.transform = 'translateY(-2px) scale(1.02)';
  });
@@ -1702,6 +2218,23 @@ document.querySelectorAll('.cta-btn').forEach(btn => {
  });
 });
 
+// Preview feature hover effects
+document.querySelectorAll('.preview-feature').forEach(feature => {
+ feature.addEventListener('mouseenter', function() {
+ const icon = this.querySelector('.preview-feature-icon');
+ if (icon) {
+ icon.style.transform = 'scale(1.1) rotate(5deg)';
+ }
+ });
+
+ feature.addEventListener('mouseleave', function() {
+ const icon = this.querySelector('.preview-feature-icon');
+ if (icon) {
+ icon.style.transform = 'scale(1) rotate(0deg)';
+ }
+ });
+});
+
 // Analytics tracking with proper JSON formatting
 function trackEvent(eventName, properties = {}) {
  // Silent tracking - replace with your analytics implementation
@@ -1714,6 +2247,17 @@ document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
  link.addEventListener('click', function() {
  trackEvent('affiliate_link_clicked', {
  url: this.href,
+ location: this.closest('section')?.id || 'unknown'
+ });
+ });
+});
+
+// Track preview page links
+document.querySelectorAll('a[href*="about-texitcoin"], a[href*="bobby-gray"]').forEach(link => {
+ link.addEventListener('click', function() {
+ trackEvent('preview_link_clicked', {
+ url: this.href,
+ page: this.href.includes('bobby-gray') ? 'bobby_gray' : 'about_texitcoin',
  location: this.closest('section')?.id || 'unknown'
  });
  });
@@ -1782,9 +2326,6 @@ window.addEventListener("scroll", function() {
  lastScrollTop = scrollTop;
  }
 });
-
-// Removed the code that was hiding navbar on mobile completely
-// Now the navbar will show on all devices as intended
 
 // Handle window resize to ensure proper mobile menu behavior
 window.addEventListener('resize', function() {
