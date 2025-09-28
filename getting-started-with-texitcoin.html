@@ -708,6 +708,87 @@
             animation-play-state: paused;
         }
 
+        /* Getting Started Section Styles */
+        .getting-started-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .step-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(38, 34, 98, 0.1);
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--deep-blue);
+            box-shadow: 0 15px 35px rgba(38, 34, 98, 0.15);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 1.2rem;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .step-btn {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .step-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-btn.primary {
+            background: var(--gradient-red);
+            box-shadow: var(--red-shadow);
+        }
+
+        .step-btn.primary:hover {
+            box-shadow: 0 8px 25px rgba(190, 31, 36, 0.3);
+        }
+
+        .step-btn.secondary {
+            background: rgba(38, 34, 98, 0.1);
+            color: var(--deep-blue);
+            border: 1px solid var(--deep-blue);
+        }
+
         /* Footer */
         .footer {
             background: #262262;
@@ -992,6 +1073,25 @@
                 grid-template-columns: 1fr;
             }
 
+            .getting-started-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            .step-card {
+                padding: 1.5rem !important;
+            }
+            
+            .step-number {
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 1rem !important;
+            }
+            
+            .step-icon {
+                font-size: 2rem !important;
+            }
+
             /* Mobile Section Divider - Switch to text */
             .section-divider {
                 height: auto;
@@ -1071,6 +1171,15 @@
 
             .resource-grid {
                 gap: 1.5rem;
+            }
+
+            .step-card {
+                padding: 1.25rem !important;
+            }
+            
+            .step-btn {
+                padding: 0.75rem 1.25rem !important;
+                font-size: 0.9rem !important;
             }
 
             /* Section Divider for very small screens */
@@ -1201,6 +1310,140 @@
             <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
         </div>
         <div class="divider-text">
+            <span class="icon">⛏</span>GETTING STARTED
+        </div>
+    </div>
+
+    <!-- Getting Started Guide Section -->
+    <section class="tutorial-section" id="getting-started" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);">
+        <div class="container">
+            <h2 class="section-title">Getting Started with TexitCoin</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Follow these simple steps to join TexitCoin and start receiving daily TXC mining rewards for life. Complete setup takes less than 10 minutes.
+            </p>
+            
+            <div class="getting-started-grid">
+                
+                <!-- Step 1: Exchange Account -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); text-align: center;">Create Exchange Account</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; text-align: center;">Set up your exchange account to receive daily TXC rewards. Choose one option:</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <a href="https://www.bitmart.com/invite/nt8HCH/en" class="step-btn primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>Create BitMart Account
+                        </a>
+                        <a href="https://dex-trade.com/refcode/cfms50" class="step-btn secondary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>Or Dex-Trade (if BitMart unavailable)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 2: Prepare USDC -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); text-align: center;">Prepare USDC Payment</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; text-align: center;">Ensure you have USDC ready in your exchange account before starting registration.</p>
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 10px; padding: 1rem; margin-bottom: 1rem;">
+                        <p style="margin: 0; font-size: 0.9rem; color: #856404; font-weight: 500;">
+                            <i class="fas fa-exclamation-triangle" style="margin-right: 0.5rem;"></i>
+                            <strong>Important:</strong> Add extra $10 for transaction fees per package
+                        </p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; text-align: center; font-size: 0.9rem;">Payment must be completed within 60 minutes of starting registration.</p>
+                </div>
+
+                <!-- Step 3: Registration Process -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); text-align: center;">Complete Registration</h3>
+                    <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; padding-left: 1.2rem;">
+                        <li>Choose your Affiliate ID/username</li>
+                        <li>Select "Crypto" as payment method</li>
+                        <li>Verify sponsor ID shows: <strong>mtglegacy</strong></li>
+                        <li>Add your TXC wallet address for rewards</li>
+                        <li>Leave "Cold Storage Coin" blank</li>
+                    </ul>
+                    <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="step-btn primary" target="_blank" rel="noopener noreferrer" style="box-shadow: var(--red-shadow);">
+                        <i class="fas fa-rocket" style="margin-right: 0.5rem;"></i>Start Registration Now
+                    </a>
+                </div>
+
+                <!-- Step 4: Payment -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); text-align: center;">Secure Payment</h3>
+                    <div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 10px; padding: 1rem; margin-bottom: 1rem;">
+                        <p style="margin: 0; font-size: 0.9rem; color: #721c24; font-weight: 600;">
+                            <i class="fas fa-exclamation-circle" style="margin-right: 0.5rem;"></i>
+                            <strong>CRITICAL:</strong> Always select <strong>Base chain</strong> when paying with USDC
+                        </p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; text-align: center;">Wrong network selection can result in permanent fund loss. Double-check before confirming payment.</p>
+                    <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; text-align: center; font-size: 0.9rem;">Stay on payment page until you see confirmation message.</p>
+                </div>
+
+                <!-- Step 5: Post Registration -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); text-align: center;">Dashboard Setup</h3>
+                    <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; padding-left: 1.2rem;">
+                        <li>Check email for MineTXC welcome message</li>
+                        <li>Create login password as instructed</li>
+                        <li>Complete profile in "My Account" page</li>
+                        <li>Set commission preferences (USDC/HASH/TXC)</li>
+                        <li>Verify TXC wallet address for daily rewards</li>
+                    </ul>
+                    <p style="color: var(--text-secondary); margin: 0; line-height: 1.6; text-align: center; font-size: 0.9rem; font-style: italic;">Your daily TXC mining rewards will begin once setup is complete!</p>
+                </div>
+
+                <!-- Support Card -->
+                <div class="step-card" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; text-align: center;">
+                    <div class="step-icon" style="color: white;">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; color: white;">Need Help?</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1.5rem; line-height: 1.6;">Stuck on any step? Get instant support from MTG directly on WhatsApp.</p>
+                    <a href="https://wa.me/27721714626" class="step-btn" target="_blank" rel="noopener noreferrer" style="background: white; color: #25D366;">
+                        <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i>Get Instant Help
+                    </a>
+                </div>
+            </div>
+
+            <!-- Video Tutorial Reference -->
+            <div style="text-align: center; padding: 2rem; background: rgba(38, 34, 98, 0.05); border-radius: 15px; margin-top: 2rem;">
+                <h3 style="font-size: 1.2rem; color: var(--deep-blue); margin-bottom: 0.5rem; font-weight: 600;">
+                    <i class="fas fa-video" style="margin-right: 0.5rem; color: var(--bold-red);"></i>
+                    Visual Learner?
+                </h3>
+                <p style="color: var(--text-secondary); margin: 0; font-size: 1rem;">
+                    Watch our step-by-step video tutorials below to see each process in action and avoid costly mistakes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 2 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
             <span class="icon">⛏</span>VIDEO TUTORIALS
         </div>
     </div>
@@ -1315,7 +1558,7 @@
         </div>
     </section>
 
-    <!-- Section Divider 2 -->
+    <!-- Section Divider 3 -->
     <div class="section-divider">
         <div class="divider-image-container">
             <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
