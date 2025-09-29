@@ -560,6 +560,164 @@
             font-family: serif;
         }
 
+        /* Video Section Styles */
+        .video-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.03)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .video-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .video-header {
+            margin-bottom: 3rem;
+        }
+
+        .video-badge {
+            display: inline-block;
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--red-shadow);
+        }
+
+        .video-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.6rem, 3vw, 2.8rem);
+            font-weight: 900;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-subtitle {
+            font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(38, 34, 98, 0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            background: var(--gradient-blue);
+        }
+
+        .video-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0;
+        }
+
+        .video-info {
+            padding: 2rem;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .video-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .video-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--red-shadow);
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+
+        .video-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(190, 31, 36, 0.4);
+            color: var(--white);
+            text-decoration: none;
+            animation-play-state: paused;
+        }
+
+        .video-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(38, 34, 98, 0.1);
+        }
+
+        .video-stat {
+            text-align: center;
+        }
+
+        .video-stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--bold-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
         /* CTA Section */
         .cta-section {
             background: rgba(38, 34, 98, 0.03);
@@ -974,6 +1132,40 @@
             .divider-text::after {
                 right: -40px;
             }
+
+            /* Video section mobile styles */
+            .video-section {
+                padding: 3rem 0;
+            }
+
+            .video-container {
+                max-width: 95%;
+                margin: 0 auto;
+            }
+
+            .video-title {
+                font-size: clamp(1.3rem, 4vw, 1.8rem);
+            }
+
+            .video-info {
+                padding: 1.5rem;
+            }
+
+            .video-description {
+                display: none;
+            }
+
+            .video-stats {
+                display: none;
+            }
+
+            .video-cta {
+                margin-top: 1rem;
+            }
+
+            .video-stat-number {
+                font-size: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1040,6 +1232,15 @@
 
             .divider-text::after {
                 right: -35px;
+            }
+
+            /* Video section very small screens */
+            .video-section {
+                padding: 2.5rem 0;
+            }
+
+            .video-info {
+                padding: 1rem;
             }
         }
 
@@ -1268,6 +1469,74 @@
                     <p>Bobby emphasizes complete transparency in TexitCoin's mining operations, with all mining infrastructure located exclusively in Texas. This commitment to regional pride and financial independence sets TexitCoin apart from other cryptocurrency projects.</p>
                     
                     <p>Under Bobby's leadership, TexitCoin is actively expanding its mining infrastructure and merchant adoption throughout Texas, creating a robust ecosystem for practical cryptocurrency use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 5 -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏️</span>MINE TXC
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <section class="video-section" id="intro-video">
+        <div class="container">
+            <div class="video-content">
+                <div class="video-header">
+                    <span class="video-badge">
+                        <i class="fas fa-play"></i>
+                        Featured Video
+                    </span>
+                    <h2 class="video-title">
+                        TexitCoin Exposed: The 7-Minute Truth
+                    </h2>
+                    <p class="video-subtitle">
+                        Bobby Gray reveals what TexitCoin really is, why it exists, and what sets it apart from 10,000+ other tokens. See the actual proof and visuals. No hype, just facts.
+                    </p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe class="video-iframe" 
+                                src="https://www.youtube.com/embed/hSikcPGug3I?rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&showinfo=0&controls=1&cc_load_policy=0" 
+                                title="Texit Coin Explained in 7 Minutes with Founder Bobby Gray (Proof & Visuals)"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <div class="video-info">
+                        <p class="video-description">
+                            Watch Bobby Gray break down exactly what makes TexitCoin different from thousands of other cryptocurrencies. Real proof, transparent visuals, and zero hype.
+                        </p>
+                        <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-rocket"></i>
+                            Start Mining TXC ⚡️
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-stats">
+                    <div class="video-stat">
+                        <div class="video-stat-number">24/7</div>
+                        <div class="video-stat-label">Mining Rewards</div>
+                    </div>
+                    <div class="video-stat">
+                        <div class="video-stat-number">100%</div>
+                        <div class="video-stat-label">Texas Made</div>
+                    </div>
+                    <div class="video-stat">
+                        <div class="video-stat-number">∞</div>
+                        <div class="video-stat-label">Potential</div>
+                    </div>
                 </div>
             </div>
         </div>
