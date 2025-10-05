@@ -1078,8 +1078,8 @@
  line-height: 1.7;
  }
 
- .video-container {
- max-width: 700px;
+ .video-section .video-container {
+ max-width: 800px;
  margin: 0 auto;
  position: relative;
  background: var(--white);
@@ -1089,18 +1089,24 @@
  transition: all 0.3s ease;
  }
 
- .video-container:hover {
+ .video-section .video-container:hover {
  transform: translateY(-5px);
  box-shadow: 0 20px 60px rgba(38, 34, 98, 0.2);
  }
 
- .video-wrapper {
+ .video-section .video-wrapper {
  position: relative;
  width: 100%;
  height: 0;
- padding-bottom: 100%;
- background: var(--gradient-blue);
- max-width: 100%;
+ padding-bottom: 56.25%;
+ background: #000;
+ overflow: hidden;
+ }
+
+ @media (max-width: 1024px) {
+ .video-section .video-container {
+ max-width: 90%;
+ }
  }
 
  .video-iframe {
@@ -1582,9 +1588,14 @@
  padding: 3rem 0;
  }
 
- .video-container {
+ .video-section .video-container {
  max-width: 95%;
  margin: 0 auto;
+ border-radius: 15px;
+ }
+
+ .video-section .video-wrapper {
+ border-radius: 15px 15px 0 0;
  }
 
  .video-title {
@@ -1596,15 +1607,18 @@
  }
 
  .video-description {
- display: none;
+ font-size: 1rem;
  }
 
  .video-stats {
- display: none;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1rem;
  }
 
  .video-cta {
  margin-top: 1rem;
+ padding: 0.9rem 1.8rem;
+ font-size: 1rem;
  }
 
  .video-stat-number {
@@ -1712,8 +1726,36 @@
  padding: 2.5rem 0;
  }
 
+ .video-section .video-container {
+ max-width: 100%;
+ border-radius: 12px;
+ }
+
+ .video-section .video-wrapper {
+ border-radius: 12px 12px 0 0;
+ }
+
  .video-info {
  padding: 1rem;
+ }
+
+ .video-cta {
+ padding: 0.8rem 1.5rem;
+ font-size: 0.95rem;
+ }
+
+ .video-stats {
+ gap: 0.8rem;
+ margin-top: 1.5rem;
+ padding-top: 1.5rem;
+ }
+
+ .video-stat-number {
+ font-size: 1.3rem;
+ }
+
+ .video-stat-label {
+ font-size: 0.8rem;
  }
  }
 
@@ -2245,6 +2287,7 @@ src="https://www.youtube.com/embed/-cQ4O0kmMN0?rel=0&modestbranding=1&iv_load_po
 title="Discover the Power of TexitCoin Mining"
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin"
 allowfullscreen
 loading="lazy">
 </iframe>
