@@ -803,6 +803,17 @@
  gap: 1.5rem;
  margin-bottom: 0;
  }
+ 
+ .preview-image {
+ width: 180px;
+ height: 180px;
+ }
+ 
+ .bobby-preview-section .preview-image {
+ width: 200px;
+ height: 200px;
+ object-fit: cover;
+ }
  }
 
  .preview-stat {
@@ -1068,7 +1079,7 @@
  }
 
  .video-container {
- max-width: 900px;
+ max-width: 700px;
  margin: 0 auto;
  position: relative;
  background: var(--white);
@@ -1087,8 +1098,9 @@
  position: relative;
  width: 100%;
  height: 0;
- padding-bottom: 56.25%;
+ padding-bottom: 100%;
  background: var(--gradient-blue);
+ max-width: 100%;
  }
 
  .video-iframe {
@@ -2063,7 +2075,7 @@ Meet the Visionary Behind TexitCoin
 <div class="preview-grid">
 <div class="preview-visual">
 <div class="preview-image-container">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" width="300" height="300" loading="lazy" decoding="async">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" width="300" height="300" loading="eager" fetchpriority="high" decoding="async">
 </div>
 </div>
 
