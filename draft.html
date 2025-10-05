@@ -358,6 +358,8 @@
  transition: all 0.3s ease;
  background: var(--white);
  display: block;
+ will-change: transform;
+ content-visibility: auto;
  }
 
  .divider-image:hover {
@@ -801,6 +803,17 @@
  gap: 1.5rem;
  margin-bottom: 0;
  }
+ 
+ .preview-image {
+ width: 180px;
+ height: 180px;
+ }
+ 
+ .bobby-preview-section .preview-image {
+ width: 200px;
+ height: 200px;
+ object-fit: cover;
+ }
  }
 
  .preview-stat {
@@ -1087,6 +1100,7 @@
  height: 0;
  padding-bottom: 56.25%;
  background: var(--gradient-blue);
+ max-width: 100%;
  }
 
  .video-iframe {
@@ -1662,8 +1676,8 @@
  }
 
  .preview-image {
- width: 180px;
- height: 180px;
+ width: 160px;
+ height: 160px;
  }
 
  .preview-feature {
@@ -1748,6 +1762,14 @@
 
  .cta-btn:hover {
  will-change: transform;
+ }
+
+ /* Image Performance */
+ img {
+ image-rendering: -webkit-optimize-contrast;
+ image-rendering: crisp-edges;
+ transform: translateZ(0);
+ backface-visibility: hidden;
  }
 
  /* Focus States for Accessibility */
@@ -1868,7 +1890,7 @@
 <!-- Section Divider 1 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="eager" fetchpriority="high">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>MINE TXC
@@ -1939,7 +1961,7 @@ Start Mining TXC ⛏️
 <!-- Section Divider 2 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>ABOUT TXC
@@ -2032,7 +2054,7 @@ Discover TexitCoin's Revolutionary Technology
 <!-- Section Divider 3 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder" class="divider-image" loading="lazy">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>MEET BOBBY
@@ -2053,7 +2075,7 @@ Meet the Visionary Behind TexitCoin
 <div class="preview-grid">
 <div class="preview-visual">
 <div class="preview-image-container">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" loading="lazy">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" width="300" height="300" loading="eager" fetchpriority="high" decoding="async">
 </div>
 </div>
 
@@ -2125,7 +2147,7 @@ Meet the Visionary Behind TexitCoin
 <!-- Section Divider: Income Opportunity -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
 </div>
 <div class="divider-text">
 <span class="icon">💰</span>INCOME OPPORTUNITY
@@ -2144,7 +2166,7 @@ Imagine adding an extra $3,000 every single week to your income. What would that
 <!-- Compensation Video 1: 1-2-FREE Bonus -->
 <div class="video-card">
 <div class="video-container">
-<video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.png">
+<video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.png" width="100%" height="200">
 <source src="https://texitcointitans.com/videos/texit-coin-1-2-free-bonus-explained.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -2161,7 +2183,7 @@ Your browser does not support the video tag.
 <!-- Compensation Video 2: Rapid Rewards -->
 <div class="video-card">
 <div class="video-container">
-<video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/earn-3k-per-week.png">
+<video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/earn-3k-per-week.png" width="100%" height="200">
 <source src="https://texitcointitans.com/videos/texit-coin-rapid-rewards-compensation-plan-explained.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -2192,7 +2214,7 @@ Watch our complete step-by-step guide to start earning with TexitCoin today
 <!-- Section Divider 4 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>MINE TXC
