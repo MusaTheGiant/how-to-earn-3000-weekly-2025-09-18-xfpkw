@@ -826,6 +826,173 @@
  background: var(--gradient-red);
  }
 
+ /* Tutorial Section Styles */
+ .tutorial-section {
+ padding: 4rem 0;
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .tutorial-section::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
+ background-size: cover;
+ opacity: 0.7;
+ }
+
+ .section-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-weight: 900;
+ color: var(--deep-blue);
+ margin-bottom: 3rem;
+ text-align: center;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ animation: fadeInUp 0.8s ease-out;
+ position: relative;
+ z-index: 2;
+ }
+
+ .video-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: 2rem;
+ margin-bottom: 4rem;
+ position: relative;
+ z-index: 2;
+ }
+
+ @media (min-width: 769px) {
+ .video-grid {
+ grid-template-columns: repeat(2, 1fr);
+ max-width: 1000px;
+ margin: 0 auto 4rem auto;
+ gap: 2.5rem;
+ }
+ }
+
+ .video-card {
+ background: var(--white);
+ border-radius: 20px;
+ padding: 2rem;
+ border: 1px solid rgba(38, 34, 98, 0.1);
+ transition: all 0.3s ease;
+ position: relative;
+ overflow: visible;
+ box-shadow: var(--card-shadow);
+ text-align: center;
+ animation: fadeInUp 0.8s ease-out both;
+ }
+
+ .video-card:nth-child(1) { animation-delay: 0.2s; }
+ .video-card:nth-child(2) { animation-delay: 0.4s; }
+
+ .video-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(135deg, rgba(38, 34, 98, 0.05) 0%, transparent 50%);
+ opacity: 0;
+ transition: opacity 0.3s ease;
+ }
+
+ .video-card:hover::before {
+ opacity: 1;
+ }
+
+ .video-card:hover {
+ transform: translateY(-10px);
+ border-color: var(--deep-blue);
+ box-shadow: 0 20px 40px rgba(38, 34, 98, 0.2);
+ }
+
+ .video-container {
+ position: relative;
+ width: 100%;
+ height: 200px;
+ border-radius: 15px;
+ overflow: hidden;
+ margin-bottom: 1.5rem;
+ background: #000;
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ .video-player {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 15px;
+ }
+
+ .video-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.3);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.3s ease;
+ border-radius: 15px;
+ }
+
+ .video-overlay.hidden {
+ opacity: 0;
+ pointer-events: none;
+ }
+
+ .play-btn {
+ width: 80px;
+ height: 80px;
+ background: rgba(255, 255, 255, 0.9);
+ border: none;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ backdrop-filter: blur(10px);
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+ }
+
+ .play-btn:hover {
+ background: rgba(255, 255, 255, 1);
+ transform: scale(1.1);
+ box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+ }
+
+ .play-btn i {
+ font-size: 2rem;
+ color: var(--deep-blue);
+ margin-left: 4px;
+ }
+
+ .video-title {
+ font-size: 1rem;
+ font-weight: 600;
+ margin-bottom: 1rem;
+ color: var(--text-primary);
+ }
+
+ .video-description {
+ color: var(--text-secondary);
+ margin-bottom: 1.5rem;
+ line-height: 1.6;
+ font-size: 0.95rem;
+ }
+
  /* Video Section Styles */
  .video-section {
  padding: 4rem 0;
@@ -1371,6 +1538,19 @@
  font-size: 1.8rem;
  }
 
+ /* Tutorial section mobile styles */
+ .tutorial-section {
+ padding: 3rem 0;
+ }
+
+ .video-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .video-container {
+ height: 180px;
+ }
+
  /* Video section mobile styles */
  .video-section {
  padding: 3rem 0;
@@ -1492,6 +1672,15 @@
  font-size: 0.8rem;
  }
 
+ /* Tutorial section very small screens */
+ .tutorial-section {
+ padding: 2.5rem 0;
+ }
+
+ .video-container {
+ height: 160px;
+ }
+
  /* Video section very small screens */
  .video-section {
  padding: 2.5rem 0;
@@ -1591,7 +1780,7 @@
  ::-webkit-scrollbar-thumb:hover {
  background: var(--deep-blue);
  }
- </style>
+</style>
 <link href="https://texitcointitans.com/" rel="canonical"/><meta content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto" name="twitter:title"/><meta content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth." name="twitter:description"/><script type="application/ld+json">{
  "@context": "https://schema.org",
  "@graph": [
@@ -1921,6 +2110,73 @@ Meet the Visionary Behind TexitCoin
 </div>
 </section>
 
+<!-- Section Divider: Income Opportunity -->
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+</div>
+<div class="divider-text">
+<span class="icon">💰</span>INCOME OPPORTUNITY
+</div>
+</div>
+
+<!-- NEW SECTION: Could You Use an Extra $3000 Per Week? -->
+<section class="tutorial-section" id="income-opportunity" style="background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 50%, #f8fafc 100%);">
+<div class="container">
+<h2 class="section-title">Could You Use an Extra $3000 Dollars Per Week?</h2>
+<p style="text-align: center; font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+Imagine adding an extra $3,000 every single week to your income. What would that mean for your family? Financial breathing room? Freedom to pursue your dreams? The ability to finally build real wealth? With TexitCoin's proven compensation plan, thousands of people just like you are turning this dream into reality. These step-by-step video tutorials show you exactly how to tap into this life-changing opportunity and start earning extra income from day one.
+</p>
+
+<div class="video-grid">
+<!-- Compensation Video 1: 1-2-FREE Bonus -->
+<div class="video-card">
+<div class="video-container">
+<video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.png">
+<source src="https://texitcointitans.com/videos/texit-coin-1-2-free-bonus-explained.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<div class="video-overlay">
+<button class="play-btn" onclick="playVideo(this)">
+<i class="fas fa-play"></i>
+</button>
+</div>
+</div>
+<h3 class="video-title">1-2-FREE Bonus Explained</h3>
+<p class="video-description">Unlock FREE bonus positions and accelerate your earning potential with TexitCoin's exclusive 1-2-FREE program - start building passive income faster than you ever thought possible.</p>
+</div>
+
+<!-- Compensation Video 2: Rapid Rewards -->
+<div class="video-card">
+<div class="video-container">
+<video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/earn-3k-per-week.png">
+<source src="https://texitcointitans.com/videos/texit-coin-rapid-rewards-compensation-plan-explained.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<div class="video-overlay">
+<button class="play-btn" onclick="playVideo(this)">
+<i class="fas fa-play"></i>
+</button>
+</div>
+</div>
+<h3 class="video-title">Rapid Rewards Explained</h3>
+<p class="video-description">Unleash explosive earning potential with TexitCoin's Rapid Rewards system - discover how to maximize your commissions and create multiple income streams from day one.</p>
+</div>
+</div>
+
+<!-- Income Opportunity CTA -->
+<div style="text-align: center; margin-top: 3rem;">
+<a href="https://texitcointitans.com/getting-started-with-texitcoin.html" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+<i class="fas fa-graduation-cap"></i>
+Getting Started Tutorials
+</a>
+<p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.95rem;">
+Watch our complete step-by-step guide to start earning with TexitCoin today
+</p>
+</div>
+</div>
+</section>
+
 <!-- Section Divider 4 -->
 <div class="section-divider">
 <div class="divider-image-container">
@@ -2063,6 +2319,32 @@ Start Mining TXC ⛏️
 </button>
 
 <script>
+// Video play functionality
+function playVideo(button) {
+const videoContainer = button.closest('.video-container');
+const video = videoContainer.querySelector('.video-player');
+const overlay = videoContainer.querySelector('.video-overlay');
+
+// Hide overlay and play video
+overlay.classList.add('hidden');
+video.play();
+video.setAttribute('controls', 'true');
+
+// Show overlay again when video ends or is paused
+video.addEventListener('ended', function() {
+overlay.classList.remove('hidden');
+video.removeAttribute('controls');
+});
+
+video.addEventListener('pause', function() {
+// Only show overlay if video hasn't ended
+if (!video.ended) {
+overlay.classList.remove('hidden');
+video.removeAttribute('controls');
+}
+});
+}
+
 // Performance optimizations
 let ticking = false;
 
