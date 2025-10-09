@@ -491,6 +491,199 @@
             margin-right: auto;
         }
 
+        /* Footer */
+        .footer {
+            background: #262262;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid rgba(38, 34, 98, 0.2);
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            color: #ffffff;
+        }
+
+        .footer-section h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bold-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--bold-red);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .legal-links a:hover {
+            color: #ffffff;
+        }
+
+        .legal-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+        }
+
+        .scroll-top i {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        /* WhatsApp Support Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            animation: whatsappPulse 3s ease-in-out infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+            animation-play-state: paused;
+        }
+
+        .whatsapp-btn i {
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+
+        @keyframes whatsappPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .video-grid {
@@ -500,11 +693,53 @@
 
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(38, 34, 98, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                font-size: 1.2rem;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+                transition: all 0.3s ease;
+                z-index: 998;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                display: flex;
+            }
+
+            .nav-links a {
+                color: var(--white);
+                font-size: 1.3rem;
+                font-weight: 600;
             }
 
             .mobile-menu-btn {
                 display: block;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-cta {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
             }
 
             .hero {
@@ -532,6 +767,18 @@
                 gap: 1.5rem;
             }
 
+            .content-section {
+                padding: 3rem 0;
+            }
+
+            .featured-video {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-banner {
+                padding: 2rem 1.5rem;
+            }
+
             .divider-image-container {
                 display: none;
             }
@@ -545,6 +792,114 @@
                 font-weight: 900;
                 color: var(--deep-blue);
                 text-transform: uppercase;
+                position: relative;
+                padding: 0 2rem;
+            }
+
+            .divider-text::before,
+            .divider-text::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 30px;
+                height: 2px;
+                background: var(--gradient-red);
+            }
+
+            .divider-text::before {
+                left: -40px;
+            }
+
+            .divider-text::after {
+                right: -40px;
+            }
+
+            .section-divider {
+                height: auto;
+                margin: 2rem 0 3rem 0;
+                padding: 1rem 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .scroll-top {
+                bottom: 1rem;
+                left: 1rem;
+                width: 45px;
+                height: 45px;
+            }
+
+            .whatsapp-btn {
+                bottom: 1rem;
+                right: 1rem;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-btn i {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-image {
+                width: 130px;
+                height: 130px;
+            }
+
+            .hero {
+                min-height: 60vh;
+                padding: 6.5rem 0 1.5rem 0;
+            }
+
+            .cta-btn {
+                max-width: 260px;
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .content-section {
+                padding: 2.5rem 0;
+            }
+
+            .featured-video {
+                padding: 1.5rem 1rem;
+            }
+
+            .cta-banner {
+                padding: 1.5rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .section-divider {
+                margin: 1.5rem 0 2.5rem 0;
+            }
+
+            .divider-text {
+                font-size: 0.9rem;
+            }
+
+            .divider-text::before,
+            .divider-text::after {
+                width: 25px;
+            }
+
+            .divider-text::before {
+                left: -35px;
+            }
+
+            .divider-text::after {
+                right: -35px;
             }
         }
 
@@ -714,6 +1069,50 @@
                         <p>Byron discusses the power of daily TXC mining rewards.</p>
                     </div>
                 </div>
+
+                <!-- Testimonial 7 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial-samantha.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>Samantha's TXC Story</h4>
+                        <p>Samantha shares how she's building passive income with TexitCoin.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 8 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial-eddy-corella.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>Eddy Corella Testimonial</h4>
+                        <p>Eddy reveals why he chose TexitCoin for long-term wealth building.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 9 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-txc-testimonial-angelo-rosat.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>Angelo Rosat's TXC Testimonial</h4>
+                        <p>Angelo shares his impressive results mining TexitCoin.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 10 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>Community Member Testimonial</h4>
+                        <p>Another satisfied TexitCoin miner shares their success story.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- CTA Banner -->
@@ -725,6 +1124,92 @@
                         <i class="fas fa-rocket"></i>
                         Start Mining Now ⛏️
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">🔥</span> THE MOVEMENT
+        </div>
+    </div>
+
+    <!-- Promotional Videos Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">See What's Driving the Movement</h2>
+            <p class="section-subtitle">From innovation to inspiration, TexitCoin is building momentum across the globe. Watch exclusive behind-the-scenes footage and community highlights.</p>
+            
+            <div class="video-grid">
+                <!-- Promo 1 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-founder%20-bobby-gray.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>Meet Founder Bobby Gray</h4>
+                        <p>Discover the vision behind TexitCoin from creator Bobby Gray.</p>
+                    </div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-events.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>TexitCoin Community Events</h4>
+                        <p>Experience the energy and excitement of TXC community gatherings.</p>
+                    </div>
+                </div>
+
+                <!-- Promo 3 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-super-car.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>TXC Super Car Showcase</h4>
+                        <p>Success in action. See how TexitCoin rewards translate to reality.</p>
+                    </div>
+                </div>
+
+                <!-- Promo 4 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-hyper-car.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>TXC Hyper Car Collection</h4>
+                        <p>Witness the lifestyle that TexitCoin mining can provide.</p>
+                    </div>
+                </div>
+
+                <!-- Promo 5 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-cars-and-coffee.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>Cars & Coffee with TXC</h4>
+                        <p>Community connections and automotive passion meet TexitCoin.</p>
+                    </div>
+                </div>
+
+                <!-- Promo 6 -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="https://texitcointitans.com/videos/texit-coin-manufactring-office.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-content">
+                        <h4>TXC Manufacturing Facility</h4>
+                        <p>Tour the Texas headquarters where TexitCoin innovation happens.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -750,8 +1235,89 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>TexitCoin Titans</h4>
+                    <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://texitcointitans.com/">Home</a></li>
+                        <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
+                        <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+                        <li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby Gray</a></li>
+                        <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+                        <li><a href="#">Training Videos</a></li>
+                        <li><a href="#">Download PDFs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+                        <li><a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+                        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a>
+                </div>
+                <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Support Button -->
+    <a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Join WhatsApp Support Group">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-        // Progress Bar
+        // Progress Bar and scroll-to-top button
         window.addEventListener('scroll', () => {
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.getElementById('progressBar').style.width = scrolled + '%';
@@ -762,6 +1328,19 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+
+            // Show/hide scroll to top button
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top functionality
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Smooth scrolling
@@ -772,6 +1351,74 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+            });
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+
+            // Close menu on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // Enhanced button interactions
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
             });
         });
     </script>
