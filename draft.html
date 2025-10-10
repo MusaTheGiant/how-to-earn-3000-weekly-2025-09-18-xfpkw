@@ -4,23 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TexitCoin Titans | TexitCoin Mining</title>
-<link href="images/favicon.png" rel="icon" type="image/png"/>
+<link href="https://texitcointitans.com/images/favicon.png" rel="icon" type="image/png"/>
 <meta content="Discover TexitCoin: a Texas mineable cryptocurrency powering financial sovereignty with daily mining rewards, community growth, and independence." name="description"/>
-<meta content="TexitCoin, Texas cryptocurrency, TXC mining, financial sovereignty, mineable digital asset, decentralized finance, crypto community" name="keywords"/>
-<!-- Open Graph Meta Tags -->
-<meta content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto Mining" property="og:title"/>
-<meta content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://texitcointitans.com" property="og:url"/>
-<meta content="https://texitcointitans.com/images/txc-logo.jpg" property="og:image"/>
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
-<!-- Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<!-- Preload critical images -->
-<link rel="preload" href="https://texitcointitans.com/images/txc-logo.jpg" as="image"/>
 <style>
  :root {
  --deep-blue: #262262;
@@ -55,7 +44,6 @@
  font-family: 'Orbitron', monospace;
  }
 
- /* Progress Bar */
  .progress-container {
  position: fixed;
  top: 0;
@@ -73,7 +61,6 @@
  transition: width 0.3s ease;
  }
 
- /* Navigation */
  .nav {
  position: fixed;
  top: 0;
@@ -128,21 +115,6 @@
  color: var(--bold-red);
  }
 
- .nav-links a::after {
- content: '';
- position: absolute;
- width: 0;
- height: 2px;
- bottom: -5px;
- left: 0;
- background: var(--bold-red);
- transition: width 0.3s ease;
- }
-
- .nav-links a:hover::after {
- width: 100%;
- }
-
  .nav-cta {
  background: var(--gradient-red);
  color: var(--white);
@@ -158,7 +130,6 @@
  box-shadow: var(--red-shadow);
  }
 
- /* CTA Button Animations */
  @keyframes ctaPulse {
  0% {
  transform: scale(1);
@@ -174,11 +145,11 @@
  }
  }
 
- .cta-btn, .nav-cta, .video-cta, .problems-solutions-cta .cta-btn, .preview-cta {
+ .cta-btn, .nav-cta, .preview-cta {
  animation: ctaPulse 3s ease-in-out infinite;
  }
 
- .cta-btn:hover, .nav-cta:hover, .video-cta:hover, .problems-solutions-cta .cta-btn:hover, .preview-cta:hover {
+ .cta-btn:hover, .nav-cta:hover, .preview-cta:hover {
  animation-play-state: paused;
  }
 
@@ -192,27 +163,6 @@
  z-index: 1001;
  }
 
- /* Mobile Menu Overlay */
- .mobile-menu-overlay {
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 100vh;
- background: rgba(38, 34, 98, 0.95);
- backdrop-filter: blur(10px);
- z-index: 998;
- opacity: 0;
- visibility: hidden;
- transition: all 0.3s ease;
- }
-
- .mobile-menu-overlay.active {
- opacity: 1;
- visibility: visible;
- }
-
- /* Hero Section */
  .hero {
  min-height: 75vh;
  background: var(--gradient-hero);
@@ -221,23 +171,6 @@
  position: relative;
  overflow: hidden;
  padding: 6rem 0 3rem 0;
- }
-
- .hero::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(190,31,36,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- animation: float 20s ease-in-out infinite;
- }
-
- @keyframes float {
- 0%, 100% { transform: translateY(0px) rotate(0deg); }
- 50% { transform: translateY(-20px) rotate(180deg); }
  }
 
  .container {
@@ -281,18 +214,6 @@
  color: rgba(255, 255, 255, 0.9);
  }
 
- .hero-description {
- font-size: clamp(0.9rem, 1.5vw, 1.1rem);
- margin-bottom: 2.5rem;
- opacity: 0.9;
- line-height: 1.7;
- animation: fadeInUp 1s ease-out 0.4s both;
- color: rgba(255, 255, 255, 0.9);
- max-width: 600px;
- margin-left: auto;
- margin-right: auto;
- }
-
  .cta-buttons {
  display: flex;
  gap: 1.5rem;
@@ -331,7 +252,6 @@
  box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
  }
 
- /* Universal Section Divider System */
  .section-divider {
  position: relative;
  z-index: 10;
@@ -358,8 +278,6 @@
  transition: all 0.3s ease;
  background: var(--white);
  display: block;
- will-change: transform;
- content-visibility: auto;
  }
 
  .divider-image:hover {
@@ -380,30 +298,6 @@
  animation: fadeInScale 1.2s ease-out both;
  }
 
- .divider-text::before,
- .divider-text::after {
- content: '';
- position: absolute;
- top: 50%;
- width: 40px;
- height: 2px;
- background: var(--gradient-red);
- }
-
- .divider-text::before {
- left: -50px;
- }
-
- .divider-text::after {
- right: -50px;
- }
-
- .divider-text .icon {
- color: var(--bold-red);
- margin-right: 0.5rem;
- font-size: 1.1rem;
- }
-
  @keyframes fadeInScale {
  from {
  opacity: 0;
@@ -415,24 +309,11 @@
  }
  }
 
- /* Problems vs Solutions Section */
  .problems-solutions-section {
  padding: 4rem 0;
  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
  position: relative;
  overflow: hidden;
- }
-
- .problems-solutions-section::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- opacity: 0.7;
  }
 
  .problems-solutions-content {
@@ -496,10 +377,6 @@
  transition: all 0.3s ease;
  animation: fadeInUp 0.8s ease-out both;
  }
-
- .problem-solution-item:nth-child(1) { animation-delay: 0.6s; }
- .problem-solution-item:nth-child(2) { animation-delay: 0.8s; }
- .problem-solution-item:nth-child(3) { animation-delay: 1.0s; }
 
  .problem-solution-item:hover {
  transform: translateY(-5px);
@@ -587,14 +464,6 @@
  box-shadow: var(--red-shadow);
  }
 
- .problems-solutions-cta .cta-btn:hover {
- transform: translateY(-3px);
- box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
- color: var(--white);
- text-decoration: none;
- }
-
- /* NEW PREVIEW SECTIONS STYLES */
  .preview-section {
  padding: 4rem 0;
  position: relative;
@@ -607,18 +476,6 @@
 
  .preview-section:nth-of-type(odd) {
  background: var(--white);
- }
-
- .preview-section::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- opacity: 0.7;
  }
 
  .preview-content {
@@ -746,8 +603,6 @@
  border: 4px solid var(--white);
  box-shadow: var(--card-shadow);
  transition: all 0.5s ease;
- will-change: transform;
- content-visibility: auto;
  }
 
  .preview-image:hover {
@@ -782,10 +637,6 @@
  box-shadow: var(--card-shadow);
  }
 
- .preview-cta.secondary:hover {
- box-shadow: 0 20px 40px rgba(38, 34, 98, 0.4);
- }
-
  .preview-stats {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -794,26 +645,6 @@
  padding-top: 3rem;
  border-top: 1px solid rgba(38, 34, 98, 0.1);
  text-align: center;
- }
-
- @media (max-width: 768px) {
- .preview-stats {
- margin-top: 2rem;
- padding-top: 2rem;
- gap: 1.5rem;
- margin-bottom: 0;
- }
- 
- .preview-image {
- width: 180px;
- height: 180px;
- }
- 
- .bobby-preview-section .preview-image {
- width: 200px;
- height: 200px;
- object-fit: cover;
- }
  }
 
  .preview-stat {
@@ -837,7 +668,6 @@
  letter-spacing: 1px;
  }
 
- /* Bobby Gray specific styles */
  .bobby-preview-section .preview-feature-icon {
  background: var(--gradient-blue);
  }
@@ -850,24 +680,11 @@
  background: var(--gradient-red);
  }
 
- /* Tutorial Section Styles */
  .tutorial-section {
  padding: 4rem 0;
  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
  position: relative;
  overflow: hidden;
- }
-
- .tutorial-section::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.02)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="300" cy="300" r="200" fill="url(%23a)"/><circle cx="700" cy="700" r="150" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- opacity: 0.7;
  }
 
  .section-title {
@@ -881,6 +698,146 @@
  animation: fadeInUp 0.8s ease-out;
  position: relative;
  z-index: 2;
+ }
+
+ .video-section {
+ padding: 4rem 0;
+ background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .video-content {
+ position: relative;
+ z-index: 2;
+ text-align: center;
+ }
+
+ .video-header {
+ margin-bottom: 3rem;
+ }
+
+ .video-badge {
+ display: inline-block;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 0.5rem 1.5rem;
+ border-radius: 50px;
+ font-weight: 700;
+ margin-bottom: 1.5rem;
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ box-shadow: var(--red-shadow);
+ }
+
+ .video-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(1.6rem, 3vw, 2.8rem);
+ font-weight: 900;
+ color: var(--deep-blue);
+ margin-bottom: 1rem;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .video-subtitle {
+ font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+ color: var(--text-secondary);
+ max-width: 600px;
+ margin: 0 auto 2rem;
+ line-height: 1.7;
+ }
+
+ .video-section .video-container {
+ max-width: 800px;
+ margin: 0 auto;
+ position: relative;
+ background: var(--white);
+ border-radius: 20px;
+ box-shadow: var(--card-shadow);
+ overflow: hidden;
+ transition: all 0.3s ease;
+ }
+
+ .video-section .video-wrapper {
+ position: relative;
+ width: 100%;
+ height: 0;
+ padding-bottom: 56.25%;
+ background: #000;
+ overflow: hidden;
+ }
+
+ .video-iframe {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: none;
+ border-radius: 0;
+ }
+
+ .video-info {
+ padding: 2rem;
+ text-align: center;
+ background: var(--white);
+ }
+
+ .video-description {
+ color: var(--text-secondary);
+ font-size: 1.1rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ }
+
+ .video-cta {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 1rem 2rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ box-shadow: var(--red-shadow);
+ animation: ctaPulse 3s ease-in-out infinite;
+ }
+
+ .video-cta:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 15px 40px rgba(190, 31, 36, 0.4);
+ color: var(--white);
+ text-decoration: none;
+ }
+
+ .video-stats {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ padding-top: 3rem;
+ border-top: 1px solid rgba(38, 34, 98, 0.1);
+ }
+
+ .video-stat {
+ text-align: center;
+ }
+
+ .video-stat-number {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: var(--bold-red);
+ margin-bottom: 0.5rem;
+ }
+
+ .video-stat-label {
+ font-size: 0.9rem;
+ color: var(--text-secondary);
+ font-weight: 500;
  }
 
  .video-grid {
@@ -1017,170 +974,6 @@
  font-size: 0.95rem;
  }
 
- /* Video Section Styles */
- .video-section {
- padding: 4rem 0;
- background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
- position: relative;
- overflow: hidden;
- }
-
- .video-section::before {
- content: '';
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(38,34,98,0.03)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="800" r="200" fill="url(%23a)"/></svg>') no-repeat center center;
- background-size: cover;
- opacity: 0.5;
- }
-
- .video-content {
- position: relative;
- z-index: 2;
- text-align: center;
- }
-
- .video-header {
- margin-bottom: 3rem;
- }
-
- .video-badge {
- display: inline-block;
- background: var(--gradient-red);
- color: var(--white);
- padding: 0.5rem 1.5rem;
- border-radius: 50px;
- font-weight: 700;
- margin-bottom: 1.5rem;
- font-size: 0.9rem;
- text-transform: uppercase;
- letter-spacing: 0.5px;
- box-shadow: var(--red-shadow);
- }
-
- .video-title {
- font-family: 'Orbitron', monospace;
- font-size: clamp(1.6rem, 3vw, 2.8rem);
- font-weight: 900;
- color: var(--deep-blue);
- margin-bottom: 1rem;
- text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
-
- .video-subtitle {
- font-size: clamp(0.9rem, 1.6vw, 1.2rem);
- color: var(--text-secondary);
- max-width: 600px;
- margin: 0 auto 2rem;
- line-height: 1.7;
- }
-
- .video-section .video-container {
- max-width: 800px;
- margin: 0 auto;
- position: relative;
- background: var(--white);
- border-radius: 20px;
- box-shadow: var(--card-shadow);
- overflow: hidden;
- transition: all 0.3s ease;
- }
-
- .video-section .video-container:hover {
- transform: translateY(-5px);
- box-shadow: 0 20px 60px rgba(38, 34, 98, 0.2);
- }
-
- .video-section .video-wrapper {
- position: relative;
- width: 100%;
- height: 0;
- padding-bottom: 56.25%;
- background: #000;
- overflow: hidden;
- }
-
- @media (max-width: 1024px) {
- .video-section .video-container {
- max-width: 90%;
- }
- }
-
- .video-iframe {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- border: none;
- border-radius: 0;
- }
-
- .video-info {
- padding: 2rem;
- text-align: center;
- background: var(--white);
- }
-
- .video-description {
- color: var(--text-secondary);
- font-size: 1.1rem;
- line-height: 1.6;
- margin-bottom: 1.5rem;
- }
-
- .video-cta {
- display: inline-flex;
- align-items: center;
- gap: 0.5rem;
- background: var(--gradient-red);
- color: var(--white);
- padding: 1rem 2rem;
- border-radius: 50px;
- text-decoration: none;
- font-weight: 600;
- transition: all 0.3s ease;
- box-shadow: var(--red-shadow);
- }
-
- .video-cta:hover {
- transform: translateY(-2px);
- box-shadow: 0 15px 40px rgba(190, 31, 36, 0.4);
- color: var(--white);
- text-decoration: none;
- }
-
- .video-stats {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
- gap: 2rem;
- margin-top: 3rem;
- padding-top: 3rem;
- border-top: 1px solid rgba(38, 34, 98, 0.1);
- }
-
- .video-stat {
- text-align: center;
- }
-
- .video-stat-number {
- font-family: 'Orbitron', monospace;
- font-size: 1.8rem;
- font-weight: 900;
- color: var(--bold-red);
- margin-bottom: 0.5rem;
- }
-
- .video-stat-label {
- font-size: 0.9rem;
- color: var(--text-secondary);
- font-weight: 500;
- }
-
- /* Footer */
  .footer {
  background: #262262;
  padding: 3rem 0 2rem;
@@ -1289,7 +1082,6 @@
  font-size: 0.9rem;
  }
 
- /* Scroll to Top */
  .scroll-top {
  position: fixed;
  bottom: 2rem;
@@ -1324,167 +1116,23 @@
  font-size: 1.2rem;
  }
 
- /* Responsive Design */
- @media (max-width: 1024px) {
- .container {
- padding: 0 1.5rem;
- }
- 
- .hero h1 {
- font-size: clamp(1.6rem, 3vw, 2.4rem);
- }
- 
- .section-divider {
- height: 100px;
- margin: -25px 0;
- }
- 
- .divider-image {
- width: 90px;
- height: 90px;
- }
-
- .preview-grid {
- gap: 3rem;
- }
-
- .preview-image {
- width: 250px;
- height: 250px;
- }
- }
-
  @media (max-width: 768px) {
  .nav-links {
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 100vh;
- background: rgba(38, 34, 98, 0.98);
- backdrop-filter: blur(10px);
- flex-direction: column;
- justify-content: center;
- align-items: center;
- gap: 3rem;
- font-size: 1.2rem;
- opacity: 0;
- visibility: hidden;
- transform: translateY(-20px);
- transition: all 0.3s ease;
- z-index: 998;
- }
-
- .nav-links.active {
- opacity: 1;
- visibility: visible;
- transform: translateY(0);
- }
-
- .nav-links a {
- color: var(--white);
- font-size: 1.3rem;
- font-weight: 600;
- }
-
- .nav-links a:hover {
- color: var(--bold-red);
+ display: none;
  }
 
  .mobile-menu-btn {
  display: block;
  }
 
- .nav-container {
- padding: 0 1rem;
+ .preview-grid {
+ grid-template-columns: 1fr;
+ gap: 2rem;
  }
 
- .logo {
- font-size: 1.2rem;
- }
-
- .nav-cta {
- padding: 0.6rem 1.2rem;
- font-size: 0.9rem;
- }
-
- .hero {
- min-height: 65vh;
- padding: 5rem 0 2rem 0;
- }
-
- .hero h1 {
- font-size: clamp(1.4rem, 5vw, 2rem);
- margin-bottom: 1rem;
- }
-
- .hero-description {
- font-size: clamp(0.85rem, 3.5vw, 1rem);
- margin-bottom: 2rem;
- }
-
- .cta-buttons {
- justify-content: center;
- }
-
- .cta-btn {
- width: 100%;
- max-width: 280px;
- padding: 0.9rem 2rem;
- font-size: 1rem;
- }
-
- .container {
- padding: 0 1rem;
- }
-
- .scroll-top {
- bottom: 1rem;
- right: 1rem;
- }
-
- /* Mobile Section Divider - Switch to text */
- .section-divider {
- height: auto;
- margin: 2rem 0 3rem 0;
- padding: 1rem 0;
- }
-
- .divider-image-container {
- display: none;
- }
-
- .divider-text {
- display: flex;
- align-items: center;
- justify-content: center;
- font-size: 1rem;
- }
-
- .divider-text::before,
- .divider-text::after {
- width: 30px;
- }
-
- .divider-text::before {
- left: -40px;
- }
-
- .divider-text::after {
- right: -40px;
- }
-
- /* Problems vs Solutions mobile styles */
- .problems-solutions-section {
- padding: 3rem 0;
- }
-
- .problems-solutions-content {
- padding: 0 1rem;
- }
-
- .problems-solutions-title {
- font-size: clamp(1.3rem, 4vw, 1.8rem);
+ .preview-image {
+ width: 200px;
+ height: 200px;
  }
 
  .problem-solution-item {
@@ -1500,81 +1148,6 @@
  justify-self: center;
  }
 
- .problem-side,
- .solution-side {
- padding: 1.2rem;
- }
-
- .problem-title,
- .solution-title {
- font-size: 0.95rem;
- margin-bottom: 0.6rem;
- }
-
- .problem-text,
- .solution-text {
- font-size: 0.85rem;
- }
-
- /* Preview sections mobile styles */
- .preview-section {
- padding: 3rem 0;
- }
-
- .preview-content {
- padding: 0 1rem;
- }
-
- .preview-title {
- font-size: clamp(1.4rem, 4vw, 2rem);
- }
-
- .preview-grid {
- grid-template-columns: 1fr;
- gap: 2rem;
- text-align: center;
- margin-bottom: 0;
- }
-
- .preview-image {
- width: 180px;
- height: 180px;
- margin: 0 auto;
- }
-
- .preview-features {
- max-width: 400px;
- margin: 0 auto 2rem;
- }
-
- .preview-feature {
- padding: 0.8rem 1rem;
- }
-
- .preview-feature:hover {
- transform: translateX(0);
- }
-
- .preview-feature-icon {
- width: 35px;
- height: 35px;
- font-size: 0.9rem;
- }
-
- .preview-stats {
- grid-template-columns: repeat(2, 1fr);
- gap: 1.5rem;
- }
-
- .preview-stat-number {
- font-size: 1.8rem;
- }
-
- /* Tutorial section mobile styles */
- .tutorial-section {
- padding: 3rem 0;
- }
-
  .video-grid {
  grid-template-columns: 1fr;
  }
@@ -1582,328 +1155,25 @@
  .video-container {
  height: 180px;
  }
-
- /* Video section mobile styles */
- .video-section {
- padding: 3rem 0;
  }
 
- .video-section .video-container {
- max-width: 95%;
- margin: 0 auto;
- border-radius: 15px;
- }
-
- .video-section .video-wrapper {
- border-radius: 15px 15px 0 0;
- }
-
- .video-title {
- font-size: clamp(1.3rem, 4vw, 1.8rem);
- }
-
- .video-info {
- padding: 1.5rem;
- }
-
- .video-description {
- font-size: 1rem;
- }
-
- .video-stats {
- grid-template-columns: repeat(3, 1fr);
- gap: 1rem;
- }
-
- .video-cta {
- margin-top: 1rem;
- padding: 0.9rem 1.8rem;
- font-size: 1rem;
- }
-
- .video-stat-number {
- font-size: 1.5rem;
- }
- }
-
- @media (max-width: 480px) {
- .nav-container {
- padding: 0 1rem;
- }
-
- .hero {
- min-height: 60vh;
- padding: 4.5rem 0 1.5rem 0;
- }
-
- .hero h1 {
- font-size: clamp(1.2rem, 5vw, 1.6rem);
- }
-
- .cta-btn {
- padding: 0.8rem 1.5rem;
- font-size: 0.95rem;
- max-width: 260px;
- }
-
- /* Section Divider for very small screens */
- .section-divider {
- margin: 1.5rem 0 2.5rem 0;
- }
-
- .divider-text {
- font-size: 0.9rem;
- }
-
- .divider-text::before,
- .divider-text::after {
- width: 25px;
- }
-
- .divider-text::before {
- left: -35px;
- }
-
- .divider-text::after {
- right: -35px;
- }
-
- /* Problems vs Solutions very small screens */
- .problems-solutions-section {
- padding: 2.5rem 0;
- }
-
- .problem-solution-item {
- padding: 1.5rem 1rem;
- gap: 1.2rem;
- }
-
- .vs-divider {
- width: 45px;
- height: 45px;
- font-size: 0.9rem;
- }
-
- /* Preview sections very small screens */
- .preview-section {
- padding: 2.5rem 0;
- }
-
- .preview-image {
- width: 160px;
- height: 160px;
- }
-
- .preview-feature {
- padding: 0.7rem 0.8rem;
- }
-
- .preview-feature-icon {
- width: 30px;
- height: 30px;
- font-size: 0.8rem;
- }
-
- .preview-feature-title {
- font-size: 0.9rem;
- }
-
- .preview-feature-desc {
- font-size: 0.8rem;
- }
-
- /* Tutorial section very small screens */
- .tutorial-section {
- padding: 2.5rem 0;
- }
-
- .video-container {
- height: 160px;
- }
-
- /* Video section very small screens */
- .video-section {
- padding: 2.5rem 0;
- }
-
- .video-section .video-container {
- max-width: 100%;
- border-radius: 12px;
- }
-
- .video-section .video-wrapper {
- border-radius: 12px 12px 0 0;
- }
-
- .video-info {
- padding: 1rem;
- }
-
- .video-cta {
- padding: 0.8rem 1.5rem;
- font-size: 0.95rem;
- }
-
- .video-stats {
- gap: 0.8rem;
- margin-top: 1.5rem;
- padding-top: 1.5rem;
- }
-
- .video-stat-number {
- font-size: 1.3rem;
- }
-
- .video-stat-label {
- font-size: 0.8rem;
- }
- }
-
- /* Animation Classes */
- .animate-on-scroll {
- opacity: 0;
- transform: translateY(30px);
- transition: all 0.6s ease;
- }
-
- .animate-on-scroll.animated {
- opacity: 1;
- transform: translateY(0);
- }
-
- /* Loading States */
- img {
- transition: opacity 0.3s ease;
- }
-
- img[loading="lazy"] {
- opacity: 0;
- }
-
- img[loading="lazy"].loaded {
- opacity: 1;
- }
-
- /* Image Loading Fallback */
- .divider-image {
- background: url('https://texitcointitans.com/images/txc-logo.jpg') center center/cover;
- }
-
- .divider-image.error + .divider-text {
- display: flex;
- }
-
- .divider-image.error {
- display: none;
- }
-
- /* Performance Optimizations */
- .hero::before {
- will-change: transform;
- }
-
- .cta-btn:hover {
- will-change: transform;
- }
-
- /* Image Performance */
- img {
- image-rendering: -webkit-optimize-contrast;
- image-rendering: crisp-edges;
- transform: translateZ(0);
- backface-visibility: hidden;
- }
-
- /* Focus States for Accessibility */
- .cta-btn:focus,
- .nav-cta:focus,
- .scroll-top:focus {
- outline: 2px solid #ffffff;
- outline-offset: 2px;
- }
-
- .nav-links a:focus {
- outline: 2px solid var(--bold-red);
- outline-offset: 4px;
- border-radius: 4px;
- }
-
- .mobile-menu-btn:focus {
- outline: 2px solid var(--bold-red);
- outline-offset: 2px;
- border-radius: 4px;
- }
-
- /* Smooth scrolling */
  html {
  scroll-behavior: smooth;
  }
-
- /* Custom scrollbar */
- ::-webkit-scrollbar {
- width: 8px;
- }
-
- ::-webkit-scrollbar-track {
- background: var(--white);
- }
-
- ::-webkit-scrollbar-thumb {
- background: var(--gradient-blue);
- border-radius: 4px;
- }
-
- ::-webkit-scrollbar-thumb:hover {
- background: var(--deep-blue);
- }
 </style>
-<link href="https://texitcointitans.com/" rel="canonical"/><meta content="TexitCoin Titans | Financial Sovereignty Through Texas Crypto" name="twitter:title"/><meta content="TexitCoin is a Texas mineable cryptocurrency empowering independence with mining rewards and community-driven growth." name="twitter:description"/><script type="application/ld+json">{
- "@context": "https://schema.org",
- "@graph": [
- {
- "@type": "Organization",
- "@id": "https://texitcointitans.com/#org",
- "name": "TexitCoin Titans Team",
- "url": "https://texitcointitans.com/",
- "logo": {
- "@type": "ImageObject",
- "url": "https://texitcointitans.com/images/txc-logo.jpg"
- },
- "sameAs": [
- "https://www.facebook.com/TexitCoinTitans",
- "https://www.tiktok.com/@texitcointitans",
- "https://www.youtube.com/@TexitCoinTitans"
- ]
- },
- {
- "@type": "WebPage",
- "@id": "https://texitcointitans.com/#webpage",
- "url": "https://texitcointitans.com/",
- "inLanguage": "en-US",
- "name": "TexitCoin Titans Team - Home",
- "headline": "Is Texas Forging the Future of Financial Sovereignty?",
- "description": "Far more than code on a blockchain, TexitCoin represents a movement toward self-reliance and community-powered growth. By combining mining rewards with real-world adoption, it positions Texans and the world to claim greater control over their financial future.",
- "isPartOf": {
- "@id": "https://texitcointitans.com/#org"
- }
- }
- ]
-}</script></head>
+</head>
 <body>
-<!-- Progress Bar -->
 <div class="progress-container">
 <div class="progress-bar" id="progressBar"></div>
 </div>
 
-<!-- Navigation -->
 <nav class="nav" id="navbar">
 <div class="nav-container">
 <a class="logo" href="#">TexitCoin Titans</a>
-<ul class="nav-links" id="navLinks">
-<li><a href="#home">Home</a></li>
-<li><a href="#intro-video">Featured Video</a></li>
+        <ul class="nav-links" id="navLinks">
 <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
-<li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby Gray</a></li>
+<li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby</a></li>
+<li><a href="#testimonials-preview">Testimonials</a></li>
 <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
 </ul>
 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
@@ -1913,7 +1183,6 @@
 </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="hero" id="home">
 <div class="container">
 <div class="hero-content">
@@ -1922,24 +1191,22 @@
 <div class="cta-buttons">
 <a class="cta-btn cta-primary" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">
 <i class="fas fa-rocket"></i>
- Start Mining TXC ⛏️
+Start Mining TXC ⛏️
 </a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- Section Divider 1 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="eager" fetchpriority="high">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>MINE TXC
 </div>
 </div>
 
-<!-- Problems vs Solutions Section -->
 <section class="problems-solutions-section" id="problems-solutions">
 <div class="problems-solutions-content">
 <span class="problems-solutions-badge">
@@ -2000,17 +1267,15 @@ Start Mining TXC ⛏️
 </div>
 </section>
 
-<!-- Section Divider 2 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>ABOUT TXC
 </div>
 </div>
 
-<!-- About TexitCoin Preview Section -->
 <section class="preview-section" id="about-texitcoin-preview">
 <div class="preview-content">
 <span class="preview-badge">
@@ -2067,7 +1332,7 @@ Discover TexitCoin's Revolutionary Technology
 
 <div class="preview-visual">
 <div class="preview-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin (TXC) - Revolutionary Cryptocurrency" class="preview-image" width="300" height="300" loading="eager" fetchpriority="high">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin (TXC) - Revolutionary Cryptocurrency" class="preview-image" width="300" height="300">
 </div>
 </div>
 </div>
@@ -2093,17 +1358,15 @@ Discover TexitCoin's Revolutionary Technology
 </div>
 </section>
 
-<!-- Section Divider 3 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder" class="divider-image" width="100" height="100">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>MEET BOBBY
 </div>
 </div>
 
-<!-- About Bobby Gray Preview Section -->
 <section class="preview-section bobby-preview-section" id="about-bobby-preview">
 <div class="preview-content">
 <span class="preview-badge">
@@ -2117,7 +1380,7 @@ Meet the Visionary Behind TexitCoin
 <div class="preview-grid">
 <div class="preview-visual">
 <div class="preview-image-container">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" width="300" height="300" loading="eager" fetchpriority="high" decoding="async">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Bobby Gray - TexitCoin Founder & CEO" class="preview-image" width="300" height="300">
 </div>
 </div>
 
@@ -2186,17 +1449,108 @@ Meet the Visionary Behind TexitCoin
 </div>
 </section>
 
-<!-- Section Divider: Income Opportunity -->
+<!-- 🆕 NEW: TESTIMONIALS PREVIEW SECTION -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
+<img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" alt="TexitCoin Success Stories" class="divider-image" width="100" height="100">
+</div>
+<div class="divider-text">
+<span class="icon">🎬</span>SUCCESS STORIES
+</div>
+</div>
+
+<section class="preview-section testimonials-preview-section" id="testimonials-preview" style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);">
+<div class="preview-content">
+<span class="preview-badge" style="background: var(--gradient-red);">
+<i class="fas fa-star"></i>
+Real Stories, Real Results
+</span>
+<h2 class="preview-title">
+Don't Take Our Word For It - Hear From Real Miners
+</h2>
+
+<div class="preview-grid">
+<div class="preview-text-content">
+<p class="preview-description">
+Thousands of everyday people are earning daily TexitCoin rewards and building real wealth. No hype, no actors - just authentic stories from miners who took action and transformed their financial future. Watch their journeys unfold.
+</p>
+
+<div class="preview-features">
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-video"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">10+ Video Testimonials</div>
+<div class="preview-feature-desc">Watch real miners share how TXC changed their lives - from paying off debt to funding surgeries</div>
+</div>
+</div>
+
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-dollar-sign"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Verified Earnings</div>
+<div class="preview-feature-desc">See documented proof of daily mining rewards, affiliate commissions, and life-changing payouts</div>
+</div>
+</div>
+
+<div class="preview-feature">
+<div class="preview-feature-icon">
+<i class="fas fa-users"></i>
+</div>
+<div class="preview-feature-text">
+<div class="preview-feature-title">Community Events</div>
+<div class="preview-feature-desc">Behind-the-scenes footage from global TXC gatherings, including Token2049 and Tampa events</div>
+</div>
+</div>
+</div>
+
+<a href="https://texitcointitans.com/texitcoin-testimonials.html" class="preview-cta">
+<i class="fas fa-play-circle"></i>
+Watch All Success Stories
+</a>
+</div>
+
+<div class="preview-visual">
+<div class="preview-image-container">
+<img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" alt="TexitCoin Testimonials - Real Success Stories" class="preview-image" width="300" height="300">
+</div>
+</div>
+</div>
+
+<div class="preview-stats">
+<div class="preview-stat">
+<span class="preview-stat-number">20+</span>
+<span class="preview-stat-label">Video Stories</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">$150K</span>
+<span class="preview-stat-label">Surgery Funded</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">$25K</span>
+<span class="preview-stat-label">Verified Cashout</span>
+</div>
+<div class="preview-stat">
+<span class="preview-stat-number">Daily</span>
+<span class="preview-stat-label">TXC Rewards</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END NEW TESTIMONIALS SECTION -->
+
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100">
 </div>
 <div class="divider-text">
 <span class="icon">💰</span>INCOME OPPORTUNITY
 </div>
 </div>
 
-<!-- NEW SECTION: Could You Use an Extra $3000 Per Week? -->
 <section class="tutorial-section" id="income-opportunity" style="background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 50%, #f8fafc 100%);">
 <div class="container">
 <h2 class="section-title">Could You Use an Extra $3000 Dollars Per Week?</h2>
@@ -2253,76 +1607,15 @@ Watch our complete step-by-step guide to start earning with TexitCoin today
 </div>
 </section>
 
-<!-- Section Divider 4 -->
 <div class="section-divider">
 <div class="divider-image-container">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy" decoding="async">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100">
 </div>
 <div class="divider-text">
 <span class="icon">⛏️</span>MINE TXC
 </div>
 </div>
 
-<!-- Video Section -->
-<section class="video-section" id="intro-video">
-<div class="container">
-<div class="video-content">
-<div class="video-header">
-<span class="video-badge">
-<i class="fas fa-play"></i>
-Featured Video
-</span>
-<h2 class="video-title">
-Discover the Power of TexitCoin Mining
-</h2>
-<p class="video-subtitle">
-Watch this exclusive introduction to understand how TexitCoin is revolutionizing financial sovereignty in Texas and beyond.
-</p>
-</div>
-
-<div class="video-container">
-<div class="video-wrapper">
-<iframe class="video-iframe" 
-src="https://www.youtube.com/embed/-cQ4O0kmMN0?rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&showinfo=0&controls=1&cc_load_policy=0" 
-title="Discover the Power of TexitCoin Mining"
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-referrerpolicy="strict-origin-when-cross-origin"
-allowfullscreen
-loading="lazy">
-</iframe>
-</div>
-
-<div class="video-info">
-<p class="video-description">
-Learn how TexitCoin is empowering Texans with a truly decentralized, mineable cryptocurrency that puts financial control back in your hands.
-</p>
-<a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
-<i class="fas fa-rocket"></i>
-Start Mining TXC ⛏️
-</a>
-</div>
-</div>
-
-<div class="video-stats">
-<div class="video-stat">
-<div class="video-stat-number">24/7</div>
-<div class="video-stat-label">Mining Rewards</div>
-</div>
-<div class="video-stat">
-<div class="video-stat-number">100%</div>
-<div class="video-stat-label">Texas Made</div>
-</div>
-<div class="video-stat">
-<div class="video-stat-number">∞</div>
-<div class="video-stat-label">Potential</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Footer -->
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">
@@ -2349,9 +1642,8 @@ Start Mining TXC ⛏️
 <ul class="footer-links">
 <li><a href="https://texitcointitans.com/">Home</a></li>
 <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
-<li><a href="#founder">Meet Bobby Gray</a></li>
-<li><a href="#company">About TexitCoin</a></li>
-<li><a href="#vision">Our Vision</a></li>
+<li><a href="#about-bobby-preview">Meet Bobby Gray</a></li>
+<li><a href="#about-texitcoin-preview">About TexitCoin</a></li>
 </ul>
 </div>
 <div class="footer-section">
@@ -2359,9 +1651,8 @@ Start Mining TXC ⛏️
 <ul class="footer-links">
 <li><a href="#">Compensation Plan</a></li>
 <li><a href="#">FAQ</a></li>
-<li><a href="#">Testimonials</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
 <li><a href="#">Training Videos</a></li>
-<li><a href="#">Download PDFs</a></li>
 </ul>
 </div>
 <div class="footer-section">
@@ -2390,8 +1681,7 @@ Start Mining TXC ⛏️
 </div>
 </footer>
 
-<!-- Scroll to Top Button -->
-<button aria-label="Scroll to top" class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+<button aria-label="Scroll to top" class="scroll-top" id="scrollTop">
 <i class="fas fa-arrow-up"></i>
 </button>
 
@@ -2422,15 +1712,12 @@ video.removeAttribute('controls');
 });
 }
 
-// Performance optimizations
 let ticking = false;
 
-// Progress Bar and Navigation
 function updateOnScroll() {
  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
  document.getElementById('progressBar').style.width = scrolled + '%';
 
- // Navigation background on scroll
  const navbar = document.getElementById('navbar');
  if (window.scrollY > 100) {
  navbar.classList.add('scrolled');
@@ -2438,7 +1725,6 @@ function updateOnScroll() {
  navbar.classList.remove('scrolled');
  }
 
- // Show/hide scroll to top button
  const scrollTop = document.getElementById('scrollTop');
  if (window.scrollY > 300) {
  scrollTop.classList.add('visible');
@@ -2456,250 +1742,22 @@ window.addEventListener('scroll', () => {
  }
 });
 
-// Scroll to top functionality
-function scrollToTop() {
+document.getElementById('scrollTop').addEventListener('click', () => {
  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+});
 
-// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  anchor.addEventListener('click', function (e) {
  e.preventDefault();
  const target = document.querySelector(this.getAttribute('href'));
  if (target) {
- const offsetTop = target.offsetTop - 80; // Account for fixed nav
+ const offsetTop = target.offsetTop - 80;
  window.scrollTo({
  top: offsetTop,
  behavior: 'smooth'
  });
  }
  });
-});
-
-// Animate elements on scroll with performance optimization
-const observerOptions = {
- threshold: 0.1,
- rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if (entry.isIntersecting) {
- entry.target.classList.add('animated');
- observer.unobserve(entry.target); // Stop observing once animated
- }
- });
-}, observerOptions);
-
-// Observe all animate-on-scroll elements
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
- observer.observe(el);
-});
-
-// Image loading fallback system
-document.querySelectorAll('.divider-image').forEach(img => {
- img.addEventListener('error', function() {
- this.classList.add('error');
- // Silent fallback - no console logging
- });
- 
- img.addEventListener('load', function() {
- this.classList.add('loaded');
- });
-});
-
-// Preview image loading
-document.querySelectorAll('.preview-image').forEach(img => {
- img.addEventListener('load', function() {
- this.classList.add('loaded');
- });
-});
-
-// Mobile menu functionality
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-
-if (mobileMenuBtn && navLinks) {
- mobileMenuBtn.addEventListener('click', function(e) {
- e.preventDefault();
- navLinks.classList.toggle('active');
- const icon = this.querySelector('i');
- 
- if (navLinks.classList.contains('active')) {
- icon.classList.remove('fa-bars');
- icon.classList.add('fa-times');
- document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
- } else {
- icon.classList.remove('fa-times');
- icon.classList.add('fa-bars');
- document.body.style.overflow = ''; // Restore scrolling
- }
- });
-
- // Close menu when clicking on a link
- navLinks.querySelectorAll('a').forEach(link => {
- link.addEventListener('click', function() {
- navLinks.classList.remove('active');
- const icon = mobileMenuBtn.querySelector('i');
- icon.classList.remove('fa-times');
- icon.classList.add('fa-bars');
- document.body.style.overflow = ''; // Restore scrolling
- });
- });
-
- // Close menu when clicking outside
- document.addEventListener('click', function(e) {
- if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
- if (navLinks.classList.contains('active')) {
- navLinks.classList.remove('active');
- const icon = mobileMenuBtn.querySelector('i');
- icon.classList.remove('fa-times');
- icon.classList.add('fa-bars');
- document.body.style.overflow = ''; // Restore scrolling
- }
- }
- });
-}
-
-// Enhanced button interactions
-document.querySelectorAll('.cta-btn, .preview-cta').forEach(btn => {
- btn.addEventListener('mouseenter', function() {
- this.style.transform = 'translateY(-2px) scale(1.02)';
- });
-
- btn.addEventListener('mouseleave', function() {
- this.style.transform = 'translateY(0) scale(1)';
- });
-
- // Add click feedback
- btn.addEventListener('click', function() {
- this.style.transform = 'translateY(0) scale(0.98)';
- setTimeout(() => {
- this.style.transform = 'translateY(-2px) scale(1.02)';
- }, 150);
- });
-});
-
-// Preview feature hover effects
-document.querySelectorAll('.preview-feature').forEach(feature => {
- feature.addEventListener('mouseenter', function() {
- const icon = this.querySelector('.preview-feature-icon');
- if (icon) {
- icon.style.transform = 'scale(1.1) rotate(5deg)';
- }
- });
-
- feature.addEventListener('mouseleave', function() {
- const icon = this.querySelector('.preview-feature-icon');
- if (icon) {
- icon.style.transform = 'scale(1) rotate(0deg)';
- }
- });
-});
-
-// Analytics tracking with proper JSON formatting
-function trackEvent(eventName, properties = {}) {
- // Silent tracking - replace with your analytics implementation
- // Example: gtag('event', eventName, properties);
- // Example: analytics.track(eventName, properties);
-}
-
-// Track affiliate link clicks
-document.querySelectorAll('a[href*="minetxc.com"]').forEach(link => {
- link.addEventListener('click', function() {
- trackEvent('affiliate_link_clicked', {
- url: this.href,
- location: this.closest('section')?.id || 'unknown'
- });
- });
-});
-
-// Track preview page links
-document.querySelectorAll('a[href*="about-texitcoin"], a[href*="bobby-gray"]').forEach(link => {
- link.addEventListener('click', function() {
- trackEvent('preview_link_clicked', {
- url: this.href,
- page: this.href.includes('bobby-gray') ? 'bobby_gray' : 'about_texitcoin',
- location: this.closest('section')?.id || 'unknown'
- });
- });
-});
-
-// Track WhatsApp clicks
-document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
- link.addEventListener('click', function() {
- trackEvent('whatsapp_clicked', {
- location: this.closest('section')?.id || 'unknown'
- });
- });
-});
-
-// Track section views
-const sectionObserver = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
- trackEvent('section_viewed', {
- section: entry.target.id
- });
- }
- });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('section[id]').forEach(section => {
- sectionObserver.observe(section);
-});
-
-// Enhanced accessibility
-document.addEventListener('keydown', function(e) {
- // ESC key closes mobile menu
- if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
- navLinks.classList.remove('active');
- const icon = mobileMenuBtn.querySelector('i');
- icon.classList.remove('fa-times');
- icon.classList.add('fa-bars');
- document.body.style.overflow = ''; // Restore scrolling
- }
-});
-
-// Performance monitoring
-window.addEventListener('load', function() {
- trackEvent('page_loaded', {
- load_time: performance.now()
- });
-});
-
-// Error handling
-window.addEventListener('error', function(e) {
- // Silent error handling - implement proper error reporting here
- // Example: Send to error tracking service like Sentry
-});
-
-// Hide navbar on scroll down for desktop/laptop, show when at top
-let lastScrollTop = 0;
-window.addEventListener("scroll", function() {
- const navbar = document.getElementById("navbar");
- if (window.innerWidth > 768) {
- let scrollTop = window.scrollY;
- if (scrollTop > lastScrollTop && scrollTop > 100) {
- navbar.style.top = "-80px"; // hide nav
- } else {
- navbar.style.top = "0"; // show nav
- }
- lastScrollTop = scrollTop;
- }
-});
-
-// Handle window resize to ensure proper mobile menu behavior
-window.addEventListener('resize', function() {
- if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
- navLinks.classList.remove('active');
- const icon = mobileMenuBtn?.querySelector('i');
- if (icon) {
- icon.classList.remove('fa-times');
- icon.classList.add('fa-bars');
- }
- document.body.style.overflow = ''; // Restore scrolling
- }
 });
 </script>
 </body>
