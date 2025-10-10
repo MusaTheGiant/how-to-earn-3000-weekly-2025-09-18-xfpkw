@@ -393,6 +393,68 @@
             background: #000;
         }
 
+        /* Custom Play Button Overlay */
+        .video-play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .video-play-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .video-play-button {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(190, 31, 36, 0.5);
+            transition: all 0.3s ease;
+            animation: playButtonPulse 2s ease-in-out infinite;
+        }
+
+        .video-play-overlay:hover .video-play-button {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(190, 31, 36, 0.7);
+            animation-play-state: paused;
+        }
+
+        .video-play-button i {
+            color: var(--white);
+            font-size: 2rem;
+            margin-left: 5px;
+        }
+
+        @keyframes playButtonPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(190, 31, 36, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 12px 40px rgba(190, 31, 36, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(190, 31, 36, 0.5);
+            }
+        }
+
         /* Video Grid */
         .video-grid {
             display: grid;
@@ -416,6 +478,11 @@
         .video-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(38, 34, 98, 0.15);
+        }
+
+        .video-card-wrapper {
+            position: relative;
+            width: 100%;
         }
 
         .video-card video {
@@ -842,6 +909,15 @@
             .whatsapp-btn i {
                 font-size: 1.6rem;
             }
+
+            .video-play-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .video-play-button i {
+                font-size: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -900,6 +976,15 @@
 
             .divider-text::after {
                 right: -35px;
+            }
+
+            .video-play-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .video-play-button i {
+                font-size: 1.3rem;
             }
         }
 
@@ -982,6 +1067,11 @@
                         <source src="https://texitcointitans.com/videos/welcome-to-mine-texit-coin.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <div class="video-play-overlay">
+                        <div class="video-play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1006,9 +1096,16 @@
             <div class="video-grid">
                 <!-- Testimonial 1 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/sarah-warrens-texitcoin-story-texit-coin.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/sarah-warrens-texitcoin-story-texit-coin.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Sarah Warren's TexitCoin Story</h4>
                         <p>Full-time grandma wipes out $12K debt in 30 days with TXC, then pays for her daughter's surgery.</p>
@@ -1017,9 +1114,16 @@
 
                 <!-- Testimonial 2 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/making-56-daily-texit-coin.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/making-56-daily-texit-coin.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Making $5 to $6 Daily with TXC</h4>
                         <p>Real numbers from a real miner earning consistent daily TXC rewards.</p>
@@ -1028,9 +1132,16 @@
 
                 <!-- Testimonial 3 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-explained.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-explained.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>TexitCoin Explained Simply</h4>
                         <p>A clear breakdown of what exactly is TexitCoin and why it matters.</p>
@@ -1039,9 +1150,16 @@
 
                 <!-- Testimonial 4 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial-rob-reynolds.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-testimonial-rob-reynolds.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Rob Reynolds - TXC Success</h4>
                         <p>Day-one believer Rob just helped his friend cash out $25K from TXC, and that's just one success story.</p>
@@ -1050,9 +1168,16 @@
 
                 <!-- Testimonial 5 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial-joe-jaquint.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-testimonial-joe-jaquint.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Joe Jaquint's Journey</h4>
                         <p>Week 71 top miner Joe reveals what he's witnessed inside TXC, and why he's doubling down.</p>
@@ -1061,9 +1186,16 @@
 
                 <!-- Testimonial 6 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial-byron-hemilton.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-testimonial-byron-hemilton.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Byron Hemilton's Experience</h4>
                         <p>Miner Bryon Hamilton reveals his TexitCoin journey, and why he's still here.</p>
@@ -1072,9 +1204,16 @@
 
                 <!-- Testimonial 7 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial-samantha.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-testimonial-samantha.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Samantha Gray's TXC Story</h4>
                         <p>Samantha needed $150K for life-saving surgery. TexitCoin paid for it, and saved her life.</p>
@@ -1083,9 +1222,16 @@
 
                 <!-- Testimonial 8 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texitcoin-miner-eddy-corella.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texitcoin-miner-eddy-corella.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Eddy Corella Testimonial</h4>
                         <p>TexitCoin miner and affiliate Eddy compared TXC to everything else, and calls it a 'no-brainer.' Here's why.</p>
@@ -1094,9 +1240,16 @@
 
                 <!-- Testimonial 9 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-txc-testimonial-angelo-rosat.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-txc-testimonial-angelo-rosat.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Angelo Rosat's TexitCoin Testimonial</h4>
                         <p>10-year crypto-mining veteran Angelo's seen it all since 2015, now he's all-in on TXC. Here's why.</p>
@@ -1105,9 +1258,16 @@
 
                 <!-- Testimonial 10 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-testimonial.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-testimonial.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Shauna Hayes TXC miner Testimonial</h4>
                         <p>Miner Shauna Hayes shares how she made the leap into crypto, and why TXC was her entry point.</p>
@@ -1148,9 +1308,16 @@
             <div class="video-grid">
                 <!-- Promo 1 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-founder%20-bobby-gray.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-founder%20-bobby-gray.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Meet Founder Bobby Gray</h4>
                         <p>Discover the vision behind TexitCoin from creator Bobby Gray.</p>
@@ -1159,9 +1326,16 @@
 
                 <!-- Promo 2 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-events.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-events.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>TexitCoin Community Events</h4>
                         <p>Experience the energy and excitement of TXC community gatherings.</p>
@@ -1170,9 +1344,16 @@
 
                 <!-- Promo 3 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-super-car.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-super-car.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>TXC Super Car Showcase</h4>
                         <p>Success in action. See how TexitCoin rewards translate to reality.</p>
@@ -1181,9 +1362,16 @@
 
                 <!-- Promo 4 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-hyper-car.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-hyper-car.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>TXC Hyper Car Collection</h4>
                         <p>Witness the lifestyle that TexitCoin mining can provide.</p>
@@ -1192,9 +1380,16 @@
 
                 <!-- Promo 5 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-cars-and-coffee.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-cars-and-coffee.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>Cars & Coffee with TXC</h4>
                         <p>Community connections and automotive passion meet TexitCoin.</p>
@@ -1203,9 +1398,16 @@
 
                 <!-- Promo 6 -->
                 <div class="video-card">
-                    <video controls preload="metadata">
-                        <source src="https://texitcointitans.com/videos/texit-coin-manufactring-office.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-card-wrapper">
+                        <video controls preload="metadata">
+                            <source src="https://texitcointitans.com/videos/texit-coin-manufactring-office.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-play-overlay">
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="video-card-content">
                         <h4>TXC Manufacturing Facility</h4>
                         <p>Tour the Texas headquarters where TexitCoin innovation happens.</p>
@@ -1419,6 +1621,39 @@
 
             btn.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Video play button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all video elements and their overlays
+            const videoWrappers = document.querySelectorAll('.video-wrapper, .video-card-wrapper');
+            
+            videoWrappers.forEach(wrapper => {
+                const video = wrapper.querySelector('video');
+                const overlay = wrapper.querySelector('.video-play-overlay');
+                
+                if (video && overlay) {
+                    // Hide overlay when video plays
+                    video.addEventListener('play', function() {
+                        overlay.classList.add('hidden');
+                    });
+                    
+                    // Show overlay when video pauses
+                    video.addEventListener('pause', function() {
+                        overlay.classList.remove('hidden');
+                    });
+                    
+                    // Show overlay when video ends
+                    video.addEventListener('ended', function() {
+                        overlay.classList.remove('hidden');
+                    });
+                    
+                    // Click overlay to play video
+                    overlay.addEventListener('click', function() {
+                        video.play();
+                    });
+                }
             });
         });
     </script>
