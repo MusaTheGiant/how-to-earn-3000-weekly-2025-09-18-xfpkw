@@ -58,6 +58,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -117,6 +118,7 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            z-index: 1001;
         }
 
         .logo {
@@ -125,6 +127,7 @@
             font-weight: 900;
             color: var(--deep-blue);
             text-decoration: none;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -169,12 +172,19 @@
             font-weight: 600;
             transition: all 0.3s ease;
             animation: ctaPulse 3s ease-in-out infinite;
+            white-space: nowrap;
         }
 
         .nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: var(--red-shadow);
             animation-play-state: paused;
+        }
+
+        .nav-cta.hide-on-menu-open {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
         }
 
         @keyframes ctaPulse {
@@ -200,6 +210,21 @@
             color: var(--text-primary);
             cursor: pointer;
             z-index: 1001;
+            position: relative;
+            transition: color 0.3s ease;
+            min-width: 44px;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-menu-btn.active {
+            color: var(--white);
+        }
+
+        .mobile-menu-btn.active i {
+            color: var(--white);
         }
 
         /* Hero Section */
@@ -336,6 +361,9 @@
             min-width: 200px;
             justify-content: center;
             animation: ctaPulse 3s ease-in-out infinite;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            user-select: none;
         }
 
         .cta-primary {
@@ -862,7 +890,7 @@
             font-size: 0.9rem;
         }
 
-        /* Scroll to Top - Moved to Bottom Left */
+        /* Scroll to Top - Bottom Left */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
@@ -880,6 +908,10 @@
             transition: all 0.3s ease;
             z-index: 1000;
             border: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            min-width: 44px;
+            min-height: 44px;
         }
 
         .scroll-top.visible {
@@ -919,6 +951,8 @@
             opacity: 0;
             visibility: hidden;
             transform: translateY(20px);
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .whatsapp-btn.visible {
@@ -999,6 +1033,7 @@
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0);
+                display: flex;
             }
 
             .nav-links a {
@@ -1012,7 +1047,7 @@
             }
 
             .mobile-menu-btn {
-                display: block;
+                display: flex;
             }
 
             .nav-container {
@@ -1313,12 +1348,13 @@
                 <li><a href="https://texitcointitans.com/">Home</a></li>
                 <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
                 <li><a href="#intro-video">Featured Video</a></li>
+                <li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
                 <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                 <i class="fas fa-bars"></i>
             </button>
-            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Mine TXC ⚡️</a>
+            <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Mine TXC ⛏️</a>
         </div>
     </nav>
 
@@ -1336,7 +1372,7 @@
                 <div class="cta-buttons">
                     <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-rocket"></i>
-                        Start Mining TXC ⚡️
+                        Start Mining TXC ⛏️
                     </a>
                 </div>
             </div>
@@ -1518,7 +1554,7 @@
                         </p>
                         <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="video-cta" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-rocket"></i>
-                            Start Mining TXC ⚡️
+                            Start Mining TXC ⛏️
                         </a>
                     </div>
                 </div>
@@ -1549,7 +1585,7 @@
                 <p>Be part of the TexitCoin revolution and start building your path to financial sovereignty today</p>
                 <a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-rocket"></i>
-                    Start Mining TXC ⚡️
+                    Start Mining TXC ⛏️
                 </a>
             </div>
         </div>
@@ -1591,7 +1627,7 @@
                     <h4>Resources</h4>
                     <ul class="footer-links">
                         <li><a href="#">Compensation Plan</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
                         <li><a href="#">Testimonials</a></li>
                         <li><a href="#">Training Videos</a></li>
                         <li><a href="#">Download PDFs</a></li>
@@ -1714,46 +1750,85 @@
         // Mobile menu functionality
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
+        const navCta = document.querySelector('.nav-cta');
 
         if (mobileMenuBtn && navLinks) {
             mobileMenuBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 navLinks.classList.toggle('active');
+                this.classList.toggle('active');
                 const icon = this.querySelector('i');
                 
                 if (navLinks.classList.contains('active')) {
                     icon.classList.remove('fa-bars');
                     icon.classList.add('fa-times');
                     document.body.style.overflow = 'hidden';
+                    if (navCta) navCta.classList.add('hide-on-menu-open');
                 } else {
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
                     document.body.style.overflow = '';
+                    if (navCta) navCta.classList.remove('hide-on-menu-open');
                 }
             });
 
+            // Close menu when clicking on a link
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', function() {
                     navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
                     document.body.style.overflow = '';
+                    if (navCta) navCta.classList.remove('hide-on-menu-open');
                 });
             });
 
+            // Close menu when clicking outside
             document.addEventListener('click', function(e) {
-                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                const isClickOnCta = navCta && navCta.contains(e.target);
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && !isClickOnCta) {
                     if (navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
                         const icon = mobileMenuBtn.querySelector('i');
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
                         document.body.style.overflow = '';
+                        if (navCta) navCta.classList.remove('hide-on-menu-open');
                     }
                 }
             });
+
+            // Close menu on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                    if (navCta) navCta.classList.remove('hide-on-menu-open');
+                }
+            });
         }
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn?.classList.remove('active');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                document.body.style.overflow = '';
+                if (navCta) navCta.classList.remove('hide-on-menu-open');
+            }
+        });
 
         // Enhanced button interactions
         document.querySelectorAll('.cta-btn').forEach(btn => {
@@ -1766,37 +1841,13 @@
             });
         });
 
-        // Accessibility
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn?.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-                document.body.style.overflow = '';
-            }
-        });
-
         // Show WhatsApp button after 10 seconds
         setTimeout(function() {
             const whatsappBtn = document.querySelector('.whatsapp-btn');
             if (whatsappBtn) {
                 whatsappBtn.classList.add('visible');
             }
-        }, 10000); // 10 seconds delay
+        }, 10000);
     </script>
 </body>
 </html>
