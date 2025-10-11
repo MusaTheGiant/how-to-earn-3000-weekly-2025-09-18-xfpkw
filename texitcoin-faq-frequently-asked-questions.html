@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TexitCoin FAQ | Your Questions Answered | TXC Mining Guide</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="Get answers to all your TexitCoin questions. Learn about TXC mining, compensation plan, getting started, safety, and more. Clear, honest answers to help you succeed.">
+    <meta name="keywords" content="TexitCoin FAQ, TXC questions, how to mine TexitCoin, is TexitCoin legit, TexitCoin compensation plan, TXC mining guide, TexitCoin support">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --deep-blue: #262262;
+            --bold-red: #be1f24;
+            --white: #ffffff;
+            --dark-shade: #130c0e;
+            --text-primary: #130c0e;
+            --text-secondary: #666666;
+            --text-light: #ffffff;
+            --gradient-red: linear-gradient(135deg, #be1f24 0%, #d32f2f 100%);
+            --gradient-blue: linear-gradient(135deg, #262262 0%, #3a2d8a 100%);
+            --gradient-hero: linear-gradient(135deg, #262262 0%, #3a2d8a 50%, #4a3a9a 100%);
+            --card-shadow: 0 8px 32px rgba(38, 34, 98, 0.15);
+            --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            z-index: 1000;
+            background: rgba(38, 34, 98, 0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-red);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+            z-index: 999;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--card-shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--bold-red);
+        }
+
+        .nav-cta {
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes ctaPulse {
+            0%, 100% { transform: scale(1); box-shadow: var(--red-shadow); }
+            50% { transform: scale(1.02); box-shadow: 0 12px 40px rgba(190, 31, 36, 0.35); }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 65vh;
+            background: var(--gradient-hero);
+            display: flex;
+            align-items: center;
+            padding: 6rem 0 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            margin: 0 auto 1.5rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .hero-description {
+            font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .cta-primary {
+            background: var(--gradient-red);
+            color: var(--white);
+            box-shadow: var(--red-shadow);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(190, 31, 36, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Section Divider */
+        .section-divider {
+            position: relative;
+            z-index: 10;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -30px 0;
+        }
+
+        .divider-image-container {
+            position: relative;
+            z-index: 15;
+        }
+
+        .divider-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            box-shadow: 0 8px 32px rgba(38, 34, 98, 0.3);
+            background: var(--white);
+        }
+
+        .divider-text {
+            display: none;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 900;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .faq-category {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .category-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .category-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(38, 34, 98, 0.1);
+            box-shadow: 0 4px 16px rgba(38, 34, 98, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 24px rgba(38, 34, 98, 0.12);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: rgba(38, 34, 98, 0.02);
+        }
+
+        .faq-question h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+            flex: 1;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            background: var(--gradient-red);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 2000px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .faq-answer-content p {
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer-content ul {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer-content a {
+            color: var(--bold-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .faq-answer-content a:hover {
+            color: var(--deep-blue);
+            text-decoration: underline;
+        }
+
+        .faq-answer-content strong {
+            color: var(--text-primary);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: var(--gradient-blue);
+            color: var(--white);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(190, 31, 36, 0.05) 0%, rgba(38, 34, 98, 0.05) 100%);
+            border-left: 4px solid var(--bold-red);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: rgba(38, 34, 98, 0.03);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: #262262;
+            padding: 3rem 0 2rem;
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bold-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--bold-red);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top i {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+            animation: whatsappPulse 3s ease-in-out infinite;
+            z-index: 1000;
+        }
+
+        @keyframes whatsappPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .whatsapp-btn i {
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(38, 34, 98, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links a {
+                color: var(--white);
+                font-size: 1.3rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-cta {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                min-height: 60vh;
+                padding: 7rem 0 2rem 0;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .section-divider {
+                height: auto;
+                margin: 2rem 0 3rem 0;
+                padding: 1rem 0;
+            }
+
+            .divider-image-container {
+                display: none;
+            }
+
+            .divider-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Orbitron', monospace;
+                font-size: 1rem;
+                font-weight: 900;
+                color: var(--deep-blue);
+                text-transform: uppercase;
+            }
+
+            .faq-section {
+                padding: 3rem 0;
+            }
+
+            .category-title {
+                font-size: 1.3rem;
+            }
+
+            .faq-question {
+                padding: 1.2rem;
+            }
+
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.8rem;
+            }
+
+            .scroll-top {
+                bottom: 1rem;
+                left: 1rem;
+                width: 45px;
+                height: 45px;
+            }
+
+            .whatsapp-btn {
+                bottom: 1rem;
+                right: 1rem;
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="https://texitcointitans.com/" class="logo">TexitCoin Titans</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="https://texitcointitans.com/">Home</a></li>
+                <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TXC</a></li>
+                <li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Bobby Gray</a></li>
+                <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+                <li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Get Started</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" class="nav-cta" target="_blank" rel="noopener noreferrer">Mine TXC ⛏️</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="https://texitcointitans.com/images/txc-logo.jpg" 
+                     alt="TexitCoin Logo" 
+                     class="profile-image">
+                <h1>Got Questions? We've Got Answers.</h1>
+                <p class="hero-subtitle">Clear, Honest Answers to Your TexitCoin Questions</p>
+                <p class="hero-description">Everything you need to know about mining TexitCoin, earning daily rewards, and building your financial future. No jargon, no confusion - just straightforward answers.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-rocket"></i>
+                        Start Mining TXC ⛏️
+                    </a>
+                    <a href="https://wa.me/27721714626" class="cta-btn cta-secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        Get Instant Help
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
+        </div>
+        <div class="divider-text">
+            💡 YOUR QUESTIONS ANSWERED
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-intro">Find quick answers to the most common questions about TexitCoin mining, earning, and getting started. Click any question to expand the answer.</p>
+
+            <!-- Category 1: Getting Started -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-rocket"></i></span>
+                    Getting Started with TexitCoin
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I get started with TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Getting started is simple and takes less than 10 minutes:</p>
+                            <ol>
+                                <li><strong>Create an exchange account</strong> on <a href="https://www.bitmart.com/invite/nt8HCH/en" target="_blank">BitMart</a> or <a href="https://dex-trade.com/refcode/cfms50" target="_blank">Dex-Trade</a></li>
+                                <li><strong>Prepare USDC</strong> for your mining package (add $10 extra for transaction fees)</li>
+                                <li><strong>Complete registration</strong> at <a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" target="_blank">MineTXC</a> with sponsor ID: <strong>mtglegacy</strong></li>
+                                <li><strong>Choose your mining package</strong> (Single, Triple Play, or Builder)</li>
+                                <li><strong>Set up your dashboard</strong> and start receiving daily TXC rewards</li>
+                            </ol>
+                            <p>Need step-by-step help? Check our <a href="https://texitcointitans.com/getting-started-with-texitcoin.html">complete getting started guide</a> with video tutorials.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What mining packages are available and how much do they cost?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin offers three mining packages to fit different budgets:</p>
+                            
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Package</th>
+                                        <th>Mining Power</th>
+                                        <th>One-Time Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Single</strong></td>
+                                        <td>100 megahash</td>
+                                        <td><strong>$995</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Triple Play</strong> 🔥</td>
+                                        <td>300 megahash + 100 FREE</td>
+                                        <td><strong>$2,985</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Builder Plan</strong></td>
+                                        <td>900 megahash + 300 FREE</td>
+                                        <td><strong>$8,955</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <p>All packages include unlimited hosting, electricity, one affiliate tracking center, training, and dedicated support. You can own up to 9 nodes maximum.</p>
+                            
+                            <div class="highlight-box">
+                                <strong>⚠️ Limited Availability:</strong> These packages are selling fast. Once they're sold out, no more will be created. <a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" target="_blank">Secure your position now</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need technical knowledge to mine TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>No technical expertise required!</strong> TexitCoin mining is designed for everyone—from complete beginners to experienced crypto enthusiasts.</p>
+                            <p>When you purchase a mining package, you're buying "mining shares" in the world's largest decentralized crypto mine. The technical side (equipment, hosting, electricity, maintenance) is handled completely for you.</p>
+                            <p>All you do is:</p>
+                            <ul>
+                                <li>Complete simple registration</li>
+                                <li>Set up your wallet address</li>
+                                <li>Receive daily TXC rewards at 7 PM</li>
+                            </ul>
+                            <p>Our <a href="https://texitcointitans.com/getting-started-with-texitcoin.html">video tutorials</a> and <a href="https://wa.me/27721714626" target="_blank">WhatsApp support</a> guide you through every step.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does it take to start receiving TXC rewards?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Once your registration and payment are confirmed, you'll start receiving <strong>daily TXC rewards within 24-48 hours</strong>. Daily payouts happen automatically at <strong>7 PM</strong> directly to your configured wallet.</p>
+                            <p>Your mining runs 24/7/365—earning TXC while you sleep, work, or spend time with family. No manual intervention needed after setup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Understanding TexitCoin -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-info-circle"></i></span>
+                    Understanding TexitCoin
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is TexitCoin (TXC)?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">TexitCoin (TXC)</a> is a fast, fair, and mineable Layer 1 cryptocurrency designed for honest trade and financial sovereignty. It's built on the proven Scrypt algorithm with <strong>zero pre-mine</strong>—meaning everyone starts equal.</p>
+                            <p><strong>Key features:</strong></p>
+                            <ul>
+                                <li>⚡ <strong>Lightning-fast:</strong> 3-minute block confirmations</li>
+                                <li>💰 <strong>Low fees:</strong> Cost-effective for daily transactions</li>
+                                <li>🎯 <strong>Fair launch:</strong> No insider advantages or pre-mining</li>
+                                <li>📈 <strong>Deflationary:</strong> Limited supply of 353 million TXC over 138 years</li>
+                                <li>🏛️ <strong>Decentralized:</strong> Independent Layer 1 blockchain</li>
+                            </ul>
+                            <p>Learn more about <a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">what makes TexitCoin different</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who created TexitCoin and why should I trust it?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin was created by <a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Bobby Gray</a>, a respected cryptocurrency pioneer with an impressive track record:</p>
+                            <ul>
+                                <li>🪙 <strong>Created the original physical Bitcoin coin in 2011</strong></li>
+                                <li>🏛️ <strong>Testified before U.S. Congress in 2012</strong> as a monetary policy expert</li>
+                                <li>💼 <strong>16+ years of experience</strong> in precious metals and alternative currencies</li>
+                                <li>🌍 <strong>Global crypto experience</strong> in South Korea, Singapore, and Thailand</li>
+                                <li>📜 <strong>Founded American Open Currency Standard</strong> in 2008</li>
+                            </ul>
+                            <p>Bobby's expertise and transparency set TexitCoin apart. He actively engages with the community through weekly calls, webinars, and events. <a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Learn more about Bobby Gray's vision</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How is TexitCoin different from Bitcoin or other cryptocurrencies?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>While Bitcoin paved the way, TexitCoin improves on several key areas:</p>
+                            
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Bitcoin</th>
+                                        <th>TexitCoin</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Block Time</strong></td>
+                                        <td>10 minutes</td>
+                                        <td>3 minutes ⚡</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Transaction Fees</strong></td>
+                                        <td>Often high</td>
+                                        <td>Low & affordable 💰</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pre-Mine</strong></td>
+                                        <td>None</td>
+                                        <td>None (100% fair) ✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mining Access</strong></td>
+                                        <td>Requires expensive equipment</td>
+                                        <td>Accessible mining shares 🎯</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Community Focus</strong></td>
+                                        <td>Global speculation</td>
+                                        <td>Real-world use & Texas pride 🤝</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <p>TexitCoin is designed to be <strong>usable</strong> as real currency—not just a speculative asset.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the total supply of TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin has a <strong>maximum supply of 353 million TXC</strong> to be mined over approximately <strong>138 years</strong>. This deflationary model creates scarcity and potential value appreciation over time.</p>
+                            <p><strong>Mining details:</strong></p>
+                            <ul>
+                                <li>📊 <strong>254 TXC per block</strong> currently</li>
+                                <li>⏱️ <strong>New block every 3 minutes</strong></li>
+                                <li>📉 <strong>Regular halving events</strong> reduce supply</li>
+                                <li>🔒 <strong>Mining difficulty increases</strong> as more miners join</li>
+                            </ul>
+                            <p>Limited supply + increasing demand = potential for long-term value growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Mining & Earning -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-coins"></i></span>
+                    Mining & Earning TXC
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does TexitCoin mining actually work?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin mining is simple: you purchase "mining shares" (measured in megahash) instead of buying and operating your own mining equipment. These shares give you a proportional stake in the world's largest decentralized TexitCoin mine.</p>
+                            <p><strong>Here's how it works:</strong></p>
+                            <ol>
+                                <li>You buy a mining package (100, 300, or 900 megahash)</li>
+                                <li>Your mining power runs 24/7 in a professional mining facility</li>
+                                <li>Daily TXC rewards are calculated based on your mining power</li>
+                                <li>Rewards are deposited directly to your wallet at 7 PM daily</li>
+                            </ol>
+                            <p><strong>No equipment to buy. No electricity bills. No technical maintenance.</strong> Just daily passive TXC income.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much can I earn mining TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Your daily TXC earnings depend on your total mining power (megahash). Larger packages generate more daily rewards.</p>
+                            <p><strong>Earning factors:</strong></p>
+                            <ul>
+                                <li>📊 <strong>Mining power:</strong> More megahash = more daily TXC</li>
+                                <li>📈 <strong>TXC market value:</strong> As TXC price increases, your daily rewards become worth more</li>
+                                <li>🔄 <strong>Mining difficulty:</strong> Adjusts over time based on network activity</li>
+                                <li>💎 <strong>Long-term holding:</strong> Many miners hold TXC for future appreciation</li>
+                            </ul>
+                            <p>Watch <a href="https://texitcointitans.com/texitcoin-testimonials.html">real testimonials</a> from miners earning $5-6 daily with starter packages, while others have cashed out $25K+ from larger investments.</p>
+                            <div class="highlight-box">
+                                <strong>💡 Smart Strategy:</strong> Many successful miners reinvest a portion of their TXC earnings into additional mining power, creating a compounding effect over time.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I buy more than one mining package?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Yes!</strong> Each miner can purchase up to <strong>9 nodes (mining packages) maximum</strong>. This allows you to scale your mining operation and daily TXC income.</p>
+                            <p>You can also unlock additional mining power beyond the 9-node limit by participating in the affiliate program and helping others join TexitCoin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens to my mining after the packages sell out?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Your mining continues indefinitely!</strong> Once you own a mining package, it's yours for the life of the TexitCoin network (138+ years planned).</p>
+                            <p>When packages sell out, new miners simply won't be able to purchase them anymore—making your position even more valuable. Limited supply drives exclusivity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I convert my TXC rewards to cash?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Converting TXC to cash is straightforward:</p>
+                            <ol>
+                                <li>Transfer your TXC to an exchange that lists it (<a href="https://www.bitmart.com/invite/nt8HCH/en" target="_blank">BitMart</a> or <a href="https://dex-trade.com/refcode/cfms50" target="_blank">Dex-Trade</a>)</li>
+                                <li>Sell TXC for USDT (stablecoin pegged to US dollar)</li>
+                                <li>Transfer USDT to a platform like Coinbase</li>
+                                <li>Convert USDT to USD and withdraw to your bank account</li>
+                            </ol>
+                            <p>Most experienced miners complete this process in under 15 minutes. Our <a href="https://wa.me/27721714626" target="_blank">support team</a> can walk you through it if needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Compensation & Commissions -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-dollar-sign"></i></span>
+                    Compensation & Affiliate Commissions
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the TexitCoin compensation plan work?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin uses a <strong>Rapid Rewards compensation plan</strong> where you earn in two ways:</p>
+                            <ol>
+                                <li><strong>Daily mining rewards:</strong> Passive TXC income from your mining shares (24/7/365)</li>
+                                <li><strong>Weekly affiliate commissions:</strong> Active income from referring new miners</li>
+                            </ol>
+                            <p>When you refer miners, you earn <strong>points</strong> based on their package size. Commissions are paid weekly when you accumulate balanced points on both sides of your binary team structure.</p>
+                            <p>Watch our <a href="https://texitcointitans.com/getting-started-with-texitcoin.html">compensation plan video tutorials</a> for a complete breakdown of earning potential.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much can I earn in weekly commissions?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Weekly commissions can reach up to <strong>$3,000</strong> for qualifying affiliates, and this can be earned <strong>every single week</strong> as long as you continue building your team.</p>
+                            
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Balanced Points</th>
+                                        <th>Weekly Commission</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>3 points (left) + 3 points (right)</td>
+                                        <td><strong>$1,000</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6 points (left) + 6 points (right)</td>
+                                        <td><strong>$2,000</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9 points (left) + 9 points (right)</td>
+                                        <td><strong>$3,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <p><strong>Commission Potential:</strong> Your maximum weekly payout is calculated by multiplying your personally sponsored miners by $1,000. This encourages continuous growth and team building.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I receive commissions in forms other than cash?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Yes!</strong> You can choose to receive your weekly commissions as:</p>
+                            <ul>
+                                <li>💵 <strong>USDC (stablecoin)</strong> - instant cash equivalent</li>
+                                <li>🪙 <strong>TXC coins</strong> - hold for potential appreciation</li>
+                                <li>⚡ <strong>Additional mining power</strong> - 200 megahash per $1,000 commission</li>
+                            </ul>
+                            <p><strong>Pro tip:</strong> Choosing additional mining power (hash) doesn't reduce your commission potential, allowing you to grow your mining operation while maintaining full earning capacity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the 1-2-FREE bonus program?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The <strong>1-2-FREE program</strong> is designed to help you triple your mining power quickly:</p>
+                            <ul>
+                                <li>✅ <strong>Refer 2 miners</strong> within 30 days</li>
+                                <li>🎁 <strong>Receive 1 FREE mining package</strong> equal to your starting package</li>
+                                <li>📈 <strong>Double your daily mining rewards</strong> instantly</li>
+                            </ul>
+                            <p><strong>Example:</strong> Start with a $995 Single package (100 megahash), refer 2 miners, and get an additional 100 megahash FREE—now earning from 200 total megahash!</p>
+                            <p>Watch our <a href="https://texitcointitans.com/getting-started-with-texitcoin.html">1-2-FREE video explanation</a> to see exactly how it works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How immediate are commission payments?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Daily mining rewards:</strong> Paid automatically every day at 7 PM directly to your wallet. No delays, no intermediaries.</p>
+                            <p><strong>Weekly affiliate commissions:</strong> Paid after the weekly close every Saturday. Qualifying commissions appear in your dashboard and are distributed shortly after.</p>
+                            <p>All payments are 24/7/365 with <strong>zero payment processor delays</strong>. Blockchain transactions happen instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: Technical & Security -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-shield-alt"></i></span>
+                    Technical & Security
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What wallets support TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin can be stored in several types of wallets:</p>
+                            <ul>
+                                <li>🔐 <strong>Cold storage coins:</strong> Physical coins for maximum security</li>
+                                <li>💻 <strong>Desktop hot wallets:</strong> Software wallets on your computer</li>
+                                <li>📱 <strong>Mobile wallets:</strong> Apps for on-the-go access</li>
+                                <li>🏦 <strong>Exchange wallets:</strong> Held on BitMart, Dex-Trade, etc.</li>
+                            </ul>
+                            <p>Choose the wallet type that fits your security needs and usage patterns. Most miners use a combination—holding long-term TXC in cold storage and keeping active trading amounts on exchanges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How fast are TexitCoin transactions?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin transactions are confirmed <strong>every 3 minutes</strong> with new blocks. This makes TXC approximately <strong>3x faster than Bitcoin</strong> (10-minute blocks) and much faster than traditional bank transfers.</p>
+                            <p>Combined with low transaction fees, TexitCoin is practical for daily use—not just long-term holding.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is TexitCoin secure and decentralized?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Yes.</strong> TexitCoin is built on proven blockchain technology:</p>
+                            <ul>
+                                <li>🔒 <strong>Scrypt algorithm:</strong> Battle-tested proof-of-work consensus</li>
+                                <li>🌐 <strong>Layer 1 blockchain:</strong> Independent network with full functionality</li>
+                                <li>🔓 <strong>Open-source:</strong> Code is transparent and verifiable</li>
+                                <li>⛏️ <strong>Decentralized mining:</strong> No single point of control</li>
+                            </ul>
+                            <p>Unlike centralized digital currencies, no single person or entity controls TexitCoin. The network is secured by miners worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where can I buy and trade TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin is currently available on these exchanges:</p>
+                            <ul>
+                                <li>🏦 <strong><a href="https://www.bitmart.com/invite/nt8HCH/en" target="_blank">BitMart</a></strong> - Major crypto exchange with high liquidity</li>
+                                <li>🏦 <strong><a href="https://dex-trade.com/refcode/cfms50" target="_blank">Dex-Trade</a></strong> - Alternative option if BitMart unavailable in your region</li>
+                                <li>📈 <strong>More listings coming soon</strong> as TXC gains adoption</li>
+                            </ul>
+                            <p>TXC is tradable globally once acquired. You can buy, sell, and transfer TXC 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 6: Investment & Safety -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-hand-holding-usd"></i></span>
+                    Investment & Safety
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is TexitCoin a legitimate investment or a scam?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin is a <strong>legitimate cryptocurrency project</strong> with transparent leadership, real technology, and an active community. However, like any investment, it carries risks.</p>
+                            <p><strong>What makes TexitCoin trustworthy:</strong></p>
+                            <ul>
+                                <li>✅ <strong>Experienced founder:</strong> <a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Bobby Gray</a> with 16+ years in the industry</li>
+                                <li>✅ <strong>Transparent operations:</strong> Weekly calls, public events, community engagement</li>
+                                <li>✅ <strong>Real testimonials:</strong> Documented earnings and <a href="https://texitcointitans.com/texitcoin-testimonials.html">verified success stories</a></li>
+                                <li>✅ <strong>Active exchanges:</strong> Listed on BitMart and Dex-Trade with real trading volume</li>
+                                <li>✅ <strong>Open-source blockchain:</strong> Code is public and verifiable</li>
+                            </ul>
+                            
+                            <div class="highlight-box">
+                                <strong>⚠️ Important:</strong> All cryptocurrency investments carry market risk. Never invest more than you can afford to lose. Do your own research, ask questions, and make informed decisions. Contact our <a href="https://wa.me/27721714626" target="_blank">support team</a> with any concerns.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are there regulatory risks involved with TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Like all cryptocurrencies, TexitCoin operates in an evolving regulatory landscape. While Texas has become crypto-friendly, regulations continue to develop.</p>
+                            <p><strong>Our approach to compliance:</strong></p>
+                            <ul>
+                                <li>📋 <strong>Transparency first:</strong> Open communication with community and regulators</li>
+                                <li>⚖️ <strong>Legal counsel:</strong> Working with regulatory experts</li>
+                                <li>🤝 <strong>Community education:</strong> Helping miners understand their responsibilities</li>
+                            </ul>
+                            <p>We encourage all miners to consult with tax professionals regarding crypto income and stay informed about local regulations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if TXC price drops? Will I lose my investment?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Your mining package purchase is a <strong>one-time fee for ongoing mining power</strong>—not a direct TXC coin purchase. Here's what that means:</p>
+                            <ul>
+                                <li>✅ <strong>You still mine daily:</strong> Regardless of TXC price, you receive daily rewards</li>
+                                <li>✅ <strong>You accumulate more TXC:</strong> Lower prices mean you can accumulate more coins</li>
+                                <li>✅ <strong>Long-term perspective:</strong> Many successful miners focus on 1-3 year horizons</li>
+                                <li>✅ <strong>Deflationary design:</strong> Limited supply means potential for appreciation</li>
+                            </ul>
+                            <p>Think of mining as <strong>dollar-cost averaging</strong> into TXC—you receive coins daily regardless of market price, positioning you to benefit when value increases.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I get a refund if I change my mind?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Mining packages are <strong>non-refundable</strong> once purchased. This is because your payment immediately secures mining infrastructure and equipment allocation.</p>
+                            <p>Before purchasing, we strongly encourage you to:</p>
+                            <ul>
+                                <li>📺 <strong>Watch all <a href="https://texitcointitans.com/getting-started-with-texitcoin.html">tutorial videos</a></strong></li>
+                                <li>💬 <strong>Ask questions via <a href="https://wa.me/27721714626" target="_blank">WhatsApp support</a></strong></li>
+                                <li>👥 <strong>Attend community Zoom calls</strong> to speak with experienced miners</li>
+                                <li>📖 <strong>Review <a href="https://texitcointitans.com/texitcoin-testimonials.html">testimonials</a></strong> from real miners</li>
+                            </ul>
+                            <p>Make sure you fully understand the opportunity before committing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 7: Support & Community -->
+            <div class="faq-category">
+                <h2 class="category-title">
+                    <span class="category-icon"><i class="fas fa-users"></i></span>
+                    Support & Community
+                </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I get help if I'm stuck or have questions?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>You're never alone with TexitCoin! We offer multiple support channels:</p>
+                            <ul>
+                                <li>📱 <strong><a href="https://wa.me/27721714626" target="_blank">WhatsApp Instant Support</a>:</strong> Get direct help from MTG</li>
+                                <li>💬 <strong><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank">Community WhatsApp Group</a>:</strong> Connect with experienced miners</li>
+                                <li>🎥 <strong><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Video Tutorials</a>:</strong> Step-by-step visual guides</li>
+                                <li>📞 <strong>Weekly Zoom Calls:</strong> Live Q&A with Bobby Gray and the team</li>
+                                <li>🤝 <strong>Local Events:</strong> In-person support and networking</li>
+                            </ul>
+                            <p>Our community is built on helping each other succeed. Don't hesitate to reach out!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are there community events I can attend?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Yes!</strong> TexitCoin hosts regular community events including:</p>
+                            <ul>
+                                <li>🍽️ <strong>Free dinner events:</strong> Meet local miners and learn in person</li>
+                                <li>💻 <strong>Weekly Zoom webinars:</strong> Training and Q&A sessions</li>
+                                <li>🎉 <strong>Regional gatherings:</strong> Community celebrations and networking</li>
+                                <li>🏆 <strong>Recognition events:</strong> Celebrating top miners and success stories</li>
+                            </ul>
+                            <p>These events provide education, support, and the chance to connect with like-minded people building financial freedom. <a href="https://wa.me/27721714626" target="_blank">Contact us</a> to find out about upcoming events in your area.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I talk to someone who's already mining TXC successfully?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Absolutely!</strong> We encourage you to connect with successful miners before joining:</p>
+                            <ul>
+                                <li>🎥 <strong>Watch <a href="https://texitcointitans.com/texitcoin-testimonials.html">video testimonials</a>:</strong> Real stories from real miners</li>
+                                <li>💬 <strong>Join our <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank">WhatsApp group</a>:</strong> Ask questions directly to active miners</li>
+                                <li>📞 <strong>Attend weekly Zoom calls:</strong> Hear from top earners and ask live questions</li>
+                                <li>🤝 <strong>Connect via <a href="https://wa.me/27721714626" target="_blank">WhatsApp</a>:</strong> Get introduced to successful miners in your area</li>
+                            </ul>
+                            <p>Hearing from people already earning with TexitCoin is the best way to understand the real opportunity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who should join TexitCoin?</h3>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>TexitCoin is perfect for anyone seeking financial independence and honest money:</p>
+                            <ul>
+                                <li>🌟 <strong>Crypto beginners</strong> wanting a simple entry point</li>
+                                <li>⛏️ <strong>Experienced miners</strong> looking for fair, transparent opportunities</li>
+                                <li>💼 <strong>Entrepreneurs & business owners</strong> diversifying income streams</li>
+                                <li>👨‍👩‍👧‍👦 <strong>Families</strong> building generational wealth</li>
+                                <li>🎯 <strong>Affiliate marketers</strong> who love sharing opportunities</li>
+                                <li>🚀 <strong>Early adopters</strong> who missed Bitcoin's early days</li>
+                                <li>🗽 <strong>Freedom advocates</strong> who value financial sovereignty</li>
+                            </ul>
+                            <p>If you're tired of bank control, inflation, and broken promises—if you want to take charge of your financial future—<a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" target="_blank">TexitCoin is for you</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Still Have Questions? We're Here to Help.</h2>
+                <p>Don't let unanswered questions hold you back. Our team is ready to help you understand TexitCoin and get started with confidence.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/27721714626" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                        Get Instant Support
+                    </a>
+                    <a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" class="cta-btn cta-secondary" style="background: var(--white); color: var(--deep-blue); border: 2px solid var(--deep-blue);">
+                        <i class="fas fa-rocket"></i>
+                        Start Mining TXC ⛏️
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>TexitCoin Titans</h4>
+                    <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://texitcointitans.com/">Home</a></li>
+                        <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
+                        <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+                        <li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby Gray</a></li>
+                        <li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Getting Started</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+                        <li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Training Videos</a></li>
+                        <li><a href="#">Download PDFs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+                        <li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+                        <li><a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+                        <li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="legal-links">
+                    <a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+                    <span class="separator">|</span>
+                    <a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a>
+                </div>
+                <p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Support Button -->
+    <a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Join WhatsApp Support Group">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const wasActive = faqItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!wasActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
