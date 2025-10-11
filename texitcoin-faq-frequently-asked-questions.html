@@ -166,6 +166,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 1001;
         }
 
         .logo {
@@ -216,6 +218,17 @@
             font-size: 1.5rem;
             color: var(--text-primary);
             cursor: pointer;
+            z-index: 1001;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-btn.active {
+            color: var(--white);
+        }
+
+        .mobile-menu-btn.active i {
+            color: var(--white);
         }
 
         /* Hero Section */
@@ -1738,6 +1751,7 @@
             mobileMenuBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 navLinks.classList.toggle('active');
+                this.classList.toggle('active');
                 const icon = this.querySelector('i');
                 
                 if (navLinks.classList.contains('active')) {
@@ -1754,6 +1768,7 @@
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', function() {
                     navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
@@ -1765,6 +1780,7 @@
                 if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                     if (navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
                         const icon = mobileMenuBtn.querySelector('i');
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
