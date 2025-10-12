@@ -918,6 +918,120 @@
             font-size: 0.95rem;
         }
 
+        /* Resources Section Styles */
+        .resources-section {
+            background: var(--white);
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .resources-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-blue);
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid rgba(38, 34, 98, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .resource-card:nth-child(1) { animation-delay: 0.2s; }
+        .resource-card:nth-child(2) { animation-delay: 0.4s; }
+        .resource-card:nth-child(3) { animation-delay: 0.6s; }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(38, 34, 98, 0.05), transparent);
+            animation: rotate 10s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .resource-card:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--deep-blue);
+        }
+
+        .resource-icon {
+            font-size: 3rem;
+            color: var(--deep-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            color: var(--text-primary);
+        }
+
+        .resource-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .download-btn {
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            animation: ctaPulse 3s ease-in-out infinite;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+            animation-play-state: paused;
+        }
+
         .footer {
             background: #262262;
             padding: 3rem 0 2rem;
@@ -1336,6 +1450,10 @@
             .video-container {
                 height: 180px;
             }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1427,6 +1545,10 @@
 
             .play-btn i {
                 font-size: 1.5rem;
+            }
+
+            .resource-grid {
+                gap: 1.5rem;
             }
         }
 
@@ -1641,7 +1763,6 @@
         </div>
     </section>
 
-    <!-- ✅ NEW SECTION INTEGRATED: See Rapid Rewards In Action -->
     <div class="section-divider">
         <div class="divider-image-container">
             <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" loading="lazy">
@@ -1659,7 +1780,6 @@
             </p>
 
             <div class="video-grid">
-                <!-- Compensation Video 1: 1-2-FREE Bonus -->
                 <div class="video-card">
                     <div class="video-container">
                         <video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.png" width="100%" height="200">
@@ -1676,7 +1796,6 @@
                     <p class="video-description">Unlock FREE bonus positions and accelerate your earning potential with TexitCoin's exclusive 1-2-FREE program.</p>
                 </div>
 
-                <!-- Compensation Video 2: Rapid Rewards -->
                 <div class="video-card">
                     <div class="video-container">
                         <video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/earn-3k-per-week.png" width="100%" height="200">
@@ -1694,7 +1813,6 @@
                 </div>
             </div>
 
-            <!-- Video Tutorials CTA -->
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://texitcointitans.com/getting-started-with-texitcoin.html" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
                     <i class="fas fa-graduation-cap"></i>
@@ -1706,7 +1824,6 @@
             </div>
         </div>
     </section>
-    <!-- ✅ END NEW SECTION -->
 
     <div class="section-divider">
         <div class="divider-image-container">
@@ -2109,6 +2226,65 @@
         </div>
     </section>
 
+    <!-- ✅ EXTRACTED SECTION INSERTED HERE -->
+    <div class="section-divider">
+        <div class="divider-image-container">
+            <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100" loading="lazy">
+        </div>
+        <div class="divider-text">
+            <span class="icon">⛏</span>RESOURCES
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+        <div class="container">
+            <h2 class="section-title">Download Resources</h2>
+            
+            <div class="resource-grid">
+                <!-- Resource Card 1 -->
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3 class="resource-title">Presentation Slides</h3>
+                    <p class="resource-description">Download the complete presentation slides used in the tutorial videos for your reference.</p>
+                    <a href="https://texitcointitans.com/resources/Texit-Coin-Presentation-Slides.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Slides
+                    </a>
+                </div>
+
+                <!-- Resource Card 2 -->
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="resource-title">Compensation Plan</h3>
+                    <p class="resource-description">Get the detailed compensation plan and understand how you can earn with TexitCoin.</p>
+                    <a href="https://texitcointitans.com/resources/TexitCoin-One-Page-Comp-Plan.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Plan
+                    </a>
+                </div>
+
+                <!-- Resource Card 3 -->
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="resource-title">Litepaper</h3>
+                    <p class="resource-description">Read the official TexitCoin Litepaper to understand the technology and vision behind the project.</p>
+                    <a href="https://texitcointitans.com/resources/Texit-Coin-Lite-Paper.pdf" class="download-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Litepaper
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ✅ END EXTRACTED SECTION -->
+
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -2161,10 +2337,10 @@
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Compensation Plan</a></li>
+                        <li><a href="#video-tutorials">Compensation Plan</a></li>
                         <li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
                         <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
-                        <li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Tutorial Videos</a></li>
+                        <li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Training Videos</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
