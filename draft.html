@@ -1508,20 +1508,17 @@
  scroll-behavior: smooth;
  }
 
- /* Image loading optimization */
  img {
  max-width: 100%;
  height: auto;
  display: block;
  }
 
- /* Prevent layout shift */
  video, iframe {
  max-width: 100%;
  display: block;
  }
 
- /* Safe area for devices with notches */
  @supports (padding: max(0px)) {
  .nav {
  padding-left: max(1rem, env(safe-area-inset-left));
@@ -1553,8 +1550,8 @@
         <ul class="nav-links" id="navLinks">
 <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
 <li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html">Comp Plan</a></li>
 <li><a href="#testimonials-preview">Testimonials</a></li>
-<!-- ✅ NEW FAQ MENU ITEM ADDED -->
 <li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
 <li><a href="getting-started-with-texitcoin.html">Getting Started</a></li>
 </ul>
@@ -1831,7 +1828,6 @@ Meet the Visionary Behind TexitCoin
 </div>
 </section>
 
-<!-- Section Divider: Income Opportunity -->
 <div class="section-divider">
 <div class="divider-image-container">
 <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100">
@@ -1841,7 +1837,6 @@ Meet the Visionary Behind TexitCoin
 </div>
 </div>
 
-<!-- NEW SECTION: Could You Use an Extra $3000 Per Week? -->
 <section class="tutorial-section" id="income-opportunity" style="background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 50%, #f8fafc 100%);">
 <div class="container">
 <h2 class="section-title">Could You Use an Extra $3000 Dollars Per Week?</h2>
@@ -1850,7 +1845,6 @@ Imagine adding an extra $3,000 every single week to your income. What would that
 </p>
 
 <div class="video-grid">
-<!-- Compensation Video 1: 1-2-FREE Bonus -->
 <div class="video-card">
 <div class="video-container">
 <video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.png" width="100%" height="200">
@@ -1867,7 +1861,6 @@ Your browser does not support the video tag.
 <p class="video-description">Unlock FREE bonus positions and accelerate your earning potential with TexitCoin's exclusive 1-2-FREE program - start building passive income faster than you ever thought possible.</p>
 </div>
 
-<!-- Compensation Video 2: Rapid Rewards -->
 <div class="video-card">
 <div class="video-container">
 <video class="video-player" preload="metadata" poster="https://texitcointitans.com/images/earn-3k-per-week.png" width="100%" height="200">
@@ -1885,7 +1878,6 @@ Your browser does not support the video tag.
 </div>
 </div>
 
-<!-- Income Opportunity CTA -->
 <div style="text-align: center; margin-top: 3rem;">
 <a href="https://texitcointitans.com/getting-started-with-texitcoin.html" class="cta-btn cta-primary" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
 <i class="fas fa-graduation-cap"></i>
@@ -1898,7 +1890,6 @@ Watch our complete step-by-step guide to start earning with TexitCoin today
 </div>
 </section>
 
-<!-- 🆕 NEW: TESTIMONIALS PREVIEW SECTION -->
 <div class="section-divider">
 <div class="divider-image-container">
 <img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" alt="TexitCoin Success Stories" class="divider-image" width="100" height="100">
@@ -1989,9 +1980,7 @@ Watch All Success Stories
 </div>
 </div>
 </section>
-<!-- END NEW TESTIMONIALS SECTION -->
 
-<!-- ✅ NEW FAQ PREVIEW SECTION ADDED -->
 <div class="section-divider">
 <div class="divider-image-container">
 <img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin FAQ" class="divider-image" width="100" height="100">
@@ -2082,7 +2071,6 @@ Get All Your Questions Answered
 </div>
 </div>
 </section>
-<!-- END NEW FAQ SECTION -->
 
 <div class="section-divider">
 <div class="divider-image-container">
@@ -2126,7 +2114,7 @@ Get All Your Questions Answered
 <div class="footer-section">
 <h4>Resources</h4>
 <ul class="footer-links">
-<li><a href="#">Compensation Plan</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html">Compensation Plan</a></li>
 <li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
 <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
 <li><a href="#">Training Videos</a></li>
@@ -2163,25 +2151,21 @@ Get All Your Questions Answered
 </button>
 
 <script>
-// Video play functionality
 function playVideo(button) {
 const videoContainer = button.closest('.video-container');
 const video = videoContainer.querySelector('.video-player');
 const overlay = videoContainer.querySelector('.video-overlay');
 
-// Hide overlay and play video
 overlay.classList.add('hidden');
 video.play();
 video.setAttribute('controls', 'true');
 
-// Show overlay again when video ends or is paused
 video.addEventListener('ended', function() {
 overlay.classList.remove('hidden');
 video.removeAttribute('controls');
 });
 
 video.addEventListener('pause', function() {
-// Only show overlay if video hasn't ended
 if (!video.ended) {
 overlay.classList.remove('hidden');
 video.removeAttribute('controls');
@@ -2237,7 +2221,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  });
 });
 
-// Mobile menu functionality
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 const navCta = document.querySelector('.nav-cta');
@@ -2262,7 +2245,6 @@ if (mobileMenuBtn && navLinks) {
  }
  });
 
- // Close menu when clicking on a link
  navLinks.querySelectorAll('a').forEach(link => {
  link.addEventListener('click', function() {
  navLinks.classList.remove('active');
@@ -2275,7 +2257,6 @@ if (mobileMenuBtn && navLinks) {
  });
  });
 
- // Close menu when clicking outside
  document.addEventListener('click', function(e) {
  const isClickOnCta = navCta && navCta.contains(e.target);
  if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && !isClickOnCta) {
@@ -2291,7 +2272,6 @@ if (mobileMenuBtn && navLinks) {
  }
  });
 
- // Close menu on Escape key
  document.addEventListener('keydown', function(e) {
  if (e.key === 'Escape' && navLinks.classList.contains('active')) {
  navLinks.classList.remove('active');
@@ -2305,7 +2285,6 @@ if (mobileMenuBtn && navLinks) {
  });
 }
 
-// Handle window resize
 window.addEventListener('resize', function() {
  if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
  navLinks.classList.remove('active');
