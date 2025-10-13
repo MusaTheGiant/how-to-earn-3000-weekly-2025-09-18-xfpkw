@@ -226,6 +226,36 @@
  }
  }
 
+ /* Logo styling for hero section - matching FAQ page */
+ .profile-image {
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ border: 5px solid #ffffff;
+ margin: 0 auto 1.5rem;
+ display: block;
+ object-fit: cover;
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+ transition: all 0.3s ease;
+ animation: fadeInScale 1s ease-out;
+ }
+
+ .profile-image:hover {
+ transform: scale(1.05);
+ box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+ }
+
+ @keyframes fadeInScale {
+ from {
+ opacity: 0;
+ transform: scale(0.8);
+ }
+ to {
+ opacity: 1;
+ transform: scale(1);
+ }
+ }
+
  .hero h1 {
  font-family: 'Orbitron', monospace;
  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -233,13 +263,14 @@
  color: var(--white);
  margin-bottom: 1.2rem;
  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+ animation: fadeInUp 1s ease-out 0.2s both;
  }
 
  .hero-subtitle {
  font-size: clamp(1rem, 2vw, 1.3rem);
  margin-bottom: 2rem;
  opacity: 0.95;
- animation: fadeInUp 1s ease-out 0.2s both;
+ animation: fadeInUp 1s ease-out 0.4s both;
  color: rgba(255, 255, 255, 0.9);
  }
 
@@ -331,17 +362,6 @@
  position: relative;
  padding: 0 2rem;
  animation: fadeInScale 1.2s ease-out both;
- }
-
- @keyframes fadeInScale {
- from {
- opacity: 0;
- transform: scale(0.8);
- }
- to {
- opacity: 1;
- transform: scale(1);
- }
  }
 
  .problems-solutions-section {
@@ -1216,11 +1236,22 @@
 
  .hero {
  min-height: 70vh;
- padding: 8rem 0 3rem 0;
+ padding: 5.5rem 0 3rem 0;
  }
 
  .hero h1 {
- margin-top: 1rem;
+ margin-top: 0;
+ }
+
+ .hero-content {
+ margin-top: 0;
+ }
+
+ /* Mobile logo sizing */
+ .profile-image {
+ width: 120px;
+ height: 120px;
+ margin-bottom: 1.2rem;
  }
 
  .container {
@@ -1331,14 +1362,22 @@
  @media (max-width: 480px) {
  .hero {
  min-height: 65vh;
- padding: 8rem 0 2rem 0;
+ padding: 5rem 0 2rem 0;
  display: flex;
  align-items: flex-start;
  justify-content: center;
  }
 
  .hero-content {
- margin-top: 2rem;
+ margin-top: 0;
+ }
+
+ /* Extra small mobile logo sizing */
+ .profile-image {
+ width: 100px;
+ height: 100px;
+ margin-bottom: 1rem;
+ border-width: 4px;
  }
 
  .hero h1 {
@@ -1565,6 +1604,12 @@
 <section class="hero" id="home">
 <div class="container">
 <div class="hero-content">
+<!-- TexitCoin Logo - Perfectly integrated matching FAQ page -->
+<img src="https://texitcointitans.com/images/texitcoin-logo-official.svg" 
+     alt="TexitCoin Logo - Official TXC Cryptocurrency" 
+     class="profile-image"
+     width="150"
+     height="150">
 <h1>Is Texas Leading the Charge for Financial Sovereignty?</h1>
 <p class="hero-subtitle">A new mineable cryptocurrency, crafted in Texas, is redefining local control and economic independence. Tap in and secure your mining position today.</p>
 <div class="cta-buttons">
@@ -1748,7 +1793,7 @@ Discover TexitCoin's Revolutionary Technology
 
 <section class="preview-section bobby-preview-section" id="about-bobby-preview">
 <div class="preview-content">
-<span class="preview-badge">
+<span class="preview-badge" style="background: var(--gradient-red);">
 <i class="fas fa-user-tie"></i>
 Cryptocurrency Pioneer
 </span>
