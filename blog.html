@@ -1119,6 +1119,15 @@
  padding: 2rem 0;
  }
 
+ /* MOBILE: Hide category filter and WhatsApp CTA, show only search */
+ .category-filter {
+ display: none;
+ }
+
+ .controls-wrapper .whatsapp-cta {
+ display: none;
+ }
+
  .pagination {
  margin-top: 3rem;
  }
@@ -1161,11 +1170,6 @@
 
  .container {
  padding: 0 1rem;
- }
-
- .whatsapp-cta {
- font-size: 0.9rem;
- padding: 0.7rem 1.2rem;
  }
 
  .pagination-btn {
@@ -1241,18 +1245,17 @@
 <div class="progress-bar" id="progressBar"></div>
 </div>
 
-<!-- Navigation - Exact Copy from Main Site -->
+<!-- Navigation - Updated: Removed Home, Renamed Getting Started to Get Started -->
 <nav class="nav" id="navbar">
 <div class="nav-container">
 <a class="logo" href="https://texitcointitans.com">TexitCoin Titans</a>
 <ul class="nav-links" id="navLinks">
-<li><a href="https://texitcointitans.com">Home</a></li>
 <li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
 <li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby</a></li>
 <li><a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html">Comp Plan</a></li>
 <li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
 <li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
-<li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Getting Started</a></li>
+<li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Get Started</a></li>
 </ul>
 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
 <i class="fas fa-bars"></i>
@@ -1261,7 +1264,7 @@
 </div>
 </nav>
 
-<!-- Blog Hero Section -->
+<!-- Blog Hero Section - Updated: Changed "daily" to "regular" -->
 <section class="blog-hero">
 <div class="container">
 <div class="blog-hero-content">
@@ -1272,7 +1275,7 @@
      height="180">
 <h1>Master the Art of TexitCoin Mining</h1>
 <p class="blog-hero-subtitle">
-Your daily source for cryptocurrency insights, mining strategies, and proven tactics to earn $10,000+ monthly with TexitCoin. Join thousands who are building generational wealth through TXC.
+Your regular source for cryptocurrency insights, mining strategies, and proven tactics to earn $10,000+ monthly with TexitCoin. Join thousands who are building generational wealth through TXC.
 </p>
 <div class="blog-hero-stats">
 <div class="hero-stat">
@@ -1292,7 +1295,7 @@ Your daily source for cryptocurrency insights, mining strategies, and proven tac
 </div>
 </section>
 
-<!-- Blog Controls -->
+<!-- Blog Controls - Updated: Removed Success Stories, Renamed Strategies to Training Calls -->
 <section class="blog-controls">
 <div class="container">
 <div class="controls-wrapper">
@@ -1304,8 +1307,7 @@ Your daily source for cryptocurrency insights, mining strategies, and proven tac
 <button class="category-btn active" data-category="all">All Posts</button>
 <button class="category-btn" data-category="mining">Mining</button>
 <button class="category-btn" data-category="news">TXC News</button>
-<button class="category-btn" data-category="strategies">Strategies</button>
-<button class="category-btn" data-category="success">Success Stories</button>
+<button class="category-btn" data-category="training">Training Calls</button>
 </div>
 <a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" class="whatsapp-cta" target="_blank" rel="noopener noreferrer">
 <i class="fab fa-whatsapp"></i>
@@ -1315,14 +1317,14 @@ Join Our Community
 </div>
 </section>
 
-<!-- Main Blog Section -->
+<!-- Main Blog Section - Updated: Kept only 1 blog post as placeholder -->
 <section class="blog-grid-section">
 <div class="container">
 <div class="blog-layout">
 <!-- Main Blog Grid -->
 <div class="blog-main">
 <div class="blog-grid">
-<!-- Blog Post 1 -->
+<!-- Blog Post 1 - Placeholder -->
 <article class="blog-card" data-category="mining">
 <div class="blog-thumbnail">
 <img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" 
@@ -1341,138 +1343,6 @@ Join Our Community
 </h2>
 <p class="blog-excerpt">
 Discover the step-by-step process to start mining TexitCoin today. From choosing your package to maximizing daily rewards, this comprehensive guide reveals everything you need to earn passive income with TXC mining.
-</p>
-<div class="blog-footer">
-<a href="#" class="read-more-btn">
-Read More <i class="fas fa-arrow-right"></i>
-</a>
-<div class="blog-shares">
-<span class="share-btn" title="Share on Facebook"><i class="fab fa-facebook-f"></i></span>
-<span class="share-btn" title="Share on Twitter"><i class="fab fa-twitter"></i></span>
-<span class="share-btn" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></span>
-</div>
-</div>
-</div>
-</article>
-
-<!-- Blog Post 2 -->
-<article class="blog-card" data-category="success">
-<div class="blog-thumbnail">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" 
-     alt="TexitCoin Success Story"
-     loading="lazy">
-<span class="blog-category">Success Stories</span>
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-date"><i class="far fa-calendar"></i> Jan 14, 2025</span>
-<span class="blog-author"><i class="far fa-user"></i> Bobby Gray</span>
-<span class="read-time"><i class="far fa-clock"></i> 6 min read</span>
-</div>
-<h2 class="blog-title">
-<a href="#">From Zero to $25,000: John's TexitCoin Success Story</a>
-</h2>
-<p class="blog-excerpt">
-Meet John, a former truck driver who transformed his life with TexitCoin. Learn how he went from struggling to pay bills to earning $25,000 in just 6 months through strategic mining and the Rapid Rewards program.
-</p>
-<div class="blog-footer">
-<a href="#" class="read-more-btn">
-Read More <i class="fas fa-arrow-right"></i>
-</a>
-<div class="blog-shares">
-<span class="share-btn" title="Share on Facebook"><i class="fab fa-facebook-f"></i></span>
-<span class="share-btn" title="Share on Twitter"><i class="fab fa-twitter"></i></span>
-<span class="share-btn" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></span>
-</div>
-</div>
-</div>
-</article>
-
-<!-- Blog Post 3 -->
-<article class="blog-card" data-category="news">
-<div class="blog-thumbnail">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" 
-     alt="TexitCoin Tampa Event"
-     loading="lazy">
-<span class="blog-category">TXC News</span>
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-date"><i class="far fa-calendar"></i> Jan 13, 2025</span>
-<span class="blog-author"><i class="far fa-user"></i> TXC Team</span>
-<span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
-</div>
-<h2 class="blog-title">
-<a href="#">TexitCoin Tampa Event: Major Announcements & What's Next</a>
-</h2>
-<p class="blog-excerpt">
-Recap of the groundbreaking TexitCoin Tampa event where CEO Bobby Gray unveiled the future roadmap. Exchange listings, new partnerships, and expansion plans that will skyrocket TXC value in 2025.
-</p>
-<div class="blog-footer">
-<a href="#" class="read-more-btn">
-Read More <i class="fas fa-arrow-right"></i>
-</a>
-<div class="blog-shares">
-<span class="share-btn" title="Share on Facebook"><i class="fab fa-facebook-f"></i></span>
-<span class="share-btn" title="Share on Twitter"><i class="fab fa-twitter"></i></span>
-<span class="share-btn" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></span>
-</div>
-</div>
-</div>
-</article>
-
-<!-- Blog Post 4 -->
-<article class="blog-card" data-category="strategies">
-<div class="blog-thumbnail">
-<img src="https://texitcointitans.com/images/earn-3k-per-week.png" 
-     alt="TexitCoin Earning Strategies"
-     loading="lazy">
-<span class="blog-category">Strategies</span>
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-date"><i class="far fa-calendar"></i> Jan 12, 2025</span>
-<span class="blog-author"><i class="far fa-user"></i> Mining Expert</span>
-<span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
-</div>
-<h2 class="blog-title">
-<a href="#">7 Proven Strategies to Earn $3,000 Weekly with TexitCoin</a>
-</h2>
-<p class="blog-excerpt">
-Unlock the secrets top earners use to generate massive weekly income with TexitCoin. From leveraging the 1-2-FREE bonus to building strategic teams, these tactics will transform your earning potential.
-</p>
-<div class="blog-footer">
-<a href="#" class="read-more-btn">
-Read More <i class="fas fa-arrow-right"></i>
-</a>
-<div class="blog-shares">
-<span class="share-btn" title="Share on Facebook"><i class="fab fa-facebook-f"></i></span>
-<span class="share-btn" title="Share on Twitter"><i class="fab fa-twitter"></i></span>
-<span class="share-btn" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></span>
-</div>
-</div>
-</div>
-</article>
-
-<!-- Blog Post 5 -->
-<article class="blog-card" data-category="mining">
-<div class="blog-thumbnail">
-<img src="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.png" 
-     alt="TexitCoin vs Bitcoin"
-     loading="lazy">
-<span class="blog-category">Mining</span>
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-date"><i class="far fa-calendar"></i> Jan 11, 2025</span>
-<span class="blog-author"><i class="far fa-user"></i> Crypto Analyst</span>
-<span class="read-time"><i class="far fa-clock"></i> 7 min read</span>
-</div>
-<h2 class="blog-title">
-<a href="#">Why TexitCoin Mining Beats Bitcoin: The Numbers Don't Lie</a>
-</h2>
-<p class="blog-excerpt">
-Compare the profitability of TexitCoin mining versus Bitcoin. With 3-minute blocks, lower barriers to entry, and the Rapid Rewards system, discover why TXC offers superior returns for everyday miners.
 </p>
 <div class="blog-footer">
 <a href="#" class="read-more-btn">
@@ -1715,7 +1585,7 @@ if (mobileMenuBtn && navLinks) {
  });
 }
 
-// Category Filter
+// Category Filter - Updated to use 'training' instead of 'strategies'
 const categoryBtns = document.querySelectorAll('.category-btn');
 const blogCards = document.querySelectorAll('.blog-card');
 
