@@ -256,6 +256,7 @@
  padding: 0 2rem;
  position: relative;
  z-index: 2;
+ width: 100%;
  }
 
  /* Article Header Section */
@@ -394,13 +395,14 @@
  /* Article Layout */
  .article-layout {
  display: grid;
- grid-template-columns: 1fr 350px;
- gap: 4rem;
+ grid-template-columns: 1fr 380px;
+ gap: 3rem;
  padding: 4rem 0;
  }
 
  .article-main {
  min-width: 0;
+ max-width: 750px;
  }
 
  /* Featured Image */
@@ -936,6 +938,57 @@
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
  background-clip: text;
+ }
+
+ /* CTA Sidebar Widget */
+ .cta-widget {
+ background: var(--gradient-blue);
+ color: var(--white);
+ text-align: center;
+ }
+
+ .cta-widget .widget-title {
+ color: var(--white);
+ border-bottom-color: rgba(255, 255, 255, 0.3);
+ -webkit-text-fill-color: var(--white);
+ background: none;
+ }
+
+ .cta-widget-content {
+ text-align: center;
+ }
+
+ .cta-icon-large {
+ font-size: 3rem;
+ margin-bottom: 1rem;
+ animation: float 3s ease-in-out infinite;
+ }
+
+ .cta-widget p {
+ margin-bottom: 1.5rem;
+ line-height: 1.6;
+ font-size: 0.95rem;
+ }
+
+ .cta-widget-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.8rem;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 1rem 1.8rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 700;
+ transition: all 0.3s ease;
+ box-shadow: var(--red-shadow);
+ }
+
+ .cta-widget-btn:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 12px 35px rgba(190, 31, 36, 0.4);
+ color: var(--white);
+ text-decoration: none;
  }
 
  /* WhatsApp Sidebar Widget */
@@ -1479,6 +1532,48 @@
  height: auto;
  display: block;
  }
+
+ /* Print Styles */
+ @media print {
+ .nav,
+ .progress-container,
+ .social-share-top,
+ .social-share-sidebar,
+ .article-sidebar,
+ .inline-cta,
+ .related-resources,
+ .email-subscribe,
+ .related-posts,
+ .footer,
+ .scroll-top {
+ display: none !important;
+ }
+
+ .article-layout {
+ grid-template-columns: 1fr;
+ }
+
+ .article-header {
+ background: none;
+ color: var(--text-primary);
+ }
+
+ .article-title,
+ .article-subtitle,
+ .breadcrumb,
+ .article-category {
+ color: var(--text-primary);
+ }
+
+ a {
+ text-decoration: underline;
+ color: var(--text-primary);
+ }
+
+ .article-content {
+ max-width: 100%;
+ }
+ }
 </style>
 </head>
 <body>
@@ -1854,6 +1949,18 @@ Read Now <i class="fas fa-arrow-right"></i>
 
 <!-- Sidebar -->
 <aside class="article-sidebar">
+<!-- Start Mining CTA Widget -->
+<div class="sidebar-widget cta-widget">
+<h3 class="widget-title">⚡ Ready to Mine TXC?</h3>
+<div class="cta-widget-content">
+<i class="fas fa-rocket cta-icon-large"></i>
+<p>Start your journey to financial freedom with TexitCoin mining packages tailored for every budget.</p>
+<a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="cta-widget-btn" target="_blank" rel="noopener noreferrer">
+<i class="fas fa-arrow-right"></i> Explore Mining Packages
+</a>
+</div>
+</div>
+
 <!-- WhatsApp Community Widget -->
 <div class="sidebar-widget whatsapp-widget">
 <h3 class="widget-title">💬 Join Our Community</h3>
