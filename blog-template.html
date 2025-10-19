@@ -15,20 +15,53 @@
 <!-- 📝 PLACEHOLDER: Insert relevant keywords (5-10 keywords) -->
 <meta name="keywords" content="TexitCoin, TXC mining, [INSERT ADDITIONAL KEYWORDS], cryptocurrency, Bobby Gray, financial freedom">
 
-<!-- Open Graph Tags for Social Media -->
-<meta property="og:title" content="[INSERT OG TITLE]">
-<meta property="og:description" content="[INSERT OG DESCRIPTION]">
-<!-- 📝 PLACEHOLDER: Insert featured image URL (1200x630px recommended) -->
-<meta property="og:image" content="[INSERT FEATURED IMAGE URL]">
-<meta property="og:url" content="[INSERT BLOG POST URL]">
+<!-- ENHANCED OPEN GRAPH TAGS - Universal Social Media Support -->
+<meta property="og:title" content="[INSERT OG TITLE - 60-90 characters, compelling and clear]">
+<meta property="og:description" content="[INSERT OG DESCRIPTION - 150-200 characters, benefit-focused]">
 <meta property="og:type" content="article">
+<meta property="og:url" content="[INSERT BLOG POST URL - Full canonical URL]">
 <meta property="og:site_name" content="TexitCoin Titans">
 
-<!-- Twitter Card Tags -->
+<!-- 📝 CRITICAL: Featured Image for Social Sharing (1200x630px REQUIRED) -->
+<meta property="og:image" content="[INSERT FEATURED IMAGE URL]">
+<meta property="og:image:secure_url" content="[INSERT FEATURED IMAGE URL - Use HTTPS]">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="[INSERT IMAGE DESCRIPTION - Describe what's in the image]">
+
+<!-- Article-Specific Open Graph Tags -->
+<meta property="article:published_time" content="[INSERT PUBLISH DATE - ISO FORMAT: 2025-01-15T10:00:00Z]">
+<meta property="article:modified_time" content="[INSERT MODIFIED DATE - ISO FORMAT]">
+<meta property="article:author" content="MTG - TXC Miner">
+<meta property="article:section" content="[INSERT CATEGORY - e.g., Cryptocurrency Mining]">
+<meta property="article:tag" content="TexitCoin">
+<meta property="article:tag" content="TXC Mining">
+<meta property="article:tag" content="Cryptocurrency">
+
+<!-- ENHANCED TWITTER CARD TAGS - Optimized for X Platform -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="[INSERT TWITTER TITLE]">
-<meta name="twitter:description" content="[INSERT TWITTER DESCRIPTION]">
+<meta name="twitter:site" content="@TexitCoinTitans">
+<meta name="twitter:creator" content="@TexitCoinTitans">
+<meta name="twitter:title" content="[INSERT TWITTER TITLE - Can be same as OG title or slightly different]">
+<meta name="twitter:description" content="[INSERT TWITTER DESCRIPTION - 150-200 characters]">
 <meta name="twitter:image" content="[INSERT FEATURED IMAGE URL]">
+<meta name="twitter:image:alt" content="[INSERT IMAGE DESCRIPTION]">
+
+<!-- WhatsApp & Telegram Optimization (uses OG tags) -->
+<!-- These platforms primarily use og:title, og:description, and og:image -->
+<!-- Ensure your og:image is high quality and 1200x630px for best results -->
+
+<!-- LinkedIn Optimization -->
+<meta property="og:locale" content="en_US">
+
+<!-- Additional Meta for Better Social Sharing -->
+<meta name="author" content="MTG - TXC Miner">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#262262">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="[INSERT BLOG POST URL]">
 
 <!-- Article Schema Markup for Rich Snippets -->
 <script type="application/ld+json">
@@ -37,10 +70,16 @@
   "@type": "BlogPosting",
   "headline": "[INSERT BLOG POST TITLE]",
   "description": "[INSERT META DESCRIPTION]",
-  "image": "[INSERT FEATURED IMAGE URL]",
+  "image": {
+    "@type": "ImageObject",
+    "url": "[INSERT FEATURED IMAGE URL]",
+    "width": 1200,
+    "height": 630
+  },
   "author": {
     "@type": "Person",
-    "name": "MTG - TXC Miner"
+    "name": "MTG - TXC Miner",
+    "url": "https://texitcointitans.com"
   },
   "publisher": {
     "@type": "Organization",
@@ -50,12 +89,13 @@
       "url": "https://texitcointitans.com/images/texitcoin-logo-official.svg"
     }
   },
-  "datePublished": "[INSERT PUBLISH DATE - ISO FORMAT: 2025-01-15]",
+  "datePublished": "[INSERT PUBLISH DATE - ISO FORMAT: 2025-01-15T10:00:00Z]",
   "dateModified": "[INSERT MODIFIED DATE - ISO FORMAT]",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "[INSERT BLOG POST URL]"
-  }
+  },
+  "keywords": "TexitCoin, TXC mining, [INSERT ADDITIONAL KEYWORDS]"
 }
 </script>
 
@@ -852,71 +892,6 @@
  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
  }
 
- /* Related Posts Section */
- .related-posts {
- margin: 4rem 0;
- }
-
- .related-posts h3 {
- font-family: 'Orbitron', monospace;
- font-size: 2rem;
- margin-bottom: 2rem;
- text-align: center;
- color: var(--text-primary);
- }
-
- .related-posts-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
- gap: 2rem;
- }
-
- .related-post-card {
- background: var(--white);
- border-radius: 15px;
- overflow: hidden;
- box-shadow: var(--card-shadow);
- transition: all 0.3s ease;
- }
-
- .related-post-card:hover {
- transform: translateY(-8px);
- box-shadow: 0 15px 50px rgba(38, 34, 98, 0.2);
- }
-
- .related-post-image {
- width: 100%;
- height: 200px;
- object-fit: cover;
- }
-
- .related-post-content {
- padding: 1.5rem;
- }
-
- .related-post-title {
- font-family: 'Orbitron', monospace;
- font-size: 1.2rem;
- margin-bottom: 0.8rem;
- color: var(--text-primary);
- }
-
- .related-post-title a {
- color: inherit;
- text-decoration: none;
- transition: color 0.3s ease;
- }
-
- .related-post-title a:hover {
- color: var(--bold-red);
- }
-
- .related-post-excerpt {
- color: var(--text-secondary);
- font-size: 0.95rem;
- line-height: 1.6;
- }
-
  /* WhatsApp Community */
  .email-subscribe {
  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
@@ -1246,10 +1221,6 @@
  grid-template-columns: 1fr;
  }
 
- .related-posts-grid {
- grid-template-columns: 1fr;
- }
-
  .stats-grid {
  grid-template-columns: repeat(2, 1fr);
  gap: 1rem;
@@ -1363,10 +1334,6 @@
  .stat-number {
  font-size: 2rem;
  }
-
- .related-posts-grid {
- gap: 1.5rem;
- }
  }
 
  @media (max-width: 375px) {
@@ -1455,7 +1422,6 @@
  .inline-cta,
  .related-resources,
  .email-subscribe,
- .related-posts,
  .footer,
  .scroll-top {
  display: none !important;
@@ -1817,41 +1783,6 @@ Read Now <i class="fas fa-arrow-right"></i>
 <i class="fab fa-whatsapp"></i> Join WhatsApp Community Now
 </a>
 <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">✓ Instant support • ✓ Daily tips • ✓ Live discussions • ✓ 100% Free</p>
-</div>
-</div>
-
-<!-- Related Posts -->
-<!-- 📝 PLACEHOLDER: Add 3 related blog posts -->
-<div class="related-posts">
-<h3>📖 Continue Reading</h3>
-<div class="related-posts-grid">
-<article class="related-post-card">
-<img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" alt="Related Post" class="related-post-image" loading="lazy">
-<div class="related-post-content">
-<h4 class="related-post-title">
-<a href="#">[Related Blog Post Title 1]</a>
-</h4>
-<p class="related-post-excerpt">[Brief excerpt from related post - 100 characters max]</p>
-</div>
-</article>
-<article class="related-post-card">
-<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="Related Post" class="related-post-image" loading="lazy">
-<div class="related-post-content">
-<h4 class="related-post-title">
-<a href="#">[Related Blog Post Title 2]</a>
-</h4>
-<p class="related-post-excerpt">[Brief excerpt from related post - 100 characters max]</p>
-</div>
-</article>
-<article class="related-post-card">
-<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Related Post" class="related-post-image" loading="lazy">
-<div class="related-post-content">
-<h4 class="related-post-title">
-<a href="#">[Related Blog Post Title 3]</a>
-</h4>
-<p class="related-post-excerpt">[Brief excerpt from related post - 100 characters max]</p>
-</div>
-</article>
 </div>
 </div>
 
