@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" name="viewport"/>
+
+<!-- 📝 PLACEHOLDER: Insert your blog post title here (60-70 characters for SEO) -->
+<title>[BLOG POST TITLE] | TexitCoin Mining Insights & Strategies</title>
+
+<link href="https://texitcointitans.com/images/favicon.png" rel="icon" type="image/png"/>
+
+<!-- 📝 PLACEHOLDER: Insert meta description (150-160 characters) -->
+<meta name="description" content="[INSERT META DESCRIPTION - Make it compelling and include main keyword]">
+
+<!-- 📝 PLACEHOLDER: Insert relevant keywords (5-10 keywords) -->
+<meta name="keywords" content="TexitCoin, TXC mining, [INSERT ADDITIONAL KEYWORDS], cryptocurrency, Bobby Gray, financial freedom">
+
+<!-- Open Graph Tags for Social Media -->
+<meta property="og:title" content="[INSERT OG TITLE]">
+<meta property="og:description" content="[INSERT OG DESCRIPTION]">
+<!-- 📝 PLACEHOLDER: Insert featured image URL (1200x630px recommended) -->
+<meta property="og:image" content="[INSERT FEATURED IMAGE URL]">
+<meta property="og:url" content="[INSERT BLOG POST URL]">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TexitCoin Titans">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[INSERT TWITTER TITLE]">
+<meta name="twitter:description" content="[INSERT TWITTER DESCRIPTION]">
+<meta name="twitter:image" content="[INSERT FEATURED IMAGE URL]">
+
+<!-- Article Schema Markup for Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[INSERT BLOG POST TITLE]",
+  "description": "[INSERT META DESCRIPTION]",
+  "image": "[INSERT FEATURED IMAGE URL]",
+  "author": {
+    "@type": "Person",
+    "name": "[INSERT AUTHOR NAME]"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TexitCoin Titans",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://texitcointitans.com/images/texitcoin-logo-official.svg"
+    }
+  },
+  "datePublished": "[INSERT PUBLISH DATE - ISO FORMAT: 2025-01-15]",
+  "dateModified": "[INSERT MODIFIED DATE - ISO FORMAT]",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "[INSERT BLOG POST URL]"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+<style>
+ /* Core Variables and Reset - Inherited from Main Site */
+ :root {
+ --deep-blue: #262262;
+ --bold-red: #be1f24;
+ --white: #ffffff;
+ --dark-shade: #130c0e;
+ --text-primary: #130c0e;
+ --text-secondary: #666666;
+ --text-light: #ffffff;
+ --gradient-red: linear-gradient(135deg, #be1f24 0%, #d32f2f 100%);
+ --gradient-blue: linear-gradient(135deg, #262262 0%, #3a2d8a 100%);
+ --gradient-hero: linear-gradient(135deg, #262262 0%, #3a2d8a 50%, #4a3a9a 100%);
+ --card-shadow: 0 8px 32px rgba(38, 34, 98, 0.15);
+ --red-shadow: 0 8px 32px rgba(190, 31, 36, 0.25);
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -webkit-tap-highlight-color: transparent;
+ }
+
+ body {
+ font-family: 'Inter', sans-serif;
+ background: var(--white);
+ color: var(--text-primary);
+ line-height: 1.6;
+ overflow-x: hidden;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ padding-top: env(safe-area-inset-top);
+ padding-bottom: env(safe-area-inset-bottom);
+ }
+
+ .font-orbitron {
+ font-family: 'Orbitron', monospace;
+ }
+
+ /* Progress Bar */
+ .progress-container {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 4px;
+ z-index: 1000;
+ background: rgba(38, 34, 98, 0.1);
+ }
+
+ .progress-bar {
+ height: 100%;
+ background: var(--gradient-red);
+ width: 0%;
+ transition: width 0.3s ease;
+ }
+
+ /* Navigation - Exact Copy from Main Site */
+ .nav {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ background: rgba(255, 255, 255, 0.95);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+ z-index: 999;
+ padding: 1rem 0;
+ transition: all 0.3s ease;
+ }
+ 
+ @supports not (backdrop-filter: blur(10px)) {
+ .nav {
+ background: rgba(255, 255, 255, 0.98);
+ }
+ }
+
+ .nav.scrolled {
+ background: rgba(255, 255, 255, 0.98);
+ box-shadow: var(--card-shadow);
+ }
+
+ .nav-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ z-index: 1001;
+ }
+
+ .logo {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.5rem;
+ font-weight: 900;
+ color: var(--deep-blue);
+ text-decoration: none;
+ white-space: nowrap;
+ }
+
+ .nav-links {
+ display: flex;
+ list-style: none;
+ gap: 2rem;
+ }
+
+ .nav-links a {
+ text-decoration: none;
+ color: var(--text-primary);
+ font-weight: 500;
+ transition: color 0.3s ease;
+ position: relative;
+ }
+
+ .nav-links a:hover {
+ color: var(--bold-red);
+ }
+
+ .nav-cta {
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 0.75rem 1.5rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ white-space: nowrap;
+ animation: ctaPulse 3s ease-in-out infinite;
+ }
+
+ .nav-cta:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--red-shadow);
+ animation-play-state: paused;
+ }
+
+ .nav-cta.hide-on-menu-open {
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
+ }
+
+ @keyframes ctaPulse {
+ 0% {
+ transform: scale(1);
+ box-shadow: var(--red-shadow);
+ }
+ 50% {
+ transform: scale(1.02);
+ box-shadow: 0 12px 40px rgba(190, 31, 36, 0.35);
+ }
+ 100% {
+ transform: scale(1);
+ box-shadow: var(--red-shadow);
+ }
+ }
+
+ .mobile-menu-btn {
+ display: none;
+ background: none;
+ border: none;
+ font-size: 1.5rem;
+ color: var(--text-primary);
+ cursor: pointer;
+ z-index: 1001;
+ position: relative;
+ transition: color 0.3s ease;
+ min-width: 44px;
+ min-height: 44px;
+ align-items: center;
+ justify-content: center;
+ -webkit-tap-highlight-color: transparent;
+ }
+
+ .mobile-menu-btn.active {
+ color: var(--white);
+ }
+
+ .mobile-menu-btn.active i {
+ color: var(--white);
+ }
+
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ position: relative;
+ z-index: 2;
+ }
+
+ /* Article Header Section */
+ .article-header {
+ background: var(--gradient-hero);
+ padding: 8rem 0 3rem 0;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .article-header::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+ }
+
+ .breadcrumb {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ font-size: 0.9rem;
+ margin-bottom: 2rem;
+ color: rgba(255, 255, 255, 0.8);
+ flex-wrap: wrap;
+ }
+
+ .breadcrumb a {
+ color: rgba(255, 255, 255, 0.8);
+ text-decoration: none;
+ transition: color 0.3s ease;
+ }
+
+ .breadcrumb a:hover {
+ color: var(--white);
+ }
+
+ .breadcrumb i {
+ font-size: 0.7rem;
+ }
+
+ .article-category {
+ display: inline-block;
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 0.5rem 1.2rem;
+ border-radius: 50px;
+ font-size: 0.85rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ margin-bottom: 1.5rem;
+ }
+
+ /* 📝 PLACEHOLDER: Insert your H1 blog post title here */
+ .article-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(2rem, 4vw, 3.2rem);
+ font-weight: 900;
+ color: var(--white);
+ margin-bottom: 1.5rem;
+ line-height: 1.2;
+ text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+ }
+
+ .article-subtitle {
+ font-size: clamp(1.1rem, 2vw, 1.3rem);
+ color: rgba(255, 255, 255, 0.9);
+ margin-bottom: 2rem;
+ line-height: 1.6;
+ max-width: 900px;
+ }
+
+ .article-meta {
+ display: flex;
+ align-items: center;
+ gap: 2rem;
+ flex-wrap: wrap;
+ color: rgba(255, 255, 255, 0.9);
+ }
+
+ .meta-item {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+
+ .meta-item i {
+ font-size: 1rem;
+ }
+
+ .author-info {
+ display: flex;
+ align-items: center;
+ gap: 0.8rem;
+ }
+
+ .author-avatar {
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ border: 2px solid var(--white);
+ }
+
+ /* Social Share Buttons - Top */
+ .social-share-top {
+ display: flex;
+ gap: 1rem;
+ margin-top: 2rem;
+ }
+
+ .share-btn-top {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: rgba(255, 255, 255, 0.2);
+ backdrop-filter: blur(10px);
+ color: var(--white);
+ padding: 0.7rem 1.2rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ .share-btn-top:hover {
+ background: var(--white);
+ color: var(--deep-blue);
+ transform: translateY(-2px);
+ }
+
+ /* Article Layout */
+ .article-layout {
+ display: grid;
+ grid-template-columns: 1fr 350px;
+ gap: 4rem;
+ padding: 4rem 0;
+ }
+
+ .article-main {
+ min-width: 0;
+ }
+
+ /* Featured Image */
+ .featured-image {
+ width: 100%;
+ max-width: 100%;
+ height: auto;
+ border-radius: 20px;
+ margin-bottom: 3rem;
+ box-shadow: var(--card-shadow);
+ }
+
+ /* Table of Contents */
+ .table-of-contents {
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+ border-left: 4px solid var(--bold-red);
+ padding: 2rem;
+ border-radius: 15px;
+ margin-bottom: 3rem;
+ box-shadow: var(--card-shadow);
+ }
+
+ .table-of-contents h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+ color: var(--text-primary);
+ }
+
+ .toc-list {
+ list-style: none;
+ }
+
+ .toc-list li {
+ margin-bottom: 0.8rem;
+ }
+
+ .toc-list a {
+ color: var(--text-secondary);
+ text-decoration: none;
+ transition: all 0.3s ease;
+ display: block;
+ padding: 0.5rem 0;
+ font-weight: 500;
+ }
+
+ .toc-list a:hover {
+ color: var(--bold-red);
+ padding-left: 0.5rem;
+ }
+
+ /* Article Content Styles */
+ .article-content {
+ font-size: 1.1rem;
+ line-height: 1.8;
+ color: var(--text-primary);
+ }
+
+ /* 📝 PLACEHOLDER: Insert your main content here */
+ .article-content h2 {
+ font-family: 'Orbitron', monospace;
+ font-size: 2rem;
+ font-weight: 700;
+ color: var(--text-primary);
+ margin: 3rem 0 1.5rem 0;
+ line-height: 1.3;
+ }
+
+ .article-content h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.5rem;
+ font-weight: 600;
+ color: var(--text-primary);
+ margin: 2.5rem 0 1rem 0;
+ line-height: 1.4;
+ }
+
+ .article-content h4 {
+ font-size: 1.2rem;
+ font-weight: 600;
+ color: var(--text-primary);
+ margin: 2rem 0 1rem 0;
+ }
+
+ .article-content p {
+ margin-bottom: 1.5rem;
+ }
+
+ .article-content strong {
+ font-weight: 700;
+ color: var(--text-primary);
+ }
+
+ .article-content em {
+ font-style: italic;
+ }
+
+ .article-content ul,
+ .article-content ol {
+ margin-bottom: 1.5rem;
+ padding-left: 2rem;
+ }
+
+ .article-content li {
+ margin-bottom: 0.8rem;
+ line-height: 1.8;
+ }
+
+ .article-content a {
+ color: var(--bold-red);
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ border-bottom: 2px solid transparent;
+ }
+
+ .article-content a:hover {
+ border-bottom-color: var(--bold-red);
+ }
+
+ .article-content blockquote {
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+ border-left: 4px solid var(--bold-red);
+ padding: 1.5rem 2rem;
+ margin: 2rem 0;
+ border-radius: 10px;
+ font-style: italic;
+ color: var(--text-secondary);
+ box-shadow: var(--card-shadow);
+ }
+
+ .article-content img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 15px;
+ margin: 2rem 0;
+ box-shadow: var(--card-shadow);
+ }
+
+ /* Key Takeaways Box */
+ .key-takeaways {
+ background: var(--gradient-blue);
+ color: var(--white);
+ padding: 2rem;
+ border-radius: 20px;
+ margin: 3rem 0;
+ box-shadow: var(--card-shadow);
+ }
+
+ .key-takeaways h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.5rem;
+ margin-bottom: 1.5rem;
+ color: var(--white) !important;
+ }
+
+ .key-takeaways ul {
+ list-style: none;
+ padding-left: 0;
+ }
+
+ .key-takeaways li {
+ padding-left: 2rem;
+ position: relative;
+ margin-bottom: 1rem;
+ }
+
+ .key-takeaways li::before {
+ content: "✓";
+ position: absolute;
+ left: 0;
+ color: #25d366;
+ font-weight: 900;
+ font-size: 1.3rem;
+ }
+
+ /* Inline CTA Boxes */
+ .inline-cta {
+ background: var(--gradient-red);
+ color: var(--white);
+ padding: 2.5rem;
+ border-radius: 20px;
+ text-align: center;
+ margin: 3rem 0;
+ box-shadow: var(--red-shadow);
+ }
+
+ .inline-cta h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ color: var(--white) !important;
+ }
+
+ .inline-cta p {
+ font-size: 1.1rem;
+ margin-bottom: 1.5rem;
+ line-height: 1.6;
+ }
+
+ .inline-cta-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.8rem;
+ background: var(--white);
+ color: var(--bold-red);
+ padding: 1rem 2.5rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 700;
+ font-size: 1.1rem;
+ transition: all 0.3s ease;
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+ }
+
+ .inline-cta-btn:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+ }
+
+ /* Statistics/Numbers Highlight */
+ .stats-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ gap: 1.5rem;
+ margin: 3rem 0;
+ }
+
+ .stat-box {
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+ padding: 2rem;
+ border-radius: 15px;
+ text-align: center;
+ box-shadow: var(--card-shadow);
+ transition: all 0.3s ease;
+ }
+
+ .stat-box:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 12px 40px rgba(38, 34, 98, 0.2);
+ }
+
+ .stat-number {
+ font-family: 'Orbitron', monospace;
+ font-size: 2.5rem;
+ font-weight: 900;
+ color: var(--bold-red);
+ display: block;
+ margin-bottom: 0.5rem;
+ }
+
+ .stat-label {
+ color: var(--text-secondary);
+ font-weight: 600;
+ }
+
+ /* Author Bio Section */
+ .author-bio {
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+ padding: 2.5rem;
+ border-radius: 20px;
+ margin: 4rem 0;
+ box-shadow: var(--card-shadow);
+ display: flex;
+ gap: 2rem;
+ align-items: center;
+ }
+
+ .author-bio-avatar {
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+ border: 4px solid var(--bold-red);
+ flex-shrink: 0;
+ }
+
+ .author-bio-content h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.5rem;
+ margin-bottom: 0.5rem;
+ color: var(--text-primary);
+ }
+
+ .author-bio-title {
+ color: var(--bold-red);
+ font-weight: 600;
+ margin-bottom: 1rem;
+ }
+
+ .author-bio-content p {
+ color: var(--text-secondary);
+ line-height: 1.6;
+ margin-bottom: 1rem;
+ }
+
+ .author-social {
+ display: flex;
+ gap: 1rem;
+ }
+
+ .author-social a {
+ width: 40px;
+ height: 40px;
+ background: var(--gradient-blue);
+ color: var(--white);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ transition: all 0.3s ease;
+ }
+
+ .author-social a:hover {
+ transform: translateY(-3px);
+ box-shadow: var(--card-shadow);
+ }
+
+ /* Related Resources Section */
+ .related-resources {
+ background: var(--gradient-blue);
+ color: var(--white);
+ padding: 3rem;
+ border-radius: 20px;
+ margin: 4rem 0;
+ box-shadow: var(--card-shadow);
+ }
+
+ .related-resources h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 2rem;
+ margin-bottom: 2rem;
+ text-align: center;
+ color: var(--white);
+ }
+
+ .resources-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 1.5rem;
+ }
+
+ .resource-card {
+ background: rgba(255, 255, 255, 0.15);
+ backdrop-filter: blur(10px);
+ padding: 1.5rem;
+ border-radius: 15px;
+ text-align: center;
+ transition: all 0.3s ease;
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ }
+
+ .resource-card:hover {
+ background: rgba(255, 255, 255, 0.25);
+ transform: translateY(-5px);
+ }
+
+ .resource-card i {
+ font-size: 2.5rem;
+ margin-bottom: 1rem;
+ color: var(--white);
+ }
+
+ .resource-card h4 {
+ font-size: 1.2rem;
+ margin-bottom: 0.8rem;
+ color: var(--white);
+ }
+
+ .resource-card p {
+ font-size: 0.95rem;
+ margin-bottom: 1.2rem;
+ opacity: 0.9;
+ }
+
+ .resource-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: var(--white);
+ color: var(--deep-blue);
+ padding: 0.7rem 1.5rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 600;
+ transition: all 0.3s ease;
+ }
+
+ .resource-btn:hover {
+ transform: scale(1.05);
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+ }
+
+ /* Related Posts Section */
+ .related-posts {
+ margin: 4rem 0;
+ }
+
+ .related-posts h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 2rem;
+ margin-bottom: 2rem;
+ text-align: center;
+ color: var(--text-primary);
+ }
+
+ .related-posts-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
+ }
+
+ .related-post-card {
+ background: var(--white);
+ border-radius: 15px;
+ overflow: hidden;
+ box-shadow: var(--card-shadow);
+ transition: all 0.3s ease;
+ }
+
+ .related-post-card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 15px 50px rgba(38, 34, 98, 0.2);
+ }
+
+ .related-post-image {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ }
+
+ .related-post-content {
+ padding: 1.5rem;
+ }
+
+ .related-post-title {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.2rem;
+ margin-bottom: 0.8rem;
+ color: var(--text-primary);
+ }
+
+ .related-post-title a {
+ color: inherit;
+ text-decoration: none;
+ transition: color 0.3s ease;
+ }
+
+ .related-post-title a:hover {
+ color: var(--bold-red);
+ }
+
+ .related-post-excerpt {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ line-height: 1.6;
+ }
+
+ /* Email Subscription Box */
+ .email-subscribe {
+ background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+ color: var(--white);
+ padding: 3rem;
+ border-radius: 20px;
+ margin: 4rem 0;
+ text-align: center;
+ box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+ }
+
+ .email-subscribe h3 {
+ font-family: 'Orbitron', monospace;
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ color: var(--white);
+ }
+
+ .email-subscribe p {
+ font-size: 1.1rem;
+ margin-bottom: 2rem;
+ opacity: 0.95;
+ }
+
+ .whatsapp-community-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 1rem;
+ background: var(--white);
+ color: #25d366;
+ padding: 1.2rem 3rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 700;
+ font-size: 1.1rem;
+ transition: all 0.3s ease;
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+ }
+
+ .whatsapp-community-btn:hover {
+ transform: scale(1.05);
+ box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+ color: #25d366;
+ text-decoration: none;
+ }
+
+ .whatsapp-community-btn i {
+ font-size: 1.5rem;
+ }
+
+ /* Sidebar Styles */
+ .article-sidebar {
+ position: sticky;
+ top: 120px;
+ height: fit-content;
+ }
+
+ .sidebar-widget {
+ background: var(--white);
+ border-radius: 20px;
+ padding: 2rem;
+ margin-bottom: 2rem;
+ box-shadow: var(--card-shadow);
+ }
+
+ .widget-title {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.2rem;
+ font-weight: 700;
+ color: var(--text-primary);
+ margin-bottom: 1.5rem;
+ padding-bottom: 1rem;
+ border-bottom: 2px solid var(--gradient-red);
+ background: var(--gradient-red);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+
+ /* WhatsApp Sidebar Widget */
+ .whatsapp-widget {
+ background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+ color: var(--white);
+ text-align: center;
+ }
+
+ .whatsapp-widget .widget-title {
+ color: var(--white);
+ border-bottom-color: rgba(255, 255, 255, 0.3);
+ -webkit-text-fill-color: var(--white);
+ background: none;
+ }
+
+ .whatsapp-widget-content {
+ text-align: center;
+ }
+
+ .whatsapp-icon-large {
+ font-size: 3.5rem;
+ margin-bottom: 1rem;
+ animation: float 3s ease-in-out infinite;
+ }
+
+ @keyframes float {
+ 0%, 100% {
+ transform: translateY(0px);
+ }
+ 50% {
+ transform: translateY(-10px);
+ }
+ }
+
+ .whatsapp-widget p {
+ margin-bottom: 1.5rem;
+ line-height: 1.6;
+ }
+
+ .whatsapp-join-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.8rem;
+ background: var(--white);
+ color: #25d366;
+ padding: 0.9rem 1.8rem;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: 700;
+ transition: all 0.3s ease;
+ }
+
+ .whatsapp-join-btn:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+ color: #25d366;
+ text-decoration: none;
+ }
+
+ /* Popular Posts Sidebar */
+ .popular-post {
+ display: flex;
+ gap: 1rem;
+ margin-bottom: 1.5rem;
+ padding-bottom: 1.5rem;
+ border-bottom: 1px solid rgba(38, 34, 98, 0.1);
+ }
+
+ .popular-post:last-child {
+ margin-bottom: 0;
+ padding-bottom: 0;
+ border-bottom: none;
+ }
+
+ .popular-post-thumbnail {
+ width: 70px;
+ height: 70px;
+ border-radius: 10px;
+ overflow: hidden;
+ flex-shrink: 0;
+ }
+
+ .popular-post-thumbnail img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ }
+
+ .popular-post-content {
+ flex: 1;
+ min-width: 0;
+ }
+
+ .popular-post-title {
+ font-size: 0.9rem;
+ font-weight: 600;
+ color: var(--text-primary);
+ margin-bottom: 0.5rem;
+ line-height: 1.4;
+ }
+
+ .popular-post-title a {
+ color: inherit;
+ text-decoration: none;
+ transition: color 0.3s ease;
+ display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ }
+
+ .popular-post-title a:hover {
+ color: var(--bold-red);
+ }
+
+ .popular-post-date {
+ font-size: 0.8rem;
+ color: var(--text-secondary);
+ }
+
+ /* Social Share Sidebar */
+ .social-share-sidebar {
+ position: sticky;
+ top: 120px;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ }
+
+ .share-btn-sidebar {
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: var(--white);
+ box-shadow: var(--card-shadow);
+ color: var(--text-secondary);
+ transition: all 0.3s ease;
+ cursor: pointer;
+ }
+
+ .share-btn-sidebar:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 30px rgba(38, 34, 98, 0.2);
+ }
+
+ .share-btn-sidebar.facebook:hover {
+ background: #1877f2;
+ color: var(--white);
+ }
+
+ .share-btn-sidebar.twitter:hover {
+ background: #1da1f2;
+ color: var(--white);
+ }
+
+ .share-btn-sidebar.whatsapp:hover {
+ background: #25d366;
+ color: var(--white);
+ }
+
+ .share-btn-sidebar.linkedin:hover {
+ background: #0077b5;
+ color: var(--white);
+ }
+
+ /* Footer - Exact Copy from Main Site */
+ .footer {
+ background: #262262;
+ padding: 3rem 0 2rem;
+ border-top: 1px solid rgba(38, 34, 98, 0.2);
+ color: #ffffff;
+ }
+
+ .footer-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 2rem;
+ margin-bottom: 2rem;
+ }
+
+ .footer-section {
+ color: #ffffff;
+ }
+
+ .footer-section h4 {
+ font-family: 'Orbitron', monospace;
+ font-size: 1.1rem;
+ margin-bottom: 1rem;
+ color: #ffffff;
+ }
+
+ .footer-section p {
+ color: #ffffff;
+ }
+
+ .footer-links {
+ list-style: none;
+ }
+
+ .footer-links li {
+ margin-bottom: 0.5rem;
+ }
+
+ .footer-links a {
+ color: rgba(255, 255, 255, 0.8);
+ text-decoration: none;
+ transition: color 0.3s ease;
+ }
+
+ .footer-links a:hover {
+ color: #ffffff;
+ }
+
+ .social-links {
+ display: flex;
+ gap: 1rem;
+ margin-top: 1rem;
+ }
+
+ .social-links a {
+ width: 40px;
+ height: 40px;
+ background: var(--bold-red);
+ color: var(--white);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ transition: all 0.3s ease;
+ }
+
+ .social-links a:hover {
+ background: var(--white);
+ color: var(--bold-red);
+ transform: translateY(-2px);
+ }
+
+ .footer-bottom {
+ text-align: center;
+ padding-top: 2rem;
+ border-top: 1px solid rgba(255, 255, 255, 0.1);
+ color: #ffffff;
+ }
+
+ .footer-bottom p {
+ color: #ffffff;
+ }
+
+ .legal-links {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ margin-bottom: 1rem;
+ }
+
+ .legal-links a {
+ color: rgba(255, 255, 255, 0.8);
+ text-decoration: none;
+ transition: color 0.3s ease;
+ font-size: 0.9rem;
+ }
+
+ .legal-links a:hover {
+ color: #ffffff;
+ }
+
+ .legal-links .separator {
+ color: rgba(255, 255, 255, 0.5);
+ font-size: 0.9rem;
+ }
+
+ /* Scroll to Top Button */
+ .scroll-top {
+ position: fixed;
+ bottom: 2rem;
+ right: 2rem;
+ width: 50px;
+ height: 50px;
+ background: var(--gradient-red);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.3s ease;
+ z-index: 1000;
+ border: none;
+ -webkit-tap-highlight-color: transparent;
+ touch-action: manipulation;
+ min-width: 44px;
+ min-height: 44px;
+ }
+
+ .scroll-top.visible {
+ opacity: 1;
+ visibility: visible;
+ }
+
+ .scroll-top:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 25px rgba(190, 31, 36, 0.3);
+ }
+
+ .scroll-top i {
+ color: var(--white);
+ font-size: 1.2rem;
+ }
+
+ /* Mobile Responsive Styles */
+ @media (max-width: 1024px) {
+ .article-layout {
+ grid-template-columns: 1fr;
+ gap: 3rem;
+ }
+
+ .article-sidebar {
+ position: static;
+ }
+
+ .social-share-sidebar {
+ position: static;
+ flex-direction: row;
+ justify-content: center;
+ margin: 2rem 0;
+ }
+ }
+
+ @media (max-width: 768px) {
+ .nav-links {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ background: rgba(38, 34, 98, 0.98);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 3rem;
+ font-size: 1.2rem;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(-20px);
+ transition: all 0.3s ease;
+ z-index: 998;
+ }
+
+ @supports not (backdrop-filter: blur(10px)) {
+ .nav-links {
+ background: rgba(38, 34, 98, 0.98);
+ }
+ }
+
+ .nav-links.active {
+ opacity: 1;
+ visibility: visible;
+ transform: translateY(0);
+ display: flex;
+ }
+
+ .nav-links a {
+ color: var(--white);
+ font-size: 1.3rem;
+ font-weight: 600;
+ }
+
+ .mobile-menu-btn {
+ display: flex;
+ }
+
+ .nav-container {
+ padding: 0 1rem;
+ }
+
+ .logo {
+ font-size: 1rem;
+ }
+
+ .nav-cta {
+ padding: 0.5rem 1rem;
+ font-size: 0.85rem;
+ }
+
+ .article-header {
+ padding: 7rem 0 2.5rem 0;
+ }
+
+ .article-title {
+ font-size: clamp(1.6rem, 5vw, 2.5rem);
+ }
+
+ .article-meta {
+ gap: 1rem;
+ }
+
+ .social-share-top {
+ flex-wrap: wrap;
+ gap: 0.8rem;
+ }
+
+ .share-btn-top {
+ flex: 1 1 calc(50% - 0.4rem);
+ min-width: 140px;
+ justify-content: center;
+ padding: 0.6rem 1rem;
+ font-size: 0.9rem;
+ }
+
+ .author-bio {
+ flex-direction: column;
+ text-align: center;
+ padding: 2rem;
+ }
+
+ .author-bio-avatar {
+ width: 100px;
+ height: 100px;
+ }
+
+ .inline-cta {
+ padding: 2rem 1.5rem;
+ }
+
+ .inline-cta h3 {
+ font-size: 1.5rem;
+ }
+
+ .whatsapp-community-btn {
+ padding: 1rem 2rem;
+ font-size: 1rem;
+ width: 100%;
+ max-width: 300px;
+ justify-content: center;
+ }
+
+ .resources-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .related-posts-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .stats-grid {
+ grid-template-columns: repeat(2, 1fr);
+ gap: 1rem;
+ }
+
+ .container {
+ padding: 0 1rem;
+ }
+
+ .table-of-contents {
+ padding: 1.5rem;
+ }
+
+ .article-content {
+ font-size: 1.05rem;
+ }
+
+ .article-content h2 {
+ font-size: 1.6rem;
+ margin: 2rem 0 1rem 0;
+ }
+
+ .article-content h3 {
+ font-size: 1.3rem;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .article-header {
+ padding: 6rem 0 2rem 0;
+ }
+
+ .article-title {
+ font-size: clamp(1.4rem, 6vw, 2rem);
+ }
+
+ .stats-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .scroll-top {
+ bottom: 1rem;
+ right: 1rem;
+ width: 45px;
+ height: 45px;
+ }
+ }
+
+ /* Smooth Scroll */
+ html {
+ scroll-behavior: smooth;
+ }
+
+ /* Accessibility: Focus States */
+ a:focus,
+ button:focus {
+ outline: 3px solid var(--bold-red);
+ outline-offset: 2px;
+ }
+
+ a:focus:not(:focus-visible),
+ button:focus:not(:focus-visible) {
+ outline: none;
+ }
+
+ a:focus-visible,
+ button:focus-visible {
+ outline: 3px solid var(--bold-red);
+ outline-offset: 2px;
+ }
+
+ /* Reduce motion for users who prefer it */
+ @media (prefers-reduced-motion: reduce) {
+ *,
+ *::before,
+ *::after {
+ animation-duration: 0.01ms !important;
+ animation-iteration-count: 1 !important;
+ transition-duration: 0.01ms !important;
+ scroll-behavior: auto !important;
+ }
+ }
+
+ /* Image Optimization */
+ img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ }
+</style>
+</head>
+<body>
+<!-- Progress Bar -->
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="navbar">
+<div class="nav-container">
+<a class="logo" href="https://texitcointitans.com">TexitCoin Titans</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
+<li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">About Bobby</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html">Comp Plan</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
+<li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Get Started</a></li>
+</ul>
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+<i class="fas fa-bars"></i>
+</button>
+<a class="nav-cta" href="https://minetxc.com/sign-up?sponsor=mtglegacy" rel="noopener noreferrer" target="_blank">Mine TXC ⛏️</a>
+</div>
+</nav>
+
+<!-- Article Header -->
+<header class="article-header">
+<div class="container">
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+<a href="https://texitcointitans.com">Home</a>
+<i class="fas fa-chevron-right"></i>
+<a href="https://texitcointitans.com/blog.html">Blog</a>
+<i class="fas fa-chevron-right"></i>
+<!-- 📝 PLACEHOLDER: Insert category name -->
+<span>[Category Name]</span>
+</nav>
+
+<!-- 📝 PLACEHOLDER: Insert category (Mining, TXC News, Training, etc.) -->
+<span class="article-category">[CATEGORY]</span>
+
+<!-- 📝 PLACEHOLDER: Insert your H1 blog post title (60-70 characters) -->
+<h1 class="article-title">[INSERT YOUR COMPELLING BLOG POST TITLE HERE]</h1>
+
+<!-- 📝 PLACEHOLDER: Insert subtitle/hook (150-200 characters) -->
+<p class="article-subtitle">[INSERT ENGAGING SUBTITLE THAT HOOKS READERS AND COMMUNICATES VALUE]</p>
+
+<!-- Article Meta -->
+<div class="article-meta">
+<div class="author-info">
+<!-- 📝 PLACEHOLDER: Insert author avatar image URL -->
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Author" class="author-avatar">
+<!-- 📝 PLACEHOLDER: Insert author name -->
+<span><strong>[Author Name]</strong></span>
+</div>
+<div class="meta-item">
+<i class="far fa-calendar"></i>
+<!-- 📝 PLACEHOLDER: Insert publish date (e.g., January 15, 2025) -->
+<span>[Publish Date]</span>
+</div>
+<div class="meta-item">
+<i class="far fa-clock"></i>
+<!-- 📝 PLACEHOLDER: Insert estimated read time (e.g., 8 min read) -->
+<span>[X] min read</span>
+</div>
+<div class="meta-item">
+<i class="far fa-eye"></i>
+<span id="viewCount">0 views</span>
+</div>
+</div>
+
+<!-- Social Share Buttons - Top -->
+<div class="social-share-top">
+<a href="#" class="share-btn-top facebook-share" target="_blank">
+<i class="fab fa-facebook-f"></i> Share
+</a>
+<a href="#" class="share-btn-top twitter-share" target="_blank">
+<i class="fab fa-twitter"></i> Tweet
+</a>
+<a href="#" class="share-btn-top whatsapp-share" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a href="#" class="share-btn-top linkedin-share" target="_blank">
+<i class="fab fa-linkedin-in"></i> LinkedIn
+</a>
+</div>
+</div>
+</header>
+
+<!-- Main Article Section -->
+<section class="article-layout">
+<div class="container">
+<div class="article-layout">
+<!-- Main Content -->
+<article class="article-main">
+<!-- Featured Image -->
+<!-- 📝 PLACEHOLDER: Insert featured image URL (1200x630px recommended) -->
+<img src="[INSERT FEATURED IMAGE URL]" alt="[Insert descriptive alt text]" class="featured-image" loading="eager">
+
+<!-- Table of Contents (Optional - Remove if post is short) -->
+<div class="table-of-contents">
+<h3>📋 What You'll Learn</h3>
+<ul class="toc-list">
+<!-- 📝 PLACEHOLDER: Add table of contents items based on your H2 headings -->
+<li><a href="#section1">[Section 1 Title]</a></li>
+<li><a href="#section2">[Section 2 Title]</a></li>
+<li><a href="#section3">[Section 3 Title]</a></li>
+<li><a href="#section4">[Section 4 Title]</a></li>
+<!-- Add more as needed -->
+</ul>
+</div>
+
+<!-- Article Content -->
+<div class="article-content">
+
+<!-- 📝 INTRODUCTION SECTION: Insert opening paragraphs (150-250 words) -->
+<p>
+[INSERT YOUR INTRODUCTION HERE - Hook the reader, establish relevance, and set up what they'll learn. Make it personal and relatable. Address their pain points.]
+</p>
+
+<p>
+[Continue introduction - Build curiosity and establish credibility. Mention specific benefits they'll gain from reading.]
+</p>
+
+<!-- PRIMARY CTA - Above the Fold -->
+<div class="inline-cta">
+<h3>🚀 Ready to Start Earning with TexitCoin?</h3>
+<p>Join thousands who are already mining TXC and building passive income streams. Get started in less than 5 minutes!</p>
+<a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="inline-cta-btn" target="_blank" rel="noopener noreferrer">
+<i class="fas fa-rocket"></i> Start Mining TXC Now
+</a>
+</div>
+
+<!-- 📝 MAIN CONTENT SECTION 1 -->
+<h2 id="section1">[INSERT H2 HEADING - Main Section 1]</h2>
+
+<p>
+[INSERT CONTENT HERE - Provide valuable information, insights, or step-by-step instructions. Use clear, conversational language.]
+</p>
+
+<p>
+[Continue with detailed explanation. Break up long paragraphs for better readability. Include specific examples.]
+</p>
+
+<!-- Example of internal linking to TexitCoin resources -->
+<p>
+Before we dive deeper, it's important to understand <a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">what TexitCoin is</a> and how it differs from other cryptocurrencies. TexitCoin (TXC) is more than just a digital currency—it's a movement toward financial sovereignty.
+</p>
+
+<!-- Key Takeaways Box (Use for important points) -->
+<div class="key-takeaways">
+<h3>🎯 Key Takeaways</h3>
+<ul>
+<li>[Key Point 1 - Make it actionable and specific]</li>
+<li>[Key Point 2 - Focus on benefits and outcomes]</li>
+<li>[Key Point 3 - Include specific numbers or results when possible]</li>
+<li>[Key Point 4 - Make it memorable]</li>
+</ul>
+</div>
+
+<!-- 📝 MAIN CONTENT SECTION 2 -->
+<h2 id="section2">[INSERT H2 HEADING - Main Section 2]</h2>
+
+<h3>[INSERT H3 SUB-HEADING]</h3>
+
+<p>
+[INSERT CONTENT - Continue building value. Address common questions or concerns.]
+</p>
+
+<ul>
+<li>[Bullet point 1 - Use lists to improve scannability]</li>
+<li>[Bullet point 2 - Each point should provide specific value]</li>
+<li>[Bullet point 3 - Keep them concise but informative]</li>
+</ul>
+
+<!-- Statistics Grid (Use when you have impressive numbers) -->
+<div class="stats-grid">
+<div class="stat-box">
+<!-- 📝 PLACEHOLDER: Insert relevant statistic -->
+<span class="stat-number">254</span>
+<span class="stat-label">TXC Per Block</span>
+</div>
+<div class="stat-box">
+<span class="stat-number">$10K+</span>
+<span class="stat-label">Monthly Potential</span>
+</div>
+<div class="stat-box">
+<span class="stat-number">24/7</span>
+<span class="stat-label">Mining Rewards</span>
+</div>
+<div class="stat-box">
+<span class="stat-number">100%</span>
+<span class="stat-label">Transparency</span>
+</div>
+</div>
+
+<p>
+Learn more about how the <a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html">TexitCoin Rapid Rewards compensation plan</a> can help you achieve these numbers consistently.
+</p>
+
+<!-- 📝 MAIN CONTENT SECTION 3 -->
+<h2 id="section3">[INSERT H2 HEADING - Main Section 3]</h2>
+
+<p>
+[INSERT CONTENT - Continue delivering value. Reference Bobby Gray's vision or real success stories when relevant.]
+</p>
+
+<blockquote>
+"[INSERT RELEVANT QUOTE - Could be from Bobby Gray, a testimonial, or an industry expert. Make it impactful and relevant to the content.]"
+</blockquote>
+
+<p>
+<a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Bobby Gray</a>, the founder and CEO of TexitCoin, built this platform with one mission: to provide everyday people with a path to financial freedom through cryptocurrency mining.
+</p>
+
+<!-- MID-CONTENT CTA -->
+<div class="inline-cta">
+<h3>💰 See What Real People Are Earning</h3>
+<p>Don't just take our word for it. Read verified testimonials from TexitCoin miners who are achieving financial freedom.</p>
+<a href="https://texitcointitans.com/texitcoin-testimonials.html" class="inline-cta-btn">
+<i class="fas fa-star"></i> Read Success Stories
+</a>
+</div>
+
+<!-- 📝 MAIN CONTENT SECTION 4 -->
+<h2 id="section4">[INSERT H2 HEADING - Main Section 4]</h2>
+
+<h3>[INSERT H3 SUB-HEADING]</h3>
+
+<p>
+[INSERT CONTENT - Continue with actionable advice, strategies, or insights.]
+</p>
+
+<ol>
+<li><strong>[Step 1]:</strong> [Detailed explanation of first step]</li>
+<li><strong>[Step 2]:</strong> [Detailed explanation of second step]</li>
+<li><strong>[Step 3]:</strong> [Detailed explanation of third step]</li>
+<li><strong>[Step 4]:</strong> [Detailed explanation of fourth step]</li>
+</ol>
+
+<!-- 📝 ADD MORE SECTIONS AS NEEDED -->
+<!-- Simply copy and paste the H2/H3 structure above and insert your content -->
+
+<!-- CONCLUSION SECTION -->
+<h2>🎯 Final Thoughts & Next Steps</h2>
+
+<p>
+[INSERT CONCLUSION - Summarize key points, reinforce the main message, and provide clear next steps. Make it action-oriented.]
+</p>
+
+<p>
+[Final paragraph - End with inspiration and urgency. Remind them of the opportunity and what they stand to gain.]
+</p>
+
+</div>
+
+<!-- Author Bio -->
+<div class="author-bio">
+<!-- 📝 PLACEHOLDER: Insert author avatar -->
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="[Author Name]" class="author-bio-avatar">
+<div class="author-bio-content">
+<!-- 📝 PLACEHOLDER: Insert author name and title -->
+<h3>[Author Name]</h3>
+<p class="author-bio-title">[Author Title/Role]</p>
+<!-- 📝 PLACEHOLDER: Insert author bio (100-150 words) -->
+<p>[INSERT AUTHOR BIO - Brief background, expertise, and why readers should trust this author. Include relevant achievements or credentials.]</p>
+<div class="author-social">
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+</div>
+
+<!-- Related Resources Section - Strategic Links -->
+<div class="related-resources">
+<h3>📚 Essential TexitCoin Resources</h3>
+<div class="resources-grid">
+<div class="resource-card">
+<i class="fas fa-info-circle"></i>
+<h4>About TexitCoin</h4>
+<p>Learn the fundamentals of TXC and why it's different from other cryptocurrencies.</p>
+<a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html" class="resource-btn">
+Learn More <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+<div class="resource-card">
+<i class="fas fa-user-tie"></i>
+<h4>Meet Bobby Gray</h4>
+<p>Discover the vision and leadership behind the TexitCoin revolution.</p>
+<a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html" class="resource-btn">
+Read Bio <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+<div class="resource-card">
+<i class="fas fa-chart-line"></i>
+<h4>Compensation Plan</h4>
+<p>Explore how you can earn with TexitCoin's Rapid Rewards system.</p>
+<a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html" class="resource-btn">
+View Plan <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+<div class="resource-card">
+<i class="fas fa-comments"></i>
+<h4>Success Stories</h4>
+<p>Read verified testimonials from TexitCoin miners worldwide.</p>
+<a href="https://texitcointitans.com/texitcoin-testimonials.html" class="resource-btn">
+Read Now <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+
+<!-- WhatsApp Community -->
+<div class="email-subscribe">
+<h3>💬 Get Exclusive TXC Mining Tips</h3>
+<p>Join our exclusive WhatsApp community for instant mining strategies, real-time market insights, and direct support from successful TXC miners. Get answers to your questions fast!</p>
+<div style="text-align: center;">
+<a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" class="whatsapp-community-btn" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i> Join WhatsApp Community Now
+</a>
+<p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">✓ Instant support • ✓ Daily tips • ✓ Live discussions • ✓ 100% Free</p>
+</div>
+</div>
+
+<!-- Related Posts -->
+<!-- 📝 PLACEHOLDER: Add 3 related blog posts -->
+<div class="related-posts">
+<h3>📖 Continue Reading</h3>
+<div class="related-posts-grid">
+<article class="related-post-card">
+<img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" alt="Related Post" class="related-post-image" loading="lazy">
+<div class="related-post-content">
+<h4 class="related-post-title">
+<a href="#">[Related Blog Post Title 1]</a>
+</h4>
+<p class="related-post-excerpt">[Brief excerpt from related post - 100 characters max]</p>
+</div>
+</article>
+<article class="related-post-card">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="Related Post" class="related-post-image" loading="lazy">
+<div class="related-post-content">
+<h4 class="related-post-title">
+<a href="#">[Related Blog Post Title 2]</a>
+</h4>
+<p class="related-post-excerpt">[Brief excerpt from related post - 100 characters max]</p>
+</div>
+</article>
+<article class="related-post-card">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Related Post" class="related-post-image" loading="lazy">
+<div class="related-post-content">
+<h4 class="related-post-title">
+<a href="#">[Related Blog Post Title 3]</a>
+</h4>
+<p class="related-post-excerpt">[Brief excerpt from related post - 100 characters max]</p>
+</div>
+</article>
+</div>
+</div>
+
+<!-- BOTTOM CTA - Final Call to Action -->
+<div class="inline-cta">
+<h3>⚡ Your Journey to $10,000+ Monthly Starts Here</h3>
+<p>Don't wait another day to start building your financial freedom. Join the TexitCoin revolution now and start earning passive income 24/7.</p>
+<a href="https://minetxc.com/sign-up?sponsor=mtglegacy" class="inline-cta-btn" target="_blank" rel="noopener noreferrer">
+<i class="fas fa-rocket"></i> Start Mining TexitCoin Today
+</a>
+</div>
+
+</article>
+
+<!-- Sidebar -->
+<aside class="article-sidebar">
+<!-- WhatsApp Community Widget -->
+<div class="sidebar-widget whatsapp-widget">
+<h3 class="widget-title">💬 Join Our Community</h3>
+<div class="whatsapp-widget-content">
+<i class="fab fa-whatsapp whatsapp-icon-large"></i>
+<p>Get instant mining tips, live support, and connect with successful TXC miners!</p>
+<a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" class="whatsapp-join-btn" target="_blank" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i> Join WhatsApp
+</a>
+</div>
+</div>
+
+<!-- Popular/Trending Posts Widget -->
+<div class="sidebar-widget">
+<h3 class="widget-title">🔥 Trending Posts</h3>
+<!-- 📝 PLACEHOLDER: Add 3 popular posts -->
+<div class="popular-post">
+<div class="popular-post-thumbnail">
+<img src="https://texitcointitans.com/images/texit-coin-txc-mining.jpg" alt="Popular Post" loading="lazy">
+</div>
+<div class="popular-post-content">
+<h4 class="popular-post-title">
+<a href="#">[Popular Post Title 1]</a>
+</h4>
+<span class="popular-post-date">January 10, 2025</span>
+</div>
+</div>
+<div class="popular-post">
+<div class="popular-post-thumbnail">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="Popular Post" loading="lazy">
+</div>
+<div class="popular-post-content">
+<h4 class="popular-post-title">
+<a href="#">[Popular Post Title 2]</a>
+</h4>
+<span class="popular-post-date">January 8, 2025</span>
+</div>
+</div>
+<div class="popular-post">
+<div class="popular-post-thumbnail">
+<img src="https://texitcointitans.com/images/texitcoin-founder-ceo-bobby-gray.jpg" alt="Popular Post" loading="lazy">
+</div>
+<div class="popular-post-content">
+<h4 class="popular-post-title">
+<a href="#">[Popular Post Title 3]</a>
+</h4>
+<span class="popular-post-date">January 5, 2025</span>
+</div>
+</div>
+</div>
+
+<!-- Social Share Sidebar -->
+<div class="sidebar-widget">
+<h3 class="widget-title">📢 Share This</h3>
+<div class="social-share-sidebar">
+<div class="share-btn-sidebar facebook facebook-share" title="Share on Facebook">
+<i class="fab fa-facebook-f"></i>
+</div>
+<div class="share-btn-sidebar twitter twitter-share" title="Share on Twitter">
+<i class="fab fa-twitter"></i>
+</div>
+<div class="share-btn-sidebar whatsapp whatsapp-share" title="Share on WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</div>
+<div class="share-btn-sidebar linkedin linkedin-share" title="Share on LinkedIn">
+<i class="fab fa-linkedin-in"></i>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-section">
+<h4>TexitCoin Titans</h4>
+<p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
+<div class="social-links">
+<a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+<i class="fab fa-tiktok"></i>
+</a>
+<a href="https://www.youtube.com/@TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<i class="fab fa-youtube"></i>
+</a>
+<a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+</div>
+</div>
+<div class="footer-section">
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li><a href="https://texitcointitans.com/">Home</a></li>
+<li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Getting Started</a></li>
+<li><a href="https://texitcointitans.com/bobby-gray-founder-ceo-texitcoin.html">Meet Bobby Gray</a></li>
+<li><a href="https://texitcointitans.com/about-texitcoin-what-is-texitcoin-txc.html">About TexitCoin</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Resources</h4>
+<ul class="footer-links">
+<li><a href="https://texitcointitans.com/texitcoin-rapid-rewards-compensation-plan.html">Compensation Plan</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-faq-frequently-asked-questions.html">FAQ</a></li>
+<li><a href="https://texitcointitans.com/texitcoin-testimonials.html">Testimonials</a></li>
+<li><a href="https://texitcointitans.com/getting-started-with-texitcoin.html">Training Videos</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Support</h4>
+<ul class="footer-links">
+<li><a href="https://wa.me/27721714626" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+<li><a href="http://texitcointitans.com/whatsappgroup.html" target="_blank" rel="noopener noreferrer">Join WhatsApp Group</a></li>
+<li><a href="https://minetxc.com/sign-up?sponsor=mtglegacy" target="_blank" rel="noopener noreferrer">Start Mining</a></li>
+<li><a href="https://texitcoin.org" target="_blank" rel="noopener noreferrer">Official TexitCoin</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="legal-links">
+<a href="https://texitcointitans.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+<span class="separator">|</span>
+<a href="https://texitcointitans.com/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms</a>
+<span class="separator">|</span>
+<a href="https://texitcointitans.com/disclaimer.html" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+<span class="separator">|</span>
+<a href="https://texitcointitans.com/affiliate-disclosure.html" target="_blank" rel="noopener noreferrer">Affiliates</a>
+</div>
+<p>&copy; 2025 TexitCoin Titans Team. All rights reserved. | Made in Texas, for Texans | Supporting the TEXIT movement</p>
+</div>
+</div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button aria-label="Scroll to top" class="scroll-top" id="scrollTop">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+// Progress Bar & Scroll Effects
+let ticking = false;
+
+function updateOnScroll() {
+ const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+ document.getElementById('progressBar').style.width = scrolled + '%';
+
+ const navbar = document.getElementById('navbar');
+ if (window.scrollY > 100) {
+ navbar.classList.add('scrolled');
+ } else {
+ navbar.classList.remove('scrolled');
+ }
+
+ const scrollTop = document.getElementById('scrollTop');
+ if (window.scrollY > 300) {
+ scrollTop.classList.add('visible');
+ } else {
+ scrollTop.classList.remove('visible');
+ }
+
+ ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+ if (!ticking) {
+ requestAnimationFrame(updateOnScroll);
+ ticking = true;
+ }
+});
+
+// Scroll to Top
+document.getElementById('scrollTop').addEventListener('click', () => {
+ window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+const navCta = document.querySelector('.nav-cta');
+
+if (mobileMenuBtn && navLinks) {
+ mobileMenuBtn.addEventListener('click', function(e) {
+ e.preventDefault();
+ navLinks.classList.toggle('active');
+ this.classList.toggle('active');
+ const icon = this.querySelector('i');
+ 
+ if (navLinks.classList.contains('active')) {
+ icon.classList.remove('fa-bars');
+ icon.classList.add('fa-times');
+ document.body.style.overflow = 'hidden';
+ if (navCta) navCta.classList.add('hide-on-menu-open');
+ } else {
+ icon.classList.remove('fa-times');
+ icon.classList.add('fa-bars');
+ document.body.style.overflow = '';
+ if (navCta) navCta.classList.remove('hide-on-menu-open');
+ }
+ });
+
+ navLinks.querySelectorAll('a').forEach(link => {
+ link.addEventListener('click', function() {
+ navLinks.classList.remove('active');
+ mobileMenuBtn.classList.remove('active');
+ const icon = mobileMenuBtn.querySelector('i');
+ icon.classList.remove('fa-times');
+ icon.classList.add('fa-bars');
+ document.body.style.overflow = '';
+ if (navCta) navCta.classList.remove('hide-on-menu-open');
+ });
+ });
+}
+
+// Social Share Functionality
+const postTitle = document.querySelector('.article-title').textContent;
+const postUrl = window.location.href;
+
+// Facebook Share
+document.querySelectorAll('.facebook-share').forEach(btn => {
+ btn.addEventListener('click', function(e) {
+ e.preventDefault();
+ window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`, '_blank', 'width=600,height=400');
+ });
+});
+
+// Twitter Share
+document.querySelectorAll('.twitter-share').forEach(btn => {
+ btn.addEventListener('click', function(e) {
+ e.preventDefault();
+ window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(postTitle)}&url=${encodeURIComponent(postUrl)}`, '_blank', 'width=600,height=400');
+ });
+});
+
+// WhatsApp Share
+document.querySelectorAll('.whatsapp-share').forEach(btn => {
+ btn.addEventListener('click', function(e) {
+ e.preventDefault();
+ window.open(`https://wa.me/?text=${encodeURIComponent(postTitle + ' ' + postUrl)}`, '_blank');
+ });
+});
+
+// LinkedIn Share
+document.querySelectorAll('.linkedin-share').forEach(btn => {
+ btn.addEventListener('click', function(e) {
+ e.preventDefault();
+ window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`, '_blank', 'width=600,height=400');
+ });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', function (e) {
+ e.preventDefault();
+ const target = document.querySelector(this.getAttribute('href'));
+ if (target) {
+ const offsetTop = target.offsetTop - 100;
+ window.scrollTo({
+ top: offsetTop,
+ behavior: 'smooth'
+ });
+ }
+ });
+});
+
+// View Counter (Example - In production, connect to analytics)
+let viewCount = Math.floor(Math.random() * 1000) + 500;
+document.getElementById('viewCount').textContent = viewCount + ' views';
+
+// Close mobile menu on escape key
+document.addEventListener('keydown', function(e) {
+ if (e.key === 'Escape' && navLinks?.classList.contains('active')) {
+ navLinks.classList.remove('active');
+ mobileMenuBtn?.classList.remove('active');
+ const icon = mobileMenuBtn?.querySelector('i');
+ if (icon) {
+ icon.classList.remove('fa-times');
+ icon.classList.add('fa-bars');
+ }
+ document.body.style.overflow = '';
+ if (navCta) navCta.classList.remove('hide-on-menu-open');
+ }
+});
+
+// Responsive handling
+window.addEventListener('resize', function() {
+ if (window.innerWidth > 768 && navLinks?.classList.contains('active')) {
+ navLinks.classList.remove('active');
+ mobileMenuBtn?.classList.remove('active');
+ const icon = mobileMenuBtn?.querySelector('i');
+ if (icon) {
+ icon.classList.remove('fa-times');
+ icon.classList.add('fa-bars');
+ }
+ document.body.style.overflow = '';
+ if (navCta) navCta.classList.remove('hide-on-menu-open');
+ }
+});
+</script>
+</body>
+</html>
