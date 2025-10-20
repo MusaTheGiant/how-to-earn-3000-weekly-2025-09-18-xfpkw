@@ -1245,7 +1245,7 @@
 <div class="progress-bar" id="progressBar"></div>
 </div>
 
-<!-- Navigation - Updated: Removed Home, Renamed Getting Started to Get Started -->
+<!-- Navigation -->
 <nav class="nav" id="navbar">
 <div class="nav-container">
 <a class="logo" href="https://texitcointitans.com">TexitCoin Titans</a>
@@ -1264,7 +1264,7 @@
 </div>
 </nav>
 
-<!-- Blog Hero Section - Updated: Changed "daily" to "regular" -->
+<!-- Blog Hero Section -->
 <section class="blog-hero">
 <div class="container">
 <div class="blog-hero-content">
@@ -1295,7 +1295,7 @@ Your regular source for cryptocurrency insights, mining strategies, and proven t
 </div>
 </section>
 
-<!-- Blog Controls - Updated: Removed Success Stories, Renamed Strategies to Training Calls -->
+<!-- Blog Controls -->
 <section class="blog-controls">
 <div class="container">
 <div class="controls-wrapper">
@@ -1317,14 +1317,48 @@ Join Our Community
 </div>
 </section>
 
-<!-- Main Blog Section - Updated: NEW 1-2-Free Bonus article added -->
+<!-- Main Blog Section -->
 <section class="blog-grid-section">
 <div class="container">
 <div class="blog-layout">
 <!-- Main Blog Grid -->
 <div class="blog-main">
 <div class="blog-grid">
-<!-- NEW Blog Post 1 - 1-2-Free Bonus Article -->
+
+<!-- NEW Blog Post 1 - Rapid Rewards Compensation Plan -->
+<article class="blog-card" data-category="mining">
+<div class="blog-thumbnail">
+<img src="https://texitcointitans.com/images/rapid-rewards-featured.jpg" 
+     alt="TexitCoin Rapid Rewards Compensation Plan - Earn $3,000 Per Week"
+     loading="lazy">
+<span class="blog-category">Compensation</span>
+</div>
+<div class="blog-content">
+<div class="blog-meta">
+<span class="blog-date"><i class="far fa-calendar"></i> Jan 20, 2025</span>
+<span class="blog-author"><i class="far fa-user"></i> MTG - TXC Miner</span>
+<span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+</div>
+<h2 class="blog-title">
+<a href="rapid-rewards-compensation-plan-guide.html">The Rapid Rewards Compensation Plan: $3,000/Week Made Simple</a>
+</h2>
+<p class="blog-excerpt">
+Discover how TexitCoin's revolutionary compensation plan eliminates complexity and makes $3,000 per week achievable for anyone willing to show up, contribute, and help others succeed. No complicated ranks, just results.
+</p>
+<div class="blog-footer">
+<a href="rapid-rewards-compensation-plan-guide.html" class="read-more-btn">
+Read More <i class="fas fa-arrow-right"></i>
+</a>
+<div class="blog-shares">
+<span class="share-btn" title="Share on Facebook"><i class="fab fa-facebook-f"></i></span>
+<span class="share-btn" title="Share on Twitter"><i class="fab fa-twitter"></i></span>
+<span class="share-btn" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></span>
+</div>
+</div>
+</div>
+</article>
+
+<!-- Existing Blog Post 2 - 1-2-Free Bonus Article -->
 <article class="blog-card" data-category="mining">
 <div class="blog-thumbnail">
 <img src="https://texitcointitans.com/images/texit-coin-1-2-free-bonus.svg" 
@@ -1439,7 +1473,7 @@ Read More <i class="fas fa-arrow-right"></i>
 </div>
 </section>
 
-<!-- Footer - Exact Copy from Main Site -->
+<!-- Footer -->
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">
@@ -1585,7 +1619,7 @@ if (mobileMenuBtn && navLinks) {
  });
 }
 
-// Category Filter - Updated to use 'training' instead of 'strategies'
+// Category Filter
 const categoryBtns = document.querySelectorAll('.category-btn');
 const blogCards = document.querySelectorAll('.blog-card');
 
@@ -1629,14 +1663,14 @@ searchInput.addEventListener('input', function() {
  });
 });
 
-// Share Buttons (Example functionality)
+// Share Buttons
 const shareBtns = document.querySelectorAll('.share-btn');
 
 shareBtns.forEach(btn => {
  btn.addEventListener('click', function(e) {
  e.preventDefault();
  const postTitle = this.closest('.blog-card').querySelector('.blog-title a').textContent;
- const postUrl = window.location.href; // In production, this would be the actual post URL
+ const postUrl = window.location.href;
  
  if (this.querySelector('.fa-facebook-f')) {
  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`, '_blank');
@@ -1648,22 +1682,17 @@ shareBtns.forEach(btn => {
  });
 });
 
-// Pagination (Example functionality)
+// Pagination
 const paginationBtns = document.querySelectorAll('.pagination-btn');
 
 paginationBtns.forEach(btn => {
  btn.addEventListener('click', function() {
  if (!this.classList.contains('disabled')) {
- // Remove active class from all
  paginationBtns.forEach(b => b.classList.remove('active'));
- // Add active class to clicked
  this.classList.add('active');
  
- // Scroll to top of blog section
  const blogSection = document.querySelector('.blog-grid-section');
  blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
- 
- // In production, this would load new posts via AJAX
  }
  });
 });
