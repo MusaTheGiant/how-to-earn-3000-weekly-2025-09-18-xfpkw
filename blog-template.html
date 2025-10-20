@@ -1505,8 +1505,8 @@
 </div>
 <div class="meta-item">
 <i class="far fa-calendar"></i>
-<!-- 📝 PLACEHOLDER: Insert publish date (e.g., January 15, 2025) -->
-<span>[Publish Date]</span>
+<!-- ✅ AUTO DATE: This will automatically show today's date -->
+<span id="publishDate"></span>
 </div>
 <div class="meta-item">
 <i class="far fa-clock"></i>
@@ -1870,6 +1870,23 @@ Read Now <i class="fas fa-arrow-right"></i>
 </button>
 
 <script>
+// ✅ AUTOMATIC PUBLISH DATE - This runs when the page loads
+function setPublishDate() {
+ const monthNames = ["January", "February", "March", "April", "May", "June",
+ "July", "August", "September", "October", "November", "December"];
+ 
+ const today = new Date();
+ const month = monthNames[today.getMonth()];
+ const day = today.getDate();
+ const year = today.getFullYear();
+ 
+ const formattedDate = `${month} ${day}, ${year}`;
+ document.getElementById('publishDate').textContent = formattedDate;
+}
+
+// Run the date function immediately when page loads
+setPublishDate();
+
 // Progress Bar & Scroll Effects
 let ticking = false;
 
