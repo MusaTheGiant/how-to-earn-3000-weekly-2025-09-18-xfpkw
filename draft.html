@@ -1141,7 +1141,7 @@
  .scroll-top {
  position: fixed;
  bottom: 2rem;
- right: 2rem;
+ left: 2rem;
  width: 50px;
  height: 50px;
  background: var(--gradient-red);
@@ -1175,6 +1175,219 @@
  color: var(--white);
  font-size: 1.2rem;
  }
+
+ .whatsapp-btn {
+ position: fixed;
+ bottom: 2rem;
+ right: 2rem;
+ width: 60px;
+ height: 60px;
+ background: #25D366;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ z-index: 1000;
+ border: none;
+ text-decoration: none;
+ box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+ animation: whatsappPulse 3s ease-in-out infinite;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(20px);
+ -webkit-tap-highlight-color: transparent;
+ touch-action: manipulation;
+ }
+
+ .whatsapp-btn.visible {
+ opacity: 1;
+ visibility: visible;
+ transform: translateY(0);
+ }
+
+ .whatsapp-btn:hover {
+ transform: translateY(-3px) scale(1.05);
+ box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+ animation-play-state: paused;
+ }
+
+ .whatsapp-btn i {
+ color: var(--white);
+ font-size: 1.8rem;
+ }
+
+ @keyframes whatsappPulse {
+ 0% {
+ transform: scale(1);
+ box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+ }
+ 50% {
+ transform: scale(1.02);
+ box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35);
+ }
+ 100% {
+ transform: scale(1);
+ box-shadow: 0 8px 32px rgba(37, 211, 102, 0.25);
+ }
+ }
+
+ /* ========== VIDEO PRESENTATION SECTION STYLES ========== */
+ .video-presentation-section {
+ padding: 4rem 0;
+ background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .video-presentation-content {
+ text-align: center;
+ max-width: 900px;
+ margin: 0 auto;
+ }
+
+ .video-section-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(1.8rem, 4vw, 2.6rem);
+ font-weight: 900;
+ color: var(--deep-blue);
+ margin-bottom: 1.5rem;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .video-section-description {
+ font-size: clamp(1rem, 2vw, 1.2rem);
+ color: var(--text-secondary);
+ margin-bottom: 3rem;
+ line-height: 1.7;
+ max-width: 700px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+
+ .video-embed-container {
+ position: relative;
+ width: 100%;
+ max-width: 800px;
+ margin: 0 auto 2.5rem;
+ padding-bottom: 56.25%;
+ height: 0;
+ overflow: hidden;
+ border-radius: 16px;
+ box-shadow: 0 20px 60px rgba(38, 34, 98, 0.15);
+ background: var(--dark-shade);
+ }
+
+ .video-embed-container iframe {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 16px;
+ }
+
+ .video-cta-container {
+ text-align: center;
+ margin-top: 2.5rem;
+ }
+
+ .video-cta-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.75rem;
+ padding: 1.2rem 3rem;
+ background: var(--gradient-red);
+ color: var(--white);
+ text-decoration: none;
+ border-radius: 50px;
+ font-size: 1.2rem;
+ font-weight: 700;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ box-shadow: var(--red-shadow);
+ animation: ctaPulse 3s ease-in-out infinite;
+ border: none;
+ cursor: pointer;
+ }
+
+ .video-cta-btn:hover {
+ transform: translateY(-3px) scale(1.02);
+ box-shadow: 0 20px 50px rgba(190, 31, 36, 0.4);
+ animation-play-state: paused;
+ }
+
+ .video-cta-btn i:first-child {
+ font-size: 1.3rem;
+ }
+
+ .video-cta-btn i:last-child {
+ font-size: 1rem;
+ transition: transform 0.3s ease;
+ }
+
+ .video-cta-btn:hover i:last-child {
+ transform: translateX(5px);
+ }
+
+ .video-cta-subtext {
+ margin-top: 1rem;
+ font-size: 0.95rem;
+ color: var(--text-secondary);
+ font-style: italic;
+ }
+
+ @media (max-width: 768px) {
+ .video-presentation-section {
+ padding: 3rem 0;
+ }
+
+ .video-section-title {
+ font-size: clamp(1.5rem, 6vw, 2rem);
+ margin-bottom: 1rem;
+ }
+
+ .video-section-description {
+ font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+ margin-bottom: 2rem;
+ }
+
+ .video-embed-container {
+ border-radius: 12px;
+ margin-bottom: 2rem;
+ }
+
+ .video-cta-btn {
+ padding: 1rem 2rem;
+ font-size: 1.05rem;
+ width: 100%;
+ max-width: 350px;
+ justify-content: center;
+ }
+
+ .video-cta-subtext {
+ font-size: 0.85rem;
+ padding: 0 1rem;
+ }
+ }
+ /* ========== END VIDEO PRESENTATION SECTION STYLES ========== */
+
+ /* Focus styles for accessibility */
+ .cta-btn:focus,
+ .nav-cta:focus,
+ .scroll-top:focus,
+ .whatsapp-btn:focus,
+ .video-cta-btn:focus {
+ outline: 2px solid #ffffff;
+ outline-offset: 2px;
+ }
+
+ .nav-links a:focus {
+ outline: 2px solid var(--bold-red);
+ outline-offset: 4px;
+ border-radius: 4px;
+ }
+
 
  @media (max-width: 768px) {
  .nav-links {
@@ -1529,13 +1742,24 @@
 
  .scroll-top {
  bottom: 0.75rem;
- right: 0.75rem;
+ left: 0.75rem;
  width: 40px;
  height: 40px;
  }
 
  .scroll-top i {
  font-size: 1rem;
+ }
+
+ .whatsapp-btn {
+ bottom: 0.75rem;
+ right: 0.75rem;
+ width: 50px;
+ height: 50px;
+ }
+
+ .whatsapp-btn i {
+ font-size: 1.5rem;
  }
  }
 
@@ -2121,6 +2345,48 @@ Get All Your Questions Answered
 </div>
 </div>
 
+<!-- ========== VIDEO PRESENTATION SECTION ========== -->
+<section class="video-presentation-section">
+<div class="container">
+<div class="video-presentation-content">
+<h2 class="video-section-title">💎 11 Minutes to Generational Wealth</h2>
+<p class="video-section-description">
+See how this Texas-born project is helping everyday investors build REAL wealth through blockchain innovation. Watch why smart investors are making the move to TexitCoin, this could change everything for you.
+</p>
+
+<div class="video-embed-container">
+<iframe 
+src="https://www.youtube.com/embed/mYz1V-dWkdw" 
+title="TexitCoin Short Presentation" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen
+loading="lazy"
+></iframe>
+</div>
+
+<div class="video-cta-container">
+<a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" class="video-cta-btn" target="_blank" rel="noopener noreferrer">
+<i class="fas fa-rocket"></i>
+Start Mining TexitCoin Now
+<i class="fas fa-arrow-right"></i>
+</a>
+<p class="video-cta-subtext">Join thousands of miners already earning daily TXC rewards</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== END VIDEO PRESENTATION SECTION ========== -->
+
+<div class="section-divider">
+<div class="divider-image-container">
+<img src="https://texitcointitans.com/images/txc-logo.jpg" alt="TexitCoin Logo" class="divider-image" width="100" height="100">
+</div>
+<div class="divider-text">
+<span class="icon">⛏️</span>MINE TXC
+</div>
+</div>
+
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">
@@ -2128,7 +2394,7 @@ Get All Your Questions Answered
 <h4>TexitCoin Titans</h4>
 <p>Your trusted partner in the TexitCoin revolution. Made in Texas, for Texans, supporting the path to financial independence and Texas sovereignty.</p>
 <div class="social-links">
-<a href="https://www.facebook.com/TexitCoinTitans" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+<a href="https://www.facebook.com/profile.php?id=61559875176657" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
 <i class="fab fa-facebook-f"></i>
 </a>
 <a href="https://www.tiktok.com/@texitcointitans" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
@@ -2190,6 +2456,14 @@ Get All Your Questions Answered
 <button aria-label="Scroll to top" class="scroll-top" id="scrollTop">
 <i class="fas fa-arrow-up"></i>
 </button>
+
+<a href="https://chat.whatsapp.com/FpsVbdLxs7f6j1wKMME6jR?mode=ems_copy_t" 
+   class="whatsapp-btn" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Join WhatsApp Support Group">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 <script>
 function playVideo(button) {
@@ -2339,6 +2613,14 @@ window.addEventListener('resize', function() {
  if (navCta) navCta.classList.remove('hide-on-menu-open');
  }
 });
+
+// Show WhatsApp button after 10 seconds
+setTimeout(function() {
+ const whatsappBtn = document.querySelector('.whatsapp-btn');
+ if (whatsappBtn) {
+ whatsappBtn.classList.add('visible');
+ }
+}, 10000);
 </script>
 </body>
 </html>
