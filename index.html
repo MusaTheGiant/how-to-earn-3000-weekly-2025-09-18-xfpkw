@@ -1340,7 +1340,7 @@
 
  .video-section-title {
  font-family: 'Orbitron', monospace;
- font-size: clamp(1.8rem, 4vw, 2.8rem);
+ font-size: clamp(1.6rem, 3.5vw, 2.2rem);
  font-weight: 900;
  color: var(--deep-blue);
  margin-bottom: 1.5rem;
@@ -1371,7 +1371,7 @@
    0 24px 48px rgba(38, 34, 98, 0.2),
    0 12px 24px rgba(38, 34, 98, 0.15);
  background: var(--dark-shade);
- border: 3px solid rgba(190, 31, 36, 0.6);
+ border: 3px solid rgba(190, 31, 36, 0.8);
  transition: all 0.3s ease;
  }
 
@@ -1381,7 +1381,7 @@
    0 32px 64px rgba(38, 34, 98, 0.25),
    0 16px 32px rgba(38, 34, 98, 0.2),
    0 0 0 1px rgba(190, 31, 36, 0.8);
- border-color: rgba(190, 31, 36, 0.9);
+ border-color: rgba(190, 31, 36, 1.0);
  }
 
  .video-embed-container iframe {
@@ -1392,6 +1392,90 @@
  height: 100%;
  border-radius: 14px;
  }
+
+ /* ===== CUSTOM THUMBNAIL OVERLAY STYLES ===== */
+ .custom-thumbnail-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: #000;
+ cursor: pointer;
+ z-index: 10;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: opacity 0.3s ease;
+ border-radius: 14px;
+ overflow: hidden;
+ }
+
+ .custom-thumbnail-overlay.hidden {
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
+ }
+
+ .custom-thumbnail-overlay img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 14px;
+ }
+
+ .play-button-overlay {
+ position: relative;
+ width: 90px;
+ height: 90px;
+ background: linear-gradient(135deg, rgba(190, 31, 36, 0.95) 0%, rgba(211, 47, 47, 0.95) 100%);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-size: 2rem;
+ padding-left: 0.3rem;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ box-shadow: 
+   0 12px 32px rgba(190, 31, 36, 0.4),
+   0 4px 12px rgba(0, 0, 0, 0.3);
+ z-index: 11;
+ animation: playButtonPulse 2.5s ease-in-out infinite;
+ border: 3px solid rgba(255, 255, 255, 0.9);
+ }
+
+ @keyframes playButtonPulse {
+ 0%, 100% {
+   transform: scale(1);
+   box-shadow: 
+     0 12px 32px rgba(190, 31, 36, 0.4),
+     0 4px 12px rgba(0, 0, 0, 0.3);
+ }
+ 50% {
+   transform: scale(1.08);
+   box-shadow: 
+     0 16px 48px rgba(190, 31, 36, 0.6),
+     0 6px 18px rgba(0, 0, 0, 0.4);
+ }
+ }
+
+ .custom-thumbnail-overlay:hover .play-button-overlay {
+ transform: scale(1.12);
+ background: linear-gradient(135deg, rgba(190, 31, 36, 1) 0%, rgba(211, 47, 47, 1) 100%);
+ box-shadow: 
+   0 20px 50px rgba(190, 31, 36, 0.6),
+   0 8px 20px rgba(0, 0, 0, 0.4);
+ animation-play-state: paused;
+ }
+
+ .custom-thumbnail-overlay:active .play-button-overlay {
+ transform: scale(1.05);
+ }
+ /* ===== END CUSTOM THUMBNAIL OVERLAY STYLES ===== */
 
  .video-cta-container {
  text-align: center;
@@ -1481,6 +1565,18 @@
  .video-embed-container {
  border-radius: 12px;
  margin-bottom: 2rem;
+ border-width: 2px;
+ }
+
+ .custom-thumbnail-overlay,
+ .custom-thumbnail-overlay img {
+ border-radius: 12px;
+ }
+
+ .play-button-overlay {
+ width: 70px;
+ height: 70px;
+ font-size: 1.6rem;
  border-width: 2px;
  }
 
@@ -2481,19 +2577,28 @@ Get All Your Questions Answered
 <span>FEATURED VIDEO</span>
 <i class="fas fa-star"></i>
 </div>
-<h2 class="video-section-title">🚀 11 Minutes to Generational Wealth</h2>
+<h2 class="video-section-title">🔥 11 Minutes to Generational Wealth</h2>
 <p class="video-section-description">
 See how this Texas-born project is helping everyday investors build REAL wealth through blockchain innovation. Watch why smart investors are making the move to TexitCoin. This could change everything for you.
 </p>
 
 <div class="video-embed-container">
+<!-- CUSTOM THUMBNAIL OVERLAY - Displays before video plays -->
+<div class="custom-thumbnail-overlay" id="videoThumbnail" onclick="playFeaturedVideo()">
+<img src="https://texitcointitans.com/images/texitcoin-short-presentation.jpg" alt="11 Minutes to Generational Wealth - TexitCoin Presentation" loading="lazy">
+<div class="play-button-overlay">
+<i class="fas fa-play"></i>
+</div>
+</div>
+
+<!-- OPTIMIZED YOUTUBE EMBED - Distraction-free, no recommended videos -->
 <iframe 
-src="https://www.youtube.com/embed/Jb87HoOsH60?start=15" 
-title="TexitCoin Short Presentation" 
+id="texitcoinFeaturedVideo"
+src="https://www.youtube.com/embed/Jb87HoOsH60?start=15&rel=0&modestbranding=1&controls=1&showinfo=0&autohide=1&fs=1&disablekb=0&playsinline=1&cc_load_policy=0&iv_load_policy=3&color=white&enablejsapi=1" 
+title="TexitCoin - 11 Minutes to Generational Wealth" 
 frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 allowfullscreen
-loading="lazy"
 ></iframe>
 </div>
 
@@ -2745,6 +2850,25 @@ window.addEventListener('resize', function() {
  if (navCta) navCta.classList.remove('hide-on-menu-open');
  }
 });
+
+// ===== FEATURED VIDEO PLAY FUNCTION =====
+// Handles custom thumbnail click - hides overlay and autoplays video
+function playFeaturedVideo() {
+ const overlay = document.getElementById('videoThumbnail');
+ const iframe = document.getElementById('texitcoinFeaturedVideo');
+ 
+ if (overlay && iframe) {
+ // Hide the custom thumbnail overlay
+ overlay.classList.add('hidden');
+ 
+ // Get current src and add autoplay parameter
+ const currentSrc = iframe.src;
+ // Check if src already has parameters
+ const separator = currentSrc.includes('?') ? '&' : '?';
+ // Add autoplay to start video immediately
+ iframe.src = currentSrc + separator + 'autoplay=1';
+ }
+}
 
 // Show WhatsApp button after 10 seconds
 setTimeout(function() {
