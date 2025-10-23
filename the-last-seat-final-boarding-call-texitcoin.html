@@ -1449,6 +1449,268 @@
  max-width: 100%;
  }
  }
+
+ /* ========== FEATURED VIDEO SECTION STYLES (from index.html) ========== */
+ .featured-video-wrapper {
+ text-align: center;
+ max-width: 900px;
+ margin: 0 auto 3rem;
+ position: relative;
+ z-index: 2;
+ background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+ border-radius: 24px;
+ padding: 2.5rem 2rem;
+ box-shadow: 
+   0 20px 60px rgba(38, 34, 98, 0.12),
+   0 8px 24px rgba(38, 34, 98, 0.08),
+   inset 0 1px 0 rgba(255, 255, 255, 0.9);
+ border: 2px solid rgba(38, 34, 98, 0.08);
+ animation: elevateIn 0.8s ease-out;
+ }
+
+ .featured-video-wrapper::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: var(--gradient-red);
+ box-shadow: 0 4px 12px rgba(190, 31, 36, 0.3);
+ border-radius: 24px 24px 0 0;
+ }
+
+ @keyframes elevateIn {
+ from {
+   opacity: 0;
+   transform: translateY(30px);
+ }
+ to {
+   opacity: 1;
+   transform: translateY(0);
+ }
+ }
+
+ .featured-badge {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+ color: #130c0e;
+ padding: 0.5rem 1.5rem;
+ border-radius: 50px;
+ font-weight: 800;
+ font-size: 0.85rem;
+ letter-spacing: 1.5px;
+ text-transform: uppercase;
+ margin-bottom: 1.5rem;
+ box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+ animation: badgePulse 3s ease-in-out infinite;
+ border: 2px solid rgba(255, 255, 255, 0.8);
+ }
+
+ .featured-badge i {
+ color: #130c0e;
+ font-size: 0.9rem;
+ animation: starTwinkle 2s ease-in-out infinite;
+ }
+
+ @keyframes badgePulse {
+ 0%, 100% {
+   box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+ }
+ 50% {
+   box-shadow: 0 12px 32px rgba(255, 215, 0, 0.6);
+ }
+ }
+
+ @keyframes starTwinkle {
+ 0%, 100% {
+   opacity: 1;
+   transform: scale(1);
+ }
+ 50% {
+   opacity: 0.7;
+   transform: scale(0.9);
+ }
+ }
+
+ .featured-video-title {
+ font-family: 'Orbitron', monospace;
+ font-size: clamp(1.4rem, 3vw, 1.8rem);
+ font-weight: 900;
+ color: var(--deep-blue);
+ margin-bottom: 1rem;
+ text-shadow: 0 2px 8px rgba(38, 34, 98, 0.15);
+ line-height: 1.2;
+ }
+
+ .featured-video-description {
+ font-size: clamp(0.95rem, 2vw, 1.1rem);
+ color: var(--text-secondary);
+ margin-bottom: 2rem;
+ line-height: 1.7;
+ max-width: 700px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+
+ .video-embed-container {
+ position: relative;
+ width: 100%;
+ max-width: 800px;
+ margin: 0 auto;
+ padding-bottom: 56.25%;
+ height: 0;
+ overflow: hidden;
+ border-radius: 16px;
+ box-shadow: 
+   0 24px 48px rgba(38, 34, 98, 0.2),
+   0 12px 24px rgba(38, 34, 98, 0.15);
+ background: var(--dark-shade);
+ border: 3px solid rgba(190, 31, 36, 0.8);
+ transition: all 0.3s ease;
+ }
+
+ .video-embed-container:hover {
+ transform: translateY(-4px);
+ box-shadow: 
+   0 32px 64px rgba(38, 34, 98, 0.25),
+   0 16px 32px rgba(38, 34, 98, 0.2),
+   0 0 0 1px rgba(190, 31, 36, 0.8);
+ border-color: rgba(190, 31, 36, 1.0);
+ }
+
+ .video-embed-container iframe {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 14px;
+ }
+
+ /* ===== CUSTOM THUMBNAIL OVERLAY STYLES ===== */
+ .custom-thumbnail-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: #000;
+ cursor: pointer;
+ z-index: 10;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: opacity 0.3s ease;
+ border-radius: 14px;
+ overflow: hidden;
+ }
+
+ .custom-thumbnail-overlay.hidden {
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
+ }
+
+ .custom-thumbnail-overlay img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 14px;
+ }
+
+ .play-button-overlay {
+ position: relative;
+ width: 90px;
+ height: 90px;
+ background: linear-gradient(135deg, rgba(190, 31, 36, 0.95) 0%, rgba(211, 47, 47, 0.95) 100%);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-size: 2rem;
+ padding-left: 0.3rem;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ box-shadow: 
+   0 12px 32px rgba(190, 31, 36, 0.4),
+   0 4px 12px rgba(0, 0, 0, 0.3);
+ z-index: 11;
+ animation: playButtonPulse 2.5s ease-in-out infinite;
+ border: 3px solid rgba(255, 255, 255, 0.9);
+ }
+
+ @keyframes playButtonPulse {
+ 0%, 100% {
+   transform: scale(1);
+   box-shadow: 
+     0 12px 32px rgba(190, 31, 36, 0.4),
+     0 4px 12px rgba(0, 0, 0, 0.3);
+ }
+ 50% {
+   transform: scale(1.08);
+   box-shadow: 
+     0 16px 48px rgba(190, 31, 36, 0.6),
+     0 6px 18px rgba(0, 0, 0, 0.4);
+ }
+ }
+
+ .custom-thumbnail-overlay:hover .play-button-overlay {
+ transform: scale(1.12);
+ background: linear-gradient(135deg, rgba(190, 31, 36, 1) 0%, rgba(211, 47, 47, 1) 100%);
+ box-shadow: 
+   0 20px 50px rgba(190, 31, 36, 0.6),
+   0 8px 20px rgba(0, 0, 0, 0.4);
+ animation-play-state: paused;
+ }
+
+ .custom-thumbnail-overlay:active .play-button-overlay {
+ transform: scale(1.05);
+ }
+ /* ===== END CUSTOM THUMBNAIL OVERLAY STYLES ===== */
+
+ /* Mobile responsive adjustments for featured video */
+ @media (max-width: 768px) {
+ .featured-video-wrapper {
+   padding: 2rem 1.5rem;
+   margin: 0 1rem 2rem;
+ }
+
+ .featured-badge {
+   font-size: 0.75rem;
+   padding: 0.4rem 1.2rem;
+ }
+
+ .featured-video-title {
+   font-size: clamp(1.2rem, 4vw, 1.6rem);
+ }
+
+ .play-button-overlay {
+   width: 70px;
+   height: 70px;
+   font-size: 1.6rem;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .featured-video-wrapper {
+   padding: 1.5rem 1rem;
+   margin: 0 0.5rem 1.5rem;
+ }
+
+ .play-button-overlay {
+   width: 60px;
+   height: 60px;
+   font-size: 1.4rem;
+ }
+ }
+ /* ========== END FEATURED VIDEO SECTION STYLES ========== */
+
 </style>
 </head>
 <body>
@@ -1566,15 +1828,35 @@
 <!-- Table of Contents - Removed for natural flow -->
 
 <!-- Featured Video Section -->
-<div style="margin-bottom: 3rem;">
-<div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: var(--card-shadow);">
+<div class="featured-video-wrapper">
+<div class="featured-badge">
+<i class="fas fa-star"></i>
+<span>FEATURED VIDEO</span>
+<i class="fas fa-star"></i>
+</div>
+<h3 class="featured-video-title">The Last Seat: Your Final Boarding Call</h3>
+<p class="featured-video-description">
+Watch this powerful message about the closing window of opportunity. The TXC mine is filling fast, and seats are limited. Will yours be the last one taken?
+</p>
+
+<div class="video-embed-container">
+<!-- CUSTOM THUMBNAIL OVERLAY - Displays before video plays -->
+<div class="custom-thumbnail-overlay" id="blogVideoThumbnail" onclick="playBlogFeaturedVideo()">
+<img src="https://texitcointitans.com/images/featured-thumbnail-the-last-seat.jpg" alt="The Last Seat - Your Final Boarding Call" loading="lazy">
+<div class="play-button-overlay">
+<i class="fas fa-play"></i>
+</div>
+</div>
+
+<!-- OPTIMIZED YOUTUBE EMBED - Distraction-free, no recommended videos -->
 <iframe 
-src="https://www.youtube.com/embed/iI9ngck8ifA?rel=0&modestbranding=1&controls=1&showinfo=0" 
-title="The Last Seat: Your Final Boarding Call for TexitCoin"
-style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen>
-</iframe>
+id="blogFeaturedVideo"
+src="https://www.youtube.com/embed/iI9ngck8ifA?rel=0&modestbranding=1&controls=1&showinfo=0&autohide=1&fs=1&disablekb=0&playsinline=1&cc_load_policy=0&iv_load_policy=3&color=white&enablejsapi=1" 
+title="The Last Seat: Your Final Boarding Call for TexitCoin" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen
+></iframe>
 </div>
 </div>
 
@@ -2133,6 +2415,26 @@ window.addEventListener('resize', function() {
  if (navCta) navCta.classList.remove('hide-on-menu-open');
  }
 });
+
+
+// Featured Video Play Function
+function playBlogFeaturedVideo() {
+ const overlay = document.getElementById('blogVideoThumbnail');
+ const iframe = document.getElementById('blogFeaturedVideo');
+ 
+ if (overlay && iframe) {
+ // Hide the custom thumbnail overlay
+ overlay.classList.add('hidden');
+ 
+ // Get current src and add autoplay parameter
+ const currentSrc = iframe.src;
+ // Check if src already has parameters
+ const separator = currentSrc.includes('?') ? '&' : '?';
+ // Add autoplay to start video immediately
+ iframe.src = currentSrc + separator + 'autoplay=1';
+ }
+}
+
 </script>
 </body>
 </html>
