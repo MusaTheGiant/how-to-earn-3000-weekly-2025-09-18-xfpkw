@@ -1241,6 +1241,230 @@
  max-width: 100%;
  }
  }
+
+ /* ========== VIDEO EMBED SECTION STYLES ========== */
+ /* Enhanced video container with custom thumbnail overlay and play button */
+ .video-embed-container {
+ position: relative;
+ width: 100%;
+ max-width: 800px;
+ margin: 2.5rem auto;
+ padding-bottom: 56.25%;
+ height: 0;
+ overflow: hidden;
+ border-radius: 16px;
+ box-shadow: 
+   0 24px 48px rgba(38, 34, 98, 0.2),
+   0 12px 24px rgba(38, 34, 98, 0.15);
+ background: var(--dark-shade);
+ border: 3px solid rgba(190, 31, 36, 0.8);
+ transition: all 0.3s ease;
+ }
+
+ .video-embed-container:hover {
+ transform: translateY(-4px);
+ box-shadow: 
+   0 32px 64px rgba(38, 34, 98, 0.25),
+   0 16px 32px rgba(38, 34, 98, 0.2),
+   0 0 0 1px rgba(190, 31, 36, 0.8);
+ border-color: rgba(190, 31, 36, 1.0);
+ }
+
+ .video-embed-container iframe {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 14px;
+ }
+
+ /* ===== CUSTOM THUMBNAIL OVERLAY STYLES ===== */
+ .custom-thumbnail-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: #000;
+ cursor: pointer;
+ z-index: 10;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: opacity 0.3s ease;
+ border-radius: 14px;
+ overflow: hidden;
+ }
+
+ .custom-thumbnail-overlay.hidden {
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
+ }
+
+ .custom-thumbnail-overlay img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 14px;
+ }
+
+ .play-button-overlay {
+ position: relative;
+ width: 90px;
+ height: 90px;
+ background: linear-gradient(135deg, rgba(190, 31, 36, 0.95) 0%, rgba(211, 47, 47, 0.95) 100%);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ font-size: 2rem;
+ padding-left: 0.3rem;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ box-shadow: 
+   0 12px 32px rgba(190, 31, 36, 0.4),
+   0 4px 12px rgba(0, 0, 0, 0.3);
+ z-index: 11;
+ animation: playButtonPulse 2.5s ease-in-out infinite;
+ border: 3px solid rgba(255, 255, 255, 0.9);
+ }
+
+ @keyframes playButtonPulse {
+ 0%, 100% {
+   transform: scale(1);
+   box-shadow: 
+     0 12px 32px rgba(190, 31, 36, 0.4),
+     0 4px 12px rgba(0, 0, 0, 0.3);
+ }
+ 50% {
+   transform: scale(1.08);
+   box-shadow: 
+     0 16px 48px rgba(190, 31, 36, 0.6),
+     0 6px 18px rgba(0, 0, 0, 0.4);
+ }
+ }
+
+ .custom-thumbnail-overlay:hover .play-button-overlay {
+ transform: scale(1.12);
+ background: linear-gradient(135deg, rgba(190, 31, 36, 1) 0%, rgba(211, 47, 47, 1) 100%);
+ box-shadow: 
+   0 20px 50px rgba(190, 31, 36, 0.6),
+   0 8px 20px rgba(0, 0, 0, 0.4);
+ animation-play-state: paused;
+ }
+
+ .custom-thumbnail-overlay:active .play-button-overlay {
+ transform: scale(1.05);
+ }
+ /* ===== END CUSTOM THUMBNAIL OVERLAY STYLES ===== */
+
+ .video-cta-container {
+ text-align: center;
+ margin-top: 2.5rem;
+ }
+
+ .video-cta-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.75rem;
+ padding: 1.3rem 3rem;
+ background: var(--gradient-red);
+ color: var(--white);
+ text-decoration: none;
+ border-radius: 50px;
+ font-size: 1.2rem;
+ font-weight: 700;
+ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ box-shadow: 
+   0 12px 32px rgba(190, 31, 36, 0.3),
+   0 4px 12px rgba(190, 31, 36, 0.2);
+ animation: ctaPulse 3s ease-in-out infinite;
+ border: none;
+ cursor: pointer;
+ }
+
+ @keyframes ctaPulse {
+ 0% {
+ transform: scale(1);
+ box-shadow: 0 12px 32px rgba(190, 31, 36, 0.3), 0 4px 12px rgba(190, 31, 36, 0.2);
+ }
+ 50% {
+ transform: scale(1.02);
+ box-shadow: 0 16px 40px rgba(190, 31, 36, 0.4), 0 6px 16px rgba(190, 31, 36, 0.25);
+ }
+ 100% {
+ transform: scale(1);
+ box-shadow: 0 12px 32px rgba(190, 31, 36, 0.3), 0 4px 12px rgba(190, 31, 36, 0.2);
+ }
+ }
+
+ .video-cta-btn:hover {
+ transform: translateY(-3px) scale(1.02);
+ box-shadow: 
+   0 20px 50px rgba(190, 31, 36, 0.4),
+   0 8px 20px rgba(190, 31, 36, 0.3);
+ animation-play-state: paused;
+ }
+
+ .video-cta-btn i:first-child {
+ font-size: 1.3rem;
+ }
+
+ .video-cta-btn i:last-child {
+ font-size: 1rem;
+ transition: transform 0.3s ease;
+ }
+
+ .video-cta-btn:hover i:last-child {
+ transform: translateX(5px);
+ }
+
+ .video-cta-subtext {
+ margin-top: 1rem;
+ font-size: 0.95rem;
+ color: var(--text-secondary);
+ font-style: italic;
+ }
+
+ /* Mobile Responsive Styles for Video */
+ @media (max-width: 768px) {
+ .video-embed-container {
+ border-radius: 12px;
+ margin: 2rem auto;
+ border-width: 2px;
+ }
+
+ .custom-thumbnail-overlay,
+ .custom-thumbnail-overlay img {
+ border-radius: 12px;
+ }
+
+ .play-button-overlay {
+ width: 70px;
+ height: 70px;
+ font-size: 1.6rem;
+ border-width: 2px;
+ }
+
+ .video-cta-btn {
+ padding: 1.1rem 2rem;
+ font-size: 1.05rem;
+ width: 100%;
+ max-width: 350px;
+ justify-content: center;
+ }
+
+ .video-cta-subtext {
+ font-size: 0.85rem;
+ padding: 0 1rem;
+ }
+ }
+ /* ========== END VIDEO EMBED SECTION STYLES ========== */
 </style>
 </head>
 <body>
@@ -1349,8 +1573,33 @@
 <img src="https://texitcointitans.com/images/texitcoin-path-to-$16.jpg" alt="TexitCoin's strategic roadmap showing the path to $16 market value by February 2026" class="featured-image" loading="eager">
 
 <!-- Featured Video Section -->
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/3e2TtenjuzE?rel=0&modestbranding=1&controls=1&showinfo=0" title="The Path to $16 by February 2026 - TexitCoin Strategy Explained" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+<div class="video-embed-container">
+<!-- CUSTOM THUMBNAIL OVERLAY - Displays before video plays -->
+<div class="custom-thumbnail-overlay" id="videoThumbnail" onclick="playFeaturedVideo()">
+<img src="https://texitcointitans.com/images/texitcoin-path-to-$16.jpg" alt="The Path to $16 by February 2026 - TexitCoin Strategy Explained" loading="lazy">
+<div class="play-button-overlay">
+<i class="fas fa-play"></i>
+</div>
+</div>
+
+<!-- OPTIMIZED YOUTUBE EMBED - Distraction-free, no recommended videos -->
+<iframe 
+id="texitcoinFeaturedVideo"
+src="https://www.youtube.com/embed/3e2TtenjuzE?rel=0&modestbranding=1&controls=1&showinfo=0&autohide=1&fs=1&disablekb=0&playsinline=1&cc_load_policy=0&iv_load_policy=3&color=white&enablejsapi=1" 
+title="The Path to $16 by February 2026 - TexitCoin Strategy Explained" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen
+></iframe>
+</div>
+
+<div class="video-cta-container">
+<a href="https://minetxc.com/intro#sign-up?sponsor=mtglegacy" class="video-cta-btn" target="_blank" rel="noopener noreferrer">
+<i class="fas fa-rocket"></i>
+Start Mining TexitCoin Now
+<i class="fas fa-arrow-right"></i>
+</a>
+<p class="video-cta-subtext">Join thousands of miners already earning daily TXC rewards</p>
 </div>
 
 <!-- Table of Contents -->
@@ -1953,6 +2202,25 @@ window.addEventListener('resize', function() {
  if (navCta) navCta.classList.remove('hide-on-menu-open');
  }
 });
+
+// ===== FEATURED VIDEO PLAY FUNCTION =====
+// Handles custom thumbnail click - hides overlay and autoplays video
+function playFeaturedVideo() {
+ const overlay = document.getElementById('videoThumbnail');
+ const iframe = document.getElementById('texitcoinFeaturedVideo');
+ 
+ if (overlay && iframe) {
+ // Hide the custom thumbnail overlay
+ overlay.classList.add('hidden');
+ 
+ // Get current src and add autoplay parameter
+ const currentSrc = iframe.src;
+ // Check if src already has parameters
+ const separator = currentSrc.includes('?') ? '&' : '?';
+ // Add autoplay to start video immediately
+ iframe.src = currentSrc + separator + 'autoplay=1';
+ }
+}
 </script>
 </body>
 </html>
