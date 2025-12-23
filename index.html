@@ -3362,9 +3362,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const giveawayBar = document.getElementById('giveawayBar');
     const closeBtn = document.getElementById('closeGiveaway');
     const body = document.body;
+    let lastScrollTop = 0;
+    let isBarDismissed = false;
     
     // Check if the bar has been dismissed before
     const isDismissed = localStorage.getItem('wefiDeobankBarDismissed');
+    
+    if (isDismissed) {
+        isBarDismissed = true;
+    }
     
     if (!isDismissed) {
         // Show the bar with animation after a short delay
@@ -3374,7 +3380,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }
     
-    // Close button functionality
+    // Scroll behavior - hide/show announcement bar
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        // Don't run if bar was manually dismissed
+        if (isBarDismissed) return;
+        
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // At top of page (within 100px)
+            if (scrollTop < 100) {
+                if (!giveawayBar.classList.contains('active')) {
+                    giveawayBar.classList.remove('dismissed');
+                    giveawayBar.classList.add('active');
+                    body.classList.add('giveaway-active');
+                }
+            }
+            // Scrolling down
+            else if (scrollTop > lastScrollTop && scrollTop > 100) {
+                if (giveawayBar.classList.contains('active')) {
+                    giveawayBar.classList.remove('active');
+                    giveawayBar.classList.add('dismissed');
+                    body.classList.remove('giveaway-active');
+                }
+            }
+            
+            lastScrollTop = scrollTop;
+        }, 100); // Debounce scroll events
+    });
+    
+    // Close button functionality - permanent dismissal
     if (closeBtn) {
         closeBtn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3382,8 +3419,9 @@ document.addEventListener('DOMContentLoaded', function() {
             giveawayBar.classList.remove('active');
             giveawayBar.classList.add('dismissed');
             body.classList.remove('giveaway-active');
+            isBarDismissed = true;
             
-            // Remember that the user dismissed it
+            // Remember that the user dismissed it permanently
             localStorage.setItem('wefiDeobankBarDismissed', 'true');
             
             // Remove from DOM after animation
